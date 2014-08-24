@@ -1,0 +1,406 @@
+[2014-08-24 02:42:31] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:41] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:42] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:42] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:43] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:43] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:43] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:43] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:43] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:43] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:43] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:43] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:49:44] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-08-24 02:53:41] production.ERROR: exception 'ErrorException' with message 'file_put_contents(/var/www/suac/app/storage/sessions/f74f4a102520a36e8e83dcf81bec482786d13df6): failed to open stream: Permission denied' in /var/www/suac/bootstrap/compiled.php:4153
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/var/www/suac/b...', 4153, Array)
+#1 /var/www/suac/bootstrap/compiled.php(4153): file_put_contents('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(71): Illuminate\Filesystem\Filesystem->put('/var/www/suac/a...', 'a:3:{s:6:"_toke...')
+#3 /var/www/suac/bootstrap/compiled.php(7873): Illuminate\Session\FileSessionHandler->write('f74f4a102520a36...', 'a:3:{s:6:"_toke...')
+#4 /var/www/suac/bootstrap/compiled.php(7730): Illuminate\Session\Store->save()
+#5 /var/www/suac/bootstrap/compiled.php(7708): Illuminate\Session\Middleware->closeSession(Object(Illuminate\Session\Store))
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
