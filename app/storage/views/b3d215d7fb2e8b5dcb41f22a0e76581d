@@ -16,7 +16,7 @@
 
   <?php echo HTML::style( asset('css/style.css') ); ?>
 
-  <?php echo HTML::style( asset('css/pages/dashborad.css') ); ?>
+  <?php echo HTML::style( asset('css/pages/dashboard.css') ); ?>
 
 
 
@@ -28,21 +28,26 @@
   <?php echo HTML::script( asset('js/base.js') ); ?>
 
 
+  <?php echo $__env->yieldContent('header'); ?>
+
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
 
 </head>
 <body>
 
 
-  <?php echo $__env->make("/layout/top", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> 
+  <?php echo $__env->make('/layout/top', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> 
 
 
-  <?php echo $__env->make("/layout/navbar", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-
-    <?php echo $content; ?>
+  <?php echo $__env->make('/layout/navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
-  <?php echo $__env->make("/layout/footer", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+  <?php echo $__env->yieldContent('content'); ?>
+
+
+
+  <?php echo $__env->make('/layout/footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
   </body>

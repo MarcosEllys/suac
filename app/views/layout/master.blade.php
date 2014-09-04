@@ -12,7 +12,7 @@
   {{ HTML::style( asset('css/bootstrap-responsive.min.css') ) }}
   {{ HTML::style( asset('css/font-awesome.css') ) }}
   {{ HTML::style( asset('css/style.css') ) }}
-  {{ HTML::style( asset('css/pages/dashborad.css') ) }}
+  {{ HTML::style( asset('css/pages/dashboard.css') ) }}
 
 
 
@@ -20,20 +20,26 @@
   {{ HTML::script( asset('js/bootstrap.js') ) }}
   {{ HTML::script( asset('js/base.js') ) }}
 
+  @yield('header')
+
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
 
 </head>
 <body>
 
 
-  @include("/layout/top") 
+  @include('/layout/top') 
 
 
-  @include("/layout/navbar")
+  @include('/layout/navbar')
 
-    {{ $content }}
 
-  @include("/layout/footer")
+
+  @yield('content')
+
+
+
+  @include('/layout/footer')
 
 
   </body>

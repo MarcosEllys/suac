@@ -3,13 +3,13 @@
   <div class="subnavbar-inner">
     <div class="container">
       <ul class="mainnav">
-        <li><a href="/suacInterface/home.php"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
+        <li><a href="/"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
 
         <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 
           <i class=" icon-group"></i><span>Assistência CRAS</span> <b class="caret"></b></a>
 
           <ul class="dropdown-menu">
-            <li><a href="/suacInterface/pessoaREF/">Pessoas referênciadas</a></li>
+            <li><a href="/peoplesref">Pessoas referênciadas</a></li>
             <li><a href="#">Famílias</a></li>
             <li><a href="/suacInterface/agendamento.php">Agendar atendimento</a></li>
           </ul>

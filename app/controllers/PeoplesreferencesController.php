@@ -6,6 +6,6 @@ class PeoplesreferencesController extends BaseController{
 
 	public function index()
 	{
-		$this->layout->content =  'Hello in hell';
+		$this->layout->content =  View::make('peoplesreference/index');
 	}
 }
