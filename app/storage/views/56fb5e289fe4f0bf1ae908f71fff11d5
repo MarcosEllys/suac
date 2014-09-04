@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<title>Cats DB</title>
+	<link rel="stylesheet" href="<?php echo asset('bootstrap-3.0.0.min.css'); ?>">
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<?php echo $__env->yieldContent('header'); ?>
+		</div>
+		<?php if(Session::has('message')): ?>
+		<div class="alert alert-success">
+			<?php echo Session::get('message'); ?>
+
+		</div>
+		<?php endif; ?>
+		<?php echo $__env->yieldContent('content'); ?>
+	</div>
+</body>
+</html>

@@ -34,6 +34,18 @@ ClassLoader::addDirectories(array(
 Log::useFiles(storage_path().'/logs/laravel.log');
 
 /*
+|
+|	Error message personalized (ThunderBrown)
+|
+|
+*/
+
+App::missing(function($exception){
+	return Response::make("Page not found",404);
+});
+
+
+/*
 |--------------------------------------------------------------------------
 | Application Error Handler
 |--------------------------------------------------------------------------

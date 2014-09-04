@@ -15,6 +15,4 @@ Route::get('/', function(){
 	return View::make('hello');
 });
 
-Route::get('/master', function(){
-	return View::make('hello');
-});
+Route::get('peoplesref','PeoplesreferencesController@index');

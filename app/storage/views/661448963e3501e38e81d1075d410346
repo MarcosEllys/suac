@@ -1,0 +1,26 @@
+<?php $__env->startSection('header'); ?>
+	<?php if(isset($breed)): ?>
+		<?php echo link_to ('/','Back to the overview'); ?>
+
+	<?php endif; ?>
+<h2>
+
+	All <?php if(isset($breed)): ?> <?php echo $breed->name; ?> <?php endif; ?> Cats
+
+	<a href="<?php echo url('cats/create'); ?>" class="btn btn-primary pull-right">
+		Add a new cat
+	</a>
+</h2>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('conten'); ?>
+	<?php foreach($cats as $cat): ?>
+		<div class="cat">
+			<a href="<?php echo url('cats'.$cat->id); ?>">
+				<strong> <?php echo $cat->name; ?> </strong> - <?php echo e($cat->breed->name); ?>
+
+			</a>
+		</div>
+	<?php endforeach; ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
