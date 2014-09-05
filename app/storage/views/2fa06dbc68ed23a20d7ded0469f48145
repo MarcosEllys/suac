@@ -11,18 +11,18 @@
           <ul class="dropdown-menu">
             <li><a href="/peoplesref">Pessoas referênciadas</a></li>
             <li><a href="#">Famílias</a></li>
-            <li><a href="/suacInterface/agendamento.php">Agendar atendimento</a></li>
+            <li><a href="#">Agendar atendimento</a></li>
           </ul>
         </li>
 
         <li>
-          <a href="/suacInterface/reports/">
+          <a href="#">
             <i class="icon-list-alt"></i><span>Relatórios</span>            
           </a>
         </li>
 
         <li>
-          <a href="/suacInterface/help/">
+          <a href="#">
             <i class="icon-facetime-video"></i><span>Ajuda</span>           
           </a>
         </li>

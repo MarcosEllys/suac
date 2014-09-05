@@ -8,7 +8,7 @@
 
 
 					<ol class="breadcrumb">
-						<li><a href="/suac/home.php"><i class="icon-dashboard"></i> Home</a></li>
+						<li><a href="/"><i class="icon-dashboard"></i> Home</a></li>
 						<li class="active">  /  <i class="icon-group"></i> Pessoas referênciadas</li>
 					</ol>
 
@@ -17,8 +17,22 @@
 			</div>
 
 			<br>
+			<br>
+			<br>
 
 
+
+			@foreach($peoplesreferences as $people)
+
+				@include('/peoplesreference._people_tile')
+
+			@endforeach
+
+
+
+			<br>
+			<br>
+			<br>
 
 			<div class="row">
 				<div class="span12">
@@ -49,6 +63,7 @@
 									</tr>
 								</thead>
 								<tbody>
+									
 									<tr>
 										<td>Raimundo Ananias</td>
 										<td>Ananias</td>

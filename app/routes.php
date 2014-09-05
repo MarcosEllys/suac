@@ -16,3 +16,9 @@ Route::get('/', function(){
 });
 
 Route::get('peoplesref','PeoplesreferencesController@index');
+
+Route::get('peoplesref/create','PeoplesreferencesController@create');
+
+Route::post('peoplesref','PeoplesreferencesController@store');
+
+Route::post('peoplesref/{$id}','PeoplesreferencesController@show');

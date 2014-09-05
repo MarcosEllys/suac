@@ -9829,3 +9829,249 @@ Stack trace:
 #16 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
 #17 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
 #18 {main} [] []
+[2014-09-04 23:24:42] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www/suac/bootstrap/compiled.php:5687
+Stack trace:
+#0 /var/www/suac/bootstrap/compiled.php(5004): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 /var/www/suac/bootstrap/compiled.php(4992): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www/suac/bootstrap/compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 /var/www/suac/bootstrap/compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www/suac/bootstrap/compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 /var/www/suac/bootstrap/compiled.php(7706): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-05 01:47:25] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www/suac/bootstrap/compiled.php:5687
+Stack trace:
+#0 /var/www/suac/bootstrap/compiled.php(5004): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 /var/www/suac/bootstrap/compiled.php(4992): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www/suac/bootstrap/compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 /var/www/suac/bootstrap/compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www/suac/bootstrap/compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 /var/www/suac/bootstrap/compiled.php(7706): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-05 02:12:47] production.ERROR: exception 'ErrorException' with message 'Undefined variable: peoplesreferences' in /var/www/suac/app/storage/views/d0f879e1fd7ca5339f34e79d3b975692:25
+Stack trace:
+#0 /var/www/suac/app/storage/views/d0f879e1fd7ca5339f34e79d3b975692(25): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/var/www/suac/a...', 25, Array)
+#1 /var/www/suac/bootstrap/compiled.php(9740): include('/var/www/suac/a...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(56): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/suac/a...', Array)
+#3 /var/www/suac/bootstrap/compiled.php(9619): Illuminate\View\Engines\CompilerEngine->get('/var/www/suac/a...', Array)
+#4 /var/www/suac/bootstrap/compiled.php(9606): Illuminate\View\View->getContents()
+#5 /var/www/suac/bootstrap/compiled.php(9597): Illuminate\View\View->renderContents()
+#6 /var/www/suac/bootstrap/compiled.php(9626): Illuminate\View\View->render()
+#7 /var/www/suac/bootstrap/compiled.php(9619): Illuminate\View\View->gatherData()
+#8 /var/www/suac/bootstrap/compiled.php(9606): Illuminate\View\View->getContents()
+#9 /var/www/suac/bootstrap/compiled.php(9597): Illuminate\View\View->renderContents()
+#10 /var/www/suac/bootstrap/compiled.php(10295): Illuminate\View\View->render()
+#11 /var/www/suac/bootstrap/compiled.php(9826): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#12 /var/www/suac/bootstrap/compiled.php(5190): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#13 /var/www/suac/bootstrap/compiled.php(4998): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#14 /var/www/suac/bootstrap/compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#15 /var/www/suac/bootstrap/compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 /var/www/suac/bootstrap/compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 /var/www/suac/bootstrap/compiled.php(7706): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#19 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#20 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#21 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#22 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#23 {main}
+
+Next exception 'ErrorException' with message 'Undefined variable: peoplesreferences (View: /var/www/suac/app/views/peoplesreference/index.blade.php)' in /var/www/suac/app/storage/views/d0f879e1fd7ca5339f34e79d3b975692:25
+Stack trace:
+#0 /var/www/suac/bootstrap/compiled.php(9742): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException))
+#1 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(56): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/suac/a...', Array)
+#2 /var/www/suac/bootstrap/compiled.php(9619): Illuminate\View\Engines\CompilerEngine->get('/var/www/suac/a...', Array)
+#3 /var/www/suac/bootstrap/compiled.php(9606): Illuminate\View\View->getContents()
+#4 /var/www/suac/bootstrap/compiled.php(9597): Illuminate\View\View->renderContents()
+#5 /var/www/suac/bootstrap/compiled.php(9626): Illuminate\View\View->render()
+#6 /var/www/suac/bootstrap/compiled.php(9619): Illuminate\View\View->gatherData()
+#7 /var/www/suac/bootstrap/compiled.php(9606): Illuminate\View\View->getContents()
+#8 /var/www/suac/bootstrap/compiled.php(9597): Illuminate\View\View->renderContents()
+#9 /var/www/suac/bootstrap/compiled.php(10295): Illuminate\View\View->render()
+#10 /var/www/suac/bootstrap/compiled.php(9826): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#11 /var/www/suac/bootstrap/compiled.php(5190): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#12 /var/www/suac/bootstrap/compiled.php(4998): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#13 /var/www/suac/bootstrap/compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /var/www/suac/bootstrap/compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /var/www/suac/bootstrap/compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 /var/www/suac/bootstrap/compiled.php(7706): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#17 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#19 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#20 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#21 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#22 {main} [] []
+[2014-09-05 02:12:54] production.ERROR: exception 'ErrorException' with message 'Undefined variable: peoplesreferences' in /var/www/suac/app/storage/views/d0f879e1fd7ca5339f34e79d3b975692:25
+Stack trace:
+#0 /var/www/suac/app/storage/views/d0f879e1fd7ca5339f34e79d3b975692(25): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/var/www/suac/a...', 25, Array)
+#1 /var/www/suac/bootstrap/compiled.php(9740): include('/var/www/suac/a...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(56): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/suac/a...', Array)
+#3 /var/www/suac/bootstrap/compiled.php(9619): Illuminate\View\Engines\CompilerEngine->get('/var/www/suac/a...', Array)
+#4 /var/www/suac/bootstrap/compiled.php(9606): Illuminate\View\View->getContents()
+#5 /var/www/suac/bootstrap/compiled.php(9597): Illuminate\View\View->renderContents()
+#6 /var/www/suac/bootstrap/compiled.php(9626): Illuminate\View\View->render()
+#7 /var/www/suac/bootstrap/compiled.php(9619): Illuminate\View\View->gatherData()
+#8 /var/www/suac/bootstrap/compiled.php(9606): Illuminate\View\View->getContents()
+#9 /var/www/suac/bootstrap/compiled.php(9597): Illuminate\View\View->renderContents()
+#10 /var/www/suac/bootstrap/compiled.php(10295): Illuminate\View\View->render()
+#11 /var/www/suac/bootstrap/compiled.php(9826): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#12 /var/www/suac/bootstrap/compiled.php(5190): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#13 /var/www/suac/bootstrap/compiled.php(4998): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#14 /var/www/suac/bootstrap/compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#15 /var/www/suac/bootstrap/compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 /var/www/suac/bootstrap/compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 /var/www/suac/bootstrap/compiled.php(7706): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#19 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#20 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#21 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#22 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#23 {main}
+
+Next exception 'ErrorException' with message 'Undefined variable: peoplesreferences (View: /var/www/suac/app/views/peoplesreference/index.blade.php)' in /var/www/suac/app/storage/views/d0f879e1fd7ca5339f34e79d3b975692:25
+Stack trace:
+#0 /var/www/suac/bootstrap/compiled.php(9742): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException))
+#1 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(56): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/suac/a...', Array)
+#2 /var/www/suac/bootstrap/compiled.php(9619): Illuminate\View\Engines\CompilerEngine->get('/var/www/suac/a...', Array)
+#3 /var/www/suac/bootstrap/compiled.php(9606): Illuminate\View\View->getContents()
+#4 /var/www/suac/bootstrap/compiled.php(9597): Illuminate\View\View->renderContents()
+#5 /var/www/suac/bootstrap/compiled.php(9626): Illuminate\View\View->render()
+#6 /var/www/suac/bootstrap/compiled.php(9619): Illuminate\View\View->gatherData()
+#7 /var/www/suac/bootstrap/compiled.php(9606): Illuminate\View\View->getContents()
+#8 /var/www/suac/bootstrap/compiled.php(9597): Illuminate\View\View->renderContents()
+#9 /var/www/suac/bootstrap/compiled.php(10295): Illuminate\View\View->render()
+#10 /var/www/suac/bootstrap/compiled.php(9826): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#11 /var/www/suac/bootstrap/compiled.php(5190): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#12 /var/www/suac/bootstrap/compiled.php(4998): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#13 /var/www/suac/bootstrap/compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /var/www/suac/bootstrap/compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /var/www/suac/bootstrap/compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 /var/www/suac/bootstrap/compiled.php(7706): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#17 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#19 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#20 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#21 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#22 {main} [] []
+[2014-09-05 02:18:03] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '$vars' (T_VARIABLE)' in /var/www/suac/app/controllers/PeoplesreferencesController.php:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-05 02:18:03] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '$vars' (T_VARIABLE)' in /var/www/suac/app/controllers/PeoplesreferencesController.php:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-05 02:18:04] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '$vars' (T_VARIABLE)' in /var/www/suac/app/controllers/PeoplesreferencesController.php:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-05 02:18:33] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '$vars' (T_VARIABLE)' in /var/www/suac/app/controllers/PeoplesreferencesController.php:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-05 02:18:33] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '$vars' (T_VARIABLE)' in /var/www/suac/app/controllers/PeoplesreferencesController.php:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-05 02:18:34] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '$vars' (T_VARIABLE)' in /var/www/suac/app/controllers/PeoplesreferencesController.php:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-05 02:18:42] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '$vars' (T_VARIABLE)' in /var/www/suac/app/controllers/PeoplesreferencesController.php:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-05 02:29:41] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www/suac/bootstrap/compiled.php:5687
+Stack trace:
+#0 /var/www/suac/bootstrap/compiled.php(5004): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 /var/www/suac/bootstrap/compiled.php(4992): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www/suac/bootstrap/compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 /var/www/suac/bootstrap/compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www/suac/bootstrap/compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 /var/www/suac/bootstrap/compiled.php(7706): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-05 02:33:29] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www/suac/bootstrap/compiled.php:5687
+Stack trace:
+#0 /var/www/suac/bootstrap/compiled.php(5004): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 /var/www/suac/bootstrap/compiled.php(4992): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www/suac/bootstrap/compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 /var/www/suac/bootstrap/compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www/suac/bootstrap/compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 /var/www/suac/bootstrap/compiled.php(7706): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-05 02:34:10] production.ERROR: exception 'ErrorException' with message 'Undefined variable: peoplesreferences' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:25
+Stack trace:
+#0 /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0(25): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/var/www/suac/a...', 25, Array)
+#1 /var/www/suac/bootstrap/compiled.php(9740): include('/var/www/suac/a...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(56): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/suac/a...', Array)
+#3 /var/www/suac/bootstrap/compiled.php(9619): Illuminate\View\Engines\CompilerEngine->get('/var/www/suac/a...', Array)
+#4 /var/www/suac/bootstrap/compiled.php(9606): Illuminate\View\View->getContents()
+#5 /var/www/suac/bootstrap/compiled.php(9597): Illuminate\View\View->renderContents()
+#6 /var/www/suac/bootstrap/compiled.php(10295): Illuminate\View\View->render()
+#7 /var/www/suac/bootstrap/compiled.php(9826): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 /var/www/suac/bootstrap/compiled.php(5190): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 /var/www/suac/bootstrap/compiled.php(4998): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#10 /var/www/suac/bootstrap/compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#11 /var/www/suac/bootstrap/compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#12 /var/www/suac/bootstrap/compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#13 /var/www/suac/bootstrap/compiled.php(7706): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#14 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#15 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#16 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#17 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#18 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#19 {main}
+
+Next exception 'ErrorException' with message 'Undefined variable: peoplesreferences (View: /var/www/suac/app/views/peoplesreference/create.blade.php)' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:25
+Stack trace:
+#0 /var/www/suac/bootstrap/compiled.php(9742): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException))
+#1 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(56): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/suac/a...', Array)
+#2 /var/www/suac/bootstrap/compiled.php(9619): Illuminate\View\Engines\CompilerEngine->get('/var/www/suac/a...', Array)
+#3 /var/www/suac/bootstrap/compiled.php(9606): Illuminate\View\View->getContents()
+#4 /var/www/suac/bootstrap/compiled.php(9597): Illuminate\View\View->renderContents()
+#5 /var/www/suac/bootstrap/compiled.php(10295): Illuminate\View\View->render()
+#6 /var/www/suac/bootstrap/compiled.php(9826): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 /var/www/suac/bootstrap/compiled.php(5190): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 /var/www/suac/bootstrap/compiled.php(4998): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#9 /var/www/suac/bootstrap/compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#10 /var/www/suac/bootstrap/compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 /var/www/suac/bootstrap/compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 /var/www/suac/bootstrap/compiled.php(7706): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#13 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#14 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#15 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#16 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#17 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2014-09-05 03:00:14] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in /var/www/suac/bootstrap/compiled.php:5687
+Stack trace:
+#0 /var/www/suac/bootstrap/compiled.php(5004): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 /var/www/suac/bootstrap/compiled.php(4992): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 /var/www/suac/bootstrap/compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 /var/www/suac/bootstrap/compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 /var/www/suac/bootstrap/compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 /var/www/suac/bootstrap/compiled.php(7706): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 /var/www/suac/bootstrap/compiled.php(8309): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 /var/www/suac/bootstrap/compiled.php(8256): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 /var/www/suac/bootstrap/compiled.php(10895): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 /var/www/suac/bootstrap/compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []

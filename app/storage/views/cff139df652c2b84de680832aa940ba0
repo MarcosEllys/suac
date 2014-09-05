@@ -1,0 +1,17 @@
+<?php $__env->startSection('content'); ?>
+
+<?php echo Form::open(array('action' => 'PeoplesreferencesController@store')); ?>
+
+
+	<?php echo Form::label('nome','Nome da pessoa referenciada'); ?>
+
+	<?php echo Form::text('name'); ?>
+
+
+	<?php echo Form::submit('Save'); ?>
+
+
+<?php echo Form::close(); ?>
+
+
+<?php $__env->stopSection(); ?>
