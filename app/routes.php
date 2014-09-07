@@ -21,4 +21,4 @@ Route::get('peoplesref/create','PeoplesreferencesController@create');
 
 Route::post('peoplesref','PeoplesreferencesController@store');
 
-Route::post('peoplesref/{$id}','PeoplesreferencesController@show');
+Route::post('peoplesref/{id}','PeoplesreferencesController@show');

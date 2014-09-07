@@ -28,6 +28,13 @@
 				</div>
 			</div>
 
+			
+
+
+
+
+
+
 			<div class="row">
 
 				<div class="span12">
@@ -41,6 +48,7 @@
 							<table class="table table-striped table-bordered">
 								<thead>
 									<tr>
+										<th> Id</th>
 										<th> Nome </th>
 										<th> Apelido</th>
 										<th class="td-actions">Ações</th>
@@ -48,27 +56,11 @@
 								</thead>
 								<tbody>
 									
-									<tr>
-										<td>Raimundo Ananias</td>
-										<td>Ananias</td>
-										<td class="td-actions">
-											<a href="ver.php">
-												<button class="btn btn-info">
-													Ver
-												</button>
-											</a>
-											<a href="alterar.php">
-												<button class="btn btn-warning">
-													Alterar
-												</button>
-											</a>
-											<a href="#">
-												<button class="btn btn-danger">
-													Excluir
-												</button>
-											</a>
-										</td>
-									</tr>
+									@foreach($peoplesreference as $people)
+
+										@include('peoplesreference._people_tile')
+
+									@endforeach
 
 								</tbody>
 							</table>
