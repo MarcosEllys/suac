@@ -17,28 +17,12 @@
 			</div>
 
 			<br>
-			<br>
-			<br>
-
-
-
-			@foreach($peoplesreferences as $people)
-
-				@include('/peoplesreference._people_tile')
-
-			@endforeach
-
-
-
-			<br>
-			<br>
-			<br>
 
 			<div class="row">
 				<div class="span12">
 					<div class="widget widget-plain">
 						<div class="widget-content">
-							<a href="cadastrar.php" class="btn btn-large btn-success btn-support-ask"> Cadastrar pessoa referênciada </a>
+							<a href="/peoplesref/create" class="btn btn-large btn-success btn-support-ask"> Cadastrar pessoa referênciada </a>
 						</div>
 					</div>
 				</div>
