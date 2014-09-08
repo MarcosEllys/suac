@@ -64,4 +64,28 @@ class PeoplesreferencesController extends BaseController{
 		$this->layout->content = View::make('peoplesreference.edit');
 	}
 
+	public function delete($id)
+	{
+		$result = Peoplesreference::find($id);
+
+		$vars = array('people' => $result);
+
+		$this->layout->content = View::make('peoplesreference.delete',$vars);
+
+	}
+
+	public function handleDelete()
+	{
+
+
+
+		// Handle the delete confirmation.
+		$id = Input::get('people');
+		$people = Peoplesreference::findOrFail($id);
+		$people->delete();
+
+		return Redirect::action('PeoplesreferencesController@index');
+
+	}
+
 }

@@ -183,7 +183,7 @@
 
 													<?php echo Form::select('nameunity', array(
 														'centro' => 'Centro',
-														'black' => 'Alto Manoel Marioano',
+														'alto manoel marioano' => 'Alto Manoel Marioano',
 														'bnh' => 'BNH'
 														), 'centro'); ?>
 

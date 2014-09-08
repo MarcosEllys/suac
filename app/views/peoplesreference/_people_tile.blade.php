@@ -9,12 +9,12 @@
 				Visualizar
 			</button>
 		</a>
-		<a href="alterar.php">
+		<a href="#">
 			<button class="btn btn-warning">
 				Alterar
 			</button>
 		</a>
-		<a href="#">
+		<a href=' {{ action('PeoplesreferencesController@delete', array('id' => $people->id) ) }} '>
 			<button class="btn btn-danger">
 				Excluir
 			</button>
