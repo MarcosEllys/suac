@@ -15,7 +15,7 @@ class PeoplesreferencesController extends BaseController{
 
 	public function create()
 	{
-		$this->layout->content = View::make('peoplesreference/create');
+		$this->layout->content = View::make('peoplesreference.create');
 	}
 
 	public function store()
@@ -29,21 +29,21 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->nis = Input::get('nis');
 		$peoplesreference->cpf = Input::get('cpf');
 		$peoplesreference->rg = Input::get('rg');
-		// $peoplesreference->orgaorg = Input::get('orgaorg');
-		// $peoplesreference->ufrg = Input::get('ufrg');
+		$peoplesreference->orgaorg = Input::get('orgaorg');
+		$peoplesreference->ufrg = Input::get('ufrg');
 		// $peoplesreference->emitedrg = Input::get('emitedrg');
 		$peoplesreference->numprotuario = Input::get('numprotuario');
-		// $peoplesreference->typeunity = Input::get('typeunity');
-		// $peoplesreference->nameunity = Input::get('nameunity');
+		$peoplesreference->typeunity = Input::get('typeunity');
+		$peoplesreference->nameunity = Input::get('nameunity');
 		$peoplesreference->rua = Input::get('rua');
 		$peoplesreference->logradouro = Input::get('logradouro');
 		$peoplesreference->cep = Input::get('cep');
-		// $peoplesreference->municipio = Input::get('municipio');
+		$peoplesreference->municipio = Input::get('municipio');
 		$peoplesreference->complemento = Input::get('complemento');
 		$peoplesreference->pointreference = Input::get('pointreference');
 		$peoplesreference->telephone1 = Input::get('telephone1');
 		$peoplesreference->telephone2 = Input::get('telephone2');
-		// $peoplesreference->localization = Input::get('localization');
+		$peoplesreference->localization = Input::get('localization');
 
 		$peoplesreference->save();
 
@@ -56,7 +56,12 @@ class PeoplesreferencesController extends BaseController{
 
 		$vars = array('people' => $result);
 
-		$this->layout->content = View::make('peoplesreference/products.show',$vars);
+		$this->layout->content = View::make('peoplesreference.show',$vars);
+	}
+
+	public function edit()
+	{
+		$this->layout->content = View::make('peoplesreference.edit');
 	}
 
 }

@@ -3,10 +3,9 @@
 	<td>{{{ $people->name }}}</td>
 	<td>{{{ $people->apelido }}}</td>
 	<td class="td-actions">
-			<button class="btn btn-info">
-				Ver
-			</button>
-		</a>
+
+		{{ HTML::link('/show{$id}', 'Ver', array('id' => $people->id, 'class' => 'btn btn-info')) }}
+
 		<a href="alterar.php">
 			<button class="btn btn-warning">
 				Alterar

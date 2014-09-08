@@ -5,7 +5,7 @@
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
       </a>
-      {{ HTML::link('/', 'Sistema Único de Assistência ao CRAS - SUAC', array('class' => 'brand'))}}
+      {{ HTML::link('/', 'Sistema Único de Assistência ao CRAS - SUAC', array('class' => 'brand')) }}
       <div class="nav-collapse">
         <ul class="nav pull-right">
           <li class="dropdown">

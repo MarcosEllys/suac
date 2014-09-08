@@ -28,17 +28,8 @@
 				</div>
 			</div>
 
-			
-
-
-
-
-
-
 			<div class="row">
-
 				<div class="span12">
-
 					<div class="widget widget-table action-table">
 						<div class="widget-header">
 							<i class="icon-group"></i>
