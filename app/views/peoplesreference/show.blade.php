@@ -9,10 +9,10 @@
 					<div class="span12">
 						<ol class="breadcrumb">
 							<li>
-								<a href="/suac/home.php"><i class="icon-dashboard"></i> Home</a>
+								<a href="/"><i class="icon-dashboard"></i> Home</a>
 							</li>
 							<li>
-								/ <a href="/suac/pessoaREF/"> <i class="icon-group"></i> Pessoas referênciadas</a>
+								/ <a href="/peoplesref"> <i class="icon-group"></i> Pessoas referênciadas</a>
 							</li>
 							<li>
 								/ <i class="icon-eye-open"></i> Ver informações

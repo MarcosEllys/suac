@@ -4,8 +4,11 @@
 	<td>{{{ $people->apelido }}}</td>
 	<td class="td-actions">
 
-		{{ HTML::link('/show{$id}', 'Ver', array('id' => $people->id, 'class' => 'btn btn-info')) }}
-
+		<a href=' {{ action('PeoplesreferencesController@show', array('id' => $people->id) ) }} '>
+			<button class="btn btn-info">
+				Visualizar
+			</button>
+		</a>
 		<a href="alterar.php">
 			<button class="btn btn-warning">
 				Alterar
