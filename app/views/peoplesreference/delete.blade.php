@@ -15,7 +15,7 @@
 								/ <a href="/peoplesref"> <i class="icon-group"></i> Pessoas referênciadas</a>
 							</li>
 							<li>
-								/ <i class="icon-remove"></i> Excluir pessoa referenciada
+								/ <i class="icon-eye-open"></i> Ver informações
 							</li>
 						</ol>
 					</div>
@@ -27,13 +27,9 @@
 					<div class="span12">
 						<div class="widget ">
 							<div class="widget-header">
-								<i class="icon-remove"></i>
-								<h3>Excluir pessoa referenciada</h3>
+								<i class="icon-eye-open"></i>
+								<h3>Ver Informações</h3>
 							</div>
-
-							{{ Form::open(array('action' => 'PeoplesreferencesController@handleDelete', 'method' => 'post', 'class' => 'form-horizontal')) }}
-
-
 							<div class="widget-content">
 								<div class="tabbable">
 									<ul class="nav nav-tabs">
@@ -52,6 +48,12 @@
 											<form id="edit-profile" class="form-horizontal">
 												<fieldset>
 
+													<div class="control-group">
+														<label class="control-label" for="email">Código:</label>
+														<div class="controls">
+															{{{ $people->id }}}
+														</div>
+													</div>
 													<div class="control-group">
 														<label class="control-label" for="email">Pessoa referenciada:</label>
 														<div class="controls">
@@ -221,15 +223,6 @@
 								</div>
 							</div>
 						</div>
-
-						<input type="hidden" name="people" value="{{ $people->id }}" />
-
-						{{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
-
-						<a href="{{ action('PeoplesreferencesController@index') }}" class="btn btn-default">Cancelar</a>
-
-						{{ Form::close() }}
-						
 					</div>
 				</div>
 			</div>

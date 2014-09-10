@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function(){
-	return View::make('home');
+
+	$queryResult = DB::table('peoplesreferences')->paginate();
+
+	return View::make('home')
+	->with('peopletotal',$queryResult);
 });
 
 Route::get('peoplesref','PeoplesreferencesController@index');
@@ -25,6 +29,6 @@ Route::get('peoplesref/{id}','PeoplesreferencesController@show');
 
 Route::get('peoplesref/{id}/edit','PeoplesreferencesController@edit');
 
-Route::get('peoplesref/delete/{id}', 'PeoplesreferencesController@destroy');
+Route::put('peoplesref/{id}','PeoplesreferencesController@update');
 
-Route::post('/peoplesref/delete', 'PeoplesreferencesController@handleDelete');
+Route::delete('peoplesref/{id}', 'PeoplesreferencesController@destroy');

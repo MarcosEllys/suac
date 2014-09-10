@@ -9,15 +9,22 @@
 				Visualizar
 			</button>
 		</a>
-		<a href="#">
+		
+		<a href=' {{ action('PeoplesreferencesController@edit', array('id' => $people->id) ) }} '>
 			<button class="btn btn-warning">
-				Alterar
+				Editar
 			</button>
 		</a>
-		<a href=' {{ action('PeoplesreferencesController@destroy', array('id' => $people->id) ) }} '>
+
+
+		<a href="#">
 			<button class="btn btn-danger">
 				Excluir
 			</button>
 		</a>
+
 	</td>
 </tr>
+
+
+      

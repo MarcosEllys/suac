@@ -38,7 +38,7 @@
                  <div id="big_stats" class="cf">
                   <div class="stat">
                    <i class="icon-user"></i>
-                   <span class="value">7</span>
+                   <span class="value"> {{ $peopletotal->getTotal(); }} </span>
                    <br>
                    Pessoas refenciadas cadastradas
                  </div>

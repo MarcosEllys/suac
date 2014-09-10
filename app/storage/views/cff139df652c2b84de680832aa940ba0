@@ -29,12 +29,6 @@
 			<div class="row">
 				<div class="span12">
 					<div class="widget ">
-
-						<?php if(Session::has('message')): ?>
-						<div class="flash alert">
-						<p><?php echo Session::get('message'); ?></p>
-						</div>
-						<?php endif; ?>
 						
 						<div class="widget-header">
 							<i class="icon-user"></i>
@@ -141,11 +135,11 @@
 												<div class="controls">
 
 													<?php echo Form::select('ufrg', array(
-													'ce' => 'CE',
-													'bh' => 'BH',
-													'pe' => 'PE',
-													'df' => 'DF'
-													), 'ce'); ?>
+														'ce' => 'CE',
+														'bh' => 'BH',
+														'pe' => 'PE',
+														'df' => 'DF'
+														), 'ce'); ?>
 
 
 
@@ -156,8 +150,8 @@
 											<?php echo Form::label('emitedrg','Data de emissão:',array('class' => 'control-label') ); ?>
 
 											<div class="controls">
-												<input type="date" class="span4" placeholder="DDMMAAAA">
-												<!-- <?php echo Form::text('emitedrg',null,array('class' => 'span2','placeholder' => 'DDMMAAAA') ); ?> -->
+												<?php echo Form::text('emitedrg',null,array('class' => 'span2','placeholder' => 'AAAAMMDD') ); ?>
+
 											</div>
 										</div>
 
@@ -194,6 +188,7 @@
 												'bnh' => 'BNH'
 												), 'centro'); ?>
 
+											
 											</div>
 										</div>
 										<!-- /Até aqui -->

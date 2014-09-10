@@ -49,6 +49,12 @@
 												<fieldset>
 
 													<div class="control-group">
+														<label class="control-label" for="email">Código:</label>
+														<div class="controls">
+															{{{ $people->id }}}
+														</div>
+													</div>
+													<div class="control-group">
 														<label class="control-label" for="email">Pessoa referenciada:</label>
 														<div class="controls">
 															{{{ $people->name }}}

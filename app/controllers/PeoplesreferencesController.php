@@ -8,7 +8,7 @@ class PeoplesreferencesController extends BaseController{
 	{
 		$queryResult = Peoplesreference::all();
 
-		$queryResult = DB::table('peoplesreferences')->paginate(1);
+		$queryResult = DB::table('peoplesreferences')->paginate(5);
 
 		$vars = array('peoplesreference' => $queryResult);
 
@@ -33,7 +33,7 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->rg = Input::get('rg');
 		$peoplesreference->orgaorg = Input::get('orgaorg');
 		$peoplesreference->ufrg = Input::get('ufrg');
-		// $peoplesreference->emitedrg = Input::get('emitedrg');
+		 $peoplesreference->emitedrg = Input::get('emitedrg');
 		$peoplesreference->numprotuario = Input::get('numprotuario');
 		$peoplesreference->typeunity = Input::get('typeunity');
 		$peoplesreference->nameunity = Input::get('nameunity');
@@ -52,6 +52,22 @@ class PeoplesreferencesController extends BaseController{
 		return Redirect::action('PeoplesreferencesController@index');
 	}
 
+	public function edit($id)
+	{
+		$result = Peoplesreference::find($id);
+
+		$vars = array('people' => $result);
+
+		$this->layout->content = View::make('peoplesreference.edit',$vars);
+	}
+
+	
+
+	public function update($id)
+	{
+	//
+	}
+
 	public function show($id)
 	{
 		$result = Peoplesreference::find($id);
@@ -61,33 +77,11 @@ class PeoplesreferencesController extends BaseController{
 		$this->layout->content = View::make('peoplesreference.show',$vars);
 	}
 
-	public function edit($id)
-	{
-		$this->layout->content = View::make('peoplesreference.edit');
-	}
-
 	public function destroy($id)
 	{
-		$result = Peoplesreference::find($id);
+		Peoplesreference::find($id)->delete();
 
-		$vars = array('people' => $result);
-
-		$this->layout->content = View::make('peoplesreference.delete',$vars);
-
-	}
-
-	public function handleDelete()
-	{
-
-
-
-		// Handle the delete confirmation.
-		$id = Input::get('people');
-		$people = Peoplesreference::findOrFail($id);
-		$people->delete();
-
-		return Redirect::action('PeoplesreferencesController@index');
-
+		return Redirect::to('peoplesreference.index');
 	}
 
 }

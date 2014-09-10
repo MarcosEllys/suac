@@ -117,12 +117,12 @@
 												<div class="controls">
 
 													{{ Form::select('ufrg', array(
-													'ce' => 'CE',
-													'bh' => 'BH',
-													'pe' => 'PE',
-													'df' => 'DF'
-													), 'ce') 
-												}}
+														'ce' => 'CE',
+														'bh' => 'BH',
+														'pe' => 'PE',
+														'df' => 'DF'
+														), 'ce') 
+													}}
 
 
 											</div>
@@ -131,8 +131,7 @@
 										<div class="control-group">
 											{{ Form::label('emitedrg','Data de emissão:',array('class' => 'control-label') ) }}
 											<div class="controls">
-												<input type="date" class="span4" placeholder="DDMMAAAA">
-												<!-- {{ Form::text('emitedrg',null,array('class' => 'span2','placeholder' => 'DDMMAAAA') ) }} -->
+												{{ Form::text('emitedrg',null,array('class' => 'span2','placeholder' => 'AAAAMMDD') ) }}
 											</div>
 										</div>
 
@@ -163,7 +162,9 @@
 												'centro' => 'Centro',
 												'alto manoel marioano' => 'Alto Manoel Marioano',
 												'bnh' => 'BNH'
-												), 'centro') }}
+												), 'centro') 
+											}}
+											
 											</div>
 										</div>
 										<!-- /Até aqui -->
