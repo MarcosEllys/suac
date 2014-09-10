@@ -91,20 +91,20 @@
 											<div class="control-group">
 												{{ Form::label('cpf','Nº do CPF:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('cpf',null,array('class' => 'span6','placeholder' => 'Somente os números') ) }}
+													{{ Form::text('cpf',null,array('class' => 'span6','placeholder' => 'Somente os números', 'required' => 'true') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('rg','Nº do Registro de Identendidade:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('rg',null,array('class' => 'span6','placeholder' => 'Somente os números') ) }}
+													{{ Form::text('rg',null,array('class' => 'span6','placeholder' => 'Somente os números', 'required' => 'true') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 
-												{{ Form::label('orgaorg', 'Orgão expedidor:',array('class' => 'control-label')) }}
+												{{ Form::label('orgaorg', 'Orgão expedidor:',array('class' => 'control-label', 'required' => 'true')) }}
 												<div class="controls">
 
 													{{ Form::select('orgaorg', array(
@@ -133,14 +133,14 @@
 										<div class="control-group">
 											{{ Form::label('emitedrg','Data de emissão:',array('class' => 'control-label') ) }}
 											<div class="controls">
-												{{ Form::text('emitedrg',null,array('class' => 'span2','placeholder' => 'AAAAMMDD') ) }}
+												{{ Form::text('emitedrg',null,array('class' => 'span2','placeholder' => 'AAAAMMDD', 'required' => 'true') ) }}
 											</div>
 										</div>
 
 										<div class="control-group">
 											{{ Form::label('numprotuario','Nº do prontuário:',array('class' => 'control-label') ) }}
 											<div class="controls">
-												{{ Form::text('numprotuario',null,array('class' => 'span6','placeholder' => 'Somente os números') ) }}
+												{{ Form::text('numprotuario',null,array('class' => 'span6','placeholder' => 'Somente os números', 'required' => 'true') ) }}
 											</div>
 										</div>
 
@@ -180,21 +180,21 @@
 									<div class="control-group">
 										{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('rua',null,array('class' => 'span6','placeholder' => 'Rua ou avenida') ) }}
+											{{ Form::text('rua',null,array('class' => 'span6','placeholder' => 'Rua ou avenida', 'required' => 'true') ) }}
 										</div>
 									</div>
 
 									<div class="control-group">
 										{{ Form::label('logradouro','Bairro:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('logradouro',null,array('class' => 'span6') ) }}
+											{{ Form::text('logradouro',null,array('class' => 'span6', 'required' => 'true') ) }}
 										</div>
 									</div>
 
 									<div class="control-group">
 										{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('cep',null,array('class' => 'span6','placeholder' => 'Somente números') ) }}
+											{{ Form::text('cep',null,array('class' => 'span6','placeholder' => 'Somente números', 'required' => 'true') ) }}
 										</div>
 									</div>
 
@@ -229,7 +229,7 @@
 								<div class="control-group">
 									{{ Form::label('telephone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
 									<div class="controls">
-										{{ Form::text('telephone1',null,array('class' => 'span6') ) }}
+										{{ Form::text('telephone1',null,array('class' => 'span6', 'required' => 'true') ) }}
 									</div>
 								</div>
 

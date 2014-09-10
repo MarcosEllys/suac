@@ -60,48 +60,48 @@
 													<div class="control-group">
 														{{ Form::label('name','Nome completo:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('name',$people->name,array('class' => 'span6') ) }}
+															{{ Form::text('name',null,array('class' => 'span6', 'placeholder' => 'Nome completo', 'required' => 'true') ) }}
 														</div>
 													</div>
 													<div class="control-group">
 														{{ Form::label('apelido','Apelido:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('apelido',$people->apelido,array('class' => 'span6') ) }}
+															{{ Form::text('apelido',null,array('class' => 'span6', 'required' => 'true') ) }}
 														</div>
 													</div>
 
 													<div class="control-group">
 														{{ Form::label('namemather','Nome da mãe:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('namemather',$people->namemather,array('class' => 'span6') ) }}
+															{{ Form::text('namemather',null,array('class' => 'span6') ) }}
 														</div>
 													</div>
 
 													<div class="control-group">
 														{{ Form::label('namefather','Nome do pai:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('namefather',$people->namefather,array('class' => 'span6') ) }}
+															{{ Form::text('namefather',null,array('class' => 'span6') ) }}
 														</div>	
 													</div>
 
 													<div class="control-group">
 														{{ Form::label('nis','Nº do NIS:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('nis',$people->nis,array('class' => 'span6') ) }}
+															{{ Form::text('nis',null,array('class' => 'span6','placeholder' => 'Número do NIS da pessoa referenciada', 'required' => 'true') ) }}
 														</div>	
 													</div>
 
 													<div class="control-group">
 														{{ Form::label('cpf','Nº do CPF:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('cpf',$people->cpf,array('class' => 'span6') ) }}
+															{{ Form::text('cpf',null,array('class' => 'span6','placeholder' => 'Somente os números', 'required' => 'true') ) }}
 														</div>
 													</div>
 
 													<div class="control-group">
 														{{ Form::label('rg','Nº do Registro de Identendidade:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('rg',$people->rg,array('class' => 'span6') ) }}
+															{{ Form::text('rg',null,array('class' => 'span6','placeholder' => 'Somente os números', 'required' => 'true') ) }}
 														</div>
 													</div>
 
@@ -135,14 +135,14 @@
 													<div class="control-group">
 														{{ Form::label('emitedrg','Data de emissão:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('emitedrg',$people->emitedrg,array('class' => 'span6') ) }}
+															{{ Form::text('emitedrg',null,array('class' => 'span2','placeholder' => 'AAAAMMDD', 'required' => 'true') ) }}
 														</div>
 													</div>
 
 													<div class="control-group">
 														{{ Form::label('numprotuario','Nº do prontuário:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('numprotuario',$people->numprotuario,array('class' => 'span6') ) }}
+															{{ Form::text('numprotuario',null,array('class' => 'span6','placeholder' => 'Somente os números', 'required' => 'true') ) }}
 														</div>
 													</div>
 

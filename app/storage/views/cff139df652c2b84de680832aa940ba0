@@ -103,7 +103,7 @@
 												<?php echo Form::label('cpf','Nº do CPF:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('cpf',null,array('class' => 'span6','placeholder' => 'Somente os números') ); ?>
+													<?php echo Form::text('cpf',null,array('class' => 'span6','placeholder' => 'Somente os números', 'required' => 'true') ); ?>
 
 												</div>
 											</div>
@@ -112,14 +112,14 @@
 												<?php echo Form::label('rg','Nº do Registro de Identendidade:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('rg',null,array('class' => 'span6','placeholder' => 'Somente os números') ); ?>
+													<?php echo Form::text('rg',null,array('class' => 'span6','placeholder' => 'Somente os números', 'required' => 'true') ); ?>
 
 												</div>
 											</div>
 
 											<div class="control-group">
 
-												<?php echo Form::label('orgaorg', 'Orgão expedidor:',array('class' => 'control-label')); ?>
+												<?php echo Form::label('orgaorg', 'Orgão expedidor:',array('class' => 'control-label', 'required' => 'true')); ?>
 
 												<div class="controls">
 
@@ -152,7 +152,7 @@
 											<?php echo Form::label('emitedrg','Data de emissão:',array('class' => 'control-label') ); ?>
 
 											<div class="controls">
-												<?php echo Form::text('emitedrg',null,array('class' => 'span2','placeholder' => 'AAAAMMDD') ); ?>
+												<?php echo Form::text('emitedrg',null,array('class' => 'span2','placeholder' => 'AAAAMMDD', 'required' => 'true') ); ?>
 
 											</div>
 										</div>
@@ -161,7 +161,7 @@
 											<?php echo Form::label('numprotuario','Nº do prontuário:',array('class' => 'control-label') ); ?>
 
 											<div class="controls">
-												<?php echo Form::text('numprotuario',null,array('class' => 'span6','placeholder' => 'Somente os números') ); ?>
+												<?php echo Form::text('numprotuario',null,array('class' => 'span6','placeholder' => 'Somente os números', 'required' => 'true') ); ?>
 
 											</div>
 										</div>
@@ -205,7 +205,7 @@
 										<?php echo Form::label('rua','Rua:',array('class' => 'control-label') ); ?>
 
 										<div class="controls">
-											<?php echo Form::text('rua',null,array('class' => 'span6','placeholder' => 'Rua ou avenida') ); ?>
+											<?php echo Form::text('rua',null,array('class' => 'span6','placeholder' => 'Rua ou avenida', 'required' => 'true') ); ?>
 
 										</div>
 									</div>
@@ -214,7 +214,7 @@
 										<?php echo Form::label('logradouro','Bairro:',array('class' => 'control-label') ); ?>
 
 										<div class="controls">
-											<?php echo Form::text('logradouro',null,array('class' => 'span6') ); ?>
+											<?php echo Form::text('logradouro',null,array('class' => 'span6', 'required' => 'true') ); ?>
 
 										</div>
 									</div>
@@ -223,7 +223,7 @@
 										<?php echo Form::label('cep','CEP:',array('class' => 'control-label') ); ?>
 
 										<div class="controls">
-											<?php echo Form::text('cep',null,array('class' => 'span6','placeholder' => 'Somente números') ); ?>
+											<?php echo Form::text('cep',null,array('class' => 'span6','placeholder' => 'Somente números', 'required' => 'true') ); ?>
 
 										</div>
 									</div>
@@ -265,7 +265,7 @@
 									<?php echo Form::label('telephone1','Telefone para contato 1:',array('class' => 'control-label') ); ?>
 
 									<div class="controls">
-										<?php echo Form::text('telephone1',null,array('class' => 'span6') ); ?>
+										<?php echo Form::text('telephone1',null,array('class' => 'span6', 'required' => 'true') ); ?>
 
 									</div>
 								</div>
