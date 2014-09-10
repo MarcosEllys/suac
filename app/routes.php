@@ -23,6 +23,8 @@ Route::post('peoplesref','PeoplesreferencesController@store');
 
 Route::get('peoplesref/{id}','PeoplesreferencesController@show');
 
-Route::get('peoplesref/delete/{id}', 'PeoplesreferencesController@delete');
+Route::get('peoplesref/{id}/edit','PeoplesreferencesController@edit');
+
+Route::get('peoplesref/delete/{id}', 'PeoplesreferencesController@destroy');
 
 Route::post('/peoplesref/delete', 'PeoplesreferencesController@handleDelete');

@@ -8,6 +8,8 @@ class PeoplesreferencesController extends BaseController{
 	{
 		$queryResult = Peoplesreference::all();
 
+		$queryResult = DB::table('peoplesreferences')->paginate(1);
+
 		$vars = array('peoplesreference' => $queryResult);
 
 		$this->layout->content = View::make('peoplesreference.index',$vars);
@@ -59,12 +61,12 @@ class PeoplesreferencesController extends BaseController{
 		$this->layout->content = View::make('peoplesreference.show',$vars);
 	}
 
-	public function edit()
+	public function edit($id)
 	{
 		$this->layout->content = View::make('peoplesreference.edit');
 	}
 
-	public function delete($id)
+	public function destroy($id)
 	{
 		$result = Peoplesreference::find($id);
 

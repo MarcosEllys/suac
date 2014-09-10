@@ -14,7 +14,7 @@
 				Alterar
 			</button>
 		</a>
-		<a href=' {{ action('PeoplesreferencesController@delete', array('id' => $people->id) ) }} '>
+		<a href=' {{ action('PeoplesreferencesController@destroy', array('id' => $people->id) ) }} '>
 			<button class="btn btn-danger">
 				Excluir
 			</button>

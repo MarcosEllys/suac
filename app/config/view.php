@@ -24,8 +24,10 @@ return array(
 	| be easily customized here to show any view you like. A clean view
 	| compatible with Twitter's Bootstrap is given to you by default.
 	|
+	| Padrão -> 'pagination' => 'pagination::slider-3',
+	|
 	*/
 
-	'pagination' => 'pagination::slider-3',
+	'pagination' => 'pagination::simple',
 
 );
