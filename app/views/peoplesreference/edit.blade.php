@@ -182,21 +182,21 @@
 													<div class="control-group">
 														{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('rua',$people->rua,array('class' => 'span6') ) }}
+															{{ Form::text('rua',null,array('class' => 'span6','placeholder' => 'Rua ou avenida', 'required' => 'true') ) }}
 														</div>
 													</div>
 
 													<div class="control-group">
 														{{ Form::label('logradouro','Bairro:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('logradouro',$people->logradouro,array('class' => 'span6') ) }}
+															{{ Form::text('logradouro',null,array('class' => 'span6', 'required' => 'true') ) }}
 														</div>
 													</div>
 
 													<div class="control-group">
 														{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('cep',$people->cep,array('class' => 'span6') ) }}
+															{{ Form::text('cep',null,array('class' => 'span6','placeholder' => 'Somente números', 'required' => 'true') ) }}
 														</div>
 													</div>
 
@@ -217,28 +217,28 @@
 													<div class="control-group">
 														{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('complemento',$people->complemento,array('class' => 'span6') ) }}
+															{{ Form::text('complemento',null,array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio') ) }}
 														</div>
 													</div>
 
 													<div class="control-group">
 														{{ Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('pointreference',$people->pointreference,array('class' => 'span6') ) }}
+															{{ Form::text('pointreference',null,array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ) }}
 														</div>
 													</div>
 
 													<div class="control-group">
 														{{ Form::label('telephone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('telephone1s',$people->telephone1,array('class' => 'span6') ) }}
+															{{ Form::text('telephone1',null,array('class' => 'span6', 'required' => 'true') ) }}
 														</div>
 													</div>
 
 													<div class="control-group">
-														{{ Form::label('telephone2','Telefone para contato 1:',array('class' => 'control-label') ) }}
+														{{ Form::label('telephone2','Telefone para contato 2:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('telephone2',$people->telephone2,array('class' => 'span6') ) }}
+															{{ Form::text('telephone2',null,array('class' => 'span6') ) }}
 														</div>
 													</div>
 
