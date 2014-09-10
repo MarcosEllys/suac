@@ -19,16 +19,23 @@ Route::get('/', function(){
 	->with('peopletotal',$queryResult);
 });
 
+Route::model('people', 'Peoplesreference');
+
 Route::get('peoplesref','PeoplesreferencesController@index');
 
 Route::get('peoplesref/create','PeoplesreferencesController@create');
 
+Route::get('peoplesref/edit/{id}','PeoplesreferencesController@edit');
+
+Route::get('peoplesref/show/{id}','PeoplesreferencesController@show');
+
+Route::get('peoplesref/delete/{id}', 'PeoplesreferencesController@delete');
+
 Route::post('peoplesref','PeoplesreferencesController@store');
 
-Route::get('peoplesref/{id}','PeoplesreferencesController@show');
+Route::post('peoplesref/edit','PeoplesreferencesController@handleEdit');
 
-Route::get('peoplesref/{id}/edit','PeoplesreferencesController@edit');
+Route::post('peoplesref/delete','PeoplesreferencesController@handleDelete');
 
-Route::put('peoplesref/{id}','PeoplesreferencesController@update');
 
-Route::delete('peoplesref/{id}', 'PeoplesreferencesController@destroy');
+

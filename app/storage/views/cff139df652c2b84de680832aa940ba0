@@ -1,10 +1,12 @@
 <?php $__env->startSection('content'); ?>
+			
+<?php echo Form::open(array('action' => 'PeoplesreferencesController@store', 'class' => 'form-horizontal')); ?>
+
+
 <div class="main">
 
 	<div class="main-inner">
 		<div class="container">
-
-			<?php echo Form::open(array('action' => 'PeoplesreferencesController@store', 'id' => 'edit-profile', 'class' => 'form-horizontal')); ?>
 
 
 			<div class="row">

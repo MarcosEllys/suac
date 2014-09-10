@@ -223,6 +223,9 @@
 								</div>
 							</div>
 						</div>
+
+						{{ HTML::link('/peoplesref','Voltar', array('class' => 'btn')) }}
+
 					</div>
 				</div>
 			</div>

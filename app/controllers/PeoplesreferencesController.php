@@ -8,7 +8,7 @@ class PeoplesreferencesController extends BaseController{
 	{
 		$queryResult = Peoplesreference::all();
 
-		$queryResult = DB::table('peoplesreferences')->paginate(5);
+		$queryResult = DB::table('peoplesreferences')->paginate(2);
 
 		$vars = array('peoplesreference' => $queryResult);
 
@@ -33,7 +33,7 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->rg = Input::get('rg');
 		$peoplesreference->orgaorg = Input::get('orgaorg');
 		$peoplesreference->ufrg = Input::get('ufrg');
-		 $peoplesreference->emitedrg = Input::get('emitedrg');
+		$peoplesreference->emitedrg = Input::get('emitedrg');
 		$peoplesreference->numprotuario = Input::get('numprotuario');
 		$peoplesreference->typeunity = Input::get('typeunity');
 		$peoplesreference->nameunity = Input::get('nameunity');
@@ -54,18 +54,45 @@ class PeoplesreferencesController extends BaseController{
 
 	public function edit($id)
 	{
-		$result = Peoplesreference::find($id);
+		$people = Peoplesreference::find($id);
 
-		$vars = array('people' => $result);
+		$vars = array('people' => $people);
 
 		$this->layout->content = View::make('peoplesreference.edit',$vars);
 	}
 
-	
-
-	public function update($id)
+	public function handleEdit()
 	{
-	//
+	
+	$people = Peoplesreference::findOrFail(Input::get('id'));
+
+	$people->name = Input::get('name');
+	$people->apelido = Input::get('apelido');
+	$people->namemather = Input::get('namemather');
+	$people->namefather = Input::get('namefather');
+	$people->nis = Input::get('nis');
+	$people->cpf = Input::get('cpf');
+	$people->rg = Input::get('rg');
+	$people->orgaorg = Input::get('orgaorg');
+	$people->ufrg = Input::get('ufrg');
+	$people->emitedrg = Input::get('emitedrg');
+	$people->numprotuario = Input::get('numprotuario');
+	$people->typeunity = Input::get('typeunity');
+	$people->nameunity = Input::get('nameunity');
+	$people->rua = Input::get('rua');
+	$people->logradouro = Input::get('logradouro');
+	$people->cep = Input::get('cep');
+	$people->municipio = Input::get('municipio');
+	$people->complemento = Input::get('complemento');
+	$people->pointreference = Input::get('pointreference');
+	$people->telephone1 = Input::get('telephone1');
+	$people->telephone2 = Input::get('telephone2');
+	$people->localization = Input::get('localization');
+
+	$people->save();
+
+	return Redirect::to('/peoplesref');
+	
 	}
 
 	public function show($id)
@@ -77,11 +104,27 @@ class PeoplesreferencesController extends BaseController{
 		$this->layout->content = View::make('peoplesreference.show',$vars);
 	}
 
-	public function destroy($id)
+	public function delete($id)
 	{
-		Peoplesreference::find($id)->delete();
 
-		return Redirect::to('peoplesreference.index');
+		$result = Peoplesreference::find($id);
+
+		$vars = array('people' => $result);
+
+		$this->layout->content = View::make('peoplesreference.delete',$vars);
+	}
+
+	public function handleDelete()
+	{
+
+		$id = Input::get('id');
+
+		$people = Peoplesreference::findOrFail($id);
+
+		$people->delete();
+
+		return Redirect::to('/peoplesref');
+
 	}
 
 }

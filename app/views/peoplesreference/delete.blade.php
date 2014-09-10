@@ -1,5 +1,9 @@
 @section('content')
 
+{{ Form::open(array('action' => 'PeoplesreferencesController@handleDelete', 'class' => 'form-horizontal')) }}
+
+<input type="hidden" name="id" value="{{ $people->id }}" />
+
 
 	<div class="main">
 		<div class="main-inner">
@@ -15,7 +19,7 @@
 								/ <a href="/peoplesref"> <i class="icon-group"></i> Pessoas referênciadas</a>
 							</li>
 							<li>
-								/ <i class="icon-eye-open"></i> Ver informações
+								/ <i class="icon-remove"></i> Excluir pessoa referenciada
 							</li>
 						</ol>
 					</div>
@@ -27,8 +31,8 @@
 					<div class="span12">
 						<div class="widget ">
 							<div class="widget-header">
-								<i class="icon-eye-open"></i>
-								<h3>Ver Informações</h3>
+								<i class="icon-remove"></i>
+								<h3>Excluir pessoa referenciada</h3>
 							</div>
 							<div class="widget-content">
 								<div class="tabbable">
@@ -45,7 +49,6 @@
 
 									<div class="tab-content">
 										<div class="tab-pane active" id="formcontrols">
-											<form id="edit-profile" class="form-horizontal">
 												<fieldset>
 
 													<div class="control-group">
@@ -146,11 +149,9 @@
 													</div>
 
 												</fieldset>
-											</form>
 										</div>
 
 										<div class="tab-pane" id="jscontrols">
-											<form id="edit-profile" class="form-horizontal">
 												<fieldset>
 
 													<div class="control-group">
@@ -217,12 +218,18 @@
 														</div>
 													</div>
 												</fieldset>
-											</form>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+
+						{{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
+
+						{{ HTML::link('/peoplesref','Cancelar', array('class' => 'btn')) }}
+
+
+						{{ Form::close() }}
 					</div>
 				</div>
 			</div>

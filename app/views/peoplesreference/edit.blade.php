@@ -1,5 +1,9 @@
 @section('content')
 
+	{{ Form::open(array('action' => 'PeoplesreferencesController@handleEdit', 'class' => 'form-horizontal')) }}
+
+	<input type="hidden" name="id" value="{{ $people->id }}">
+
 
 	<div class="main">
 		<div class="main-inner">
@@ -45,7 +49,6 @@
 
 									<div class="tab-content">
 										<div class="tab-pane active" id="formcontrols">
-											<form id="edit-profile" class="form-horizontal">
 												<fieldset>
 
 													<div class="control-group">
@@ -171,11 +174,9 @@
 													</div>
 
 												</fieldset>
-											</form>
 										</div>
 
 										<div class="tab-pane" id="jscontrols">
-											<form id="edit-profile" class="form-horizontal">
 												<fieldset>
 
 													<div class="control-group">
@@ -230,7 +231,7 @@
 													<div class="control-group">
 														{{ Form::label('telephone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{ Form::text('name',$people->telephone1,array('class' => 'span6') ) }}
+															{{ Form::text('telephone1s',$people->telephone1,array('class' => 'span6') ) }}
 														</div>
 													</div>
 
@@ -256,7 +257,6 @@
 														</div>
 													</div>
 												</fieldset>
-											</form>
 										</div>
 									</div>
 								</div>
@@ -264,6 +264,19 @@
 						</div>
 					</div>
 				</div>
+				<div class="form-actions">
+
+						{{ Form::submit('Save', array('class' => 'btn btn-primary')) }}
+
+						{{ HTML::link('/peoplesref','Cancelar', array('class' => 'btn')) }}
+
+					</div>
+
+					{{ Form::close() }}
+
+				</div>
+
+
 			</div>
 		</div>
 	</div>

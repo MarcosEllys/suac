@@ -1,10 +1,12 @@
 @section('content')
+			
+{{ Form::open(array('action' => 'PeoplesreferencesController@store', 'class' => 'form-horizontal')) }}
+
 <div class="main">
 
 	<div class="main-inner">
 		<div class="container">
 
-			{{ Form::open(array('action' => 'PeoplesreferencesController@store', 'id' => 'edit-profile', 'class' => 'form-horizontal')) }}
 
 			<div class="row">
 				<div class="span12">
