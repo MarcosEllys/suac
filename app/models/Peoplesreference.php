@@ -1,6 +1,9 @@
 <?php
 
- class Peoplesreference extends Eloquent{
+class Peoplesreference extends Eloquent{
 
- 	protected $table = 'peoplesreferences';
- }
+	protected $table = 'peoplesreferences';
+
+	
+
+}

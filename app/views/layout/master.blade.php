@@ -34,13 +34,11 @@
   @include('/layout/navbar')
 
 
-
   @yield('content')
-
 
 
   @include('/layout/footer')
 
 
-  </body>
-  </html>
+</body>
+</html>

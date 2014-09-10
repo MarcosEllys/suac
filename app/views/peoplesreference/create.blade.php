@@ -1,5 +1,5 @@
 @section('content')
-			
+
 {{ Form::open(array('action' => 'PeoplesreferencesController@store', 'class' => 'form-horizontal')) }}
 
 <div class="main">
@@ -26,9 +26,9 @@
 
 			<br>
 
-
 			<div class="row">
 				<div class="span12">
+
 					<div class="widget ">
 						
 						<div class="widget-header">
@@ -56,14 +56,14 @@
 											<div class="control-group">
 												{{ Form::label('name','Nome completo:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('name',null,array('class' => 'span6', 'placeholder' => 'Nome completo') ) }}
+													{{ Form::text('name',null,array('class' => 'span6', 'placeholder' => 'Nome completo', 'required' => 'true') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('apelido','Apelido:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('apelido',null,array('class' => 'span6') ) }}
+													{{ Form::text('apelido',null,array('class' => 'span6', 'required' => 'true') ) }}
 												</div>
 											</div>
 
@@ -84,7 +84,7 @@
 											<div class="control-group">
 												{{ Form::label('nis','Nº do NIS:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('nis',null,array('class' => 'span6','placeholder' => 'Número do NIS da pessoa referenciada') ) }}
+													{{ Form::text('nis',null,array('class' => 'span6','placeholder' => 'Número do NIS da pessoa referenciada', 'required' => 'true') ) }}
 												</div>
 											</div>
 
@@ -119,12 +119,12 @@
 												<div class="controls">
 
 													{{ Form::select('ufrg', array(
-														'ce' => 'CE',
-														'bh' => 'BH',
-														'pe' => 'PE',
-														'df' => 'DF'
-														), 'ce') 
-													}}
+													'ce' => 'CE',
+													'bh' => 'BH',
+													'pe' => 'PE',
+													'df' => 'DF'
+													), 'ce') 
+												}}
 
 
 											</div>
@@ -167,97 +167,95 @@
 												), 'centro') 
 											}}
 											
-											</div>
-										</div>
-										<!-- /Até aqui -->
-
-									</fieldset>
-								</div>
-
-								<div class="tab-pane" id="jscontrols">
-									<fieldset>
-
-										<div class="control-group">
-											{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
-											<div class="controls">
-												{{ Form::text('rua',null,array('class' => 'span6','placeholder' => 'Rua ou avenida') ) }}
-											</div>
-										</div>
-
-										<div class="control-group">
-											{{ Form::label('logradouro','Bairro:',array('class' => 'control-label') ) }}
-											<div class="controls">
-												{{ Form::text('logradouro',null,array('class' => 'span6') ) }}
-											</div>
-										</div>
-
-										<div class="control-group">
-											{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
-											<div class="controls">
-												{{ Form::text('cep',null,array('class' => 'span6','placeholder' => 'Somente números') ) }}
-											</div>
-										</div>
-
-										<div class="control-group">
-											{{ Form::label('municipio','Municipio:',array('class' => 'control-label') ) }}
-											<div class="controls">
-
-												{{ Form::select('municipio', array(
-												'ico' => 'Icó',
-												'russas' => 'Russas',
-												'jaguaribe' => 'Jaguaribe'
-												), 'ico') 
-											}}
-
 										</div>
 									</div>
-
-									<div class="control-group">
-										{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
-										<div class="controls">
-											{{ Form::text('complemento',null,array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio') ) }}
-										</div>
-									</div>
-
-									<div class="control-group">
-										{{ Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ) }}
-										<div class="controls">
-											{{ Form::text('pointreference',null,array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ) }}
-										</div>
-									</div>
-
-									<div class="control-group">
-										{{ Form::label('telephone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
-										<div class="controls">
-											{{ Form::text('telephone1',null,array('class' => 'span6') ) }}
-										</div>
-									</div>
-
-									<div class="control-group">
-										{{ Form::label('telephone2','Telefone para contato 2:',array('class' => 'control-label') ) }}
-										<div class="controls">
-											{{ Form::text('telephone2',null,array('class' => 'span6') ) }}
-										</div>
-									</div>
-
-									<div class="control-group">
-										{{ Form::label('localization', 'Tipo de unidade:',array('class' => 'control-label') ) }}
-										<div class="controls">
-											<label class="radio inline">
-												{{ Form::radio('localization', 'urbano', true) }} Urbano
-											</label>
-											<label class="radio inline">
-												{{ Form::radio('localization', 'rural') }} Rural
-												
-											</label>		
-										</div>
-									</div>
-
 									<!-- /Até aqui -->
 
 								</fieldset>
 							</div>
 
+							<div class="tab-pane" id="jscontrols">
+								<fieldset>
+
+									<div class="control-group">
+										{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											{{ Form::text('rua',null,array('class' => 'span6','placeholder' => 'Rua ou avenida') ) }}
+										</div>
+									</div>
+
+									<div class="control-group">
+										{{ Form::label('logradouro','Bairro:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											{{ Form::text('logradouro',null,array('class' => 'span6') ) }}
+										</div>
+									</div>
+
+									<div class="control-group">
+										{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											{{ Form::text('cep',null,array('class' => 'span6','placeholder' => 'Somente números') ) }}
+										</div>
+									</div>
+
+									<div class="control-group">
+										{{ Form::label('municipio','Municipio:',array('class' => 'control-label') ) }}
+										<div class="controls">
+
+											{{ Form::select('municipio', array(
+											'ico' => 'Icó',
+											'russas' => 'Russas',
+											'jaguaribe' => 'Jaguaribe'
+											), 'ico') 
+										}}
+
+									</div>
+								</div>
+
+								<div class="control-group">
+									{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('complemento',null,array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio') ) }}
+									</div>
+								</div>
+
+								<div class="control-group">
+									{{ Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('pointreference',null,array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ) }}
+									</div>
+								</div>
+
+								<div class="control-group">
+									{{ Form::label('telephone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('telephone1',null,array('class' => 'span6') ) }}
+									</div>
+								</div>
+
+								<div class="control-group">
+									{{ Form::label('telephone2','Telefone para contato 2:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('telephone2',null,array('class' => 'span6') ) }}
+									</div>
+								</div>
+
+								<div class="control-group">
+									{{ Form::label('localization', 'Tipo de unidade:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										<label class="radio inline">
+											{{ Form::radio('localization', 'urbano', true) }} Urbano
+										</label>
+										<label class="radio inline">
+											{{ Form::radio('localization', 'rural') }} Rural
+											
+										</label>		
+									</div>
+								</div>
+
+								<!-- /Até aqui -->
+
+							</fieldset>
 						</div>
 
 					</div>
@@ -270,15 +268,17 @@
 
 	</div>
 
-	<div class="form-actions">
+</div>
 
-		{{ Form::submit('Save', array('class' => 'btn btn-primary')) }}
+<div class="form-actions">
 
-		{{ HTML::link('/peoplesref','Cancelar', array('class' => 'btn')) }}
+	{{ Form::submit('Save', array('class' => 'btn btn-primary')) }}
 
-	</div>
+	{{ HTML::link('/peoplesref','Cancelar', array('class' => 'btn')) }}
 
-	{{ Form::close() }}
+</div>
+
+{{ Form::close() }}
 
 </div>
 
