@@ -8,7 +8,7 @@ class PeoplesreferencesController extends BaseController{
 	{
 		$queryResult = Peoplesreference::all();
 
-		$queryResult = DB::table('peoplesreferences')->paginate(3);
+		$queryResult = DB::table('peoplesreferences')->paginate(8);
 
 		$vars = array('peoplesreference' => $queryResult);
 
@@ -26,6 +26,7 @@ class PeoplesreferencesController extends BaseController{
 
 		$peoplesreference->name = Input::get('name');
 		$peoplesreference->apelido = Input::get('apelido');
+		$peoplesreference->datenascimento = Input::get('datenascimento');		
 		$peoplesreference->namemather = Input::get('namemather');
 		$peoplesreference->namefather = Input::get('namefather');
 		$peoplesreference->nis = Input::get('nis');
@@ -34,7 +35,7 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->orgaorg = Input::get('orgaorg');
 		$peoplesreference->ufrg = Input::get('ufrg');
 		$peoplesreference->emitedrg = Input::get('emitedrg');
-		$peoplesreference->numprotuario = Input::get('numprotuario');
+		$peoplesreference->numprontuario = Input::get('numprontuario');
 		$peoplesreference->typeunity = Input::get('typeunity');
 		$peoplesreference->nameunity = Input::get('nameunity');
 		$peoplesreference->rua = Input::get('rua');
@@ -68,6 +69,7 @@ class PeoplesreferencesController extends BaseController{
 
 	$people->name = Input::get('name');
 	$people->apelido = Input::get('apelido');
+	$people->datenascimento = Input::get('datenascimento');		
 	$people->namemather = Input::get('namemather');
 	$people->namefather = Input::get('namefather');
 	$people->nis = Input::get('nis');
@@ -76,7 +78,7 @@ class PeoplesreferencesController extends BaseController{
 	$people->orgaorg = Input::get('orgaorg');
 	$people->ufrg = Input::get('ufrg');
 	$people->emitedrg = Input::get('emitedrg');
-	$people->numprotuario = Input::get('numprotuario');
+	$people->numprontuario = Input::get('numprontuario');
 	$people->typeunity = Input::get('typeunity');
 	$people->nameunity = Input::get('nameunity');
 	$people->rua = Input::get('rua');

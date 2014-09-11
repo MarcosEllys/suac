@@ -60,10 +60,18 @@
 															{{{ $people->name }}}
 														</div>
 													</div>
+													
 													<div class="control-group">
 														<label class="control-label" for="email">Apelido:</label>
 														<div class="controls">
 															{{{ $people->apelido }}}
+														</div>
+													</div>
+
+													<div class="control-group">
+														<label class="control-label" for="email">Data de nascimento:</label>
+														<div class="controls">
+															{{{ $people->datenascimento }}}
 														</div>
 													</div>
 
@@ -126,12 +134,12 @@
 													<div class="control-group">
 														<label class="control-label" for="email">Número do prontuário:</label>
 														<div class="controls">
-															{{{ $people->numprotuario }}}
+															{{{ $people->numprontuario }}}
 														</div>
 													</div>
 
 													<div class="control-group">
-														<label class="control-label">Tipo de unidade</label>
+														<label class="control-label">Unidade de atendimento:</label>
 
 														<div class="controls">
 															{{{ $people->typeunity }}}

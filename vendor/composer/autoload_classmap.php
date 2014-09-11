@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddColunNumfoda' => $baseDir . '/app/database/migrations/2014_09_11_022153_add_colun_numfoda.php',
+    'AddColunNumprontuario' => $baseDir . '/app/database/migrations/2014_09_11_021540_add_colun_numprontuario.php',
+    'AddDatenascimentoToPeoplesreferencesTable' => $baseDir . '/app/database/migrations/2014_09_11_013436_add_datenascimento_to_peoplesreferences_table.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
     'Boris\\CLIOptionsHandler' => $vendorDir . '/d11wtq/boris/lib/Boris/CLIOptionsHandler.php',
@@ -497,6 +500,7 @@ return array(
     'Net_SSH1' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Net/SSH1.php',
     'Net_SSH2' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Net/SSH2.php',
     'Normalizer' => $vendorDir . '/patchwork/utf8/class/Normalizer.php',
+    'NumprotuarioAI' => $baseDir . '/app/database/migrations/2014_09_11_015308_numprotuarioAI.php',
     'PHPParser_Autoloader' => $vendorDir . '/nikic/php-parser/lib/PHPParser/Autoloader.php',
     'PHPParser_Builder' => $vendorDir . '/nikic/php-parser/lib/PHPParser/Builder.php',
     'PHPParser_BuilderAbstract' => $vendorDir . '/nikic/php-parser/lib/PHPParser/BuilderAbstract.php',
@@ -1562,6 +1566,7 @@ return array(
     'System_SSH_Agent' => $vendorDir . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
     'System_SSH_Agent_Identity' => $vendorDir . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
     'TestCase' => $baseDir . '/app/tests/TestCase.php',
+    'Updatenumprotuario' => $baseDir . '/app/database/migrations/2014_09_11_015959_updatenumprotuario.php',
     'User' => $baseDir . '/app/models/User.php',
     'UserSeeder' => $baseDir . '/app/database/seeds/UserSeeder.php',
     'Whoops\\Exception\\ErrorException' => $vendorDir . '/filp/whoops/src/Whoops/Exception/ErrorException.php',

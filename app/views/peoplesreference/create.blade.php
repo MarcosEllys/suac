@@ -28,7 +28,6 @@
 
 			<div class="row">
 				<div class="span12">
-
 					<div class="widget ">
 						
 						<div class="widget-header">
@@ -56,16 +55,24 @@
 											<div class="control-group">
 												{{ Form::label('name','Nome completo:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('name',null,array('class' => 'span6', 'placeholder' => 'Nome completo', 'required' => 'true') ) }}
+													{{ Form::text('name',null,array('class' => 'span6', 'placeholder' => 'Nome completo') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('apelido','Apelido:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('apelido',null,array('class' => 'span6', 'required' => 'true') ) }}
+													{{ Form::text('apelido',null,array('class' => 'span6') ) }}
 												</div>
 											</div>
+
+											<div class="control-group">
+												{{ Form::label('datenascimento','Data de nascimento:',array('class' => 'control-label') ) }}
+												<div class="controls">
+													{{ Form::text('datenascimento',null,array('class' => 'span2','placeholder' => 'AAAAMMDD') ) }}
+												</div>
+											</div>
+
 
 											<div class="control-group">
 												{{ Form::label('namemather','Nome da mãe:',array('class' => 'control-label') ) }}
@@ -84,180 +91,215 @@
 											<div class="control-group">
 												{{ Form::label('nis','Nº do NIS:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('nis',null,array('class' => 'span6','placeholder' => 'Número do NIS da pessoa referenciada', 'required' => 'true') ) }}
+													{{ Form::text('nis',null,array('class' => 'span6','placeholder' => 'Número do NIS da pessoa referenciada') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('cpf','Nº do CPF:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('cpf',null,array('class' => 'span6','placeholder' => 'Somente os números', 'required' => 'true') ) }}
+													{{ Form::text('cpf',null,array('class' => 'span6','placeholder' => 'Somente os números') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
-												{{ Form::label('rg','Nº do Registro de Identendidade:',array('class' => 'control-label') ) }}
+												{{ Form::label('rg','Nº do RG:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('rg',null,array('class' => 'span6','placeholder' => 'Somente os números', 'required' => 'true') ) }}
+													{{ Form::text('rg',null,array('class' => 'span6','placeholder' => 'Somente os números') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 
-												{{ Form::label('orgaorg', 'Orgão expedidor:',array('class' => 'control-label', 'required' => 'true')) }}
+												{{ Form::label('orgaorg', 'Orgão expedidor:',array('class' => 'control-label')) }}
 												<div class="controls">
 
 													{{ Form::select('orgaorg', array(
-													'ssp' => 'SSP'
-													), 'ssp') }}
-
-												</div>
-											</div>
-
-											<div class="control-group">
-												{{ Form::label('ufrg', 'UF do Registro de Identidade:',array('class' => 'control-label')) }}
-												<div class="controls">
-
-													{{ Form::select('ufrg', array(
-													'ce' => 'CE',
-													'bh' => 'BH',
-													'pe' => 'PE',
-													'df' => 'DF'
-													), 'ce') 
+													'ssp' => 'SSP',
+													'ifp' => 'IFP',
+													'ipf' => 'IPF',
+													'ma' => 'MA',
+													'mm' => 'MM',
+													'mt' => 'MT',
+													'oab' => 'OAB',
+													'crea' => 'CREA',
+													'crm' => 'CRM',
+													'cra' => 'CRA',
+													'me' => 'ME',
+													'cbm' => 'CBM',
+													'cro' => 'CRO',
+													'crf' => 'CRF',
+													), 'ssp') 
 												}}
 
-
 											</div>
 										</div>
 
 										<div class="control-group">
-											{{ Form::label('emitedrg','Data de emissão:',array('class' => 'control-label') ) }}
-											<div class="controls">
-												{{ Form::text('emitedrg',null,array('class' => 'span2','placeholder' => 'AAAAMMDD', 'required' => 'true') ) }}
-											</div>
-										</div>
-
-										<div class="control-group">
-											{{ Form::label('numprotuario','Nº do prontuário:',array('class' => 'control-label') ) }}
-											<div class="controls">
-												{{ Form::text('numprotuario',null,array('class' => 'span6','placeholder' => 'Somente os números', 'required' => 'true') ) }}
-											</div>
-										</div>
-
-										<div class="control-group">
-											{{ Form::label('typeunity', 'Tipo de unidade:',array('class' => 'control-label') ) }}
-											<div class="controls">
-												<label class="radio inline">
-													{{ Form::radio('typeunity', 'cras', true) }} CRAS
-												</label>
-												<label class="radio inline">
-													{{ Form::radio('typeunity', 'creas') }} CREAS
-												</label>
-											</div>
-										</div>
-
-										<div class="control-group">
-											{{ Form::label('nameunity', 'Nome da unidade:',array('class' => 'control-label')) }}
+											{{ Form::label('ufrg', 'UF do Registro de Identidade:',array('class' => 'control-label')) }}
 											<div class="controls">
 
-												{{ Form::select('nameunity', array(
-												'centro' => 'Centro',
-												'alto manoel marioano' => 'Alto Manoel Marioano',
-												'bnh' => 'BNH'
-												), 'centro') 
+												{{ Form::select('ufrg', array(
+												'ce' => 'CE',
+												'pb' => 'PB',
+												'pe' => 'PE',
+												'df' => 'DF',
+												'ba' => 'BA',
+												'al' => 'AL',
+												'rs' => 'RS',
+												'sc' => 'SC',
+												'pr' => 'PR',
+												'sp' => 'SP',
+												'rj' => 'RJ',
+												'mg' => 'MG',
+												'es' => 'ES',
+												'mt' => 'MT',
+												'ms' => 'MS',
+												'go' => 'GO',
+												'rn' => 'RN',
+												'ap' => 'AP',
+												'to' => 'TO',
+												'ac' => 'AC',
+												'ro' => 'RO',
+												'rr' => 'RR',
+												'am' => 'AM',
+												'pa' => 'PA',
+												'ma' => 'MA',
+												'pi' => 'PI',
+												'se' => 'SE'
+												), 'ce') 
 											}}
-											
-										</div>
-									</div>
-									<!-- /Até aqui -->
 
-								</fieldset>
-							</div>
 
-							<div class="tab-pane" id="jscontrols">
-								<fieldset>
-
-									<div class="control-group">
-										{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
-										<div class="controls">
-											{{ Form::text('rua',null,array('class' => 'span6','placeholder' => 'Rua ou avenida', 'required' => 'true') ) }}
 										</div>
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('logradouro','Bairro:',array('class' => 'control-label') ) }}
+										{{ Form::label('emitedrg','Data de emissão:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('logradouro',null,array('class' => 'span6', 'required' => 'true') ) }}
+											{{ Form::text('emitedrg',null,array('class' => 'span2','placeholder' => 'AAAAMMDD') ) }}
 										</div>
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
+										{{ Form::label('numprontuario','Nº do prontuário:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('cep',null,array('class' => 'span6','placeholder' => 'Somente números', 'required' => 'true') ) }}
+											{{ Form::text('numprontuario',null,array('class' => 'span6','placeholder' => 'Somente os números') ) }}
 										</div>
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('municipio','Municipio:',array('class' => 'control-label') ) }}
+										{{ Form::label('typeunity', 'Tipo de unidade:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											<label class="radio inline">
+												{{ Form::radio('typeunity', 'cras', true) }} CRAS
+											</label>
+											<label class="radio inline">
+												{{ Form::radio('typeunity', 'creas') }} CREAS
+											</label>
+										</div>
+									</div>
+
+									<div class="control-group">
+										{{ Form::label('nameunity', 'Unidade de atendimento:',array('class' => 'control-label')) }}
 										<div class="controls">
 
-											{{ Form::select('municipio', array(
-											'ico' => 'Icó',
-											'russas' => 'Russas',
-											'jaguaribe' => 'Jaguaribe'
-											), 'ico') 
+											{{ Form::select('nameunity', array(
+											'centro' => 'Centro',
+											'alto manoel marioano' => 'Alto Manoel Marioano',
+											'bnh' => 'BNH'
+											), 'centro') 
 										}}
 
 									</div>
 								</div>
-
-								<div class="control-group">
-									{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
-									<div class="controls">
-										{{ Form::text('complemento',null,array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio') ) }}
-									</div>
-								</div>
-
-								<div class="control-group">
-									{{ Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ) }}
-									<div class="controls">
-										{{ Form::text('pointreference',null,array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ) }}
-									</div>
-								</div>
-
-								<div class="control-group">
-									{{ Form::label('telephone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
-									<div class="controls">
-										{{ Form::text('telephone1',null,array('class' => 'span6', 'required' => 'true') ) }}
-									</div>
-								</div>
-
-								<div class="control-group">
-									{{ Form::label('telephone2','Telefone para contato 2:',array('class' => 'control-label') ) }}
-									<div class="controls">
-										{{ Form::text('telephone2',null,array('class' => 'span6') ) }}
-									</div>
-								</div>
-
-								<div class="control-group">
-									{{ Form::label('localization', 'Tipo de unidade:',array('class' => 'control-label') ) }}
-									<div class="controls">
-										<label class="radio inline">
-											{{ Form::radio('localization', 'urbano', true) }} Urbano
-										</label>
-										<label class="radio inline">
-											{{ Form::radio('localization', 'rural') }} Rural
-											
-										</label>		
-									</div>
-								</div>
-
 								<!-- /Até aqui -->
 
 							</fieldset>
 						</div>
 
+						<div class="tab-pane" id="jscontrols">
+							<fieldset>
+
+								<div class="control-group">
+									{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('rua',null,array('class' => 'span6','placeholder' => 'Rua ou avenida') ) }}
+									</div>
+								</div>
+
+								<div class="control-group">
+									{{ Form::label('logradouro','Bairro:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('logradouro',null,array('class' => 'span6') ) }}
+									</div>
+								</div>
+
+								<div class="control-group">
+									{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('cep',null,array('class' => 'span6','placeholder' => 'Somente números') ) }}
+									</div>
+								</div>
+
+								<div class="control-group">
+									{{ Form::label('municipio','Municipio:',array('class' => 'control-label') ) }}
+									<div class="controls">
+
+										{{ Form::select('municipio', array(
+										'ico' => 'Icó',
+										'russas' => 'Russas',
+										'jaguaribe' => 'Jaguaribe'
+										), 'ico') 
+									}}
+
+								</div>
+							</div>
+
+							<div class="control-group">
+								{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
+								<div class="controls">
+									{{ Form::text('complemento',null,array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio') ) }}
+								</div>
+							</div>
+
+							<div class="control-group">
+								{{ Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ) }}
+								<div class="controls">
+									{{ Form::text('pointreference',null,array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ) }}
+								</div>
+							</div>
+
+							<div class="control-group">
+								{{ Form::label('telephone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
+								<div class="controls">
+									{{ Form::text('telephone1',null,array('class' => 'span6') ) }}
+								</div>
+							</div>
+
+							<div class="control-group">
+								{{ Form::label('telephone2','Telefone para contato 2:',array('class' => 'control-label') ) }}
+								<div class="controls">
+									{{ Form::text('telephone2',null,array('class' => 'span6') ) }}
+								</div>
+							</div>
+
+							<div class="control-group">
+								{{ Form::label('localization', 'Tipo de unidade:',array('class' => 'control-label') ) }}
+								<div class="controls">
+									<label class="radio inline">
+										{{ Form::radio('localization', 'urbano', true) }} Urbano
+									</label>
+									<label class="radio inline">
+										{{ Form::radio('localization', 'rural') }} Rural
+
+									</label>		
+								</div>
+							</div>
+
+							<!-- /Até aqui -->
+
+						</fieldset>
 					</div>
 
 				</div>
@@ -267,6 +309,8 @@
 		</div>
 
 	</div>
+
+</div>
 
 </div>
 
