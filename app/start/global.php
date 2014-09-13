@@ -41,7 +41,7 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 */
 
 App::missing(function($exception){
-	return Response::make(View::make('/layout/404'),404);
+	return Response::make(View::make('layout.404'),404);
 });
 
 

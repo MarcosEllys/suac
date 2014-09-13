@@ -58,7 +58,7 @@
 												<?php echo Form::label('name','Nome completo:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('name',Input::old('name'),array('class' => 'span6', 'placeholder' => 'Nome completo') ); ?>
+													<?php echo Form::text('name',Input::old('name'),array('class' => 'span6', 'placeholder' => 'Nome completo','required' => 'true') ); ?>
 
 												</div>
 											</div>
@@ -67,7 +67,7 @@
 												<?php echo Form::label('apelido','Apelido:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('apelido',Input::old('apelido'),array('class' => 'span6') ); ?>
+													<?php echo Form::text('apelido',Input::old('apelido'),array('class' => 'span6','maxlength' => '7') ); ?>
 
 												</div>
 											</div>

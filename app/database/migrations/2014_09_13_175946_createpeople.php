@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePeopleReferencesTable extends Migration {
+class Createpeople extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,26 +12,27 @@ class CreatePeopleReferencesTable extends Migration {
 	 */
 	public function up()
 	{
-		
 		Schema::create('peoplesreferences',function(Blueprint $table){	
 
 			$table->increments('id');
 
 			$table
-			->string('name',60);
+			->string('nome',60);
 
 			$table
 			->string('apelido',30)
 			->nullable()
 			->default(null);
 
+			$table->date('nascimento');
+
 			$table
-			->string('namemather',60)
+			->string('nomemae',60)
 			->nullable()
 			->default(null);
 
 			$table
-			->string('namefather',60)
+			->string('nomepai',60)
 			->nullable()
 			->default(null);
 
@@ -54,14 +55,13 @@ class CreatePeopleReferencesTable extends Migration {
 			->date('emitedrg');
 
 			$table
-			->integer('numprotuario')
-			->default(null);
+			->integer('numeroprontuario');
 
 			$table
-			->string('typeunity',5);
+			->string('tipounidade',5);
 
 			$table
-			->string('nameunity',20);
+			->string('nomeunidade',20);
 
 			 /**
 			 * Dados sobre endereço.
@@ -72,12 +72,10 @@ class CreatePeopleReferencesTable extends Migration {
 			 ->string('rua',40);
 
 			 $table
-			 ->string('logradouro',35)
-			 ->default('centro');
+			 ->string('bairro',35);
 
 			 $table
-			 ->integer('cep')
-			 ->default(63430000);
+			 ->integer('cep');
 
 			 $table
 			 ->string('municipio',30)
@@ -94,11 +92,11 @@ class CreatePeopleReferencesTable extends Migration {
 			 ->default(null);
 
 			 $table
-			 ->integer('telephone1');
+			 ->integer('telefone1');
 
 
 			 $table
-			 ->integer('telephone2')
+			 ->integer('telefone2')
 			 ->nullable()
 			 ->default(null);
 
@@ -110,8 +108,7 @@ class CreatePeopleReferencesTable extends Migration {
 
 
 			});
-
-	}	
+	}
 
 	/**
 	 * Reverse the migrations.

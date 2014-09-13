@@ -56,14 +56,14 @@
 											<div class="control-group">
 												{{ Form::label('name','Nome completo:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('name',Input::old('name'),array('class' => 'span6', 'placeholder' => 'Nome completo') ) }}
+													{{ Form::text('name',Input::old('name'),array('class' => 'span6', 'placeholder' => 'Nome completo','required' => 'true') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('apelido','Apelido:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('apelido',Input::old('apelido'),array('class' => 'span6') ) }}
+													{{ Form::text('apelido',Input::old('apelido'),array('class' => 'span6','maxlength' => '7') ) }}
 												</div>
 											</div>
 
