@@ -25,19 +25,8 @@
 				</div>
 			</div>
 
-			<br>
+			<?php echo $__env->make('layout._errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>				
 
-
-					
-	<?php echo $errors->first('name', '<div class="alert">
-									<button type="button" class="close" data-dismiss="alert">×</button>
-									:message
-								</div>'
-					); ?>
-
-					
-
-			<br>
 
 			<div class="row">
 				<div class="span12">
@@ -78,7 +67,7 @@
 												<?php echo Form::label('apelido','Apelido:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('apelido',null,array('class' => 'span6') ); ?>
+													<?php echo Form::text('apelido',Input::old('apelido'),array('class' => 'span6') ); ?>
 
 												</div>
 											</div>

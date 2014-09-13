@@ -52,8 +52,8 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->localization = Input::get('localization');
 
 		$rules = array(
-			'name' => 'required|alpha_num|min:3|max:32'
-		// 'email' => 'required|email',
+			'name' => 'required|alpha_num|min:5|max:32',
+			'apelido' => 'required|between:5,7'
 			);
 
 		$validator = Validator::make($data, $rules);
