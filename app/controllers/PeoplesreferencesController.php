@@ -8,7 +8,7 @@ class PeoplesreferencesController extends BaseController{
 	{
 		$queryResult = Peoplesreference::all();
 
-		$queryResult = DB::table('peoplesreferences')->paginate(8);
+		$queryResult = DB::table('peoplesreferences')->paginate(3);
 
 		$vars = array('peoplesreference' => $queryResult);
 

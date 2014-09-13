@@ -40,7 +40,7 @@
 				<ul class="nav pull-right">
 					
 					<li class="">						
-						<a href="index.html" class="">
+						<a href="/" class="">
 							<i class="icon-chevron-left"></i>
 							Voltar para o inicio
 						</a>
@@ -66,14 +66,12 @@
 				<h2>Who! bad trip man. No more pixesl for you.</h2>
 				
 				<div class="error-details">
-					Sorry, an error has occured! Why not try going back to the <a href="/">página home</a> or perhaps try following!
+					Desculpe, an error has occured! Why not try going back to the <a href="/">página home</a> or perhaps try following!
 					
 				</div> 
 
 				<div class="error-actions">
 					<a href="/" class="btn btn-large btn-primary">
-						<i class="icon-chevron-left"></i>
-						&nbsp;
 						Voltar para o inicio						
 					</a>
 					
