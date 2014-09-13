@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="utf-8">
   <title>SUAC - Sistema Único de Assistência ao CRAS</title>

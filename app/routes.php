@@ -19,6 +19,12 @@ Route::get('/', function(){
 	->with('peopletotal',$queryResult);
 });
 
+Route::get('sobre',function(){
+
+	return View::make('umbrella');
+
+});
+
 Route::model('people', 'Peoplesreference');
 
 Route::get('peoplesref','PeoplesreferencesController@index');

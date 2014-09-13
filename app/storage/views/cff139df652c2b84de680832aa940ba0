@@ -55,10 +55,10 @@
 									<div class="tab-pane active" id="formcontrols">
 										<fieldset>
 											<div class="control-group">
-												<?php echo Form::label('name','Nome completo:',array('class' => 'control-label') ); ?>
+												<?php echo Form::label('nome','Nome completo:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('name',Input::old('name'),array('class' => 'span6', 'placeholder' => 'Nome completo','required' => 'true') ); ?>
+													<?php echo Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'required' => 'true', 'maxlength' => '60') ); ?>
 
 												</div>
 											</div>
@@ -67,35 +67,35 @@
 												<?php echo Form::label('apelido','Apelido:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('apelido',Input::old('apelido'),array('class' => 'span6','maxlength' => '7') ); ?>
+													<?php echo Form::text('apelido',Input::old('apelido'),array('class' => 'span6', 'required' => 'true', 'maxlength' => '30') ); ?>
 
 												</div>
 											</div>
 
 											<div class="control-group">
-												<?php echo Form::label('datenascimento','Data de nascimento:',array('class' => 'control-label') ); ?>
+												<?php echo Form::label('nascimento','Data de nascimento:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('datenascimento',null,array('class' => 'span2','placeholder' => 'AAAAMMDD') ); ?>
+													<?php echo Form::text('nascimento',Input::old('nascimento'),array('class' => 'span2','placeholder' => 'AAAAMMDD', 'required' => 'true') ); ?>
 
 												</div>
 											</div>
 
 
 											<div class="control-group">
-												<?php echo Form::label('namemather','Nome da mãe:',array('class' => 'control-label') ); ?>
+												<?php echo Form::label('nomemae','Nome da mãe:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('namemather',null,array('class' => 'span6') ); ?>
+													<?php echo Form::text('nomemae',Input::old('nomemae'),array('class' => 'span6') ); ?>
 
 												</div>
 											</div>
 
 											<div class="control-group">
-												<?php echo Form::label('namefather','Nome do pai:',array('class' => 'control-label') ); ?>
+												<?php echo Form::label('nomepai','Nome do pai:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('namefather',null,array('class' => 'span6') ); ?>
+													<?php echo Form::text('nomepai',Input::old('nomepai'),array('class' => 'span6') ); ?>
 
 												</div>
 											</div>
@@ -104,7 +104,7 @@
 												<?php echo Form::label('nis','Nº do NIS:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('nis',null,array('class' => 'span6','placeholder' => 'Número do NIS da pessoa referenciada') ); ?>
+													<?php echo Form::text('nis',null,array('class' => 'span6','placeholder' => 'Número do NIS da pessoa referenciada', 'required' => 'true') ); ?>
 
 												</div>
 											</div>
@@ -113,7 +113,7 @@
 												<?php echo Form::label('cpf','Nº do CPF:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('cpf',null,array('class' => 'span6','placeholder' => 'Somente os números') ); ?>
+													<?php echo Form::text('cpf',Input::old('cpf'),array('class' => 'span6','placeholder' => 'Somente os números') ); ?>
 
 												</div>
 											</div>
@@ -122,7 +122,7 @@
 												<?php echo Form::label('rg','Nº do RG:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('rg',null,array('class' => 'span6','placeholder' => 'Somente os números') ); ?>
+													<?php echo Form::text('rg',Input::old('rg'),array('class' => 'span6','placeholder' => 'Somente os números') ); ?>
 
 												</div>
 											</div>
@@ -198,7 +198,7 @@
 										<?php echo Form::label('emitedrg','Data de emissão:',array('class' => 'control-label') ); ?>
 
 										<div class="controls">
-											<?php echo Form::text('emitedrg',null,array('class' => 'span2','placeholder' => 'AAAAMMDD') ); ?>
+											<?php echo Form::text('emitedrg',Input::old('emitedrg'),array('class' => 'span2','placeholder' => 'AAAAMMDD') ); ?>
 
 										</div>
 									</div>
@@ -207,7 +207,7 @@
 										<?php echo Form::label('numprontuario','Nº do prontuário:',array('class' => 'control-label') ); ?>
 
 										<div class="controls">
-											<?php echo Form::text('numprontuario',null,array('class' => 'span6','placeholder' => 'Somente os números') ); ?>
+											<?php echo Form::text('numprontuario',Input::old('numeroprontuario'),array('class' => 'span6','placeholder' => 'Somente os números') ); ?>
 
 										</div>
 									</div>
@@ -251,16 +251,16 @@
 									<?php echo Form::label('rua','Rua:',array('class' => 'control-label') ); ?>
 
 									<div class="controls">
-										<?php echo Form::text('rua',null,array('class' => 'span6','placeholder' => 'Rua ou avenida') ); ?>
+										<?php echo Form::text('rua',Input::old('rua'),array('class' => 'span6','placeholder' => 'Rua ou avenida') ); ?>
 
 									</div>
 								</div>
 
 								<div class="control-group">
-									<?php echo Form::label('logradouro','Bairro:',array('class' => 'control-label') ); ?>
+									<?php echo Form::label('bairro','Bairro:',array('class' => 'control-label') ); ?>
 
 									<div class="controls">
-										<?php echo Form::text('logradouro',null,array('class' => 'span6') ); ?>
+										<?php echo Form::text('bairro',Input::old('bairro'),array('class' => 'span6') ); ?>
 
 									</div>
 								</div>
@@ -269,7 +269,7 @@
 									<?php echo Form::label('cep','CEP:',array('class' => 'control-label') ); ?>
 
 									<div class="controls">
-										<?php echo Form::text('cep',null,array('class' => 'span6','placeholder' => 'Somente números') ); ?>
+										<?php echo Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números') ); ?>
 
 									</div>
 								</div>
@@ -293,7 +293,7 @@
 								<?php echo Form::label('complemento','Complemento:',array('class' => 'control-label') ); ?>
 
 								<div class="controls">
-									<?php echo Form::text('complemento',null,array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio') ); ?>
+									<?php echo Form::text('complemento',Input::old('complemento'),array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio') ); ?>
 
 								</div>
 							</div>
@@ -302,25 +302,25 @@
 								<?php echo Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ); ?>
 
 								<div class="controls">
-									<?php echo Form::text('pointreference',null,array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ); ?>
+									<?php echo Form::text('pointreference',Input::old('pointreference'),array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ); ?>
 
 								</div>
 							</div>
 
 							<div class="control-group">
-								<?php echo Form::label('telephone1','Telefone para contato 1:',array('class' => 'control-label') ); ?>
+								<?php echo Form::label('telefone1','Telefone para contato 1:',array('class' => 'control-label') ); ?>
 
 								<div class="controls">
-									<?php echo Form::text('telephone1',null,array('class' => 'span6') ); ?>
+									<?php echo Form::text('telefone1',Input::old('telefone1'),array('class' => 'span6') ); ?>
 
 								</div>
 							</div>
 
 							<div class="control-group">
-								<?php echo Form::label('telephone2','Telefone para contato 2:',array('class' => 'control-label') ); ?>
+								<?php echo Form::label('telefone2','Telefone para contato 2:',array('class' => 'control-label') ); ?>
 
 								<div class="controls">
-									<?php echo Form::text('telephone2',null,array('class' => 'span6') ); ?>
+									<?php echo Form::text('telefone2',Input::old('telefone2'),array('class' => 'span6') ); ?>
 
 								</div>
 							</div>
