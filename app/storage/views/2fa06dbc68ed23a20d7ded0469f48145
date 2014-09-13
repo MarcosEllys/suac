@@ -22,7 +22,7 @@
         </li>
 
         <li>
-          <a href="#">
+          <a href="ajuda">
             <i class="icon-facetime-video"></i><span>Ajuda</span>           
           </a>
         </li>

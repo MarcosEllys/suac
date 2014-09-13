@@ -25,6 +25,12 @@ Route::get('sobre',function(){
 
 });
 
+Route::get('ajuda',function(){
+
+	return View::make('helpers.index');
+
+});
+
 Route::model('people', 'Peoplesreference');
 
 Route::get('peoplesref','PeoplesreferencesController@index');

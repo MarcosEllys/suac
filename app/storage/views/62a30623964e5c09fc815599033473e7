@@ -8,6 +8,8 @@
 
   <?php /* Imports */ ?>
 
+  <?php echo $__env->yieldContent('header'); ?>
+
   <?php echo HTML::style( asset('css/bootstrap.min.css') ); ?>
 
   <?php echo HTML::style( asset('css/bootstrap-responsive.min.css') ); ?>
@@ -27,8 +29,6 @@
 
   <?php echo HTML::script( asset('js/base.js') ); ?>
 
-
-  <?php echo $__env->yieldContent('header'); ?>
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
 
