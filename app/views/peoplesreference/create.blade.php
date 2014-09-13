@@ -26,6 +26,18 @@
 
 			<br>
 
+
+					
+	{{ $errors->first('name', '<div class="alert">
+									<button type="button" class="close" data-dismiss="alert">×</button>
+									:message
+								</div>'
+					) 
+	}}
+					
+
+			<br>
+
 			<div class="row">
 				<div class="span12">
 					<div class="widget ">
@@ -55,7 +67,7 @@
 											<div class="control-group">
 												{{ Form::label('name','Nome completo:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('name',null,array('class' => 'span6', 'placeholder' => 'Nome completo') ) }}
+													{{ Form::text('name',Input::old('name'),array('class' => 'span6', 'placeholder' => 'Nome completo') ) }}
 												</div>
 											</div>
 

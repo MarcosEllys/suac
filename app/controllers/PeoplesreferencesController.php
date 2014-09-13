@@ -22,6 +22,9 @@ class PeoplesreferencesController extends BaseController{
 
 	public function store()
 	{
+
+		$data = Input::all();
+
 		$peoplesreference = new Peoplesreference();
 
 		$peoplesreference->name = Input::get('name');
@@ -48,9 +51,23 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->telephone2 = Input::get('telephone2');
 		$peoplesreference->localization = Input::get('localization');
 
-		$peoplesreference->save();
+		$rules = array(
+			'name' => 'required|alpha_num|min:3|max:32'
+		// 'email' => 'required|email',
+			);
 
-		return Redirect::action('PeoplesreferencesController@index');
+		$validator = Validator::make($data, $rules);
+
+		if ($validator->passes()) {
+
+			$peoplesreference->save();
+
+			return Redirect::action('PeoplesreferencesController@index');
+
+		}
+
+		return Redirect::to('peoplesref/create')->withInput()->withErrors($validator);
+
 	}
 
 	public function edit($id)
@@ -64,37 +81,37 @@ class PeoplesreferencesController extends BaseController{
 
 	public function handleEdit()
 	{
-	
-	$people = Peoplesreference::findOrFail(Input::get('id'));
 
-	$people->name = Input::get('name');
-	$people->apelido = Input::get('apelido');
-	$people->datenascimento = Input::get('datenascimento');		
-	$people->namemather = Input::get('namemather');
-	$people->namefather = Input::get('namefather');
-	$people->nis = Input::get('nis');
-	$people->cpf = Input::get('cpf');
-	$people->rg = Input::get('rg');
-	$people->orgaorg = Input::get('orgaorg');
-	$people->ufrg = Input::get('ufrg');
-	$people->emitedrg = Input::get('emitedrg');
-	$people->numprontuario = Input::get('numprontuario');
-	$people->typeunity = Input::get('typeunity');
-	$people->nameunity = Input::get('nameunity');
-	$people->rua = Input::get('rua');
-	$people->logradouro = Input::get('logradouro');
-	$people->cep = Input::get('cep');
-	$people->municipio = Input::get('municipio');
-	$people->complemento = Input::get('complemento');
-	$people->pointreference = Input::get('pointreference');
-	$people->telephone1 = Input::get('telephone1');
-	$people->telephone2 = Input::get('telephone2');
-	$people->localization = Input::get('localization');
+		$people = Peoplesreference::findOrFail(Input::get('id'));
 
-	$people->save();
+		$people->name = Input::get('name');
+		$people->apelido = Input::get('apelido');
+		$people->datenascimento = Input::get('datenascimento');		
+		$people->namemather = Input::get('namemather');
+		$people->namefather = Input::get('namefather');
+		$people->nis = Input::get('nis');
+		$people->cpf = Input::get('cpf');
+		$people->rg = Input::get('rg');
+		$people->orgaorg = Input::get('orgaorg');
+		$people->ufrg = Input::get('ufrg');
+		$people->emitedrg = Input::get('emitedrg');
+		$people->numprontuario = Input::get('numprontuario');
+		$people->typeunity = Input::get('typeunity');
+		$people->nameunity = Input::get('nameunity');
+		$people->rua = Input::get('rua');
+		$people->logradouro = Input::get('logradouro');
+		$people->cep = Input::get('cep');
+		$people->municipio = Input::get('municipio');
+		$people->complemento = Input::get('complemento');
+		$people->pointreference = Input::get('pointreference');
+		$people->telephone1 = Input::get('telephone1');
+		$people->telephone2 = Input::get('telephone2');
+		$people->localization = Input::get('localization');
 
-	return Redirect::to('/peoplesref');
-	
+		$people->save();
+
+		return Redirect::to('/peoplesref');
+
 	}
 
 	public function show($id)
