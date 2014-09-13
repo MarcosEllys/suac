@@ -8,134 +8,45 @@
 
   <?php /* Imports */ ?>
 
-  <?php echo HTML::style('public/css/bootstrap.min.css'); ?>
+  <?php echo HTML::style( asset('css/bootstrap.min.css') ); ?>
 
-  <?php echo HTML::style('public/css/bootstrap-responsive.min.css'); ?>
+  <?php echo HTML::style( asset('css/bootstrap-responsive.min.css') ); ?>
 
-  <?php echo HTML::style('public/css/font-awesome.css'); ?>
+  <?php echo HTML::style( asset('css/font-awesome.css') ); ?>
 
-  <?php echo HTML::style('public/css/style.css'); ?>
+  <?php echo HTML::style( asset('css/style.css') ); ?>
 
-  <?php echo HTML::style('public/css/pages/dashborad.public/css'); ?>
+  <?php echo HTML::style( asset('css/pages/dashboard.css') ); ?>
 
 
 
-  <?php echo HTML::script('public/js/jquery-1.7.2.min.js'); ?>
 
-  <?php echo HTML::script('public/js/bootstrap.js'); ?>
+  <?php echo HTML::script( asset('js/jquery-1.7.2.min.js') ); ?>
 
-  <?php echo HTML::script('public/js/base.js'); ?>
+  <?php echo HTML::script( asset('js/bootstrap.js') ); ?>
 
+  <?php echo HTML::script( asset('js/base.js') ); ?>
+
+
+  <?php echo $__env->yieldContent('header'); ?>
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
-
-  <?php echo $__env->yieldContent('header'); ?> 
 
 </head>
 <body>
 
-  <?php /* Begin Top */ ?>
+  
+  <?php echo $__env->make('/layout/top', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> 
 
 
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="/suacInterface/home.php">Sistema Único de Assistência ao CRAS - SUAC </a>
-        <div class="nav-collapse">
-          <ul class="nav pull-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                class="icon-user"></i> Assistente Social <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="/suacInterface/perfil.php">Perfil</a>
-                  </li>
-                  <li>
-                    <a href="index.php">Sair</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+  <?php echo $__env->make('/layout/navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
-
-    <?php /* End Top */ ?>
-
-    <?php /* Begin Navbar */ ?>
-
-    <div class="subnavbar">
-      <div class="subnavbar-inner">
-        <div class="container">
-          <ul class="mainnav">
-            <li><a href="/suacInterface/home.php"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
-
-            <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 
-              <i class=" icon-group"></i><span>Assistência CRAS</span> <b class="caret"></b></a>
-
-              <ul class="dropdown-menu">
-                <li><a href="/suacInterface/pessoaREF/">Pessoas referênciadas</a></li>
-                <li><a href="#">Famílias</a></li>
-                <li><a href="/suacInterface/agendamento.php">Agendar atendimento</a></li>
-              </ul>
-            </li>
-
-            <li>
-              <a href="/suacInterface/reports/">
-                <i class="icon-list-alt"></i><span>Relatórios</span>            
-              </a>
-            </li>
-
-            <li>
-              <a href="/suacInterface/help/">
-                <i class="icon-facetime-video"></i><span>Ajuda</span>           
-              </a>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <?php /* End Navbar */ ?>
+  <?php echo $__env->yieldContent('content'); ?>
 
 
+  <?php echo $__env->make('/layout/footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
-
-
-
-
-    <?php echo $__env->yieldContent('content'); ?>
-
-
-
-
-
-
-
-
-    <?php /* Begin footer */ ?>
-
-    <div class="footer">
-      <div class="footer-inner">
-        <div class="container">
-          <div class="row">
-            <div class="span12">
-              © 2014 Desenvolvido por <a href="#">Umbrella Software</a>.
-            </div>
-          </div> 
-        </div> 
-      </div> 
-    </div>
-
-    <?php /* End footer */ ?>
-
-  </body>
-  </html>
+</body>
+</html>

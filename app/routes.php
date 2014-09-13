@@ -37,5 +37,8 @@ Route::post('peoplesref/edit','PeoplesreferencesController@handleEdit');
 
 Route::post('peoplesref/delete','PeoplesreferencesController@handleDelete');
 
+Route::get('teste',function(){
 
+	return View::make('/layout/404');
 
+});
