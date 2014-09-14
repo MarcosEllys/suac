@@ -107,7 +107,7 @@
 												<br>
 												1 - selecione a aba "Assistência Cras".
 												<br>
-												2 - clique em "<a href="../agendamento.php">Agendar atendimento</a>".
+												2 - clique em "<a href="#">Agendar atendimento</a>".
 												<br>
 												3 - Selecione uma pessoa referenciada.
 												<br>
@@ -119,7 +119,7 @@
 												<br>
 												<br>
 
-												<a href="atendimento.php">Clique aqui</a> e confira um tutorial.
+												<a href="#">Clique aqui</a> e confira um tutorial.
 
 											</p>
 

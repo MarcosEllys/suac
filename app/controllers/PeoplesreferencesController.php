@@ -2,8 +2,6 @@
 
 class PeoplesreferencesController extends BaseController{
 
-	protected $layout = '/layout.master';
-
 	public function index()
 	{
 		$queryResult = Peoplesreference::all();
@@ -65,9 +63,10 @@ class PeoplesreferencesController extends BaseController{
 
 			return Redirect::action('PeoplesreferencesController@index');
 
-		}
+		} else {
 
-		return Redirect::to('peoplesref/create')->withInput()->withErrors($validator);
+			return Redirect::to('peoplesref/create')->withInput()->withErrors($validator);
+		}
 
 	}
 
