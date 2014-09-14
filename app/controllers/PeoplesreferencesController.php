@@ -6,7 +6,7 @@ class PeoplesreferencesController extends BaseController{
 	{
 		$queryResult = Peoplesreference::all();
 
-		$queryResult = DB::table('peoplesreferences')->paginate(3);
+		$queryResult = DB::table('peoplesreferences')->paginate(5);
 
 		$vars = array('peoplesreference' => $queryResult);
 
@@ -53,7 +53,7 @@ class PeoplesreferencesController extends BaseController{
 			// 'nome' => 'required|alpha|between:10,60',
 			// 'apelido' => 'required|between:3,30',
 			// // 'nis' => 'required|integer|between:4,4',
-			// 'nascimento' => 'required|date'
+			'nascimento' => 'required|date'
 			);
 
 		$validator = Validator::make($data, $rules);

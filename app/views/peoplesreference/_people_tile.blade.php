@@ -1,7 +1,7 @@
 	<tr>
-	<td> {{{ $people->id }}} </td>
-	<td>{{{ $people->nome }}}</td>
-	<td>{{{ $people->apelido }}}</td>
+	<td>{{{$people->id}}}</td>
+	<td>{{{$people->nome }}}</td>
+	<td>{{{$people->apelido}}}</td>
 	<td class="td-actions">
 
 		<a href=' {{ action('PeoplesreferencesController@show', $people->id ) }} '>

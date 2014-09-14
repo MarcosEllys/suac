@@ -40,9 +40,9 @@
 							<table class="table table-striped table-bordered">
 								<thead>
 									<tr>
-										<th> Id</th>
-										<th> Nome </th>
-										<th> Apelido</th>
+										<th>Id</th>
+										<th>Nome</th>
+										<th>Apelido</th>
 										<th class="td-actions">Ações</th>
 									</tr>
 								</thead>
