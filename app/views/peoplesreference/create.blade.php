@@ -56,21 +56,21 @@
 											<div class="control-group">
 												{{ Form::label('nome','Nome completo:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'required' => 'true', 'maxlength' => '60') ) }}
+													{{ Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '60') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('apelido','Apelido:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('apelido',Input::old('apelido'),array('class' => 'span6', 'required' => 'true', 'maxlength' => '30') ) }}
+													{{ Form::text('apelido',Input::old('apelido'),array('class' => 'span6', 'maxlength' => '30') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('nascimento','Data de nascimento:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('nascimento',Input::old('nascimento'),array('class' => 'span2','placeholder' => 'AAAAMMDD', 'required' => 'true') ) }}
+													{{ Form::text('nascimento',Input::old('nascimento'),array('class' => 'span2','placeholder' => 'AAAAMMDD') ) }}
 												</div>
 											</div>
 
@@ -92,7 +92,7 @@
 											<div class="control-group">
 												{{ Form::label('nis','Nº do NIS:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('nis',null,array('class' => 'span6','placeholder' => 'Número do NIS da pessoa referenciada', 'required' => 'true') ) }}
+													{{ Form::text('nis',null,array('class' => 'span6','placeholder' => 'Número do NIS da pessoa referenciada') ) }}
 												</div>
 											</div>
 
@@ -183,29 +183,29 @@
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('numprontuario','Nº do prontuário:',array('class' => 'control-label') ) }}
+										{{ Form::label('numeroprontuario','Nº do prontuário:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('numprontuario',Input::old('numeroprontuario'),array('class' => 'span6','placeholder' => 'Somente os números') ) }}
+											{{ Form::text('numeroprontuario',Input::old('numeroprontuario'),array('class' => 'span6','placeholder' => 'Somente os números') ) }}
 										</div>
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('typeunity', 'Tipo de unidade:',array('class' => 'control-label') ) }}
+										{{ Form::label('tipounidade', 'Tipo de unidade:',array('class' => 'control-label') ) }}
 										<div class="controls">
 											<label class="radio inline">
-												{{ Form::radio('typeunity', 'cras', true) }} CRAS
+												{{ Form::radio('tipounidade', 'cras', true) }} CRAS
 											</label>
 											<label class="radio inline">
-												{{ Form::radio('typeunity', 'creas') }} CREAS
+												{{ Form::radio('tipounidade', 'creas') }} CREAS
 											</label>
 										</div>
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('nameunity', 'Unidade de atendimento:',array('class' => 'control-label')) }}
+										{{ Form::label('nomeunidade', 'Unidade de atendimento:',array('class' => 'control-label')) }}
 										<div class="controls">
 
-											{{ Form::select('nameunity', array(
+											{{ Form::select('nomeunidade', array(
 											'centro' => 'Centro',
 											'alto manoel marioano' => 'Alto Manoel Marioano',
 											'bnh' => 'BNH'

@@ -50,9 +50,10 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->localization = Input::get('localization');
 
 		$rules = array(
-			'nome' => 'required|alpha|between:10,60',
-			'apelido' => 'required|between:3,30',
-			'nis' => 'required|integer|between:4,4'
+			// 'nome' => 'required|alpha|between:10,60',
+			// 'apelido' => 'required|between:3,30',
+			// // 'nis' => 'required|integer|between:4,4',
+			// 'nascimento' => 'required|date'
 			);
 
 		$validator = Validator::make($data, $rules);
@@ -84,28 +85,28 @@ class PeoplesreferencesController extends BaseController{
 
 		$people = Peoplesreference::findOrFail(Input::get('id'));
 
-		$people->name = Input::get('name');
+		$people->nome = Input::get('nome');
 		$people->apelido = Input::get('apelido');
-		$people->datenascimento = Input::get('datenascimento');		
-		$people->namemather = Input::get('namemather');
-		$people->namefather = Input::get('namefather');
+		$people->nascimento = Input::get('nascimento');		
+		$people->nomemae = Input::get('nomemae');
+		$people->nomepai = Input::get('nomepai');
 		$people->nis = Input::get('nis');
 		$people->cpf = Input::get('cpf');
 		$people->rg = Input::get('rg');
 		$people->orgaorg = Input::get('orgaorg');
 		$people->ufrg = Input::get('ufrg');
 		$people->emitedrg = Input::get('emitedrg');
-		$people->numprontuario = Input::get('numprontuario');
-		$people->typeunity = Input::get('typeunity');
-		$people->nameunity = Input::get('nameunity');
+		$people->numeroprontuario = Input::get('numeroprontuario');
+		$people->tipounidade = Input::get('tipounidade');
+		$people->nomeunidade = Input::get('nomeunidade');
 		$people->rua = Input::get('rua');
-		$people->logradouro = Input::get('logradouro');
+		$people->bairro = Input::get('bairro');
 		$people->cep = Input::get('cep');
 		$people->municipio = Input::get('municipio');
 		$people->complemento = Input::get('complemento');
 		$people->pointreference = Input::get('pointreference');
-		$people->telephone1 = Input::get('telephone1');
-		$people->telephone2 = Input::get('telephone2');
+		$people->telefone1 = Input::get('telefone1');
+		$people->telefone2 = Input::get('telefone2');
 		$people->localization = Input::get('localization');
 
 		$people->save();

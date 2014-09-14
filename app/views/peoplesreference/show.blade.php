@@ -57,7 +57,7 @@
 													<div class="control-group">
 														<label class="control-label" for="email">Pessoa referenciada:</label>
 														<div class="controls">
-															{{{ $people->name }}}
+															{{{ $people->nome }}}
 														</div>
 													</div>
 													
@@ -71,21 +71,21 @@
 													<div class="control-group">
 														<label class="control-label" for="email">Data de nascimento:</label>
 														<div class="controls">
-															{{{ $people->datenascimento }}}
+															{{{ $people->nascimento }}}
 														</div>
 													</div>
 
 													<div class="control-group">
 														<label class="control-label" for="email">Nome da mãe:</label>
 														<div class="controls">
-															{{{ $people->namemather }}}
+															{{{ $people->nomemae }}}
 														</div>
 													</div>
 
 													<div class="control-group">
 														<label class="control-label" for="email">Nome do pai:</label>
 														<div class="controls">
-															{{{ $people->namefather }}}
+															{{{ $people->nomepai }}}
 														</div>	
 													</div>
 
@@ -134,7 +134,7 @@
 													<div class="control-group">
 														<label class="control-label" for="email">Número do prontuário:</label>
 														<div class="controls">
-															{{{ $people->numprontuario }}}
+															{{{ $people->numeroprontuario }}}
 														</div>
 													</div>
 
@@ -142,14 +142,14 @@
 														<label class="control-label">Unidade de atendimento:</label>
 
 														<div class="controls">
-															{{{ $people->typeunity }}}
+															{{{ $people->tipounidade }}}
 														</div>
 													</div>
 
 													<div class="control-group">
 														<label class="control-label" for="email">Nome da Unidade:</label>
 														<div class="controls">
-															{{{ $people->nameunity }}}
+															{{{ $people->nomeunidade }}}
 														</div>
 													</div>
 
@@ -171,7 +171,7 @@
 													<div class="control-group">
 														<label class="control-label" for="email">Bairro:</label>
 														<div class="controls">
-															{{{ $people->logradouro }}}
+															{{{ $people->bairro }}}
 														</div>
 													</div>
 
@@ -206,14 +206,14 @@
 													<div class="control-group">
 														<label class="control-label" for="email">Telefone para contato 1:</label>
 														<div class="controls">
-															{{{ $people->telephone1 }}}
+															{{{ $people->telefone1 }}}
 														</div>
 													</div>
 
 													<div class="control-group">
 														<label class="control-label" for="email">Telefone para contato 2:</label>
 														<div class="controls">
-															{{{ $people->telephone2 }}}
+															{{{ $people->telefone2 }}}
 														</div>
 													</div>
 

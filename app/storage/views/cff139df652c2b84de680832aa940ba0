@@ -58,7 +58,7 @@
 												<?php echo Form::label('nome','Nome completo:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'required' => 'true', 'maxlength' => '60') ); ?>
+													<?php echo Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '60') ); ?>
 
 												</div>
 											</div>
@@ -67,7 +67,7 @@
 												<?php echo Form::label('apelido','Apelido:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('apelido',Input::old('apelido'),array('class' => 'span6', 'required' => 'true', 'maxlength' => '30') ); ?>
+													<?php echo Form::text('apelido',Input::old('apelido'),array('class' => 'span6', 'maxlength' => '30') ); ?>
 
 												</div>
 											</div>
@@ -76,7 +76,7 @@
 												<?php echo Form::label('nascimento','Data de nascimento:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('nascimento',Input::old('nascimento'),array('class' => 'span2','placeholder' => 'AAAAMMDD', 'required' => 'true') ); ?>
+													<?php echo Form::text('nascimento',Input::old('nascimento'),array('class' => 'span2','placeholder' => 'AAAAMMDD') ); ?>
 
 												</div>
 											</div>
@@ -104,7 +104,7 @@
 												<?php echo Form::label('nis','Nº do NIS:',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
-													<?php echo Form::text('nis',null,array('class' => 'span6','placeholder' => 'Número do NIS da pessoa referenciada', 'required' => 'true') ); ?>
+													<?php echo Form::text('nis',null,array('class' => 'span6','placeholder' => 'Número do NIS da pessoa referenciada') ); ?>
 
 												</div>
 											</div>
@@ -204,33 +204,33 @@
 									</div>
 
 									<div class="control-group">
-										<?php echo Form::label('numprontuario','Nº do prontuário:',array('class' => 'control-label') ); ?>
+										<?php echo Form::label('numeroprontuario','Nº do prontuário:',array('class' => 'control-label') ); ?>
 
 										<div class="controls">
-											<?php echo Form::text('numprontuario',Input::old('numeroprontuario'),array('class' => 'span6','placeholder' => 'Somente os números') ); ?>
+											<?php echo Form::text('numeroprontuario',Input::old('numeroprontuario'),array('class' => 'span6','placeholder' => 'Somente os números') ); ?>
 
 										</div>
 									</div>
 
 									<div class="control-group">
-										<?php echo Form::label('typeunity', 'Tipo de unidade:',array('class' => 'control-label') ); ?>
+										<?php echo Form::label('tipounidade', 'Tipo de unidade:',array('class' => 'control-label') ); ?>
 
 										<div class="controls">
 											<label class="radio inline">
-												<?php echo Form::radio('typeunity', 'cras', true); ?> CRAS
+												<?php echo Form::radio('tipounidade', 'cras', true); ?> CRAS
 											</label>
 											<label class="radio inline">
-												<?php echo Form::radio('typeunity', 'creas'); ?> CREAS
+												<?php echo Form::radio('tipounidade', 'creas'); ?> CREAS
 											</label>
 										</div>
 									</div>
 
 									<div class="control-group">
-										<?php echo Form::label('nameunity', 'Unidade de atendimento:',array('class' => 'control-label')); ?>
+										<?php echo Form::label('nomeunidade', 'Unidade de atendimento:',array('class' => 'control-label')); ?>
 
 										<div class="controls">
 
-											<?php echo Form::select('nameunity', array(
+											<?php echo Form::select('nomeunidade', array(
 											'centro' => 'Centro',
 											'alto manoel marioano' => 'Alto Manoel Marioano',
 											'bnh' => 'BNH'

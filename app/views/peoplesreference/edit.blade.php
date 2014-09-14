@@ -54,9 +54,9 @@
 									<div class="tab-pane active" id="formcontrols">
 										<fieldset>
 											<div class="control-group">
-												{{ Form::label('name','Nome completo:',array('class' => 'control-label') ) }}
+												{{ Form::label('nome','Nome completo:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('name',$people->name,array('class' => 'span6') ) }}
+													{{ Form::text('nome',$people->nome,array('class' => 'span6') ) }}
 												</div>
 											</div>
 
@@ -68,24 +68,24 @@
 											</div>
 
 											<div class="control-group">
-												{{ Form::label('datenascimento','Data de nascimento:',array('class' => 'control-label') ) }}
+												{{ Form::label('nascimento','Data de nascimento:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('datenascimento',$people->datenascimento,array('class' => 'span2') ) }}
+													{{ Form::text('nascimento',$people->nascimento,array('class' => 'span2') ) }}
 												</div>
 											</div>
 
 
 											<div class="control-group">
-												{{ Form::label('namemather','Nome da mãe:',array('class' => 'control-label') ) }}
+												{{ Form::label('nomemae','Nome da mãe:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('namemather',$people->namemather,array('class' => 'span6') ) }}
+													{{ Form::text('nomemae',$people->nomemae,array('class' => 'span6') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
-												{{ Form::label('namefather','Nome do pai:',array('class' => 'control-label') ) }}
+												{{ Form::label('nomepai','Nome do pai:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('namefather',$people->namefather,array('class' => 'span6') ) }}
+													{{ Form::text('nomepai',$people->nomepai,array('class' => 'span6') ) }}
 												</div>
 											</div>
 
@@ -183,33 +183,33 @@
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('numprontuario','Nº do prontuário:',array('class' => 'control-label') ) }}
+										{{ Form::label('numeroprontuario','Nº do prontuário:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('numprontuario',$people->numprontuario,array('class' => 'span6') ) }}
+											{{ Form::text('numeroprontuario',$people->numeroprontuario,array('class' => 'span6') ) }}
 										</div>
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('typeunity', 'Tipo de unidade:',array('class' => 'control-label') ) }}
+										{{ Form::label('tipounidade', 'Tipo de unidade:',array('class' => 'control-label') ) }}
 										<div class="controls">
 											<label class="radio inline">
-												{{ Form::radio('typeunity', 'cras', true) }} CRAS
+												{{ Form::radio('tipounidade', 'cras', true) }} CRAS
 											</label>
 											<label class="radio inline">
-												{{ Form::radio('typeunity', 'creas') }} CREAS
+												{{ Form::radio('tipounidade', 'creas') }} CREAS
 											</label>
 										</div>
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('nameunity', 'Unidade de atendimento:',array('class' => 'control-label')) }}
+										{{ Form::label('nomeunidade', 'Unidade de atendimento:',array('class' => 'control-label')) }}
 										<div class="controls">
 
-											{{ Form::select('nameunity', array(
+											{{ Form::select('nomeunidade', array(
 											'centro' => 'Centro',
 											'alto manoel marioano' => 'Alto Manoel Marioano',
 											'bnh' => 'BNH'
-											), $people->nameunity) 
+											), $people->nomeunidade) 
 										}}
 
 									</div>
@@ -230,9 +230,9 @@
 								</div>
 
 								<div class="control-group">
-									{{ Form::label('logradouro','Bairro:',array('class' => 'control-label') ) }}
+									{{ Form::label('bairro','Bairro:',array('class' => 'control-label') ) }}
 									<div class="controls">
-										{{ Form::text('logradouro',$people->logradouro,array('class' => 'span6') ) }}
+										{{ Form::text('bairro',$people->bairro,array('class' => 'span6') ) }}
 									</div>
 								</div>
 
@@ -272,16 +272,16 @@
 							</div>
 
 							<div class="control-group">
-								{{ Form::label('telephone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
+								{{ Form::label('telefone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{ Form::text('telephone1',$people->telephone1,array('class' => 'span6') ) }}
+									{{ Form::text('telefone1',$people->telefone1,array('class' => 'span6') ) }}
 								</div>
 							</div>
 
 							<div class="control-group">
-								{{ Form::label('telephone2','Telefone para contato 2:',array('class' => 'control-label') ) }}
+								{{ Form::label('telefone2','Telefone para contato 2:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{ Form::text('telephone2',$people->telephone2,array('class' => 'span6') ) }}
+									{{ Form::text('telefone2',$people->telefone2,array('class' => 'span6') ) }}
 								</div>
 							</div>
 
