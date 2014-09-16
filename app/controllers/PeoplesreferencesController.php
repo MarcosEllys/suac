@@ -21,8 +21,6 @@ class PeoplesreferencesController extends BaseController{
 	public function store()
 	{
 
-		$data = Input::all();
-
 		$peoplesreference = new Peoplesreference();
 
 		$peoplesreference->nome = Input::get('nome');
@@ -50,13 +48,16 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->localization = Input::get('localization');
 
 		$rules = array(
-			// 'nome' => 'required|alpha|between:10,60',
+			'nome' => 'required|alpha|between:10,60',
 			// 'apelido' => 'required|between:3,30',
 			// // 'nis' => 'required|integer|between:4,4',
-			'nascimento' => 'required|date'
 			);
 
-		$validator = Validator::make($data, $rules);
+		$messages = array(
+			'nome.required' => 'Nome completo porra'
+			);
+
+		$validator = Validator::make(Input::all(), $rules,$messages);
 
 		if ($validator->passes()) {
 
