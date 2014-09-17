@@ -1,242 +1,82 @@
 @section('content')
 
+<div class="main">
+	<div class="main-inner">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
 
-	<div class="main">
-		<div class="main-inner">
-			<div class="container">
 
-				<div class="row">
-					<div class="span12">
-						<ol class="breadcrumb">
-							<li>
-								<a href="/"><i class="icon-dashboard"></i> Home</a>
-							</li>
-							<li>
-								/ <a href="/peoplesref"> <i class="icon-group"></i> Pessoas referênciadas</a>
-							</li>
-							<li>
-								/ <i class="icon-eye-open"></i> Ver informações
-							</li>
-						</ol>
-					</div>
+					<ol class="breadcrumb">
+						<li><a href="/"><i class="icon-dashboard"></i> Home</a></li>
+						<li class="active">  /  <i class="icon-group"></i> Pessoas referênciadas</li>
+					</ol>
+
+
+				</div>
+			</div>
+
+			<br>
+
+			<div class="row">
+
+				<div class="span7">
+					<div class="widget widget-plain">
+						<div class="widget-content">
+							<a href="/peoplesref/create" class="btn btn-large btn-success btn-support-ask"> Cadastrar pessoa referênciada </a>
+						</div>
+					</div>					
 				</div>
 
-				<br>
 
-				<div class="row">
-					<div class="span12">
-						<div class="widget ">
-							<div class="widget-header">
-								<i class="icon-eye-open"></i>
-								<h3>Ver Informações</h3>
-							</div>
-							<div class="widget-content">
-								<div class="tabbable">
-									<ul class="nav nav-tabs">
-										<li class="active">
-											<a href="#formcontrols" data-toggle="tab">Dados Pessoais</a>
-										</li>
-										<li class="">
-											<a href="#jscontrols" data-toggle="tab">Dados sobre endereço</a>
-										</li>
-									</ul>
+				<div class="span5">
 
-									<br>
+					{{ Form::text('nome',null,array('class' => 'span4 m-wrap', 'placeholder' => 'Nome da pessoa referenciada') ) }}
 
-									<div class="tab-content">
-										<div class="tab-pane active" id="formcontrols">
-											<form id="edit-profile" class="form-horizontal">
-												<fieldset>
+					<button class="btn" type="button">Buscar</button>
 
-													<div class="control-group">
-														<label class="control-label" for="email">Código:</label>
-														<div class="controls">
-														</div>
-													</div>
-													<div class="control-group">
-														<label class="control-label" for="email">Pessoa referenciada:</label>
-														<div class="controls">
-															{{{ $people->nome }}}
-														</div>
-													</div>
-													
-													<div class="control-group">
-														<label class="control-label" for="email">Apelido:</label>
-														<div class="controls">
-															{{{ $people->apelido }}}
-														</div>
-													</div>
+				</div>
 
-													<div class="control-group">
-														<label class="control-label" for="email">Data de nascimento:</label>
-														<div class="controls">
-															{{{ $people->nascimento }}}
-														</div>
-													</div>
+			</div>
 
-													<div class="control-group">
-														<label class="control-label" for="email">Nome da mãe:</label>
-														<div class="controls">
-															{{{ $people->nomemae }}}
-														</div>
-													</div>
+			<div class="row">
+				<div class="span12">
 
-													<div class="control-group">
-														<label class="control-label" for="email">Nome do pai:</label>
-														<div class="controls">
-															{{{ $people->nomepai }}}
-														</div>	
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">NIS da pessoa de referência:</label>
-														<div class="controls">
-															{{{ $people->nis }}}
-														</div>	
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">CPF:</label>
-														<div class="controls">
-															{{{ $people->cpf }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">RG:</label>
-														<div class="controls">
-															{{{ $people->rg }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">Orgão expedidor:</label>
-														<div class="controls">
-															{{{ $people->orgaorg }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">UF do Registro de Identidade:</label>
-														<div class="controls">
-															{{{ $people->ufrg }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">Data de emissão:</label>
-														<div class="controls">
-															{{{ $people->emitedrg }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">Número do prontuário:</label>
-														<div class="controls">
-															{{{ $people->numeroprontuario }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label">Unidade de atendimento:</label>
-
-														<div class="controls">
-															{{{ $people->tipounidade }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">Nome da Unidade:</label>
-														<div class="controls">
-															{{{ $people->nomeunidade }}}
-														</div>
-													</div>
-
-												</fieldset>
-											</form>
-										</div>
-
-										<div class="tab-pane" id="jscontrols">
-											<form id="edit-profile" class="form-horizontal">
-												<fieldset>
-
-													<div class="control-group">
-														<label class="control-label" for="email">Rua:</label>
-														<div class="controls">
-															{{{ $people->rua }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">Bairro:</label>
-														<div class="controls">
-															{{{ $people->bairro }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">CEP:</label>
-														<div class="controls">
-															{{{ $people->cep }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">Municipio:</label>
-														<div class="controls">
-															{{{ $people->municipio }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">Complemento:</label>
-														<div class="controls">
-															{{{ $people->complemento }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">Ponto de referência:</label>
-														<div class="controls">
-															{{{ $people->pointreference }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">Telefone para contato 1:</label>
-														<div class="controls">
-															{{{ $people->telefone1 }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">Telefone para contato 2:</label>
-														<div class="controls">
-															{{{ $people->telefone2 }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label">Localização do domicilio</label>
-
-														<div class="controls">
-															{{{ $people->localization }}}																
-														</div>
-													</div>
-												</fieldset>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
+					<div class="widget widget-table action-table">
+						<div class="widget-header">
+							<i class="icon-group"></i>
+							<h3>Pessoas referenciadas cadastradas</h3>
 						</div>
+						<div class="widget-content">
+							<table class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<th>Id</th>
+										<th>Nome</th>
+										<th>Apelido</th>
+										<th class="td-actions">Ações</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+									@foreach($peoplesreference as $people)
 
-						{{ HTML::link('/peoplesref','Voltar', array('class' => 'btn')) }}
+									@include('peoplesreference._people_tile')
 
+									@endforeach
+
+								</tbody>
+							</table>
+						</div>
 					</div>
+
+
+
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
+
 
 @stop

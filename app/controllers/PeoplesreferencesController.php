@@ -157,7 +157,7 @@ class PeoplesreferencesController extends BaseController{
 
 		$result = Peoplesreference::where('nome', 'LIKE', "$name%")->get();
 
-		$vars = array('people' => $result);
+		$vars = array('peoplesreference' => $result);
 
 		$this->layout->content = View::make('peoplesreference.search',$vars);
 
