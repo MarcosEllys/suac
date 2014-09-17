@@ -11,27 +11,31 @@
 |
 */
 
-Route::get('/', function(){
+Route::get('/', function()
+{
 
 	$queryResult = DB::table('peoplesreferences')->paginate();
 
-	return View::make('home')
-	->with('peopletotal',$queryResult);
+	return View::make('home')->with('peopletotal',$queryResult);
+
 });
 
 Route::get('cep/{cep}', function($cep)
 {
 
 	return CepConsult::getAddress($cep);	
+
 });
 
-Route::get('sobre',function(){
+Route::get('sobre',function()
+{
 
 	return View::make('umbrella');
 
 });
 
-Route::get('ajuda',function(){
+Route::get('ajuda',function()
+{
 
 	return View::make('helpers.index');
 
@@ -54,3 +58,5 @@ Route::post('peoplesref','PeoplesreferencesController@store');
 Route::post('peoplesref/edit','PeoplesreferencesController@handleEdit');
 
 Route::post('peoplesref/delete','PeoplesreferencesController@handleDelete');
+
+Route::get('peoplesref/search/{name}', 'PeoplesreferencesController@search');
