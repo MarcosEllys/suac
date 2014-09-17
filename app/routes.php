@@ -19,6 +19,14 @@ Route::get('/', function(){
 	->with('peopletotal',$queryResult);
 });
 
+Route::get('cep/{cep}', function($cep){
+
+	return CepConsult::getAddress('13015904');
+
+
+	
+});
+
 Route::get('sobre',function(){
 
 	return View::make('umbrella');
