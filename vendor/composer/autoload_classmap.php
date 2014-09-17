@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Createpeople' => $baseDir . '/app/database/migrations/2014_09_13_175946_createpeople.php',
+    'CustomValidator' => $baseDir . '/app/libraries/ CustomValidator.php',
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
     'HomeController' => $baseDir . '/app/controllers/HomeController.php',
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',

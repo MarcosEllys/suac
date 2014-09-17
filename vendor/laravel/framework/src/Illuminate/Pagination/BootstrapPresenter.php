@@ -25,7 +25,7 @@ class BootstrapPresenter extends Presenter {
 	 */
 	public function getDisabledTextWrapper($text)
 	{
-		return '<li class="disabled"><span>'.$text.'</span></li>';
+		return '<li class="disabled"><a href="#">'.$text.'</a></li>';
 	}
 
 	/**
@@ -36,7 +36,7 @@ class BootstrapPresenter extends Presenter {
 	 */
 	public function getActivePageWrapper($text)
 	{
-		return '<li class="active"><span>'.$text.'</span></li>';
+		return '<li class="active"><a href="#">'.$text.'</a></li>';
 	}
 
 }

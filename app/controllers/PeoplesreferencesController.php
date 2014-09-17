@@ -6,7 +6,7 @@ class PeoplesreferencesController extends BaseController{
 	{
 		$queryResult = Peoplesreference::all();
 
-		$queryResult = DB::table('peoplesreferences')->paginate(5);
+		$queryResult = DB::table('peoplesreferences')->paginate(1);
 
 		$vars = array('peoplesreference' => $queryResult);
 
@@ -49,12 +49,15 @@ class PeoplesreferencesController extends BaseController{
 
 		$rules = array(
 			'nome' => 'required|alpha|between:10,60',
+			'apelido' => 'required|between:11,13'
 			// 'apelido' => 'required|between:3,30',
 			// // 'nis' => 'required|integer|between:4,4',
 			);
 
+		$rules["cpf_cnpj"] = array("required","cpf");
+
 		$messages = array(
-			'nome.required' => 'Nome completo porra'
+			'nome.between' => 'Nome completo porra'
 			);
 
 		$validator = Validator::make(Input::all(), $rules,$messages);

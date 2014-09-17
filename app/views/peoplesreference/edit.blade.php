@@ -2,7 +2,9 @@
 
 {{ Form::open(array('action' => 'PeoplesreferencesController@handleEdit', 'class' => 'form-horizontal')) }}
 
-<input type="hidden" name="id" value="{{ $people->id }}">
+<!-- <input type="hidden" name="id" value="{{ $people->id }}"> -->
+
+{{ Form::hidden('id', $people->id) }}
 
 
 <div class="main">

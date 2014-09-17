@@ -36,19 +36,7 @@
 			
 			{{ HTML::link('/', 'Sistema Único de Assistência ao CRAS - SUAC', array('class' => 'brand')) }}		
 			
-			<div class="nav-collapse">
-				<ul class="nav pull-right">
-					
-					<li class="">						
-						<a href="/" class="">
-							<i class="icon-chevron-left"></i>
-							Voltar para o inicio
-						</a>
-						
-					</li>
-				</ul>
-
-			</div>
+			
 		</div> 
 	</div> 
 </div> 
@@ -63,16 +51,17 @@
 			<div class="error-container">
 				<h1>404</h1>
 				
-				<h2>Who! bad trip man. No more pixesl for you.</h2>
+				<h2>
+					Desculpe, ocorreu um erro! Por que não voltar para a  <a href="/">página inicial</a>
+				</h2>
 				
 				<div class="error-details">
-					Desculpe, an error has occured! Why not try going back to the <a href="/">página home</a> or perhaps try following!
-					
+					Página não encontrada.				
 				</div> 
 
 				<div class="error-actions">
 					<a href="/" class="btn btn-large btn-primary">
-						Voltar para o inicio						
+						Voltar para o a página inicial						
 					</a>
 					
 					

@@ -18,7 +18,7 @@ ClassLoader::addDirectories(array(
 	app_path().'/models',
 	app_path().'/database/seeds',
 
-));
+	));
 
 /*
 |--------------------------------------------------------------------------
@@ -76,7 +76,7 @@ App::error(function(Exception $exception, $code)
 
 App::down(function()
 {
-	return Response::make("Be right back!", 503);
+	return Response::make(View::make('layout.maintenance'), 503);
 });
 
 /*
@@ -91,3 +91,17 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|--------------------------------------------------------------------------
+| Set CustomValidator
+|--------------------------------------------------------------------------
+|
+| load validator.
+|
+*/
+
+Validator::resolver(function($translator, $data, $rules, $messages)
+{
+	return new CustomValidator($translator, $data, $rules, $messages);
+});

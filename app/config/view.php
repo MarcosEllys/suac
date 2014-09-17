@@ -28,6 +28,6 @@ return array(
 	|
 	*/
 
-	'pagination' => 'pagination::simple',
+	'pagination' => 'pagination::slider',
 
 );
