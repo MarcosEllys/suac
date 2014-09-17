@@ -151,4 +151,14 @@ class PeoplesreferencesController extends BaseController{
 
 	}
 
+	public function search($name){
+
+		$result = Peoplesreference::find($id);
+
+		$vars = array('people' => $result);
+
+		$this->layout->content = View::make('peoplesreference.show',$vars);
+
+	}
+
 }

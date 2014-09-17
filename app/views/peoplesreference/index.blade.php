@@ -19,13 +19,24 @@
 			<br>
 
 			<div class="row">
-				<div class="span12">
+
+				<div class="span7">
 					<div class="widget widget-plain">
 						<div class="widget-content">
 							<a href="/peoplesref/create" class="btn btn-large btn-success btn-support-ask"> Cadastrar pessoa referênciada </a>
 						</div>
-					</div>
+					</div>					
 				</div>
+
+
+				<div class="span5">
+
+					{{ Form::text('nome',null,array('class' => 'span4 m-wrap', 'placeholder' => 'Nome da pessoa referenciada') ) }}
+
+					<button class="btn" type="button">Buscar</button>
+
+				</div>
+
 			</div>
 
 			<div class="row">
@@ -50,7 +61,7 @@
 									
 									@foreach($peoplesreference as $people)
 
-										@include('peoplesreference._people_tile')
+									@include('peoplesreference._people_tile')
 
 									@endforeach
 

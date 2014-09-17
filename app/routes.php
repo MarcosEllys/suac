@@ -19,12 +19,10 @@ Route::get('/', function(){
 	->with('peopletotal',$queryResult);
 });
 
-Route::get('cep/{cep}', function($cep){
+Route::get('cep/{cep}', function($cep)
+{
 
-	return CepConsult::getAddress('13015904');
-
-
-	
+	return CepConsult::getAddress($cep);	
 });
 
 Route::get('sobre',function(){
