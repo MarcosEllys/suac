@@ -6,7 +6,7 @@ class PeoplesreferencesController extends BaseController{
 	{
 		$queryResult = Peoplesreference::all();
 
-		$queryResult = DB::table('peoplesreferences')->paginate(1);
+		$queryResult = DB::table('peoplesreferences')->paginate(10);
 
 		$vars = array('peoplesreference' => $queryResult);
 
@@ -154,8 +154,7 @@ class PeoplesreferencesController extends BaseController{
 	public function search($name)
 	{
 
-
-		$result = Peoplesreference::where('nome', 'LIKE', "$name%")->get();
+		$result = Peoplesreference::where('nome', 'LIKE', "%$name%")->get();
 
 		$vars = array('peoplesreference' => $result);
 

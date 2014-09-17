@@ -31,9 +31,11 @@
 
 				<div class="span5">
 
-					{{ Form::text('nome',null,array('class' => 'span4 m-wrap', 'placeholder' => 'Nome da pessoa referenciada') ) }}
+					{{ Form::text('nome',null,array('value' => Input::get(), 'class' => 'span4 m-wrap', 'placeholder' => 'Nome da pessoa referenciada') ) }}					
 
-					<button class="btn" type="button">Buscar</button>
+					<a href=' {{ action('PeoplesreferencesController@search', Input::get() ) }} ' class='btn'>
+						Buscar
+					</a>				
 
 				</div>
 

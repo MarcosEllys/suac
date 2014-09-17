@@ -23,7 +23,7 @@ Route::get('/', function()
 Route::get('cep/{cep}', function($cep)
 {
 
-	return CepConsult::getAddress($cep);	
+	return CepConsult::getAddress($cep);
 
 });
 
@@ -59,4 +59,4 @@ Route::post('peoplesref/edit','PeoplesreferencesController@handleEdit');
 
 Route::post('peoplesref/delete','PeoplesreferencesController@handleDelete');
 
-Route::get('peoplesref/search/{name}', 'PeoplesreferencesController@search');
+Route::get('peoplesref/search/{nome}', 'PeoplesreferencesController@search');

@@ -9,7 +9,7 @@
 
 					<ol class="breadcrumb">
 						<li><a href="/"><i class="icon-dashboard"></i> Home</a></li>
-						<li class="active">  /  <i class="icon-group"></i> Pessoas referênciadas</li>
+						<li class="active">  /  <i class="icon-search"></i> Buscar pessoa referênciada</li>
 					</ol>
 
 
@@ -61,7 +61,7 @@
 									
 									@foreach($peoplesreference as $people)
 
-									@include('peoplesreference._people_tile')
+										@include('peoplesreference._people_tile')
 
 									@endforeach
 
