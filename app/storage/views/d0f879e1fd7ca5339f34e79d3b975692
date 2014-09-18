@@ -31,12 +31,15 @@
 
 				<div class="span5">
 
-					<?php echo Form::text('nome',null,array('value' => Input::get(), 'class' => 'span4 m-wrap', 'placeholder' => 'Nome da pessoa referenciada') ); ?>
+					<?php echo Form::open(array('action' => 'PeoplesreferencesController@search') ); ?>
 
 
-					<a href=' <?php echo action('PeoplesreferencesController@search', 'Input::get()' ); ?> ' class='btn'>
-						Buscar
-					</a>				
+					<?php echo Form::text('nome',null,array('class' => 'span4 m-wrap', 'placeholder' => 'Nome da pessoa referenciada') ); ?>
+
+
+					<?php echo Form::submit('Buscar', array('class' => 'btn') ); ?>					
+
+					<?php echo Form::close(); ?>			
 
 				</div>
 

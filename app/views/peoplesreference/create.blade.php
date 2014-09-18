@@ -317,7 +317,7 @@
 
 <div class="form-actions">
 
-	{{ Form::submit('Save', array('class' => 'btn btn-primary')) }}
+	{{ Form::submit('Salvar', array('class' => 'btn btn-primary')) }}
 
 	{{ HTML::link('/peoplesref','Cancelar', array('class' => 'btn')) }}
 

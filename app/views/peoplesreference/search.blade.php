@@ -9,6 +9,7 @@
 
 					<ol class="breadcrumb">
 						<li><a href="/"><i class="icon-dashboard"></i> Home</a></li>
+						<li><a href="/peoplesref"> / <i class="icon-group"></i> Pessoas referênciadas</a></li>
 						<li class="active">  /  <i class="icon-search"></i> Buscar pessoa referênciada</li>
 					</ol>
 
@@ -31,9 +32,13 @@
 
 				<div class="span5">
 
+					{{ Form::open(array('action' => 'PeoplesreferencesController@search') ) }}
+
 					{{ Form::text('nome',null,array('class' => 'span4 m-wrap', 'placeholder' => 'Nome da pessoa referenciada') ) }}
 
-					<button class="btn" type="button">Buscar</button>
+					{{ Form::submit('Buscar', array('class' => 'btn') ) }}					
+
+					{{ Form::close() }}
 
 				</div>
 
@@ -69,8 +74,6 @@
 							</table>
 						</div>
 					</div>
-
-
 
 				</div>
 			</div>

@@ -31,11 +31,13 @@
 
 				<div class="span5">
 
-					{{ Form::text('nome',null,array('value' => Input::get(), 'class' => 'span4 m-wrap', 'placeholder' => 'Nome da pessoa referenciada') ) }}					
+					{{ Form::open(array('action' => 'PeoplesreferencesController@search') ) }}
 
-					<a href=' {{ action('PeoplesreferencesController@search', Input::get() ) }} ' class='btn'>
-						Buscar
-					</a>				
+					{{ Form::text('nome',null,array('class' => 'span4 m-wrap', 'placeholder' => 'Nome da pessoa referenciada') ) }}
+
+					{{ Form::submit('Buscar', array('class' => 'btn') ) }}					
+
+					{{ Form::close() }}			
 
 				</div>
 

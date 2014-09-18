@@ -59,4 +59,4 @@ Route::post('peoplesref/edit','PeoplesreferencesController@handleEdit');
 
 Route::post('peoplesref/delete','PeoplesreferencesController@handleDelete');
 
-Route::get('peoplesref/search/{nome}', 'PeoplesreferencesController@search');
+Route::post('peoplesref/search', 'PeoplesreferencesController@search');
