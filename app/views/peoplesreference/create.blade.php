@@ -223,27 +223,6 @@
 							<fieldset>
 
 								<div class="control-group">
-									{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
-									<div class="controls">
-										{{ Form::text('rua',Input::old('rua'),array('class' => 'span6','placeholder' => 'Rua ou avenida') ) }}
-									</div>
-								</div>
-
-								<div class="control-group">
-									{{ Form::label('bairro','Bairro:',array('class' => 'control-label') ) }}
-									<div class="controls">
-										{{ Form::text('bairro',Input::old('bairro'),array('class' => 'span6') ) }}
-									</div>
-								</div>
-
-								<div class="control-group">
-									{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
-									<div class="controls">
-										{{ Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números') ) }}
-									</div>
-								</div>
-
-								<!-- <div class="control-group">
 									{{ Form::label('municipio','Municipio:',array('class' => 'control-label') ) }}
 									<div class="controls">
 
@@ -254,7 +233,28 @@
 										), 'ico') 
 									}}
 
-								</div> -->
+								</div>
+							</div>
+
+							<div class="control-group">
+								{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
+								<div class="controls">
+									{{ Form::text('rua',Input::old('rua'),array('class' => 'span6','placeholder' => 'Rua ou avenida') ) }}
+								</div>
+							</div>
+
+							<div class="control-group">
+								{{ Form::label('bairro','Bairro:',array('class' => 'control-label') ) }}
+								<div class="controls">
+									{{ Form::text('bairro',Input::old('bairro'),array('class' => 'span6') ) }}
+								</div>
+							</div>
+
+							<div class="control-group">
+								{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
+								<div class="controls">
+									{{ Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números') ) }}
+								</div>
 							</div>
 
 							<div class="control-group">

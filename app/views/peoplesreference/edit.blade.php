@@ -225,6 +225,20 @@
 							<fieldset>
 
 								<div class="control-group">
+									{{ Form::label('municipio','Municipio:',array('class' => 'control-label') ) }}
+									<div class="controls">
+
+										{{ Form::select('municipio', array(
+										'ico' => 'Icó',
+										'russas' => 'Russas',
+										'jaguaribe' => 'Jaguaribe'
+										), $people->municipio) 
+									}}
+
+								</div>
+							</div>
+
+								<div class="control-group">
 									{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
 									<div class="controls">
 										{{ Form::text('rua',$people->rua,array('class' => 'span6') ) }}
@@ -244,20 +258,6 @@
 										{{ Form::text('cep',$people->cep,array('class' => 'span6') ) }}
 									</div>
 								</div>
-
-								<div class="control-group">
-									{{ Form::label('municipio','Municipio:',array('class' => 'control-label') ) }}
-									<div class="controls">
-
-										{{ Form::select('municipio', array(
-										'ico' => 'Icó',
-										'russas' => 'Russas',
-										'jaguaribe' => 'Jaguaribe'
-										), $people->municipio) 
-									}}
-
-								</div>
-							</div>
 
 							<div class="control-group">
 								{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}

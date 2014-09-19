@@ -59,7 +59,7 @@
 			<div class="error-container">
 				
 				<h2>
-					Desculpe, estamos em manutenção! Volte novamente mais tarde.
+					Entramos em manutenção! Volte novamente das 7:00 as 18:00.
 				</h2>
 				
 			</div> 
