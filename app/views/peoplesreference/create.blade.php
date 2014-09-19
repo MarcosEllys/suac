@@ -243,7 +243,7 @@
 									</div>
 								</div>
 
-								<div class="control-group">
+								<!-- <div class="control-group">
 									{{ Form::label('municipio','Municipio:',array('class' => 'control-label') ) }}
 									<div class="controls">
 
@@ -254,7 +254,7 @@
 										), 'ico') 
 									}}
 
-								</div>
+								</div> -->
 							</div>
 
 							<div class="control-group">

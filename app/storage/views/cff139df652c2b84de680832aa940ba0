@@ -274,7 +274,7 @@
 									</div>
 								</div>
 
-								<div class="control-group">
+								<!-- <div class="control-group">
 									<?php echo Form::label('municipio','Municipio:',array('class' => 'control-label') ); ?>
 
 									<div class="controls">
@@ -286,7 +286,7 @@
 										), 'ico'); ?>
 
 
-								</div>
+								</div> -->
 							</div>
 
 							<div class="control-group">
@@ -358,7 +358,7 @@
 
 <div class="form-actions">
 
-	<?php echo Form::submit('Save', array('class' => 'btn btn-primary')); ?>
+	<?php echo Form::submit('Salvar', array('class' => 'btn btn-primary')); ?>
 
 
 	<?php echo HTML::link('/peoplesref','Cancelar', array('class' => 'btn')); ?>

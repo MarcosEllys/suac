@@ -36,15 +36,21 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->numeroprontuario = Input::get('numeroprontuario');
 		$peoplesreference->tipounidade = Input::get('tipounidade');
 		$peoplesreference->nomeunidade = Input::get('nomeunidade');
-		$peoplesreference->rua = Input::get('rua');
-		$peoplesreference->bairro = Input::get('bairro');
 		$peoplesreference->cep = Input::get('cep');
-		$peoplesreference->municipio = Input::get('municipio');
+
+		$mycep =  CepConsult::getAddress(Input::get('cep'));
+
+		$peoplesreference->rua = $mycep['street'];
+		$peoplesreference->bairro = $mycep['district'];
+		$peoplesreference->municipio = $mycep['city'];
+		$peoplesreference->uf = $mycep['state'];
+
 		$peoplesreference->complemento = Input::get('complemento');
 		$peoplesreference->pointreference = Input::get('pointreference');
 		$peoplesreference->telefone1 = Input::get('telefone1');
 		$peoplesreference->telefone2 = Input::get('telefone2');
 		$peoplesreference->localization = Input::get('localization');
+
 
 		$rules = array(
 			'nome' => 'required|alpha|between:10,60',
@@ -53,13 +59,7 @@ class PeoplesreferencesController extends BaseController{
 			// // 'nis' => 'required|integer|between:4,4',
 			);
 
-		$rules["cpf_cnpj"] = array("required","cpf");
-
-		$messages = array(
-			'nome.between' => 'Nome completo porra'
-			);
-
-		$validator = Validator::make(Input::all(), $rules,$messages);
+		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->passes()) {
 
@@ -154,9 +154,9 @@ class PeoplesreferencesController extends BaseController{
 	{
 		$name = Input::get('nome');
 
-		$AllPeoples = Peoplesreference::paginate(1);
+		$AllPeoples = Peoplesreference::paginate(10);
 
-		$result = Peoplesreference::where('nome', 'LIKE', '%'.$name.'%')->get();
+		$result = Peoplesreference::where('nome', 'LIKE', '%'.$name.'%')->paginate(1);
 
 
 		$vars = array('peoplesreference' => $result);
