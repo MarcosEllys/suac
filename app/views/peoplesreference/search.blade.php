@@ -74,8 +74,6 @@
 							</table>
 						</div>
 					</div>
-
-					{{ $peoplesreference->links(); }}
 				</div>
 			</div>
 		</div>

@@ -5,7 +5,7 @@ class PeoplesreferencesController extends BaseController{
 	public function index()
 	{
 
-		$queryResult = Peoplesreference::paginate(10);
+		$queryResult = Peoplesreference::paginate(5);
 
 		$vars = array('peoplesreference' => $queryResult);
 
@@ -38,23 +38,23 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->nomeunidade = Input::get('nomeunidade');
 		$peoplesreference->cep = Input::get('cep');
 
-		$mycep =  CepConsult::getAddress(Input::get('cep'));
+		// $mycep =  CepConsult::getAddress(Input::get('cep'));
 
-		if (exists($mycep)) {
+		// if (empty($mycep)) {
+
+			$people->municipio = Input::get('municipio');
+			$people->rua = Input::get('rua');
+			$people->bairro = Input::get('bairro');
+			$people->uf = Input::get('uf');
+
+		// } else {
+
+		// 	$people->municipio = $mycep['city'];
+		// 	$people->rua = Input::get('rua');
+		// 	$people->bairro = Input::get('bairro');
+		// 	$people->uf = $mycep['state'];
 			
-			$peoplesreference->municipio = $mycep['city'];
-			$peoplesreference->rua = Input::get('rua');
-			$peoplesreference->bairro = Input::get('bairro');
-			$peoplesreference->uf = $mycep['state'];
-
-		} else {
-			
-			$peoplesreference->municipio = Input::get('municipio');
-			$peoplesreference->rua = Input::get('rua');
-			$peoplesreference->bairro = Input::get('bairro');
-			$peoplesreference->uf = Input::get('uf');
-
-		}
+		// }
 
 		$peoplesreference->complemento = Input::get('complemento');
 		$peoplesreference->pointreference = Input::get('pointreference');
@@ -95,47 +95,47 @@ class PeoplesreferencesController extends BaseController{
 	public function handleEdit()
 	{
 
-		$peoplesreference = new Peoplesreference();
+		$people = Peoplesreference::findOrFail(Input::get('id'));
 
-		$peoplesreference->nome = Input::get('nome');
-		$peoplesreference->apelido = Input::get('apelido');
-		$peoplesreference->nascimento = Input::get('nascimento');		
-		$peoplesreference->nomemae = Input::get('nomemae');
-		$peoplesreference->nomepai = Input::get('nomepai');
-		$peoplesreference->nis = Input::get('nis');
-		$peoplesreference->cpf = Input::get('cpf');
-		$peoplesreference->rg = Input::get('rg');
-		$peoplesreference->orgaorg = Input::get('orgaorg');
-		$peoplesreference->ufrg = Input::get('ufrg');
-		$peoplesreference->emitedrg = Input::get('emitedrg');
-		$peoplesreference->numeroprontuario = Input::get('numeroprontuario');
-		$peoplesreference->tipounidade = Input::get('tipounidade');
-		$peoplesreference->nomeunidade = Input::get('nomeunidade');
-		$peoplesreference->cep = Input::get('cep');
+		$people->nome = Input::get('nome');
+		$people->apelido = Input::get('apelido');
+		$people->nascimento = Input::get('nascimento');		
+		$people->nomemae = Input::get('nomemae');
+		$people->nomepai = Input::get('nomepai');
+		$people->nis = Input::get('nis');
+		$people->cpf = Input::get('cpf');
+		$people->rg = Input::get('rg');
+		$people->orgaorg = Input::get('orgaorg');
+		$people->ufrg = Input::get('ufrg');
+		$people->emitedrg = Input::get('emitedrg');
+		$people->numeroprontuario = Input::get('numeroprontuario');
+		$people->tipounidade = Input::get('tipounidade');
+		$people->nomeunidade = Input::get('nomeunidade');
+		$people->cep = Input::get('cep');
 
-		$mycep =  CepConsult::getAddress(Input::get('cep'));
+		// $mycep =  CepConsult::getAddress(Input::get('cep'));
 
-		if (exists($mycep)) {
+		// if (empty($mycep)) {
+
+			$people->municipio = Input::get('municipio');
+			$people->rua = Input::get('rua');
+			$people->bairro = Input::get('bairro');
+			$people->uf = Input::get('uf');
+
+		// } else {
+
+		// 	$people->municipio = $mycep['city'];
+		// 	$people->rua = Input::get('rua');
+		// 	$people->bairro = Input::get('bairro');
+		// 	$people->uf = $mycep['state'];
 			
-			$peoplesreference->municipio = $mycep['city'];
-			$peoplesreference->rua = Input::get('rua');
-			$peoplesreference->bairro = Input::get('bairro');
-			$peoplesreference->uf = $mycep['state'];
+		// }
 
-		} else {
-			
-			$peoplesreference->municipio = Input::get('municipio');
-			$peoplesreference->rua = Input::get('rua');
-			$peoplesreference->bairro = Input::get('bairro');
-			$peoplesreference->uf = Input::get('uf');
-
-		}
-
-		$peoplesreference->complemento = Input::get('complemento');
-		$peoplesreference->pointreference = Input::get('pointreference');
-		$peoplesreference->telefone1 = Input::get('telefone1');
-		$peoplesreference->telefone2 = Input::get('telefone2');
-		$peoplesreference->localization = Input::get('localization');
+		$people->complemento = Input::get('complemento');
+		$people->pointreference = Input::get('pointreference');
+		$people->telefone1 = Input::get('telefone1');
+		$people->telefone2 = Input::get('telefone2');
+		$people->localization = Input::get('localization');
 
 		$people->save();
 
@@ -179,10 +179,7 @@ class PeoplesreferencesController extends BaseController{
 	{
 		$name = Input::get('nome');
 
-		$AllPeoples = Peoplesreference::paginate(10);
-
-		$result = Peoplesreference::where('nome', 'LIKE', '%'.$name.'%')->paginate(1);
-
+		$result = Peoplesreference::where('nome', 'LIKE', '%'.$name.'%')->get();
 
 		$vars = array('peoplesreference' => $result);
 

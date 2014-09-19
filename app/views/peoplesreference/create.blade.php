@@ -223,6 +223,46 @@
 							<fieldset>
 
 								<div class="control-group">
+									{{ Form::label('uf','Estado:',array('class' => 'control-label') ) }}
+									<div class="controls">
+
+										{{ Form::select('uf', array(
+										'CE' => 'CE',
+												'PB' => 'PB',
+												'PE' => 'PE',
+												'DF' => 'DF',
+												'BA' => 'BA',
+												'AL' => 'AL',
+												'RS' => 'RS',
+												'SC' => 'SC',
+												'PR' => 'PR',
+												'SP' => 'SP',
+												'RJ' => 'RJ',
+												'MG' => 'MG',
+												'ES' => 'ES',
+												'MT' => 'MT',
+												'MS' => 'MS',
+												'GO' => 'GO',
+												'RN' => 'RN',
+												'AP' => 'AP',
+												'TO' => 'TO',
+												'AC' => 'AC',
+												'RO' => 'RO',
+												'RR' => 'RR',
+												'AM' => 'AM',
+												'PA' => 'PA',
+												'MA' => 'MA',
+												'PI' => 'PI',
+												'SE' => 'SE'
+										), 'CE') 
+									}}
+
+								</div>
+							</div>
+
+
+
+								<div class="control-group">
 									{{ Form::label('municipio','Municipio:',array('class' => 'control-label') ) }}
 									<div class="controls">
 

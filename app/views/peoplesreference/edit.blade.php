@@ -143,33 +143,33 @@
 											<div class="controls">
 
 												{{ Form::select('ufrg', array(
-												'ce' => 'CE',
-												'pb' => 'PB',
-												'pe' => 'PE',
-												'df' => 'DF',
-												'ba' => 'BA',
-												'al' => 'AL',
-												'rs' => 'RS',
-												'sc' => 'SC',
-												'pr' => 'PR',
-												'sp' => 'SP',
-												'rj' => 'RJ',
-												'mg' => 'MG',
-												'es' => 'ES',
-												'mt' => 'MT',
-												'ms' => 'MS',
-												'go' => 'GO',
-												'rn' => 'RN',
-												'ap' => 'AP',
-												'to' => 'TO',
-												'ac' => 'AC',
-												'ro' => 'RO',
-												'rr' => 'RR',
-												'am' => 'AM',
-												'pa' => 'PA',
-												'ma' => 'MA',
-												'pi' => 'PI',
-												'se' => 'SE'
+												'CE' => 'CE',
+												'PB' => 'PB',
+												'PE' => 'PE',
+												'DF' => 'DF',
+												'BA' => 'BA',
+												'AL' => 'AL',
+												'RS' => 'RS',
+												'SC' => 'SC',
+												'PR' => 'PR',
+												'SP' => 'SP',
+												'RJ' => 'RJ',
+												'MG' => 'MG',
+												'ES' => 'ES',
+												'MT' => 'MT',
+												'MS' => 'MS',
+												'GO' => 'GO',
+												'RN' => 'RN',
+												'AP' => 'AP',
+												'TO' => 'TO',
+												'AC' => 'AC',
+												'RO' => 'RO',
+												'RR' => 'RR',
+												'AM' => 'AM',
+												'PA' => 'PA',
+												'MA' => 'MA',
+												'PI' => 'PI',
+												'SE' => 'SE'
 												), $people->ufrg) 
 											}}
 
@@ -223,6 +223,44 @@
 
 						<div class="tab-pane" id="jscontrols">
 							<fieldset>
+
+								<div class="control-group">
+									{{ Form::label('uf','Estado:',array('class' => 'control-label') ) }}
+									<div class="controls">
+
+										{{ Form::select('uf', array(
+										'CE' => 'CE',
+												'PB' => 'PB',
+												'PE' => 'PE',
+												'DF' => 'DF',
+												'BA' => 'BA',
+												'AL' => 'AL',
+												'RS' => 'RS',
+												'SC' => 'SC',
+												'PR' => 'PR',
+												'SP' => 'SP',
+												'RJ' => 'RJ',
+												'MG' => 'MG',
+												'ES' => 'ES',
+												'MT' => 'MT',
+												'MS' => 'MS',
+												'GO' => 'GO',
+												'RN' => 'RN',
+												'AP' => 'AP',
+												'TO' => 'TO',
+												'AC' => 'AC',
+												'RO' => 'RO',
+												'RR' => 'RR',
+												'AM' => 'AM',
+												'PA' => 'PA',
+												'MA' => 'MA',
+												'PI' => 'PI',
+												'SE' => 'SE'
+										), $people->uf) 
+									}}
+
+								</div>
+							</div>
 
 								<div class="control-group">
 									{{ Form::label('municipio','Municipio:',array('class' => 'control-label') ) }}
