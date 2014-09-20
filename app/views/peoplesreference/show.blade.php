@@ -28,7 +28,7 @@
 						<div class="widget ">
 							<div class="widget-header">
 								<i class="icon-eye-open"></i>
-								<h3>Ver Informações</h3>
+								<h3>Informações de {{{ $people->nome }}}</h3>
 							</div>
 							<div class="widget-content">
 								<div class="tabbable">

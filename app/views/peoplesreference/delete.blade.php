@@ -19,7 +19,7 @@
 								/ <a href=" {{ action('PeoplesreferencesController@index') }} "> <i class="icon-group"></i> Pessoas referênciadas</a>
 							</li>
 							<li>
-								/ <i class="icon-remove"></i> Excluir pessoa referenciada
+								/ <i class="icon-remove-sign"></i> Excluir pessoa referenciada
 							</li>
 						</ol>
 					</div>
@@ -31,7 +31,7 @@
 					<div class="span12">
 						<div class="widget ">
 							<div class="widget-header">
-								<i class="icon-remove"></i>
+								<i class="icon-remove-sign"></i>
 								<h3>Excluir pessoa referenciada</h3>
 							</div>
 							<div class="widget-content">

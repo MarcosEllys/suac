@@ -15,10 +15,10 @@
 							<a href=" {{ URL("/") }} "><i class="icon-dashboard"></i> Home</a>
 						</li>
 						<li>
-							/ <a href="{{ action('PeoplesreferencesController@index') }}"> <i class="icon-group"></i> Pessoas referênciadas</a>
+							/ <a href="{{ action('PeoplesreferencesController@index') }}"> <i class="icon-plus-sign "></i> Pessoas referênciadas</a>
 						</li>
 						<li>
-							/ <i class="icon-user"></i> Cadastrar pessoa referênciada
+							/ <i class="icon-plus-sign"></i> Cadastrar pessoa referênciada
 						</li>
 					</ol>
 				</div>
@@ -32,7 +32,7 @@
 					<div class="widget ">
 						
 						<div class="widget-header">
-							<i class="icon-user"></i>
+							<i class="icon-plus-sign"></i>
 							<h3>Cadastrar pessoa referênciada</h3>
 						</div>
 
