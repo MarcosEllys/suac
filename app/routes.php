@@ -35,6 +35,7 @@ Route::get('ajuda',function()
 
 });
 
+
 Route::model('people', 'Peoplesreference');
 
 Route::get('peoplesref','PeoplesreferencesController@index');
@@ -54,3 +55,5 @@ Route::post('peoplesref/edit','PeoplesreferencesController@handleEdit');
 Route::post('peoplesref/delete','PeoplesreferencesController@handleDelete');
 
 Route::post('peoplesref/search', 'PeoplesreferencesController@search');
+
+Route::get('unidades','UnidadesController@index');
