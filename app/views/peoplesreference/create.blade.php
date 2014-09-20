@@ -116,21 +116,21 @@
 												<div class="controls">
 
 													{{ Form::select('orgaorg', array(
-													'ssp' => 'SSP',
-													'ifp' => 'IFP',
-													'ipf' => 'IPF',
-													'ma' => 'MA',
-													'mm' => 'MM',
-													'mt' => 'MT',
-													'oab' => 'OAB',
-													'crea' => 'CREA',
-													'crm' => 'CRM',
-													'cra' => 'CRA',
-													'me' => 'ME',
-													'cbm' => 'CBM',
-													'cro' => 'CRO',
-													'crf' => 'CRF',
-													), 'ssp') 
+													'SSP' => 'SSP',
+													'IFP' => 'IFP',
+													'IPF' => 'IPF',
+													'MA' => 'MA',
+													'MM' => 'MM',
+													'MT' => 'MT',
+													'OAB' => 'OAB',
+													'CREA' => 'CREA',
+													'CRM' => 'CRM',
+													'CRA' => 'CRA',
+													'ME' => 'ME',
+													'CBM' => 'CBM',
+													'CRO' => 'CRO',
+													'CRF' => 'CRF',
+													), 'SSP') 
 												}}
 
 											</div>
@@ -141,34 +141,34 @@
 											<div class="controls">
 
 												{{ Form::select('ufrg', array(
-												'ce' => 'CE',
-												'pb' => 'PB',
-												'pe' => 'PE',
-												'df' => 'DF',
-												'ba' => 'BA',
-												'al' => 'AL',
-												'rs' => 'RS',
-												'sc' => 'SC',
-												'pr' => 'PR',
-												'sp' => 'SP',
-												'rj' => 'RJ',
-												'mg' => 'MG',
-												'es' => 'ES',
-												'mt' => 'MT',
-												'ms' => 'MS',
-												'go' => 'GO',
-												'rn' => 'RN',
-												'ap' => 'AP',
-												'to' => 'TO',
-												'ac' => 'AC',
-												'ro' => 'RO',
-												'rr' => 'RR',
-												'am' => 'AM',
-												'pa' => 'PA',
-												'ma' => 'MA',
-												'pi' => 'PI',
-												'se' => 'SE'
-												), 'ce') 
+												'CE' => 'CE',
+												'PB' => 'PB',
+												'PE' => 'PE',
+												'DF' => 'DF',
+												'BA' => 'BA',
+												'AL' => 'AL',
+												'RS' => 'RS',
+												'SC' => 'SC',
+												'PR' => 'PR',
+												'SP' => 'SP',
+												'RJ' => 'RJ',
+												'MG' => 'MG',
+												'ES' => 'ES',
+												'MT' => 'MT',
+												'MS' => 'MS',
+												'GO' => 'GO',
+												'RN' => 'RN',
+												'AP' => 'AP',
+												'TO' => 'TO',
+												'AC' => 'AC',
+												'RO' => 'RO',
+												'RR' => 'RR',
+												'AM' => 'AM',
+												'PA' => 'PA',
+												'MA' => 'MA',
+												'PI' => 'PI',
+												'SE' => 'SE'
+												), 'CE') 
 											}}
 
 

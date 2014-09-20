@@ -9,8 +9,8 @@
           <i class=" icon-bookmark"></i><span>Administrativo</span> <b class="caret"></b></a>
 
           <ul class="dropdown-menu">
-            <li><a href="#">Unidades Cras</a></li>
             <li><a href="#">Usuários</a></li>
+            <li><a href="#">Unidades CRAS</a></li>
           </ul>
         </li>
 

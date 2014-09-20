@@ -118,20 +118,20 @@
 												<div class="controls">
 
 													{{ Form::select('orgaorg', array(
-													'ssp' => 'SSP',
-													'ifp' => 'IFP',
-													'ipf' => 'IPF',
-													'ma' => 'MA',
-													'mm' => 'MM',
-													'mt' => 'MT',
-													'oab' => 'OAB',
-													'crea' => 'CREA',
-													'crm' => 'CRM',
-													'cra' => 'CRA',
-													'me' => 'ME',
-													'cbm' => 'CBM',
-													'cro' => 'CRO',
-													'crf' => 'CRF',
+													'SSP' => 'SSP',
+													'IFP' => 'IFP',
+													'IPF' => 'IPF',
+													'MA' => 'MA',
+													'MM' => 'MM',
+													'MT' => 'MT',
+													'OAB' => 'OAB',
+													'CREA' => 'CREA',
+													'CRM' => 'CRM',
+													'CRA' => 'CRA',
+													'ME' => 'ME',
+													'CBM' => 'CBM',
+													'CRO' => 'CRO',
+													'CRF' => 'CRF',
 													), $people->orgaorg) 
 												}}
 
@@ -170,7 +170,7 @@
 												'MA' => 'MA',
 												'PI' => 'PI',
 												'SE' => 'SE'
-												), $people->ufrg) 
+												), $people->ufrg)
 											}}
 
 

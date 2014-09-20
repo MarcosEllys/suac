@@ -20,12 +20,6 @@ Route::get('/', function()
 
 });
 
-Route::get('cep/{cep}', function($cep)
-{
-
-	return CepConsult::getAddress($cep);
-
-});
 
 Route::get('sobre',function()
 {

@@ -122,7 +122,8 @@
 		</div>
 	</div>
 
-	<script src="../js/faq.js"></script>
+
+	<script src="{{ asset("js/faq.js") }}"></script>
 
 	<script>
 	$(function(){
