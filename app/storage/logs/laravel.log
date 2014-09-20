@@ -9690,3 +9690,11 @@ Stack trace:
 #9 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
 #10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
 #11 {main} [] []
+[2014-09-20 16:56:03] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Schema\Blueprint::nome()' in /var/www/suac/app/database/migrations/2014_09_20_164838_create_table_unidades.php:28
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-20 16:57:08] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Schema\Blueprint::tipo()' in /var/www/suac/app/database/migrations/2014_09_20_164838_create_table_unidades.php:38
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
