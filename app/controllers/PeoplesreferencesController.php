@@ -38,23 +38,12 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->nomeunidade = Input::get('nomeunidade');
 		$peoplesreference->cep = Input::get('cep');
 
-		// $mycep =  CepConsult::getAddress(Input::get('cep'));
+		$mycep =  CepConsult::getAddress(Input::get('cep'));
 
-		// if (empty($mycep)) {
-
-			$people->municipio = Input::get('municipio');
-			$people->rua = Input::get('rua');
-			$people->bairro = Input::get('bairro');
-			$people->uf = Input::get('uf');
-
-		// } else {
-
-		// 	$people->municipio = $mycep['city'];
-		// 	$people->rua = Input::get('rua');
-		// 	$people->bairro = Input::get('bairro');
-		// 	$people->uf = $mycep['state'];
-			
-		// }
+		$peoplesreference->municipio = $mycep['city'];
+		$peoplesreference->rua = Input::get('rua');
+		$peoplesreference->bairro = Input::get('bairro');
+		$peoplesreference->uf = $mycep['state'];
 
 		$peoplesreference->complemento = Input::get('complemento');
 		$peoplesreference->pointreference = Input::get('pointreference');
@@ -113,23 +102,12 @@ class PeoplesreferencesController extends BaseController{
 		$people->nomeunidade = Input::get('nomeunidade');
 		$people->cep = Input::get('cep');
 
-		// $mycep =  CepConsult::getAddress(Input::get('cep'));
+		$mycep =  CepConsult::getAddress(Input::get('cep'));
 
-		// if (empty($mycep)) {
-
-			$people->municipio = Input::get('municipio');
-			$people->rua = Input::get('rua');
-			$people->bairro = Input::get('bairro');
-			$people->uf = Input::get('uf');
-
-		// } else {
-
-		// 	$people->municipio = $mycep['city'];
-		// 	$people->rua = Input::get('rua');
-		// 	$people->bairro = Input::get('bairro');
-		// 	$people->uf = $mycep['state'];
-			
-		// }
+		$people->municipio = $mycep['city'];
+		$people->rua = Input::get('rua');
+		$people->bairro = Input::get('bairro');
+		$people->uf = $mycep['state'];
 
 		$people->complemento = Input::get('complemento');
 		$people->pointreference = Input::get('pointreference');

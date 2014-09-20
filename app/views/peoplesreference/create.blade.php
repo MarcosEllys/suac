@@ -12,10 +12,10 @@
 				<div class="span12">
 					<ol class="breadcrumb">
 						<li>
-							<a href="/"><i class="icon-dashboard"></i> Home</a>
+							<a href=" {{ URL("/") }} "><i class="icon-dashboard"></i> Home</a>
 						</li>
 						<li>
-							/ <a href="/peoplesref"> <i class="icon-group"></i> Pessoas referênciadas</a>
+							/ <a href="{{ action('PeoplesreferencesController@index') }}"> <i class="icon-group"></i> Pessoas referênciadas</a>
 						</li>
 						<li>
 							/ <i class="icon-user"></i> Cadastrar pessoa referênciada
@@ -222,59 +222,14 @@
 						<div class="tab-pane" id="jscontrols">
 							<fieldset>
 
-								<div class="control-group">
-									{{ Form::label('uf','Estado:',array('class' => 'control-label') ) }}
-									<div class="controls">
 
-										{{ Form::select('uf', array(
-										'CE' => 'CE',
-												'PB' => 'PB',
-												'PE' => 'PE',
-												'DF' => 'DF',
-												'BA' => 'BA',
-												'AL' => 'AL',
-												'RS' => 'RS',
-												'SC' => 'SC',
-												'PR' => 'PR',
-												'SP' => 'SP',
-												'RJ' => 'RJ',
-												'MG' => 'MG',
-												'ES' => 'ES',
-												'MT' => 'MT',
-												'MS' => 'MS',
-												'GO' => 'GO',
-												'RN' => 'RN',
-												'AP' => 'AP',
-												'TO' => 'TO',
-												'AC' => 'AC',
-												'RO' => 'RO',
-												'RR' => 'RR',
-												'AM' => 'AM',
-												'PA' => 'PA',
-												'MA' => 'MA',
-												'PI' => 'PI',
-												'SE' => 'SE'
-										), 'CE') 
-									}}
-
+							<div class="control-group">
+								{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
+								<div class="controls">
+									{{ Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números') ) }}
 								</div>
 							</div>
 
-
-
-								<div class="control-group">
-									{{ Form::label('municipio','Municipio:',array('class' => 'control-label') ) }}
-									<div class="controls">
-
-										{{ Form::select('municipio', array(
-										'ico' => 'Icó',
-										'russas' => 'Russas',
-										'jaguaribe' => 'Jaguaribe'
-										), 'ico') 
-									}}
-
-								</div>
-							</div>
 
 							<div class="control-group">
 								{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
@@ -290,12 +245,6 @@
 								</div>
 							</div>
 
-							<div class="control-group">
-								{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{ Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números') ) }}
-								</div>
-							</div>
 
 							<div class="control-group">
 								{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}

@@ -9,10 +9,10 @@
 					<div class="span12">
 						<ol class="breadcrumb">
 							<li>
-								<a href="/"><i class="icon-dashboard"></i> Home</a>
+								<a href=" {{ URL("/") }} "><i class="icon-dashboard"></i> Home</a>
 							</li>
 							<li>
-								/ <a href="/peoplesref"> <i class="icon-group"></i> Pessoas referênciadas</a>
+								/ <a href=" {{ action('PeoplesreferencesController@index') }} "> <i class="icon-group"></i> Pessoas referênciadas</a>
 							</li>
 							<li>
 								/ <i class="icon-eye-open"></i> Ver informações
@@ -162,6 +162,19 @@
 												<fieldset>
 
 													<div class="control-group">
+														<label class="control-label" for="email">CEP:</label>
+														<div class="controls">
+															{{{ $people->cep }}}
+														</div>
+													</div>
+													
+												<div class="control-group">
+													<label class="control-label" for="email">Municipio:</label>
+													<div class="controls">
+														{{{ $people->municipio }}}
+													</div>
+												</div>
+													<div class="control-group">
 														<label class="control-label" for="email">Rua:</label>
 														<div class="controls">
 															{{{ $people->rua }}}
@@ -175,19 +188,7 @@
 														</div>
 													</div>
 
-													<div class="control-group">
-														<label class="control-label" for="email">CEP:</label>
-														<div class="controls">
-															{{{ $people->cep }}}
-														</div>
-													</div>
 
-													<div class="control-group">
-														<label class="control-label" for="email">Municipio:</label>
-														<div class="controls">
-															{{{ $people->municipio }}}
-														</div>
-													</div>
 
 													<div class="control-group">
 														<label class="control-label" for="email">Complemento:</label>

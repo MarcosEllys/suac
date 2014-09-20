@@ -8,7 +8,7 @@
 
 
 					<ol class="breadcrumb">
-						<li><a href="/"><i class="icon-dashboard"></i> Home</a></li>
+						<li><a href="<?php echo URL("/"); ?>"><i class="icon-dashboard"></i> Home</a></li>
 						<li class="active">  /  <i class="icon-group"></i> Pessoas referênciadas</li>
 					</ol>
 
@@ -23,7 +23,7 @@
 				<div class="span7">
 					<div class="widget widget-plain">
 						<div class="widget-content">
-							<a href="/peoplesref/create" class="btn btn-large btn-success btn-support-ask"> Cadastrar pessoa referênciada </a>
+							<a href="<?php echo action('PeoplesreferencesController@create'); ?>" class="btn btn-large btn-success btn-support-ask"> Cadastrar pessoa referênciada </a>
 						</div>
 					</div>					
 				</div>

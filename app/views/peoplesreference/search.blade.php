@@ -8,8 +8,8 @@
 
 
 					<ol class="breadcrumb">
-						<li><a href="/"><i class="icon-dashboard"></i> Home</a></li>
-						<li><a href="/peoplesref"> / <i class="icon-group"></i> Pessoas referênciadas</a></li>
+						<li><a href=" {{ URL("/") }} "><i class="icon-dashboard"></i> Home</a></li>
+						<li><a href=" {{ action('PeoplesreferencesController@index') }} "> / <i class="icon-group"></i> Pessoas referênciadas</a></li>
 						<li class="active">  /  <i class="icon-search"></i> Buscar pessoa referênciada</li>
 					</ol>
 
@@ -24,7 +24,7 @@
 				<div class="span7">
 					<div class="widget widget-plain">
 						<div class="widget-content">
-							<a href="/peoplesref/create" class="btn btn-large btn-success btn-support-ask"> Cadastrar pessoa referênciada </a>
+							<a href=" {{ action('PeoplesreferencesController@create') }} " class="btn btn-large btn-success btn-support-ask"> Cadastrar pessoa referênciada </a>
 						</div>
 					</div>					
 				</div>

@@ -1,4 +1,5 @@
 @section("top")
+
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
@@ -13,10 +14,10 @@
               class="icon-user"></i> Assistente Social <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="/suacInterface/perfil.php">Perfil</a>
+                  <a href="#">Perfil</a>
                 </li>
                 <li>
-                  <a href="index.php">Sair</a>
+                  <a href="#">Sair</a>
                 </li>
               </ul>
             </li>
@@ -25,4 +26,5 @@
       </div>
     </div>
 </div>
+
 @show
