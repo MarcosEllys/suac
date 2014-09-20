@@ -32,7 +32,7 @@
 						<div class="widget ">
 							<div class="widget-header">
 								<i class="icon-remove-sign"></i>
-								<h3>Excluir pessoa referenciada</h3>
+								<h3>Excluir {{ $people->nome }}</h3>
 							</div>
 							<div class="widget-content">
 								<div class="tabbable">
