@@ -162,6 +162,20 @@
 
 										<div class="tab-pane" id="jscontrols">
 												<fieldset>
+													
+													<div class="control-group">
+														<label class="control-label" for="email">CEP:</label>
+														<div class="controls">
+															{{{ $people->cep }}}
+														</div>
+													</div>
+
+													<div class="control-group">
+														<label class="control-label" for="email">Municipio:</label>
+														<div class="controls">
+															{{{ $people->municipio }}}
+														</div>
+													</div>
 
 													<div class="control-group">
 														<label class="control-label" for="email">Rua:</label>
@@ -174,20 +188,6 @@
 														<label class="control-label" for="email">Bairro:</label>
 														<div class="controls">
 															{{{ $people->bairro }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">CEP:</label>
-														<div class="controls">
-															{{{ $people->cep }}}
-														</div>
-													</div>
-
-													<div class="control-group">
-														<label class="control-label" for="email">Municipio:</label>
-														<div class="controls">
-															{{{ $people->municipio }}}
 														</div>
 													</div>
 
