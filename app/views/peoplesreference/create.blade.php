@@ -15,7 +15,7 @@
 							<a href=" {{ URL("/") }} "><i class="icon-dashboard"></i> Home</a>
 						</li>
 						<li>
-							/ <a href="{{ action('PeoplesreferencesController@index') }}"> <i class="icon-plus-sign "></i> Pessoas referênciadas</a>
+							/ <a href="{{ action('PeoplesreferencesController@index') }}"> <i class="icon-user "></i> Pessoas referênciadas</a>
 						</li>
 						<li>
 							/ <i class="icon-plus-sign"></i> Cadastrar pessoa referênciada

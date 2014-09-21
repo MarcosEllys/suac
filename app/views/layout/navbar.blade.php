@@ -10,7 +10,7 @@
 
           <ul class="dropdown-menu">
             <li><a href="#">Usuários</a></li>
-            <li><a href="#">Unidades CRAS</a></li>
+            <li><a href="{{ action('UnidadesController@index') }}">Unidades</a></li>
           </ul>
         </li>
 

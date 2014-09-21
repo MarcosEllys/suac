@@ -14,9 +14,13 @@
 Route::get('/', function()
 {
 
-	$queryResult = DB::table('peoplesreferences')->paginate();
+	$pf = DB::table('peoplesreferences')->paginate();
 
-	return View::make('home')->with('peopletotal',$queryResult);
+	$unidades = DB::table('unidades')->paginate();
+
+	return View::make('home')
+				->with('peopletotal',$pf)
+				->with('unidades',$unidades);
 
 });
 
@@ -34,6 +38,9 @@ Route::get('ajuda',function()
 	return View::make('helpers.index');
 
 });
+
+
+
 
 
 Route::model('people', 'Peoplesreference');
@@ -56,4 +63,14 @@ Route::post('peoplesref/delete','PeoplesreferencesController@handleDelete');
 
 Route::post('peoplesref/search', 'PeoplesreferencesController@search');
 
+
+
+
+
+Route::model('unidade','Unidade');
+
 Route::get('unidades','UnidadesController@index');
+
+Route::get('unidades/create','UnidadesController@create');
+
+Route::post('unidades','UnidadesController@store');

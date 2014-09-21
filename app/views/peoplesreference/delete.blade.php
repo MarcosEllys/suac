@@ -16,7 +16,7 @@
 								<a href=" {{ URL("/") }} "><i class="icon-dashboard"></i> Home</a>
 							</li>
 							<li>
-								/ <a href=" {{ action('PeoplesreferencesController@index') }} "> <i class="icon-group"></i> Pessoas referênciadas</a>
+								/ <a href=" {{ action('PeoplesreferencesController@index') }} "> <i class="icon-user"></i> Pessoas referênciadas</a>
 							</li>
 							<li>
 								/ <i class="icon-remove-sign"></i> Excluir pessoa referenciada
@@ -32,7 +32,7 @@
 						<div class="widget ">
 							<div class="widget-header">
 								<i class="icon-remove-sign"></i>
-								<h3>Excluir {{ $people->nome }}</h3>
+								<h3>Excluir {{{ $people->nome }}}</h3>
 							</div>
 							<div class="widget-content">
 								<div class="tabbable">

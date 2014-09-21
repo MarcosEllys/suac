@@ -101,7 +101,7 @@ require app_path().'/filters.php';
 |
 */
 
-Validator::resolver(function($translator, $data, $rules, $messages)
-{
-	return new CustomValidator($translator, $data, $rules, $messages);
-});
+// Validator::resolver(function($translator, $data, $rules, $messages)
+// {
+// 	return new CustomValidator($translator, $data, $rules, $messages);
+// });

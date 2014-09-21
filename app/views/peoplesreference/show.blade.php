@@ -12,7 +12,7 @@
 								<a href=" {{ URL("/") }} "><i class="icon-dashboard"></i> Home</a>
 							</li>
 							<li>
-								/ <a href=" {{ action('PeoplesreferencesController@index') }} "> <i class="icon-group"></i> Pessoas referênciadas</a>
+								/ <a href=" {{ action('PeoplesreferencesController@index') }} "> <i class="icon-user"></i> Pessoas referênciadas</a>
 							</li>
 							<li>
 								/ <i class="icon-eye-open"></i> Ver informações

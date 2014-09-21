@@ -18,7 +18,7 @@
 							<a href=" {{ URL("/") }} "><i class="icon-dashboard"></i> Home</a>
 						</li>
 						<li>
-							/ <a href=" {{ action('PeoplesreferencesController@index') }} "> <i class="icon-group"></i> Pessoas referênciadas</a>
+							/ <a href=" {{ action('PeoplesreferencesController@index') }} "> <i class="icon-user"></i> Pessoas referênciadas</a>
 						</li>
 						<li>
 							/ <i class="icon-pencil"></i> Editar pessoa referênciada
@@ -35,7 +35,7 @@
 						
 						<div class="widget-header">
 							<i class="icon-pencil"></i>
-							<h3>Editar pessoa referênciada</h3>
+							<h3>Editando {{{ $people->nome }}}</h3>
 						</div>
 
 
