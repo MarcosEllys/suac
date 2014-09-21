@@ -104,7 +104,7 @@
 
 			} else {
 
-				return Redirect::to('unidades/create')->withInput()->withErrors($validator);
+				return Redirect::to('unidades/edit/'.$unidade->id)->withInput()->withErrors($validator);
 			}
 
 	}
