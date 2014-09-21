@@ -86,9 +86,26 @@
 		$unidade->complemento = Input::get('complemento');
 		$unidade->tipo = Input::get('tipo');
 
-		$unidade->save();
+		$rules = array(
+				'nome' => 'required|alpha|between:5,40',
+				'rua' => 'required|between:5,35',
+				'bairro' => 'required|between:5,30',
+				'numero' => 'required|numeric',
+				'tipo' => 'required'
+				);
 
-		return Redirect::to('/unidades');
+			$validator = Validator::make(Input::all(), $rules);
+
+			if ($validator->passes()) {
+
+				$unidade->save();
+
+				return Redirect::action('UnidadesController@index');
+
+			} else {
+
+				return Redirect::to('unidades/create')->withInput()->withErrors($validator);
+			}
 
 	}
 
