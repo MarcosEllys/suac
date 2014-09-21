@@ -15,7 +15,7 @@
 								/ <a href=" {{ action('PeoplesreferencesController@index') }} "> <i class="icon-user"></i> Pessoas referênciadas</a>
 							</li>
 							<li>
-								/ <i class="icon-eye-open"></i> Ver informações
+								/ <i class="icon-eye-open"></i> Informações
 							</li>
 						</ol>
 					</div>
@@ -28,7 +28,7 @@
 						<div class="widget ">
 							<div class="widget-header">
 								<i class="icon-eye-open"></i>
-								<h3>Informações de {{{ $people->nome }}}</h3>
+								<h3>Informações</h3>
 							</div>
 							<div class="widget-content">
 								<div class="tabbable">

@@ -54,5 +54,66 @@
 
 		}
 
+		public function show($id)
+		{
+			
+		$result = Unidade::find($id);
+
+		$vars = array('unidade' => $result);
+
+		$this->layout->content = View::make('unidades.show',$vars);
+
+		}
+
+		public function edit($id)
+	{
+		$unidade = Unidade::find($id);
+
+		$vars = array('unidade' => $unidade);
+
+		$this->layout->content = View::make('unidades.edit',$vars);
+	}
+
+	public function handleEdit()
+	{
+
+		$unidade = Unidade::findOrFail(Input::get('id'));
+
+		$unidade->nome = Input::get('nome');
+		$unidade->rua = Input::get('rua');
+		$unidade->bairro = Input::get('bairro');		
+		$unidade->numero = Input::get('numero');
+		$unidade->complemento = Input::get('complemento');
+		$unidade->tipo = Input::get('tipo');
+
+		$unidade->save();
+
+		return Redirect::to('/unidades');
+
+	}
+
+	public function delete($id)
+	{
+
+		$result = Unidade::find($id);
+
+		$vars = array('unidade' => $result);
+
+		$this->layout->content = View::make('unidades.delete',$vars);
+	}
+
+	public function handleDelete()
+	{
+
+		$id = Input::get('id');
+
+		$unidade = Unidade::findOrFail($id);
+
+		$unidade->delete();
+
+		return Redirect::to('/unidades');
+
+	}
+
 		
 		}

@@ -2,8 +2,6 @@
 
 {{ Form::open(array('action' => 'PeoplesreferencesController@handleEdit', 'class' => 'form-horizontal')) }}
 
-<!-- <input type="hidden" name="id" value="{{ $people->id }}"> -->
-
 {{ Form::hidden('id', $people->id) }}
 
 
@@ -55,6 +53,14 @@
 								<div class="tab-content">
 									<div class="tab-pane active" id="formcontrols">
 										<fieldset>
+
+											<div class="control-group">
+												{{ Form::label('id','Código:',array('class' => 'control-label') ) }}
+												<div class="controls">
+													{{{ $people->id }}}
+												</div>
+											</div>
+
 											<div class="control-group">
 												{{ Form::label('nome','Nome completo:',array('class' => 'control-label') ) }}
 												<div class="controls">

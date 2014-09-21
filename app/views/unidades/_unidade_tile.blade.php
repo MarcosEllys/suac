@@ -4,19 +4,19 @@
 	<td>{{{$unidade->tipo}}}</td>
 	<td class="td-actions">
 
-		<a href=' {{ action('PeoplesreferencesController@show', $unidade->id ) }} '>
+		<a href=' {{ action('UnidadesController@show', $unidade->id ) }} '>
 			<button class="btn btn-info">
 				Visualizar
 			</button>
 		</a>
 		
-		<a href=' {{ action('PeoplesreferencesController@edit',$unidade->id ) }} '>
+		<a href=' {{ action('UnidadesController@edit',$unidade->id ) }} '>
 			<button class="btn btn-warning">
 				Editar
 			</button>
 		</a>
 
-		<a href=' {{ action('PeoplesreferencesController@delete',$unidade->id ) }} '>
+		<a href=' {{ action('UnidadesController@delete',$unidade->id ) }} '>
 			<button class="btn btn-danger">
 				Excluir
 			</button>

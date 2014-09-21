@@ -1,6 +1,8 @@
 @section('content')
 
-{{ Form::open(array('action' => 'UnidadesController@store', 'class' => 'form-horizontal')) }}
+{{ Form::open(array('action' => 'UnidadesController@handleDelete', 'class' => 'form-horizontal')) }}
+
+{{ Form::hidden('id', $unidade->id) }}
 
 <div class="main">
 
@@ -18,7 +20,7 @@
 							/ <a href="{{ action('UnidadesController@index') }}"> <i class="icon-home "></i> Unidades</a>
 						</li>
 						<li>
-							/ <i class="icon-eye-open"></i> Informações unidade
+							/ <i class="icon-remove-sign"></i> Excluir unidade
 						</li>
 					</ol>
 				</div>
@@ -32,8 +34,8 @@
 
 					<div class="widget">
 						<div class="widget-header">
-							<i class="icon-eye-open"></i>
-							<h3>Informações da unidade </h3>
+							<i class="icon-remove-sign"></i>
+							<h3>Excluir da unidade </h3>
 						</div>
 						<!-- /widget-header -->
 						<div class="widget-content">
@@ -94,7 +96,11 @@
 
 						<br>
 
-						{{ HTML::link('/unidades','Voltar', array('class' => 'btn')) }}
+						{{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
+
+						{{ HTML::link('/unidades','Cancelar', array('class' => 'btn')) }}
+
+						{{ Form::close(); }}
 
 
 					</div>

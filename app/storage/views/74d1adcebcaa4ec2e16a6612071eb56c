@@ -21,7 +21,8 @@
   <br>
 
 <div class="row">
-  <div class="span5">
+
+  <div class="span6">
     <div class="widget widget-nopad">
       <div class="widget-header"> <i class="icon-bar-chart"></i>
         <h3> Status do sistema</h3>
@@ -31,6 +32,7 @@
           <div class="widget-content">
             <h6 class="bigstats">Dados importantes sobre o sistema.</h6>
              <div id="big_stats" class="cf">
+            
               <div class="stat">
                <i class="icon-user"></i>
                <span class="value"> <?php echo $peopletotal->getTotal();; ?> </span>
@@ -38,25 +40,25 @@
                Pessoas refenciadas cadastradas
              </div>
 
-
              <div class="stat"> 
-               <i class="icon-user-md"></i> <span class="value"><?php echo $unidades->getTotal();; ?></span>
+               <i class="icon-user-md"></i> <span class="value">0</span>
                <br>
                Usuários cadastrados 
              </div>
+
              <div class="stat"> 
-               <i class="icon-tasks"></i> 
-               <span class="value">4</span>
+               <i class="icon-home"></i> <span class="value"><?php echo $unidades->getTotal();; ?></span>
                <br>
-               Atendimentos agendados 
+               Unidades cadastradas 
              </div>
+
            </div>
          </div>
        </div>
      </div>
    </div>
  </div>
- <div class="span7">
+ <div class="span6">
   <div class="widget widget-table action-table">
     <div class="widget-header"> <i class="icon-tasks"></i>
       <h3>Atendimentos agendados</h3>

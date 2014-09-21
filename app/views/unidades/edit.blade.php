@@ -1,6 +1,8 @@
 @section('content')
 
-{{ Form::open(array('action' => 'UnidadesController@store', 'class' => 'form-horizontal')) }}
+{{ Form::open(array('action' => 'UnidadesController@handleEdit', 'class' => 'form-horizontal')) }}
+
+{{ Form::hidden('id',$unidade->id) }}
 
 <div class="main">
 
@@ -18,7 +20,7 @@
 							/ <a href="{{ action('UnidadesController@index') }}"> <i class="icon-home "></i> Unidades</a>
 						</li>
 						<li>
-							/ <i class="icon-eye-open"></i> Informações unidade
+							/ <i class="icon-pencil"></i> Editar unidade
 						</li>
 					</ol>
 				</div>
@@ -32,8 +34,8 @@
 
 					<div class="widget">
 						<div class="widget-header">
-							<i class="icon-eye-open"></i>
-							<h3>Informações da unidade </h3>
+							<i class="icon-pencil"></i>
+							<h3>Editar unidade</h3>
 						</div>
 						<!-- /widget-header -->
 						<div class="widget-content">
@@ -50,55 +52,64 @@
 							<div class="control-group">
 								{{ Form::label('nome','Nome da unidade:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{{ $unidade->nome }}}
+									{{ Form::text('nome',$unidade->nome,array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '40') ) }}
 								</div>
 							</div>
 
 							<div class="control-group">
 								{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{{ $unidade->rua }}}
+									{{ Form::text('rua',$unidade->rua,array('class' => 'span6', 'placeholder' => 'Rua ou avenida', 'maxlength' => '35') ) }}
 								</div>
 							</div>
 
 							<div class="control-group">
 								{{ Form::label('bairro','Bairro:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{{ $unidade->bairro }}}
+									{{ Form::text('bairro',$unidade->bairro,array('class' => 'span6', 'maxlength' => '30') ) }}
 								</div>
 							</div>
 
 							<div class="control-group">
 								{{ Form::label('numero','Nº:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{{ $unidade->numero }}}
+									{{ Form::text('numero',$unidade->numero,array('class' => 'span3','maxlength' => '4') ) }}
 								</div>
 							</div>
 
 							<div class="control-group">
 								{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{{ $unidade->complemento }}}}
+									{{ Form::text('complemento',$unidade->complemento,array('class' => 'span6', 'placeholder' => 'Casa | Apartamento | Condominio', 'maxlength' => '20') ) }}
 								</div>
 							</div>
 
 							<div class="control-group">
-								{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{{ $unidade->tipo }}}
-								</div>
-							</div>
+										{{ Form::label('tipo', 'Tipo de unidade:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											<label class="radio inline">
+												{{ Form::radio('tipo', 'CRAS', true) }} CRAS
+											</label>
+											<label class="radio inline">
+												{{ Form::radio('tipo', 'CREAS') }} CREAS
+											</label>
+										</div>
+									</div>
+
 
 
 						</div>
+					</div>
 
-						<br>
+					<div class="form-actions">
 
-						{{ HTML::link('/unidades','Voltar', array('class' => 'btn')) }}
+						{{ Form::submit('Salvar', array('class' => 'btn btn-primary')) }}
 
+						{{ HTML::link('/unidades','Cancelar', array('class' => 'btn')) }}
 
 					</div>
 
+					{{ Form::close() }}
 
 				</div>
 

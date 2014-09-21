@@ -2,7 +2,7 @@
 
 {{ Form::open(array('action' => 'PeoplesreferencesController@handleDelete', 'class' => 'form-horizontal')) }}
 
-<input type="hidden" name="id" value="{{ $people->id }}" />
+{{ Form::hidden('id', $people->id) }}
 
 
 	<div class="main">
