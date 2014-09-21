@@ -9,7 +9,7 @@
           <i class=" icon-bookmark"></i><span>Administrativo</span> <b class="caret"></b></a>
 
           <ul class="dropdown-menu">
-            <li><a href="#">Usuários</a></li>
+            <li><a href="{{ URL("/users") }}">Usuários</a></li>
             <li><a href="{{ action('UnidadesController@index') }}">Unidades</a></li>
           </ul>
         </li>

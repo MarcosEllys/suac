@@ -39,9 +39,15 @@ Route::get('ajuda',function()
 
 });
 
-
-
-
+/*
+|--------------------------------------------------------------------------
+| People references Routes
+|--------------------------------------------------------------------------
+|
+| Rotas dedicadas a manipulação de dados de PF
+| Rota adicional search para busca LIKE.
+|
+*/
 
 Route::model('people', 'Peoplesreference');
 
@@ -63,9 +69,14 @@ Route::get('peoplesref/delete/{id}', 'PeoplesreferencesController@delete');
 
 Route::post('peoplesref/delete','PeoplesreferencesController@handleDelete');
 
-
-
-
+/*
+|--------------------------------------------------------------------------
+| Unidades Routes
+|--------------------------------------------------------------------------
+|
+| Rotas dedicadas a manipulação de dados de Unidades.
+|
+*/
 
 Route::model('unidade','Unidade');
 
@@ -84,3 +95,30 @@ Route::post('unidades/edit','UnidadesController@handleEdit');
 Route::get('unidades/delete/{id}','UnidadesController@delete');
 
 Route::post('unidades/delete','UnidadesController@handleDelete');
+
+/*
+|--------------------------------------------------------------------------
+| Users Routes
+|--------------------------------------------------------------------------
+|
+| Rotas dedicadas a manipulação de dados de Users.
+|
+*/
+
+Route::model('user','User');
+
+Route::get('users','UsersController@index');
+
+Route::get('users/create','UsersController@create');
+
+Route::post('users','UsersController@store');
+
+Route::get('users/show/{id}','UsersController@show');
+
+Route::get('users/edit/{id}','UsersController@edit');
+
+Route::post('users/edit','UsersController@handleEdit');
+
+Route::get('users/delete/{id}','UsersController@delete');
+
+Route::post('users/delete','UsersController@handleDelete');

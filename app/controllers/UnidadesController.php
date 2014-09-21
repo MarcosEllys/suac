@@ -30,7 +30,6 @@ class UnidadesController extends BaseController{
 		$unidade->complemento = Input::get('complemento');
 		$unidade->tipo = Input::get('tipo');
 
-
 		$rules = array(
 			'nome' => 'required|alpha|between:5,40',
 			'rua' => 'required|between:5,35',
@@ -39,7 +38,7 @@ class UnidadesController extends BaseController{
 			'tipo' => 'required'
 			);
 
-		$validator = Validator::make(Input::all(), $rules);
+		$validator = Validator::make(Input::all(),$rules);
 
 		if ($validator->passes()) {
 
