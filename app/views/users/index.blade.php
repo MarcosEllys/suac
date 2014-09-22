@@ -23,7 +23,7 @@
 				<div class="span7">
 					<div class="widget widget-plain">
 						<div class="widget-content">
-							<a href="{{ action('UnidadesController@create') }}" class="btn btn-large btn-success btn-support-ask"> Cadastrar usuário</a>
+							<a href="{{ action('UsersController@create') }}" class="btn btn-large btn-success btn-support-ask"> Cadastrar usuário</a>
 						</div>
 					</div>					
 				</div>

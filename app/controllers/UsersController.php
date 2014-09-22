@@ -12,4 +12,9 @@ class UsersController extends BaseController{
 		$this->layout->content = View::make('users.index',$vars);
 
 	}
+
+	public function create()
+	{
+		$this->layout->content = View::make('users.create');
+	}
 }

@@ -50,7 +50,7 @@
 					<div class="widget widget-table action-table">
 						<div class="widget-header">
 							<i class="icon-group"></i>
-							<h3>Pessoas referenciadas cadastradas</h3>
+							<h3>Pessoas referenciadas</h3>
 						</div>
 						<div class="widget-content">
 							<table class="table table-striped table-bordered">
