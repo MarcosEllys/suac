@@ -1,8 +1,8 @@
 <?php
 
-use LaravelBook\Ardent\Ardent;
+// use LaravelBook\Ardent\Ardent;
 
-class Unidade extends Ardent {
+class Unidade extends Eloquent {
 
 	protected $table = 'unidades';
 
@@ -13,5 +13,10 @@ class Unidade extends Ardent {
 		'numero' => 'required|numeric',
 		'tipo' => 'required'
 		);
+
+	public function validate($data)
+	{
+		return Validator::make($data,self::$rules);
+	}
 
 }

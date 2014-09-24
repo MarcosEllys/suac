@@ -101,6 +101,7 @@ return array(
     |
     */
 
-    'attributes' => array(),
+    'attributes' => array(
+        'emitedrg' => 'data de emissão'),
 
 );
