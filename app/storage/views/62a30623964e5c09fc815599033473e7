@@ -26,7 +26,6 @@
 
 
 
-
   <?php echo HTML::script( asset('js/jquery-1.7.2.min.js') ); ?>
 
   <?php echo HTML::script( asset('js/bootstrap.js') ); ?>

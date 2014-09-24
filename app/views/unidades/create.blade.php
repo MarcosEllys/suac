@@ -1,4 +1,12 @@
+@section('header')
+
+	{{ HTML::script( asset('js/jquery-mask/jquery.mask.js') ) }}
+	{{ HTML::script( asset('js/jquery-mask/jquery.mask.min.js') ) }}
+
+@stop
+
 @section('content')
+
 
 {{ Form::open(array('action' => 'UnidadesController@store', 'class' => 'form-horizontal')) }}
 
@@ -24,6 +32,7 @@
 				</div>
 			</div>
 
+
 			@include('layout._errors')				
 
 
@@ -43,7 +52,7 @@
 							<div class="control-group">
 								{{ Form::label('nome','Nome da unidade:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{ Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '40') ) }}
+									{{ Form::text('nome',Input::old('nome'),array('data-mask' => '9999/99/99', 'class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '40') ) }}
 								</div>
 							</div>
 

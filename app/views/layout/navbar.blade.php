@@ -25,7 +25,7 @@
         </li>
 
         <li>
-          <a href="#">
+          <a href=" {{ URL("/reports") }} ">
             <i class="icon-list-alt"></i><span>Relatórios</span>            
           </a>
         </li>

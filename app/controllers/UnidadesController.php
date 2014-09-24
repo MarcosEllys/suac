@@ -2,6 +2,14 @@
 
 class UnidadesController extends BaseController{
 
+	// protected $unidade;
+
+	// public function __construct(Unidade $unidade)
+ //    {
+ //        $this->unidade = $unidade;
+ //    }
+
+
 	public function index()
 	{
 
@@ -30,15 +38,7 @@ class UnidadesController extends BaseController{
 		$unidade->complemento = Input::get('complemento');
 		$unidade->tipo = Input::get('tipo');
 
-		$rules = array(
-			'nome' => 'required|alpha|between:5,40',
-			'rua' => 'required|between:5,35',
-			'bairro' => 'required|between:5,30',
-			'numero' => 'required|numeric',
-			'tipo' => 'required'
-			);
-
-		$validator = Validator::make(Input::all(),$rules);
+		$validator = Validator::make(Input::all(),$this->unidade);
 
 		if ($validator->passes()) {
 
@@ -86,7 +86,7 @@ class UnidadesController extends BaseController{
 		$unidade->tipo = Input::get('tipo');
 
 		$rules = array(
-			'nome' => 'required|alpha|between:5,40',
+			'nome' => 'required|between:5,40',
 			'rua' => 'required|between:5,35',
 			'bairro' => 'required|between:5,30',
 			'numero' => 'required|numeric',

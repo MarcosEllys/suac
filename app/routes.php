@@ -24,6 +24,8 @@ Route::get('/', function()
 
 });
 
+Route::get('login','UsersController@login');
+
 
 Route::get('sobre',function()
 {
@@ -122,3 +124,18 @@ Route::post('users/edit','UsersController@handleEdit');
 Route::get('users/delete/{id}','UsersController@delete');
 
 Route::post('users/delete','UsersController@handleDelete');
+
+/*
+|--------------------------------------------------------------------------
+| Reports Routes
+|--------------------------------------------------------------------------
+|
+| Rotas dedicadas a seção relatórios do sistema.
+|
+*/
+
+Route::get('reports',function(){
+
+	return View::make('reports.index');
+
+});

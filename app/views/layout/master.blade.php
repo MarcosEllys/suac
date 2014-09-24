@@ -21,7 +21,6 @@
   {{ HTML::style( asset('css/pages/dashboard.css') ) }}
 
 
-
   {{ HTML::script( asset('js/jquery-1.7.2.min.js') ) }}
   {{ HTML::script( asset('js/bootstrap.js') ) }}
   {{ HTML::script( asset('js/base.js') ) }}
