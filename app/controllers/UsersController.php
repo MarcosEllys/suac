@@ -2,6 +2,19 @@
 
 class UsersController extends BaseController{
 
+	protected $user;
+
+	public function __construct(User $user)
+	{
+		$this->user = $user;
+	}
+
+	public function login(){
+
+		return View::make('users.login');
+	}
+
+	
 	public function index()
 	{
 
@@ -56,11 +69,6 @@ class UsersController extends BaseController{
 
 		
 
-	}
-
-	public function login(){
-
-		return View::make('users.login');
 	}
 
 }

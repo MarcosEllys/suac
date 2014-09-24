@@ -25,7 +25,7 @@
 
 						<ol class="breadcrumb">
 							<li>
-								<a href="/"><i class="icon-dashboard"></i> Home</a>
+								<a href=" {{ URL("/") }} "><i class="icon-dashboard"></i> Home</a>
 							</li>
 							<li class="active">
 								/ <i class="icon-facetime-video"></i> Ajuda

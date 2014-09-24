@@ -11,6 +11,36 @@
 |
 */
 
+
+Route::get('/login','UsersController@login');
+
+Route::get('login', 'UsersController@login');
+
+// Route::post('validate','UsersController@validate');
+
+// Route::group(array('before' => 'auth'), function()
+// {
+
+// 	Route::model('unidade','Unidade');
+
+// 	Route::get('unidades','UnidadesController@index');
+
+// 	Route::get('unidades/create','UnidadesController@create');
+
+// 	Route::post('unidades','UnidadesController@store');
+
+// 	Route::get('unidades/show/{id}','UnidadesController@show');
+
+// 	Route::get('unidades/edit/{id}','UnidadesController@edit');
+
+// 	Route::post('unidades/edit','UnidadesController@handleEdit');
+
+// 	Route::get('unidades/delete/{id}','UnidadesController@delete');
+
+// 	Route::post('unidades/delete','UnidadesController@handleDelete');
+
+// });
+
 Route::get('/', function()
 {
 
@@ -24,15 +54,13 @@ Route::get('/', function()
 
 });
 
-Route::get('login','UsersController@login');
-
-
 Route::get('sobre',function()
 {
 
 	return View::make('umbrella');
 
 });
+
 
 Route::get('ajuda',function()
 {

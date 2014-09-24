@@ -45,7 +45,7 @@ class UnidadesController extends BaseController{
 
 			$unidade->save();
 
-			return Redirect::action('UnidadesController@index');
+			return Redirect::action('UnidadesController@index')->with('message', 'Unidade criada com sucesso');;
 
 		} else {
 

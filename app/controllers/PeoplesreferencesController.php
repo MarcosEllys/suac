@@ -2,6 +2,13 @@
 
 class PeoplesreferencesController extends BaseController{
 
+	public $peoplesreference;
+
+	public function __construct(Peoplesreference $peoplesreference)
+	{
+		$this->peoplesreference = $peoplesreference;
+	}
+
 	public function index()
 	{
 
@@ -52,12 +59,7 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->localization = Input::get('localization');
 
 
-		$rules = array(
-			'nome' => 'required|alpha|between:10,60',
-			'apelido' => 'required|between:11,13'
-			);
-
-		$validator = Validator::make(Input::all(), $rules);
+		$validator = $this->peoplesreference->validate(Input::all());
 
 		if ($validator->passes()) {
 
@@ -115,9 +117,18 @@ class PeoplesreferencesController extends BaseController{
 		$people->telefone2 = Input::get('telefone2');
 		$people->localization = Input::get('localization');
 
-		$people->save();
+		$validator = $this->peoplesreference->validate(Input::all());
 
-		return Redirect::to('/peoplesref');
+		if ($validator->passes()) {
+
+			$people->save();
+
+			return Redirect::action('PeoplesreferencesController@index');
+
+		} else {
+
+			return Redirect::to('peoplesref/create')->withInput()->withErrors($validator);
+		}
 
 	}
 
