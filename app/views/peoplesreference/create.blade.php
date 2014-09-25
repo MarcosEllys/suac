@@ -12,7 +12,7 @@
 				<div class="span12">
 					<ol class="breadcrumb">
 						<li>
-							<a href=" {{ URL("/index") }} "><i class="icon-dashboard"></i> Home</a>
+							<a href=" {{ URL("/") }} "><i class="icon-dashboard"></i> Home</a>
 						</li>
 						<li>
 							/ <a href="{{ action('PeoplesreferencesController@index') }}"> <i class="icon-user "></i> Pessoas referênciadas</a>

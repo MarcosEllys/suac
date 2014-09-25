@@ -17,7 +17,13 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('hello');
+
+		$pf = DB::table('peoplesreferences')->paginate();
+
+		$unidades = DB::table('unidades')->paginate();
+
+		return View::make('home')->with('peopletotal',$pf)->with('unidades',$unidades);
+
 	}
 
 }

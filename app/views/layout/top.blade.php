@@ -11,13 +11,13 @@
         <ul class="nav pull-right">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-              class="icon-user-md"></i> Assistente Social <b class="caret"></b></a>
+              class="icon-user-md"></i> {{ Auth::user->username }} <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#">Perfil</a>
                 </li>
                 <li>
-                  <a href="#">Sair</a>
+                  <a href="#"> {{link_to('logout', 'Log Out')}} </a>
                 </li>
               </ul>
             </li>

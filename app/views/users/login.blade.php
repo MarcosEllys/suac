@@ -41,7 +41,7 @@
 
 			<div class="content clearfix">
 
-				<form action=" / " method="get">
+				{{ Form::open(array('action' => 'UsersController@validate')) }}
 
 					<div class="alert">
 						<button type="button" class="close" data-dismiss="alert">
@@ -68,12 +68,9 @@
 						<span class="login-checkbox">
 							<input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4" />
 							<label class="choice" for="Field">Mantenha-me conectado</label> </span>
-						<a href="home.php">
-						<button class="button btn btn-success btn-large" type="submit">
-							Logar
-						</button> </a>
+						{{ Form::submit('Logar', array('class' => 'button btn btn-success btn-large')) }}
 					</div>
-				</form>
+				{{ Form::close() }}
 
 			</div>
 		</div>

@@ -40,12 +40,11 @@ class UnidadesController extends BaseController{
 
 		$validator = $this->unidade->validate(Input::all());
 
-
 		if ($validator->passes()) {
 
 			$unidade->save();
 
-			return Redirect::action('UnidadesController@index')->with('message', 'Unidade criada com sucesso');;
+			return Redirect::action('UnidadesController@index');
 
 		} else {
 

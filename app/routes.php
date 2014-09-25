@@ -11,159 +11,138 @@
 |
 */
 
-
-Route::get('/login','UsersController@login');
-
-Route::get('login', 'UsersController@login');
-
-// Route::post('validate','UsersController@validate');
-
-// Route::group(array('before' => 'auth'), function()
+// Route::get('/', function()
 // {
 
-// 	Route::model('unidade','Unidade');
+// 	$pf = DB::table('peoplesreferences')->paginate();
 
-// 	Route::get('unidades','UnidadesController@index');
+// 	$unidades = DB::table('unidades')->paginate();
 
-// 	Route::get('unidades/create','UnidadesController@create');
-
-// 	Route::post('unidades','UnidadesController@store');
-
-// 	Route::get('unidades/show/{id}','UnidadesController@show');
-
-// 	Route::get('unidades/edit/{id}','UnidadesController@edit');
-
-// 	Route::post('unidades/edit','UnidadesController@handleEdit');
-
-// 	Route::get('unidades/delete/{id}','UnidadesController@delete');
-
-// 	Route::post('unidades/delete','UnidadesController@handleDelete');
+// 	return View::make('home')
+// 	->with('peopletotal',$pf)
+// 	->with('unidades',$unidades);
 
 // });
 
-Route::get('/', function()
+Route::get('/','UsersController@login');
+
+Route::get('login', 'UsersController@login');
+
+Route::post('login','UsersController@validate');
+
+
+
+Route::group(array('before' => 'auth'), function()
 {
 
-	$pf = DB::table('peoplesreferences')->paginate();
-
-	$unidades = DB::table('unidades')->paginate();
-
-	return View::make('home')
-				->with('peopletotal',$pf)
-				->with('unidades',$unidades);
-
-});
-
-Route::get('sobre',function()
-{
-
-	return View::make('umbrella');
-
-});
+	Route::get('sobre',function()
+	{
+		return View::make('umbrella');
+	});
 
 
-Route::get('ajuda',function()
-{
+	Route::get('ajuda',function()
+	{
+		return View::make('helpers.index');
+	});
 
-	return View::make('helpers.index');
+	/*
+	|--------------------------------------------------------------------------
+	| People references Routes
+	|--------------------------------------------------------------------------
+	|
+	| Rotas dedicadas a manipulação de dados de PF
+	| Rota adicional search para busca LIKE.
+	|
+	*/
 
-});
+	Route::model('people', 'Peoplesreference');
 
-/*
-|--------------------------------------------------------------------------
-| People references Routes
-|--------------------------------------------------------------------------
-|
-| Rotas dedicadas a manipulação de dados de PF
-| Rota adicional search para busca LIKE.
-|
-*/
+	Route::get('peoplesref','PeoplesreferencesController@index');
 
-Route::model('people', 'Peoplesreference');
+	Route::post('peoplesref/search', 'PeoplesreferencesController@search');
 
-Route::get('peoplesref','PeoplesreferencesController@index');
+	Route::get('peoplesref/create','PeoplesreferencesController@create');
 
-Route::post('peoplesref/search', 'PeoplesreferencesController@search');
+	Route::post('peoplesref','PeoplesreferencesController@store');
 
-Route::get('peoplesref/create','PeoplesreferencesController@create');
+	Route::get('peoplesref/edit/{id}','PeoplesreferencesController@edit');
 
-Route::post('peoplesref','PeoplesreferencesController@store');
+	Route::post('peoplesref/edit','PeoplesreferencesController@handleEdit');
 
-Route::get('peoplesref/edit/{id}','PeoplesreferencesController@edit');
+	Route::get('peoplesref/show/{id}','PeoplesreferencesController@show');
 
-Route::post('peoplesref/edit','PeoplesreferencesController@handleEdit');
+	Route::get('peoplesref/delete/{id}', 'PeoplesreferencesController@delete');
 
-Route::get('peoplesref/show/{id}','PeoplesreferencesController@show');
+	Route::post('peoplesref/delete','PeoplesreferencesController@handleDelete');
 
-Route::get('peoplesref/delete/{id}', 'PeoplesreferencesController@delete');
+	/*
+	|--------------------------------------------------------------------------
+	| Users Routes
+	|--------------------------------------------------------------------------
+	|
+	| Rotas dedicadas a manipulação de dados de Users.
+	|
+	*/
 
-Route::post('peoplesref/delete','PeoplesreferencesController@handleDelete');
+	Route::model('user','User');
 
-/*
-|--------------------------------------------------------------------------
-| Unidades Routes
-|--------------------------------------------------------------------------
-|
-| Rotas dedicadas a manipulação de dados de Unidades.
-|
-*/
+	Route::get('users','UsersController@index');
 
-Route::model('unidade','Unidade');
+	Route::get('users/create','UsersController@create');
 
-Route::get('unidades','UnidadesController@index');
+	Route::post('users','UsersController@store');
 
-Route::get('unidades/create','UnidadesController@create');
+	Route::get('users/show/{id}','UsersController@show');
 
-Route::post('unidades','UnidadesController@store');
+	Route::get('users/edit/{id}','UsersController@edit');
 
-Route::get('unidades/show/{id}','UnidadesController@show');
+	Route::post('users/edit','UsersController@handleEdit');
 
-Route::get('unidades/edit/{id}','UnidadesController@edit');
+	Route::get('users/delete/{id}','UsersController@delete');
 
-Route::post('unidades/edit','UnidadesController@handleEdit');
+	Route::post('users/delete','UsersController@handleDelete');
 
-Route::get('unidades/delete/{id}','UnidadesController@delete');
+	/*
+	|--------------------------------------------------------------------------
+	| Unidades Routes
+	|--------------------------------------------------------------------------
+	|
+	| Rotas dedicadas a manipulação de dados de Unidades.
+	|
+	*/
 
-Route::post('unidades/delete','UnidadesController@handleDelete');
+	Route::model('unidade','Unidade');
 
-/*
-|--------------------------------------------------------------------------
-| Users Routes
-|--------------------------------------------------------------------------
-|
-| Rotas dedicadas a manipulação de dados de Users.
-|
-*/
+	Route::get('unidades','UnidadesController@index');
 
-Route::model('user','User');
+	Route::get('unidades/create','UnidadesController@create');
 
-Route::get('users','UsersController@index');
+	Route::post('unidades','UnidadesController@store');
 
-Route::get('users/create','UsersController@create');
+	Route::get('unidades/show/{id}','UnidadesController@show');
 
-Route::post('users','UsersController@store');
+	Route::get('unidades/edit/{id}','UnidadesController@edit');
 
-Route::get('users/show/{id}','UsersController@show');
+	Route::post('unidades/edit','UnidadesController@handleEdit');
 
-Route::get('users/edit/{id}','UsersController@edit');
+	Route::get('unidades/delete/{id}','UnidadesController@delete');
 
-Route::post('users/edit','UsersController@handleEdit');
+	Route::post('unidades/delete','UnidadesController@handleDelete');
 
-Route::get('users/delete/{id}','UsersController@delete');
+	/*
+	|--------------------------------------------------------------------------
+	| Reports Routes
+	|--------------------------------------------------------------------------
+	|
+	| Rotas dedicadas a seção relatórios do sistema.
+	|
+	*/
 
-Route::post('users/delete','UsersController@handleDelete');
+	Route::get('reports',function(){
 
-/*
-|--------------------------------------------------------------------------
-| Reports Routes
-|--------------------------------------------------------------------------
-|
-| Rotas dedicadas a seção relatórios do sistema.
-|
-*/
+		return View::make('reports.index');
 
-Route::get('reports',function(){
-
-	return View::make('reports.index');
+	});
 
 });

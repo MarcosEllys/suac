@@ -189,16 +189,16 @@
 											</div>
 
 											<div class="control-group">
-												{{ Form::label('passowrd','Senha:',array('class' => 'control-label') ) }}
+												{{ Form::label('password','Senha:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::password('passowrd',Input::old('passowrd'),array('class' => 'span6') ) }}
+													{{ Form::password('password',Input::old('password'),array('class' => 'span6') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
-												{{ Form::label('passowrd_confirmation','Repita a senha:',array('class' => 'control-label') ) }}
+												{{ Form::label('password_confirmation','Repita a senha:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::password('passowrd_confirmation',Input::old('passowrd_confirmation'),array('class' => 'span6') ) }}
+													{{ Form::password('password_confirmation',Input::old('password_confirmation'),array('class' => 'span6') ) }}
 												</div>
 											</div>
 
@@ -276,9 +276,9 @@
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ) }}
+										{{ Form::label('pointreferencia','Ponto de referência:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('pointreference',Input::old('pointreference'),array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ) }}
+											{{ Form::text('pointreferencia',Input::old('pointreferencia'),array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ) }}
 										</div>
 									</div>
 
@@ -304,7 +304,7 @@
 
 		{{ Form::submit('Salvar', array('class' => 'btn btn-primary')) }}
 
-		{{ HTML::link('/peoplesref','Cancelar', array('class' => 'btn')) }}
+		{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
 
 	</div>
 

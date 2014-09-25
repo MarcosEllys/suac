@@ -9,9 +9,35 @@ class UsersController extends BaseController{
 		$this->user = $user;
 	}
 
+	public function validate(){
+
+		$user = array(
+			'username' => Input::get('username'),
+			 'password' => Input::get('password')
+			 );
+
+		if (Auth::attempt($user))
+		{
+			return Redirect::to('/peoplesref');
+			
+		} else {
+
+			return Redirect::back()->withInput()->withErrors('error','Usuário ou senha inválidos');
+
+		}
+	}
+
 	public function login(){
 
 		return View::make('users.login');
+	}
+
+	public function logaut()
+	{
+
+		Auth::logaut();
+		return Redirect::action('UsersController@login');
+
 	}
 
 	
@@ -52,16 +78,20 @@ class UsersController extends BaseController{
 		$user->is_admin = Input::get('is_admin');
 		$user->cep = Input::get('cep');
 
-		$mycep =  CepConsult::getAddress(Input::get('cep'));
+		// $mycep =  CepConsult::getAddress(Input::get('cep'));
 
-		$user->uf = $mycep['state'];
-		$user->municipio = $mycep['city'];
+		// $user->uf = $mycep['state'];
+		// $user->municipio = $mycep['city'];
+
+
+		$user->uf = 'CE';
+		$user->cidade = 'Icó';
 		$user->bairro = Input::get('bairro');
 		$user->rua = Input::get('rua');
 		$user->numero = Input::get('numero');
 
 		$user->complemento = Input::get('complemento');
-		$user->pointreference = Input::get('pointreference');
+		$user->pointreferencia  = Input::get('pointreferencia');
 
 		$user->save();
 

@@ -8,7 +8,7 @@
 
 
 					<ol class="breadcrumb">
-						<li><a href="<?php echo URL("/index"); ?>"><i class="icon-dashboard"></i> Home</a></li>
+						<li><a href="<?php echo URL("/"); ?>"><i class="icon-dashboard"></i> Home</a></li>
 						<li class="active">  /  <i class="icon-user"></i> Pessoas referênciadas</li>
 					</ol>
 
