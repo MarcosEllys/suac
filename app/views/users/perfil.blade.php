@@ -1,6 +1,6 @@
 @section('content')
 
-{{ Form::open(array('action' => 'UsersController@store', 'class' => 'form-horizontal')) }}
+{{ Form::open(array('class' => 'form-horizontal')) }}
 
 <div class="main">
 
@@ -214,11 +214,7 @@
 
 			</div>
 
-			<div class="form-actions">
-
 				{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
-
-			</div>
 
 			{{ Form::close() }}
 

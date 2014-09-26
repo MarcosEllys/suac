@@ -17,11 +17,10 @@ class UsersController extends BaseController{
 			'password' 	=> Input::get('password')
 			);
 		
-		$validator = $this->user->validation($userdata);
+		$validator = $this->user->validate($userdata);
 
 		if ($validator->passes()) {
 
-			// attempt to do the login
 			if (Auth::attempt($userdata)) {
 				return Redirect::to('/');
 			} else {
@@ -47,6 +46,10 @@ class UsersController extends BaseController{
 		return Redirect::to('/');
 	}
 
+	public function perfil(){
+
+		$this->layout->content = View::make('users.perfil');
+	}
 	
 	public function index()
 	{
@@ -59,10 +62,6 @@ class UsersController extends BaseController{
 
 	}
 
-	public function perfil(){
-
-		$this->layout->content = View::make('users.perfil');
-	}
 
 	public function create()
 	{
@@ -101,13 +100,22 @@ class UsersController extends BaseController{
 		$user->bairro = Input::get('bairro');
 		$user->rua = Input::get('rua');
 		$user->numero = Input::get('numero');
-
 		$user->complemento = Input::get('complemento');
 		$user->pointreferencia  = Input::get('pointreferencia');
 
-		$user->save();
+		// $validator = $this->user->validate(Input::all());
 
-		return Redirect::action('UsersController@index');
+		// if ($validator->passes()) {
+
+			$user->save();
+
+			return Redirect::action('UsersController@index');
+
+		// } else {
+
+		// 	return Redirect::to('users/create')->withInput()->withErrors($validator);
+		// }
+
 		
 
 	}
@@ -133,6 +141,17 @@ class UsersController extends BaseController{
 		$user->delete();
 
 		return Redirect::action('UsersController@index');
+
+	}
+
+	public function show($id)
+	{
+
+		$result = User::find($id);
+
+		$vars = array('users' => $result);
+
+		$this->layout->content = View::make('users.show',$vars);
 
 	}
 

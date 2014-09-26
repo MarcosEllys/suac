@@ -103,7 +103,7 @@ return array(
 
     'attributes' => array(
         'emitedrg' => 'data de emissão',
-        'username' => 'Usuário',
-        'password' => 'Senha'),
+        'username' => 'usuário',
+        'password' => 'senha'),
 
 );

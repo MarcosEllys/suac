@@ -1,7 +1,13 @@
 	<tr>
 	<td>{{{$user->id}}}</td>
 	<td>{{{$user->nome }}}</td>
-	<td>{{{$user->tipo}}}</td>
+	<td>
+		@if($user->is_admin = true)
+			Administrador
+		@else
+			Usuário comum
+		@endif
+	</td>
 	<td class="td-actions">
 
 		<a href=' {{ action('UsersController@show', $user->id ) }} '>
