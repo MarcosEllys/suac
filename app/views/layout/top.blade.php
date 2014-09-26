@@ -17,7 +17,7 @@
                   <a href="#">Perfil</a>
                 </li>
                 <li>
-                  <a href="#">Logout</a>
+                  <a href=' {{ URL('logout') }} '> Sair </a>
                 </li>
               </ul>
             </li>
@@ -25,6 +25,6 @@
         </div>
       </div>
     </div>
-</div>
+  </div>
 
-@show
+  @show

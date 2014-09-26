@@ -24,17 +24,13 @@ class UsersController extends BaseController{
 			// attempt to do the login
 			if (Auth::attempt($userdata)) {
 
-				// validation successful!
-				// redirect them to the secure section or whatever
-				// return Redirect::to('secure');
-				// for now we'll just echo success (even though echoing in a controller is bad)
-				return Redirect::action('UnidadesController@index');
+				return Redirect::to('/');
 
-			} else {
+			}
+		} else {
 
-				return Redirect::to('login')->withInput()->withErrors($validator);
-
-			} 
+			return Redirect::to('login')->withInput()->withErrors($validator);
+	
 		}
 	}
 
@@ -43,11 +39,11 @@ class UsersController extends BaseController{
 		return View::make('users.login');
 	}
 
-	public function logaut()
+	public function logout()
 	{
-		Auth::logaut();
+		Auth::logout();
 
-		return Redirect::action('UsersController@login');
+		return Redirect::to('/');
 	}
 
 	
@@ -106,7 +102,6 @@ class UsersController extends BaseController{
 		$user->save();
 
 		return Redirect::action('UsersController@index');
-
 		
 
 	}
@@ -127,9 +122,9 @@ class UsersController extends BaseController{
 
 		$id = Input::get('id');
 
-		$unidade = User::findOrFail($id);
+		$user = User::findOrFail($id);
 
-		$unidade->delete();
+		$user->delete();
 
 		return Redirect::action('UsersController@index');
 

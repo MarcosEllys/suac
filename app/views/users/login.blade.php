@@ -43,12 +43,8 @@
 
 			{{ Form::open(array('action' => 'UsersController@validate')) }}
 
-			<div class="alert">
-				<button type="button" class="close" data-dismiss="alert">
-					×
-				</button>
-				<strong>Aviso!</strong> Efetue login para acessar todas as funcionalidades do sistema.
-			</div>
+
+			@include('layout._errors')
 
 			<h1>Login</h1>
 
@@ -60,8 +56,8 @@
 				</div>
 				<div class="field">
 					{{ Form::label('password','Password:') }}
-					{{ Form::text('password',Input::old('password'),array('class' => 'login password-field', 'id' => 'password', 'placeholder' => 'Usuário') ) }}
-					<!-- <input type="password" id="password" name="password" value="" placeholder="Senha" class="login password-field"/> -->
+					<!-- {{ Form::text('password',Input::old('password'),array('class' => 'login password-field', 'id' => 'password', 'placeholder' => 'Usuário') ) }} -->
+					<input type="password" id="password" name="password" value="" placeholder="Senha" class="login password-field"/>
 				</div>
 			</div>
 			<div class="login-actions">

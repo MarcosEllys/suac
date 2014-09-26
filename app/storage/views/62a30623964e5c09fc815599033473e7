@@ -1,8 +1,7 @@
-<?php if(Auth::check()): ?>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  
+
   <meta charset="utf-8">
   
   <title>SUAC - Sistema Único de Assistência ao CRAS</title>
@@ -39,19 +38,22 @@
 </head>
 <body>
 
-  
+
   <?php echo $__env->make('/layout/top', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> 
 
+  <?php if(Auth::check()): ?>
 
-  <?php echo $__env->make('/layout/navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('/layout/navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
+  <?php endif; ?>
 
   <?php echo $__env->yieldContent('content'); ?>
 
+  <?php if(Auth::check()): ?>
 
-  <?php echo $__env->make('/layout/footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-
+    <?php echo $__env->make('/layout/footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  
+  <?php endif; ?>
 
 </body>
 </html>
-<?php endif; ?>

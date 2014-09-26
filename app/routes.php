@@ -11,21 +11,6 @@
 |
 */
 
-// Route::get('/', function()
-// {
-
-// 	$pf = DB::table('peoplesreferences')->paginate();
-
-// 	$unidades = DB::table('unidades')->paginate();
-
-// 	return View::make('home')
-// 	->with('peopletotal',$pf)
-// 	->with('unidades',$unidades);
-
-// });
-
-Route::get('/','UsersController@login');
-
 Route::get('login', 'UsersController@login');
 
 Route::post('login','UsersController@validate');
@@ -34,6 +19,19 @@ Route::post('login','UsersController@validate');
 
 Route::group(array('before' => 'auth'), function()
 {
+
+	Route::get('/', function()
+	{
+
+		$pf = DB::table('peoplesreferences')->paginate();
+
+		$unidades = DB::table('unidades')->paginate();
+
+		return View::make('home')
+		->with('peopletotal',$pf)
+		->with('unidades',$unidades);
+
+	});
 
 	Route::get('sobre',function()
 	{
@@ -86,6 +84,8 @@ Route::group(array('before' => 'auth'), function()
 	*/
 
 	Route::model('user','User');
+
+	Route::get('logout','UsersController@logout');
 
 	Route::get('users','UsersController@index');
 

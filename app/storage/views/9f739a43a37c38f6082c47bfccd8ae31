@@ -18,7 +18,7 @@
                   <a href="#">Perfil</a>
                 </li>
                 <li>
-                  <a href="#">Logout</a>
+                  <a href=' <?php echo URL('logout'); ?> '> Sair </a>
                 </li>
               </ul>
             </li>
@@ -26,6 +26,6 @@
         </div>
       </div>
     </div>
-</div>
+  </div>
 
-<?php echo $__env->yieldSection(); ?>
+  <?php echo $__env->yieldSection(); ?>

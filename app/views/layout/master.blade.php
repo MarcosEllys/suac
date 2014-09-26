@@ -1,8 +1,7 @@
-@if(Auth::check())
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  
+
   <meta charset="utf-8">
   
   <title>SUAC - Sistema Único de Assistência ao CRAS</title>
@@ -31,19 +30,22 @@
 </head>
 <body>
 
-  
+
   @include('/layout/top') 
 
+  @if(Auth::check())
 
-  @include('/layout/navbar')
+    @include('/layout/navbar')
 
+  @endif
 
   @yield('content')
 
+  @if(Auth::check())
 
-  @include('/layout/footer')
-
+    @include('/layout/footer')
+  
+  @endif
 
 </body>
 </html>
-@endif
