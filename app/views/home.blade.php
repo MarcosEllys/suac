@@ -43,7 +43,7 @@
              </div>
 
              <div class="stat"> 
-               <i class="icon-user-md"></i> <span class="value">0</span>
+               <i class="icon-user-md"></i> <span class="value"> {{ $users->getTotal(); }} </span>
                <br>
                Usuários cadastrados 
              </div>

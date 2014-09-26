@@ -23,10 +23,11 @@ class UsersController extends BaseController{
 
 			// attempt to do the login
 			if (Auth::attempt($userdata)) {
-
 				return Redirect::to('/');
-
+			} else {
+				return Redirect::to('login')->withInput()->withErrors($validator);
 			}
+
 		} else {
 
 			return Redirect::to('login')->withInput()->withErrors($validator);

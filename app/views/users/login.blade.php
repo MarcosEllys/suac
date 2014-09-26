@@ -15,6 +15,8 @@
 	{{ HTML::style( asset('css/pages/signin.css') ) }}
 
 	{{ HTML::script( asset('js/signin.js') ) }}
+	{{ HTML::script( asset('js/jquery-1.7.2.min.js') ) }}
+	{{ HTML::script( asset('js/bootstrap.js') ) }}
 
 
 
@@ -50,14 +52,15 @@
 
 			<div class="login-fields">
 
+				<p>Todos os campos são obrigatórios</p>
+
 				<div class="field">
 					{{ Form::label('username','Username:') }}
 					{{ Form::text('username',Input::old('username'),array('class' => 'login username-field', 'id' => 'username', 'placeholder' => 'Usuário') ) }}
 				</div>
 				<div class="field">
 					{{ Form::label('password','Password:') }}
-					<!-- {{ Form::text('password',Input::old('password'),array('class' => 'login password-field', 'id' => 'password', 'placeholder' => 'Usuário') ) }} -->
-					<input type="password" id="password" name="password" value="" placeholder="Senha" class="login password-field"/>
+					<input type="password" id="password" name="password" value="" placeholder="Senha" class="login password-field">
 				</div>
 			</div>
 			<div class="login-actions">

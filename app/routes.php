@@ -25,11 +25,14 @@ Route::group(array('before' => 'auth'), function()
 
 		$pf = DB::table('peoplesreferences')->paginate();
 
-		$unidades = DB::table('unidades')->paginate();
+		$uni = DB::table('unidades')->paginate();
+
+		$user = DB::table('users')->paginate();
 
 		return View::make('home')
 		->with('peopletotal',$pf)
-		->with('unidades',$unidades);
+		->with('unidades',$uni)
+		->with('users',$user);
 
 	});
 

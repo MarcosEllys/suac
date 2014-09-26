@@ -102,6 +102,8 @@ return array(
     */
 
     'attributes' => array(
-        'emitedrg' => 'data de emissão'),
+        'emitedrg' => 'data de emissão',
+        'username' => 'Usuário',
+        'password' => 'Senha'),
 
 );
