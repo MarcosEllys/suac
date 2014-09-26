@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
 	<meta charset="utf-8">
@@ -48,7 +48,7 @@
 
 			@include('layout._errors')
 
-			<h1>Login</h1>
+			<h1>Tela de Login</h1>
 
 			<div class="login-fields">
 
@@ -56,7 +56,7 @@
 
 				<div class="field">
 					{{ Form::label('username','Username:') }}
-					{{ Form::text('username',Input::old('username'),array('class' => 'login username-field', 'id' => 'username', 'placeholder' => 'Usuário') ) }}
+					{{ Form::text('username',Input::old('username'),array('class' => 'login username-field', 'id' => 'username', 'placeholder' => 'Usuário','autofocus') ) }}
 				</div>
 				<div class="field">
 					{{ Form::label('password','Password:') }}

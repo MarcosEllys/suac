@@ -90,6 +90,8 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('logout','UsersController@logout');
 
+	Route::get('perfil','UsersController@perfil');	
+
 	Route::get('users','UsersController@index');
 
 	Route::get('users/create','UsersController@create');

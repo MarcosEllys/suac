@@ -15,7 +15,7 @@
               class="icon-user-md"></i> <?php echo e(Auth::User()->username); ?>  <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#">Perfil</a>
+                  <a href=" <?php echo URL("perfil"); ?> ">Perfil</a>
                 </li>
                 <li>
                   <a href=' <?php echo URL('logout'); ?> '> Sair </a>

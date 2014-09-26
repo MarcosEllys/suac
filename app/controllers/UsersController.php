@@ -59,6 +59,11 @@ class UsersController extends BaseController{
 
 	}
 
+	public function perfil(){
+
+		$this->layout->content = View::make('users.perfil');
+	}
+
 	public function create()
 	{
 		$this->layout->content = View::make('users.create');

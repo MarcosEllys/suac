@@ -14,7 +14,7 @@
               class="icon-user-md"></i> {{{ Auth::User()->username }}}  <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#">Perfil</a>
+                  <a href=" {{ URL("perfil") }} ">Perfil</a>
                 </li>
                 <li>
                   <a href=' {{ URL('logout') }} '> Sair </a>
