@@ -1,5 +1,4 @@
 @if(Auth::check())
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -47,5 +46,4 @@
 
 </body>
 </html>
-
 @endif

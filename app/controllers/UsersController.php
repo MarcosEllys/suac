@@ -9,21 +9,32 @@ class UsersController extends BaseController{
 		$this->user = $user;
 	}
 
-	public function validate(){
+	public function validate()
+	{
 
-		$user = array(
-			'username' => Input::get('username'),
-			 'password' => Input::get('password')
-			 );
+		$userdata = array(
+			'username' 	=> Input::get('username'),
+			'password' 	=> Input::get('password')
+			);
+		
+		$validator = $this->user->validation($userdata);
 
-		if (Auth::attempt($user))
-		{
-			return Redirect::to('/peoplesref');
-			
-		} else {
+		if ($validator->passes()) {
 
-			return Redirect::back()->withInput()->withErrors('error','Usuário ou senha inválidos');
+			// attempt to do the login
+			if (Auth::attempt($userdata)) {
 
+				// validation successful!
+				// redirect them to the secure section or whatever
+				// return Redirect::to('secure');
+				// for now we'll just echo success (even though echoing in a controller is bad)
+				return Redirect::action('UnidadesController@index');
+
+			} else {
+
+				return Redirect::to('login')->withInput()->withErrors($validator);
+
+			} 
 		}
 	}
 
@@ -34,10 +45,9 @@ class UsersController extends BaseController{
 
 	public function logaut()
 	{
-
 		Auth::logaut();
-		return Redirect::action('UsersController@login');
 
+		return Redirect::action('UsersController@login');
 	}
 
 	
@@ -72,8 +82,8 @@ class UsersController extends BaseController{
 		$user->emitedrg = Input::get('emitedrg');
 		$user->telefone = Input::get('telefone');
 		$user->username = Input::get('username');
-		$user->password = Input::get('password');
-		$user->password_confirmation = Input::get('password_confirmation');
+		$user->password = Hash::make(Input::get('password'));
+		$user->password_confirmation = Hash::make(Input::get('password_confirmation'));
 		$user->email = Input::get('email');
 		$user->is_admin = Input::get('is_admin');
 		$user->cep = Input::get('cep');
@@ -98,6 +108,30 @@ class UsersController extends BaseController{
 		return Redirect::action('UsersController@index');
 
 		
+
+	}
+
+
+	public function delete($id)
+	{
+
+		$result = User::find($id);
+
+		$vars = array('users' => $result);
+
+		$this->layout->content = View::make('users.delete',$vars);
+	}
+
+	public function handleDelete()
+	{
+
+		$id = Input::get('id');
+
+		$unidade = User::findOrFail($id);
+
+		$unidade->delete();
+
+		return Redirect::action('UsersController@index');
 
 	}
 
