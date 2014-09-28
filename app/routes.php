@@ -148,4 +148,16 @@ Route::group(array('before' => 'auth'), function()
 		return View::make('reports.index');
 	});
 
+	Route::get('reports/peoples',function(){
+
+		$pf = DB::table('peoplesreferences')
+		->orderBy('nome','asc')
+		->paginate();
+
+		return View::make('reports.peoples.index')
+		->with('peoples',$pf);
+
+
+	});
+
 });

@@ -52,8 +52,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 
 	public static $RulesLogin = array(
-		'username' => 'alpha_num|required|between:5,20',
-		'password' => 'required|between:5,20',
+		'username' => 'alpha_num|required|between:4,20',
+		'password' => 'required|between:4,20',
 		);
 
 	public function validate($data)

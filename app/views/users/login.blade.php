@@ -66,14 +66,15 @@
 			<div class="login-actions">
 
 				<span class="login-checkbox">
-
-					<label class="choice" for="Field">Mantenha-me conectado</label> </span>
-					{{ Form::submit('Enviar', array('class' => 'button btn btn-success btn-large')) }}
-				</div>
-				{{ Form::close(); }}
-
+					<input id="Field" name="Field" class="field login-checkbox" value="First Choice" tabindex="4" type="checkbox">
+					<label class="choice" for="Field">Mantenha-me conectado</label> 
+				</span>
+				{{ Form::submit('Enviar', array('class' => 'button btn btn-success btn-large')) }}
 			</div>
-		</div>
-	</body>
+			{{ Form::close(); }}
 
-	</html>
+		</div>
+	</div>
+</body>
+
+</html>
