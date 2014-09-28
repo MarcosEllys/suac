@@ -1,10 +1,3 @@
-@section('header')
-
-	{{ HTML::script( asset('js/jquery-mask/jquery.mask.js', array('defer' => 'defer' ) ) ) }}
-	{{ HTML::script( asset('js/jquery-mask/jquery.mask.min.js',array('defer' => 'defer' ) ) ) }}
-
-@stop
-
 @section('content')
 
 

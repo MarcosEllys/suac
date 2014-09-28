@@ -53,6 +53,7 @@
 								<div class="tab-content">
 									<div class="tab-pane active" id="formcontrols">
 										<fieldset>
+
 											<div class="control-group">
 												{{ Form::label('nome','Nome completo:',array('class' => 'control-label') ) }}
 												<div class="controls">
@@ -83,14 +84,14 @@
 											<div class="control-group">
 												{{ Form::label('cpf','Nº do CPF:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('cpf',Input::old('cpf'),array('class' => 'span6','placeholder' => 'Somente os números') ) }}
+													{{ Form::text('cpf',Input::old('cpf'),array('class' => 'span6', 'placeholder' => 'Somente os números') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
-												{{ Form::label('rg','Nº do RG:',array('class' => 'control-label') ) }}
+												{{ Form::label('rg','Nº do Rg:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('rg',Input::old('rg'),array('class' => 'span6','placeholder' => 'Somente os números') ) }}
+													{{ Form::text('rg',Input::old('rg'),array('class' => 'span6', 'placeholder' => 'Somente os números') ) }}
 												</div>
 											</div>
 
@@ -260,11 +261,10 @@
 											{{ Form::text('bairro',Input::old('bairro'),array('class' => 'span6') ) }}
 										</div>
 									</div>
-
 									<div class="control-group">
-										{{ Form::label('numero','Número:',array('class' => 'control-label') ) }}
+										{{ Form::label('numero','Numero:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('numero',Input::old('numero'),array('class' => 'span6') ) }}
+											{{ Form::text('numero',Input::old('numero'),array('class' => 'span6', 'placeholder' => 'Somente os números') ) }}
 										</div>
 									</div>
 

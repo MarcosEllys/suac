@@ -16,14 +16,19 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
+	public static $RulesLogin = array(
+		'username' => 'alpha_num|required|between:5,20',
+		'password' => 'required|between:5,20',
+		);
+
 	public static $rules = array(
-		'username' => 'required',
+		'username' => 'alpha_num|required|between:5,20',
 		'password' => 'required',
 		);
 
 	public function validate($data)
 	{
-		return Validator::make($data,self::$rules);
+		return Validator::make($data,self::$RulesLogin);
 	}
 
 	/**

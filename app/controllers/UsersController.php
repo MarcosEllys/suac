@@ -75,7 +75,7 @@ class UsersController extends BaseController{
 
 		$user->nome = Input::get('nome');
 		$user->sexo = Input::get('sexo');
-		$user->nascimento = Input::get('nascimento');		
+		$user->nascimento = Input::get('nascimento');
 		$user->cpf = Input::get('cpf');
 		$user->rg = Input::get('rg');
 		$user->orgaorg = Input::get('orgaorg');
@@ -119,7 +119,6 @@ class UsersController extends BaseController{
 		
 
 	}
-
 
 	public function delete($id)
 	{
