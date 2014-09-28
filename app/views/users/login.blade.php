@@ -66,10 +66,11 @@
 			<div class="login-actions">
 
 				<span class="login-checkbox">
-					<input id="Field" name="Field" class="field login-checkbox" value="First Choice" tabindex="4" type="checkbox">
-					<label class="choice" for="Field">Mantenha-me conectado</label> 
+					<label class="choice" for="Field">Recuperar senha</label> 
 				</span>
+
 				{{ Form::submit('Enviar', array('class' => 'button btn btn-success btn-large')) }}
+
 			</div>
 			{{ Form::close(); }}
 

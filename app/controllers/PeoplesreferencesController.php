@@ -45,12 +45,12 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->nomeunidade = Input::get('nomeunidade');
 		$peoplesreference->cep = Input::get('cep');
 
-		$mycep =  CepConsult::getAddress(Input::get('cep'));
+		// $mycep =  CepConsult::getAddress(Input::get('cep'));
 
-		$peoplesreference->municipio = $mycep['city'];
+		// $peoplesreference->uf = $mycep['city'];
+		// $peoplesreference->municipio = $mycep['city'];
 		$peoplesreference->rua = Input::get('rua');
 		$peoplesreference->bairro = Input::get('bairro');
-		$peoplesreference->uf = $mycep['state'];
 
 		$peoplesreference->complemento = Input::get('complemento');
 		$peoplesreference->pointreference = Input::get('pointreference');

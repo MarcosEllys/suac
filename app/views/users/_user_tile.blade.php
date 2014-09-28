@@ -8,7 +8,7 @@
 			Usuário comum
 		@endif
 	</td>
-	<td class="td-actions">
+	<td>
 
 		<a href=' {{ action('UsersController@show', $user->id ) }} '>
 			<button class="btn btn-info">

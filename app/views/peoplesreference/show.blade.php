@@ -169,11 +169,19 @@
 													</div>
 													
 												<div class="control-group">
+													<label class="control-label" for="email">Estado:</label>
+													<div class="controls">
+														{{{ $people->uf }}}
+													</div>
+												</div>
+
+												<div class="control-group">
 													<label class="control-label" for="email">Municipio:</label>
 													<div class="controls">
 														{{{ $people->municipio }}}
 													</div>
 												</div>
+
 													<div class="control-group">
 														<label class="control-label" for="email">Rua:</label>
 														<div class="controls">

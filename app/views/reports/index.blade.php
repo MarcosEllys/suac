@@ -33,12 +33,42 @@
 						</div>
 						<div class="widget-content">
 							<div class="shortcuts">
-								<a href=" {{ URL("reports/peoples") }} " class="shortcut">
-									<i class="shortcut-icon icon-user"></i> <span class="shortcut-label"> Pessoas referenciadas cadastradas </span> 
-								</a>
+
+
+								<a href="#myModal" role="button" class="shortcut" data-toggle="modal"><i class="shortcut-icon icon-user"></i> <span class="shortcut-label"> Pessoas referenciadas cadastradas </span></a>
+
+								<!-- Modal -->
+								<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<h3 id="myModalLabel"><i class="shortcut-icon icon-user"></i> Pessoas referenciadas cadastradas</h3>
+									</div>
+									<div class="modal-body">
+
+										<a href=" {{ URL("reports/peoples") }} " class="shortcut">
+											<i class="shortcut-icon icon-user"></i> <span class="shortcut-label"> Ordenadas por código </span> 
+										</a>
+
+										<a href=" {{ URL("reports/peoples") }} " class="shortcut">
+											<i class="shortcut-icon icon-user"></i> <span class="shortcut-label"> Ordenadas por nome </span> 
+										</a>
+
+										<a href=" {{ URL("reports/peoples") }} " class="shortcut">
+											<i class="shortcut-icon icon-user"></i> <span class="shortcut-label"> Ordenadas por unidade de atendimento </span> 
+										</a>
+
+									</div>
+									<div class="modal-footer">
+										<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+									</div>
+								</div>
+
+
+
 								<a href="javascript:;" class="shortcut">
 									<i class="shortcut-icon icon-group"></i> <span class="shortcut-label"> Famílias cadastradas </span> 
 								</a>
+
 								<a href="javascript:;" class="shortcut">
 									<i class="shortcut-icon icon-ok"></i> <span class="shortcut-label">Atendimentos realizados </span> 
 								</a>

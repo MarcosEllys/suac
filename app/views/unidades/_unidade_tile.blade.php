@@ -2,7 +2,7 @@
 	<td>{{{$unidade->id}}}</td>
 	<td>{{{$unidade->nome }}}</td>
 	<td>{{{$unidade->tipo}}}</td>
-	<td class="td-actions">
+	<td>
 
 		<a href=' {{ action('UnidadesController@show', $unidade->id ) }} '>
 			<button class="btn btn-info">
