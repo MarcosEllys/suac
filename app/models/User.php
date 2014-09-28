@@ -16,14 +16,44 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
+	/**
+	 * Metódo de validação para inserção e manipulação de usuário
+	 *
+	 * @var array com regras de validação.
+	 * @return validor check.
+	 */
+
+
+	public static $rules = array(
+		'nome' => 'required|between:5,20',
+		'sexo' => 'required',
+		'nascimento' => 'required',
+		'rg' => 'required|numeric',
+		'orgaorg' => 'required',
+		'ufrg' => 'required',
+		'emitedrg' => 'required',
+		'username' => 'alpha_num|required|between:4,20',
+		'password' => 'required',
+		'password' => 'confirmed',
+		'is_admin' => 'required',
+		'bairro' => 'required|between:5,20',
+		);
+
+	public function validation($data)
+	{
+		return Validator::make($data,self::$rules);
+	}
+
+	/**
+	 * Metódo de validação para efetuar login
+	 *
+	 * @var array com regras de validação.
+	 * @return validor check.
+	 */
+
 	public static $RulesLogin = array(
 		'username' => 'alpha_num|required|between:5,20',
 		'password' => 'required|between:5,20',
-		);
-
-	public static $rules = array(
-		'username' => 'alpha_num|required|between:5,20',
-		'password' => 'required',
 		);
 
 	public function validate($data)
