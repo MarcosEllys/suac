@@ -20,7 +20,7 @@
 							/ <a href="{{ action('UsersController@index') }}"> <i class="icon-user-md "></i> Usuários</a>
 						</li>
 						<li>
-							/ <i class="icon-eye-open"></i> Informações do usuário
+							/ <i class="icon-eye-open"></i> Ver usuário
 						</li>
 					</ol>
 				</div>
@@ -35,7 +35,7 @@
 						
 						<div class="widget-header">
 							<i class="icon-eye-open"></i>
-							<h3>Informações do usuário </h3>
+							<h3>Ver usuário</h3>
 						</div>
 
 
@@ -66,11 +66,7 @@
 											<div class="control-group">
 												{{ Form::label('sexo', 'Sexo:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													@if($users->sexo = 'M')
-														Masculino
-													@else
-														Feminino
-													@endif	
+													{{{ $users->sexo }}}	
 												</div>
 											</div>
 
@@ -89,7 +85,7 @@
 											</div>
 
 											<div class="control-group">
-												{{ Form::label('rg','Nº do RG:',array('class' => 'control-label') ) }}
+												{{ Form::label('rg','Nº do Rg:',array('class' => 'control-label') ) }}
 												<div class="controls">
 													{{{ $users->rg }}}
 												</div>
@@ -149,11 +145,7 @@
 													<div class="control-group">
 														{{ Form::label('is_admin', 'Tipo de usuário:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															@if($users->is_admin = true)
-																Administrador
-															@else
-																Usuário comum
-															@endif
+															{{{ $users->is_admin }}}		
 														</div>
 													</div>
 
@@ -208,9 +200,8 @@
 													{{{ $users->bairro }}}
 												</div>
 											</div>
-
 											<div class="control-group">
-												{{ Form::label('numero','Número:',array('class' => 'control-label') ) }}
+												{{ Form::label('numero','Numero:',array('class' => 'control-label') ) }}
 												<div class="controls">
 													{{{ $users->numero }}}
 												</div>
@@ -248,7 +239,7 @@
 
 			</div>
 
-			{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
+				{{ HTML::link('/users','Voltar', array('class' => 'btn')) }}
 
 			{{ Form::close() }}
 
