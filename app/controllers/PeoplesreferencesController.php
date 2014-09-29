@@ -41,7 +41,6 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->ufrg = Input::get('ufrg');
 		$peoplesreference->emitedrg = Input::get('emitedrg');
 		$peoplesreference->numeroprontuario = Input::get('numeroprontuario');
-		$peoplesreference->tipounidade = Input::get('tipounidade');
 		$peoplesreference->nomeunidade = Input::get('nomeunidade');
 		$peoplesreference->cep = Input::get('cep');
 
@@ -100,7 +99,6 @@ class PeoplesreferencesController extends BaseController{
 		$people->ufrg = Input::get('ufrg');
 		$people->emitedrg = Input::get('emitedrg');
 		$people->numeroprontuario = Input::get('numeroprontuario');
-		$people->tipounidade = Input::get('tipounidade');
 		$people->nomeunidade = Input::get('nomeunidade');
 		$people->cep = Input::get('cep');
 

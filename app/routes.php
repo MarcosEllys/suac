@@ -147,6 +147,7 @@ Route::group(array('before' => 'auth'), function()
 	Route::get('reports',function(){
 		return View::make('reports.index');
 	});
+	
 
 	Route::get('reports/peoples',function(){
 

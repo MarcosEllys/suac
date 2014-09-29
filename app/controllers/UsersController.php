@@ -24,7 +24,9 @@ class UsersController extends BaseController{
 			if (Auth::attempt($userdata)) {
 				return Redirect::to('/');
 			} else {
-				return Redirect::to('login')->withInput()->withErrors($validator);
+				
+				return Redirect::to('login')->withInput()->withErrors('Erro','Usuário e/ou Senha errados');
+
 			}
 
 		} else {

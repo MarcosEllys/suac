@@ -190,18 +190,6 @@
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('tipounidade', 'Tipo de unidade:',array('class' => 'control-label') ) }}
-										<div class="controls">
-											<label class="radio inline">
-												{{ Form::radio('tipounidade', 'cras', true) }} CRAS
-											</label>
-											<label class="radio inline">
-												{{ Form::radio('tipounidade', 'creas') }} CREAS
-											</label>
-										</div>
-									</div>
-
-									<div class="control-group">
 										{{ Form::label('nomeunidade', 'Unidade de atendimento:',array('class' => 'control-label')) }}
 										<div class="controls">
 
@@ -223,73 +211,75 @@
 							<fieldset>
 
 
-							<div class="control-group">
-								{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{ Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números') ) }}
+								<div class="control-group">
+									{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números') ) }}
+									</div>
 								</div>
-							</div>
 
 
-							<div class="control-group">
-								{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{ Form::text('rua',Input::old('rua'),array('class' => 'span6','placeholder' => 'Rua ou avenida') ) }}
+								<div class="control-group">
+									{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('rua',Input::old('rua'),array('class' => 'span6','placeholder' => 'Rua ou avenida') ) }}
+									</div>
 								</div>
-							</div>
 
-							<div class="control-group">
-								{{ Form::label('bairro','Bairro:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{ Form::text('bairro',Input::old('bairro'),array('class' => 'span6') ) }}
+								<div class="control-group">
+									{{ Form::label('bairro','Bairro:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('bairro',Input::old('bairro'),array('class' => 'span6') ) }}
+									</div>
 								</div>
-							</div>
 
 
-							<div class="control-group">
-								{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{ Form::text('complemento',Input::old('complemento'),array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio') ) }}
+								<div class="control-group">
+									{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('complemento',Input::old('complemento'),array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio') ) }}
+									</div>
 								</div>
-							</div>
 
-							<div class="control-group">
-								{{ Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{ Form::text('pointreference',Input::old('pointreference'),array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ) }}
+								<div class="control-group">
+									{{ Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('pointreference',Input::old('pointreference'),array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ) }}
+									</div>
 								</div>
-							</div>
 
-							<div class="control-group">
-								{{ Form::label('telefone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{ Form::text('telefone1',Input::old('telefone1'),array('class' => 'span6') ) }}
+								<div class="control-group">
+									{{ Form::label('telefone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('telefone1',Input::old('telefone1'),array('class' => 'span6') ) }}
+									</div>
 								</div>
-							</div>
 
-							<div class="control-group">
-								{{ Form::label('telefone2','Telefone para contato 2:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{ Form::text('telefone2',Input::old('telefone2'),array('class' => 'span6') ) }}
+								<div class="control-group">
+									{{ Form::label('telefone2','Telefone para contato 2:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										{{ Form::text('telefone2',Input::old('telefone2'),array('class' => 'span6') ) }}
+									</div>
 								</div>
-							</div>
 
-							<div class="control-group">
-								{{ Form::label('localization', 'Tipo de unidade:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									<label class="radio inline">
-										{{ Form::radio('localization', 'urbano', true) }} Urbano
-									</label>
-									<label class="radio inline">
-										{{ Form::radio('localization', 'rural') }} Rural
+								<div class="control-group">
+									{{ Form::label('localization', 'Tipo de unidade:',array('class' => 'control-label') ) }}
+									<div class="controls">
+										<label class="radio inline">
+											{{ Form::radio('localization', 'urbano', true) }} Urbano
+										</label>
+										<label class="radio inline">
+											{{ Form::radio('localization', 'rural') }} Rural
 
-									</label>		
+										</label>		
+									</div>
 								</div>
-							</div>
 
-							<!-- /Até aqui -->
+								<!-- /Até aqui -->
 
-						</fieldset>
+							</fieldset>
+						</div>
+
 					</div>
 
 				</div>
@@ -299,8 +289,6 @@
 		</div>
 
 	</div>
-
-</div>
 
 </div>
 

@@ -28,20 +28,26 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		'nome' => 'required|between:5,20',
 		'sexo' => 'required',
 		'nascimento' => 'required',
+		'cpf' => array('required','cpf'),
 		'rg' => 'required|numeric',
 		'orgaorg' => 'required',
 		'ufrg' => 'required',
 		'emitedrg' => 'required',
-		'username' => 'alpha_num|required|between:4,20',
+		'username' => 'unique:users|alpha_num|required|between:4,20',
+		'email' => 'unique:uses|required|email',
 		'password' => 'required',
 		'password' => 'confirmed',
 		'is_admin' => 'required',
 		'bairro' => 'required|between:5,20',
 		);
 
+	public static $messages = array(
+		'cpf' => 'cpf inválido',
+		);
+
 	public function validation($data)
 	{
-		return Validator::make($data,self::$rules);
+		return Validator::make($data,self::$rules,self::$messages);
 	}
 
 	/**

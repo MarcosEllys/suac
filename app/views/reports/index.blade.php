@@ -40,7 +40,7 @@
 								<!-- Modal -->
 								<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<button type="button" class="close btn-danger" data-dismiss="modal" aria-hidden="true">×</button>
 										<h3 id="myModalLabel"><i class="shortcut-icon icon-user"></i> Pessoas referenciadas cadastradas</h3>
 									</div>
 									<div class="modal-body">

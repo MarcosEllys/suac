@@ -213,19 +213,6 @@
 									</div>
 
 									<div class="control-group">
-										<?php echo Form::label('tipounidade', 'Tipo de unidade:',array('class' => 'control-label') ); ?>
-
-										<div class="controls">
-											<label class="radio inline">
-												<?php echo Form::radio('tipounidade', 'cras', true); ?> CRAS
-											</label>
-											<label class="radio inline">
-												<?php echo Form::radio('tipounidade', 'creas'); ?> CREAS
-											</label>
-										</div>
-									</div>
-
-									<div class="control-group">
 										<?php echo Form::label('nomeunidade', 'Unidade de atendimento:',array('class' => 'control-label')); ?>
 
 										<div class="controls">
@@ -248,88 +235,90 @@
 							<fieldset>
 
 
-							<div class="control-group">
-								<?php echo Form::label('cep','CEP:',array('class' => 'control-label') ); ?>
+								<div class="control-group">
+									<?php echo Form::label('cep','CEP:',array('class' => 'control-label') ); ?>
 
-								<div class="controls">
-									<?php echo Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números') ); ?>
+									<div class="controls">
+										<?php echo Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números') ); ?>
 
+									</div>
 								</div>
-							</div>
 
 
-							<div class="control-group">
-								<?php echo Form::label('rua','Rua:',array('class' => 'control-label') ); ?>
+								<div class="control-group">
+									<?php echo Form::label('rua','Rua:',array('class' => 'control-label') ); ?>
 
-								<div class="controls">
-									<?php echo Form::text('rua',Input::old('rua'),array('class' => 'span6','placeholder' => 'Rua ou avenida') ); ?>
+									<div class="controls">
+										<?php echo Form::text('rua',Input::old('rua'),array('class' => 'span6','placeholder' => 'Rua ou avenida') ); ?>
 
+									</div>
 								</div>
-							</div>
 
-							<div class="control-group">
-								<?php echo Form::label('bairro','Bairro:',array('class' => 'control-label') ); ?>
+								<div class="control-group">
+									<?php echo Form::label('bairro','Bairro:',array('class' => 'control-label') ); ?>
 
-								<div class="controls">
-									<?php echo Form::text('bairro',Input::old('bairro'),array('class' => 'span6') ); ?>
+									<div class="controls">
+										<?php echo Form::text('bairro',Input::old('bairro'),array('class' => 'span6') ); ?>
 
+									</div>
 								</div>
-							</div>
 
 
-							<div class="control-group">
-								<?php echo Form::label('complemento','Complemento:',array('class' => 'control-label') ); ?>
+								<div class="control-group">
+									<?php echo Form::label('complemento','Complemento:',array('class' => 'control-label') ); ?>
 
-								<div class="controls">
-									<?php echo Form::text('complemento',Input::old('complemento'),array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio') ); ?>
+									<div class="controls">
+										<?php echo Form::text('complemento',Input::old('complemento'),array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio') ); ?>
 
+									</div>
 								</div>
-							</div>
 
-							<div class="control-group">
-								<?php echo Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ); ?>
+								<div class="control-group">
+									<?php echo Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ); ?>
 
-								<div class="controls">
-									<?php echo Form::text('pointreference',Input::old('pointreference'),array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ); ?>
+									<div class="controls">
+										<?php echo Form::text('pointreference',Input::old('pointreference'),array('class' => 'span6','placeholder' => 'Escola / Hospital / Empresa') ); ?>
 
+									</div>
 								</div>
-							</div>
 
-							<div class="control-group">
-								<?php echo Form::label('telefone1','Telefone para contato 1:',array('class' => 'control-label') ); ?>
+								<div class="control-group">
+									<?php echo Form::label('telefone1','Telefone para contato 1:',array('class' => 'control-label') ); ?>
 
-								<div class="controls">
-									<?php echo Form::text('telefone1',Input::old('telefone1'),array('class' => 'span6') ); ?>
+									<div class="controls">
+										<?php echo Form::text('telefone1',Input::old('telefone1'),array('class' => 'span6') ); ?>
 
+									</div>
 								</div>
-							</div>
 
-							<div class="control-group">
-								<?php echo Form::label('telefone2','Telefone para contato 2:',array('class' => 'control-label') ); ?>
+								<div class="control-group">
+									<?php echo Form::label('telefone2','Telefone para contato 2:',array('class' => 'control-label') ); ?>
 
-								<div class="controls">
-									<?php echo Form::text('telefone2',Input::old('telefone2'),array('class' => 'span6') ); ?>
+									<div class="controls">
+										<?php echo Form::text('telefone2',Input::old('telefone2'),array('class' => 'span6') ); ?>
 
+									</div>
 								</div>
-							</div>
 
-							<div class="control-group">
-								<?php echo Form::label('localization', 'Tipo de unidade:',array('class' => 'control-label') ); ?>
+								<div class="control-group">
+									<?php echo Form::label('localization', 'Tipo de unidade:',array('class' => 'control-label') ); ?>
 
-								<div class="controls">
-									<label class="radio inline">
-										<?php echo Form::radio('localization', 'urbano', true); ?> Urbano
-									</label>
-									<label class="radio inline">
-										<?php echo Form::radio('localization', 'rural'); ?> Rural
+									<div class="controls">
+										<label class="radio inline">
+											<?php echo Form::radio('localization', 'urbano', true); ?> Urbano
+										</label>
+										<label class="radio inline">
+											<?php echo Form::radio('localization', 'rural'); ?> Rural
 
-									</label>		
+										</label>		
+									</div>
 								</div>
-							</div>
 
-							<!-- /Até aqui -->
+								<!-- /Até aqui -->
 
-						</fieldset>
+							</fieldset>
+						</div>
+
 					</div>
 
 				</div>
@@ -339,8 +328,6 @@
 		</div>
 
 	</div>
-
-</div>
 
 </div>
 

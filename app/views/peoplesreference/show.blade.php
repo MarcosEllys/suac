@@ -139,14 +139,6 @@
 													</div>
 
 													<div class="control-group">
-														<label class="control-label">Unidade de atendimento:</label>
-
-														<div class="controls">
-															{{{ $people->tipounidade }}}
-														</div>
-													</div>
-
-													<div class="control-group">
 														<label class="control-label" for="email">Nome da Unidade:</label>
 														<div class="controls">
 															{{{ $people->nomeunidade }}}

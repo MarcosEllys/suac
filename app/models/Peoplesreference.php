@@ -4,6 +4,11 @@ class Peoplesreference extends Eloquent{
 
 	protected $table = 'peoplesreferences';
 
+	public function unidades()
+	{
+		return $this->belongsTo('unidades');
+	}
+
 	public static $rules = array(
 		'nome' => 'required|alpha|between:10,60',
 		'apelido' => 'required|between:11,13',
@@ -11,7 +16,7 @@ class Peoplesreference extends Eloquent{
 		);
 
 	public static $messages = array(
-		'cpf' => 'CPF inválido',
+		'cpf' => 'cpf inválido',
 		);
 
 

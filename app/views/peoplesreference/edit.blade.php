@@ -198,18 +198,6 @@
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('tipounidade', 'Tipo de unidade:',array('class' => 'control-label') ) }}
-										<div class="controls">
-											<label class="radio inline">
-												{{ Form::radio('tipounidade', 'cras', true) }} CRAS
-											</label>
-											<label class="radio inline">
-												{{ Form::radio('tipounidade', 'creas') }} CREAS
-											</label>
-										</div>
-									</div>
-
-									<div class="control-group">
 										{{ Form::label('nomeunidade', 'Unidade de atendimento:',array('class' => 'control-label')) }}
 										<div class="controls">
 
