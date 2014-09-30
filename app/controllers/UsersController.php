@@ -25,7 +25,7 @@ class UsersController extends BaseController{
 				return Redirect::to('/');
 			} else {
 				
-				return Redirect::to('login')->withInput()->withErrors('Erro','Usuário e/ou Senha errados');
+				return Redirect::to('login')->withInput()->withErrors('Usuário e/ou Senha errados');
 
 			}
 

@@ -22,13 +22,13 @@
 							<table class="table table-striped table-bordered">
 								<thead>
 									<tr>
-										<th>Código</th>
-										<th>Nome</th>
-										<th>Apelido</th>
-										<th>Data de nascimento</th>
-										<th>NIS</th>
-										<th>CPF</th>
-										<th>Unidade de Atendimento</th>
+										<th><a href="{{ URL::to('reports/peoples?sort=id') }} "><i class="icon-large icon-sort"></i> Código</a></th>
+										<th><a href="{{ URL::to('reports/peoples?sort=nome') }} "><i class="icon-large icon-sort"></i> Nome</a></th>
+										<th><a href="{{ URL::to('reports/peoples?sort=apelido') }} "><i class="icon-large icon-sort"></i> Apelido</a></th>
+										<th><a href="{{ URL::to('reports/peoples?sort=nascimento') }} "><i class="icon-large icon-sort"></i> Data de nascimento</a></th>
+										<th><a href="{{ URL::to('reports/peoples?sort=nis') }} "><i class="icon-large icon-sort"></i> NIS</a></th>
+										<th><a href="{{ URL::to('reports/peoples?sort=cpf') }} "><i class="icon-large icon-sort"></i> CPF</a></th>
+										<th><a href="{{ URL::to('reports/peoples?sort=nomeunidade') }} "><i class="icon-large icon-sort"></i> Unidade de Atendimento</a></th>
 									</tr>
 								</thead>
 								<tbody>
