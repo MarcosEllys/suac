@@ -34,7 +34,7 @@
 				<span class="icon-bar"></span>
 			</a>
 			
-			{{ HTML::link('#', 'Sistema Único de Assistência ao CRAS - SUAC', array('class' => 'brand')) }}		
+			{{ HTML::link('#', 'SUAC - Sistema Único de Assistência ao CRAS', array('class' => 'brand')) }}		
 			
 			
 		</div> 
