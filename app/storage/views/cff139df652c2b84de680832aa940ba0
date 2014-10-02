@@ -217,11 +217,11 @@
 
 										<div class="controls">
 
-											<?php echo Form::select('nomeunidade', array(
-											'centro' => 'Centro',
-											'alto manoel marioano' => 'Alto Manoel Marioano',
-											'bnh' => 'BNH'
-											), 'centro'); ?>
+										<select id="nomeunidade" name="nomeunidade">
+										<?php foreach($unidades as $unidade): ?>
+											<option value=" <?php echo e($unidade->id); ?> " selected="selected"><?php echo e($unidade->nome); ?></option>
+										<?php endforeach; ?>
+										</select>
 
 
 									</div>

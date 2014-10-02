@@ -29794,3 +29794,310 @@ Stack trace:
 #9 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
 #10 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
 #11 {main} [] []
+[2014-10-01 23:38:24] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<', expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:221
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:38:40] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<', expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:221
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:40:34] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<', expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:221
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:40:47] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '{', expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:223
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:41:36] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<', expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:221
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:41:52] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<', expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:223
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:41:54] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<', expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:223
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:42:44] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '{', expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:224
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:42:45] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '{', expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:224
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:43:11] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '?'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:228
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:43:22] production.ERROR: exception 'ErrorException' with message 'Undefined variable: unidade' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:223
+Stack trace:
+#0 /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0(223): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/var/www/suac/a...', 223, Array)
+#1 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(37): include('/var/www/suac/a...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(56): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/suac/a...', Array)
+#3 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\Engines\CompilerEngine->get('/var/www/suac/a...', Array)
+#4 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#5 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#6 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(150): Illuminate\View\View->render()
+#7 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\View->gatherData()
+#8 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#9 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#10 /var/www/suac/vendor/laravel/framework/src/Illuminate/Http/Response.php(43): Illuminate\View\View->render()
+#11 /var/www/suac/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php(202): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#12 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1498): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#13 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1031): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#14 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#15 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#19 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#20 /var/www/suac/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#21 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#22 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#23 {main}
+
+Next exception 'ErrorException' with message 'Undefined variable: unidade (View: /var/www/suac/app/views/peoplesreference/create.blade.php)' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:223
+Stack trace:
+#0 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(41): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 0)
+#1 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(56): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/suac/a...', Array)
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\Engines\CompilerEngine->get('/var/www/suac/a...', Array)
+#3 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#4 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#5 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(150): Illuminate\View\View->render()
+#6 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\View->gatherData()
+#7 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#8 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#9 /var/www/suac/vendor/laravel/framework/src/Illuminate/Http/Response.php(43): Illuminate\View\View->render()
+#10 /var/www/suac/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php(202): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#11 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1498): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#12 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1031): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#13 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#17 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#19 /var/www/suac/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#20 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#21 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#22 {main} [] []
+[2014-10-01 23:43:23] production.ERROR: exception 'ErrorException' with message 'Undefined variable: unidade' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:223
+Stack trace:
+#0 /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0(223): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/var/www/suac/a...', 223, Array)
+#1 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(37): include('/var/www/suac/a...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(56): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/suac/a...', Array)
+#3 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\Engines\CompilerEngine->get('/var/www/suac/a...', Array)
+#4 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#5 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#6 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(150): Illuminate\View\View->render()
+#7 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\View->gatherData()
+#8 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#9 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#10 /var/www/suac/vendor/laravel/framework/src/Illuminate/Http/Response.php(43): Illuminate\View\View->render()
+#11 /var/www/suac/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php(202): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#12 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1498): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#13 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1031): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#14 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#15 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#19 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#20 /var/www/suac/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#21 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#22 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#23 {main}
+
+Next exception 'ErrorException' with message 'Undefined variable: unidade (View: /var/www/suac/app/views/peoplesreference/create.blade.php)' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:223
+Stack trace:
+#0 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(41): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 0)
+#1 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(56): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/suac/a...', Array)
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\Engines\CompilerEngine->get('/var/www/suac/a...', Array)
+#3 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#4 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#5 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(150): Illuminate\View\View->render()
+#6 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\View->gatherData()
+#7 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#8 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#9 /var/www/suac/vendor/laravel/framework/src/Illuminate/Http/Response.php(43): Illuminate\View\View->render()
+#10 /var/www/suac/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php(202): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#11 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1498): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#12 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1031): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#13 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#17 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#19 /var/www/suac/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#20 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#21 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#22 {main} [] []
+[2014-10-01 23:43:33] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:223
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:43:34] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:223
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:43:41] production.ERROR: exception 'ErrorException' with message 'Use of undefined constant unidadeid - assumed 'unidadeid'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:223
+Stack trace:
+#0 /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0(223): Illuminate\Exception\Handler->handleError(8, 'Use of undefine...', '/var/www/suac/a...', 223, Array)
+#1 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(37): include('/var/www/suac/a...')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(56): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/suac/a...', Array)
+#3 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\Engines\CompilerEngine->get('/var/www/suac/a...', Array)
+#4 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#5 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#6 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(150): Illuminate\View\View->render()
+#7 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\View->gatherData()
+#8 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#9 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#10 /var/www/suac/vendor/laravel/framework/src/Illuminate/Http/Response.php(43): Illuminate\View\View->render()
+#11 /var/www/suac/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php(202): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#12 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1498): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#13 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1031): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#14 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#15 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#19 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#20 /var/www/suac/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#21 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#22 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#23 {main}
+
+Next exception 'ErrorException' with message 'Use of undefined constant unidadeid - assumed 'unidadeid' (View: /var/www/suac/app/views/peoplesreference/create.blade.php)' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:223
+Stack trace:
+#0 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(41): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 0)
+#1 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(56): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/suac/a...', Array)
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\Engines\CompilerEngine->get('/var/www/suac/a...', Array)
+#3 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#4 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#5 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(150): Illuminate\View\View->render()
+#6 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(134): Illuminate\View\View->gatherData()
+#7 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(102): Illuminate\View\View->getContents()
+#8 /var/www/suac/vendor/laravel/framework/src/Illuminate/View/View.php(76): Illuminate\View\View->renderContents()
+#9 /var/www/suac/vendor/laravel/framework/src/Illuminate/Http/Response.php(43): Illuminate\View\View->render()
+#10 /var/www/suac/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php(202): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#11 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1498): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#12 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1031): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#13 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#17 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#19 /var/www/suac/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#20 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#21 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#22 {main} [] []
+[2014-10-01 23:44:17] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '?'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:228
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:44:52] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<', expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:222
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:44:58] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<', expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:224
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:45:00] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<', expecting ')'' in /var/www/suac/app/storage/views/cff139df652c2b84de680832aa940ba0:224
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-10-01 23:53:23] production.ERROR: exception 'ErrorException' with message 'Undefined variable: unidades' in /var/www/suac/app/controllers/PeoplesreferencesController.php:84
+Stack trace:
+#0 /var/www/suac/app/controllers/PeoplesreferencesController.php(84): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/var/www/suac/a...', 84, Array)
+#1 [internal function]: PeoplesreferencesController->edit('1')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(231): call_user_func_array(Array, Array)
+#3 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('edit', Array)
+#4 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(PeoplesreferencesController), Object(Illuminate\Routing\Route), 'edit')
+#5 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(962): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'Peoplesreferenc...', 'edit')
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('1')
+#7 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Route.php(109): call_user_func_array(Object(Closure), Array)
+#8 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1028): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#10 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#13 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#14 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#15 /var/www/suac/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#16 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#17 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2014-10-01 23:53:59] production.ERROR: exception 'ErrorException' with message 'Undefined variable: unidades' in /var/www/suac/app/controllers/PeoplesreferencesController.php:84
+Stack trace:
+#0 /var/www/suac/app/controllers/PeoplesreferencesController.php(84): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/var/www/suac/a...', 84, Array)
+#1 [internal function]: PeoplesreferencesController->edit('1')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(231): call_user_func_array(Array, Array)
+#3 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('edit', Array)
+#4 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(PeoplesreferencesController), Object(Illuminate\Routing\Route), 'edit')
+#5 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(962): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'Peoplesreferenc...', 'edit')
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('1')
+#7 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Route.php(109): call_user_func_array(Object(Closure), Array)
+#8 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1028): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#10 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#13 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#14 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#15 /var/www/suac/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#16 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#17 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2014-10-01 23:54:12] production.ERROR: exception 'ErrorException' with message 'Undefined variable: unidades' in /var/www/suac/app/controllers/PeoplesreferencesController.php:84
+Stack trace:
+#0 /var/www/suac/app/controllers/PeoplesreferencesController.php(84): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', '/var/www/suac/a...', 84, Array)
+#1 [internal function]: PeoplesreferencesController->edit('1')
+#2 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(231): call_user_func_array(Array, Array)
+#3 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('edit', Array)
+#4 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(PeoplesreferencesController), Object(Illuminate\Routing\Route), 'edit')
+#5 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(962): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'Peoplesreferenc...', 'edit')
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('1')
+#7 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Route.php(109): call_user_func_array(Object(Closure), Array)
+#8 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1028): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#10 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#13 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#14 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#15 /var/www/suac/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#16 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#17 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2014-10-01 23:55:44] production.ERROR: exception 'Exception' with message 'curl Could not reach the server: http://cep.correiocontrol.com.br/63430000.json' in /var/www/suac/vendor/zizaco/cep-consult/src/Zizaco/CepConsult/Curl.php:39
+Stack trace:
+#0 /var/www/suac/vendor/zizaco/cep-consult/src/Zizaco/CepConsult/CepConsult.php(22): Zizaco\CepConsult\Curl->request('GET', 'http://cep.corr...', 80)
+#1 /var/www/suac/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(208): Zizaco\CepConsult\CepConsult->getAddress('63430000')
+#2 /var/www/suac/app/controllers/PeoplesreferencesController.php(109): Illuminate\Support\Facades\Facade::__callStatic('getAddress', Array)
+#3 /var/www/suac/app/controllers/PeoplesreferencesController.php(109): Zizaco\CepConsult\Facade::getAddress('63430000')
+#4 [internal function]: PeoplesreferencesController->handleEdit()
+#5 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(231): call_user_func_array(Array, Array)
+#6 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('handleEdit', Array)
+#7 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(PeoplesreferencesController), Object(Illuminate\Routing\Route), 'handleEdit')
+#8 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(962): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'Peoplesreferenc...', 'handleEdit')
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#10 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Route.php(109): call_user_func_array(Object(Closure), Array)
+#11 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1028): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#12 /var/www/suac/vendor/laravel/framework/src/Illuminate/Routing/Router.php(996): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#13 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(777): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#14 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(747): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#15 /var/www/suac/vendor/laravel/framework/src/Illuminate/Session/Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#16 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#17 /var/www/suac/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#18 /var/www/suac/vendor/stack/builder/src/Stack/StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#19 /var/www/suac/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(643): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#20 /var/www/suac/public/index.php(49): Illuminate\Foundation\Application->run()
+#21 {main} [] []

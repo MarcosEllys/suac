@@ -21,7 +21,9 @@ class PeoplesreferencesController extends BaseController{
 
 	public function create()
 	{
-		$this->layout->content = View::make('peoplesreference.create');
+		$unidades = Unidade::all();
+
+		$this->layout->content = View::make('peoplesreference.create')->with('unidades',$unidades);
 	}
 
 	public function store()
@@ -77,9 +79,11 @@ class PeoplesreferencesController extends BaseController{
 	{
 		$people = Peoplesreference::find($id);
 
+		$unidades = Unidade::all();
+
 		$vars = array('people' => $people);
 
-		$this->layout->content = View::make('peoplesreference.edit',$vars);
+		$this->layout->content = View::make('peoplesreference.edit',$vars)->with('unidades',$unidades);
 	}
 
 	public function handleEdit()
