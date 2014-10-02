@@ -151,9 +151,7 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('reports/peoples',function(){
 
-		$pf = DB::table('peoplesreferences')
-		->orderBy('nomeunidade','asc')
-		->paginate();
+		$pf = DB::table('peoplesreferences')->paginate();
 
 		return View::make('reports.peoples.index')
 		->with('peoples',$pf);

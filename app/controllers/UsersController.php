@@ -91,14 +91,14 @@ class UsersController extends BaseController{
 		$user->is_admin = Input::get('is_admin');
 		$user->cep = Input::get('cep');
 
-		// $mycep =  CepConsult::getAddress(Input::get('cep'));
+		$mycep =  CepConsult::getAddress(Input::get('cep'));
 
-		// $user->uf = $mycep['state'];
-		// $user->municipio = $mycep['city'];
+		$user->uf = $mycep['state'];
+		$user->cidade = $mycep['city'];
 
+		// $user->uf = 'CE';
+		// $user->cidade = 'Icó';
 
-		$user->uf = 'CE';
-		$user->cidade = 'Icó';
 		$user->bairro = Input::get('bairro');
 		$user->rua = Input::get('rua');
 		$user->numero = Input::get('numero');
@@ -186,14 +186,14 @@ class UsersController extends BaseController{
 		$user->is_admin = Input::get('is_admin');
 		$user->cep = Input::get('cep');
 
-		// $mycep =  CepConsult::getAddress(Input::get('cep'));
+		$mycep =  CepConsult::getAddress(Input::get('cep'));
 
-		// $user->uf = $mycep['state'];
-		// $user->municipio = $mycep['city'];
+		$user->uf = $mycep['state'];
+		$user->cidade = $mycep['city'];
 
+		// $user->uf = 'CE';
+		// $user->cidade = 'Icó';
 
-		$user->uf = 'CE';
-		$user->cidade = 'Icó';
 		$user->bairro = Input::get('bairro');
 		$user->rua = Input::get('rua');
 		$user->numero = Input::get('numero');
