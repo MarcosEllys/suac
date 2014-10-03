@@ -1,9 +1,3 @@
-<?php $__env->startSection('header'); ?>
-
-@parent
-
-<?php $__env->stopSection(); ?>
-
 <?php $__env->startSection('content'); ?>
 
 <div class="main">
