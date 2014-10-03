@@ -43,7 +43,7 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->ufrg = Input::get('ufrg');
 		$peoplesreference->emitedrg = Input::get('emitedrg');
 		$peoplesreference->numeroprontuario = Input::get('numeroprontuario');
-		$peoplesreference->nomeunidade = Input::get('nomeunidade');
+		$peoplesreference->unidade_id = Input::get('unidade_id');
 		$peoplesreference->cep = Input::get('cep');
 
 		$mycep =  CepConsult::getAddress(Input::get('cep'));
@@ -103,15 +103,15 @@ class PeoplesreferencesController extends BaseController{
 		$people->ufrg = Input::get('ufrg');
 		$people->emitedrg = Input::get('emitedrg');
 		$people->numeroprontuario = Input::get('numeroprontuario');
-		$people->nomeunidade = Input::get('nomeunidade');
+		$peoplesreference->unidade_id = Input::get('unidade_id');
 		$people->cep = Input::get('cep');
 
 		$mycep =  CepConsult::getAddress(Input::get('cep'));
 
+		$people->uf = $mycep['state'];
 		$people->municipio = $mycep['city'];
 		$people->rua = Input::get('rua');
 		$people->bairro = Input::get('bairro');
-		$people->uf = $mycep['state'];
 
 		$people->complemento = Input::get('complemento');
 		$people->pointreference = Input::get('pointreference');
@@ -129,7 +129,7 @@ class PeoplesreferencesController extends BaseController{
 
 		} else {
 
-			return Redirect::to('peoplesref/create')->withInput()->withErrors($validator);
+			return Redirect::to('peoplesref/edit/'.$people->id)->withInput()->withErrors($validator);
 		}
 
 	}

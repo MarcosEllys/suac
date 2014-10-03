@@ -44,7 +44,6 @@
 						</div>
 					</div>
 
-
 					<div class="form-actions">
 
 						<a class="btn btn-large disabled" href="#">

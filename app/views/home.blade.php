@@ -1,11 +1,5 @@
 @extends('layout.master')
 
-@section('header')
-
-@parent
-
-@stop
-
 @section('content')
 
 <div class="main">

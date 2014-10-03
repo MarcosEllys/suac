@@ -213,11 +213,11 @@
 									</div>
 
 									<div class="control-group">
-										<?php echo Form::label('nomeunidade', 'Unidade de atendimento:',array('class' => 'control-label')); ?>
+										<?php echo Form::label('unidade_id', 'Unidade de atendimento:',array('class' => 'control-label')); ?>
 
 										<div class="controls">
 											
-											<select id="nomeunidade" name="nomeunidade">
+											<select id="unidade_id" name="unidade_id">
 												<?php foreach($unidades as $unidade): ?>
 												<option value=" <?php echo e($unidade->id); ?> " selected="selected"><?php echo e($unidade->nome); ?></option>
 												<?php endforeach; ?>

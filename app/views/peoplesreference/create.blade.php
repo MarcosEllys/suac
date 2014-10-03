@@ -190,10 +190,10 @@
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('nomeunidade', 'Unidade de atendimento:',array('class' => 'control-label')) }}
+										{{ Form::label('unidade_id', 'Unidade de atendimento:',array('class' => 'control-label')) }}
 										<div class="controls">
 											
-											<select id="nomeunidade" name="nomeunidade">
+											<select id="unidade_id" name="unidade_id">
 												@foreach($unidades as $unidade)
 												<option value=" {{{$unidade->id}}} " selected="selected">{{{$unidade->nome}}}</option>
 												@endforeach

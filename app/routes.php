@@ -23,11 +23,11 @@ Route::group(array('before' => 'auth'), function()
 	Route::get('/', function()
 	{
 
-		$pf = DB::table('peoplesreferences')->paginate();
+		$pf = Peoplesreference::paginate();
 
-		$uni = DB::table('unidades')->paginate();
+		$uni = Unidade::paginate();
 
-		$user = DB::table('users')->paginate();
+		$user = User::paginate();
 
 		return View::make('home')
 		->with('peopletotal',$pf)
@@ -41,10 +41,25 @@ Route::group(array('before' => 'auth'), function()
 		return View::make('umbrella');
 	});
 
+	/*
+	|--------------------------------------------------------------------------
+	| Sobre Routes
+	|--------------------------------------------------------------------------
+	|
+	| Rotas dedicadas a seção ajuda.
+	| incluido tutoriais.
+	|
+	*/
+
 
 	Route::get('ajuda',function()
 	{
 		return View::make('helpers.index');
+	});
+
+	Route::get('ajuda/agendaratendimento',function()
+	{
+		return View::make('helpers.agendaratendimento');
 	});
 
 	/*
@@ -151,7 +166,7 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('reports/peoples',function(){
 
-		$pf = DB::table('peoplesreferences')->paginate();
+		$pf = Peoplesreference::paginate(null,array('id','nome','apelido','nascimento','nis','cpf','unidade_id'));
 
 		return View::make('reports.peoples.index')
 		->with('peoples',$pf);

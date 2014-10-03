@@ -190,12 +190,12 @@ class UsersController extends BaseController{
 
 		$user->uf = $mycep['state'];
 		$user->cidade = $mycep['city'];
+		$user->bairro = Input::get('bairro');
+		$user->rua = Input::get('rua');
 
 		// $user->uf = 'CE';
 		// $user->cidade = 'Icó';
 
-		$user->bairro = Input::get('bairro');
-		$user->rua = Input::get('rua');
 		$user->numero = Input::get('numero');
 		$user->complemento = Input::get('complemento');
 		$user->pointreferencia  = Input::get('pointreferencia');

@@ -106,7 +106,7 @@
 											<br>
 											<br>
 
-											<a href="#">Clique aqui</a> e confira um tutorial.
+											<a href=" {{ URL("ajuda/agendaratendimento") }} ">Clique aqui</a> e confira um tutorial.
 
 										</p>
 
