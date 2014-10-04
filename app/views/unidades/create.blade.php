@@ -45,35 +45,35 @@
 							<div class="control-group">
 								{{ Form::label('nome','Nome da unidade:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{ Form::text('nome',Input::old('nome'),array('data-mask' => '9999/99/99', 'class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '40') ) }}
+									{{ Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '40','autofocus', 'required') ) }}
 								</div>
 							</div>
 
 							<div class="control-group">
 								{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{ Form::text('rua',Input::old('rua'),array('class' => 'span6', 'placeholder' => 'Rua ou avenida', 'maxlength' => '35') ) }}
+									{{ Form::text('rua',Input::old('rua'),array('class' => 'span6', 'placeholder' => 'Rua ou avenida', 'maxlength' => '35', 'required') ) }}
 								</div>
 							</div>
 
 							<div class="control-group">
 								{{ Form::label('bairro','Bairro:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{ Form::text('bairro',Input::old('bairro'),array('class' => 'span6', 'maxlength' => '30') ) }}
+									{{ Form::text('bairro',Input::old('bairro'),array('class' => 'span6', 'maxlength' => '30', 'required') ) }}
 								</div>
 							</div>
 
 							<div class="control-group">
 								{{ Form::label('numero','Nº:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{ Form::text('numero',Input::old('numero'),array('class' => 'span3','maxlength' => '4') ) }}
+									{{ Form::text('numero',Input::old('numero'),array('class' => 'span3','maxlength' => '4', 'required') ) }}
 								</div>
 							</div>
 
 							<div class="control-group">
 								{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{ Form::text('complemento',Input::old('complemento'),array('class' => 'span6', 'placeholder' => 'Casa | Apartamento | Condominio', 'maxlength' => '20') ) }}
+									{{ Form::text('complemento',Input::old('complemento'),array('class' => 'span6', 'placeholder' => 'Casa | Apartamento | Condominio', 'maxlength' => '20', 'required') ) }}
 								</div>
 							</div>
 

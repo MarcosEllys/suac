@@ -62,7 +62,7 @@
 
 										01 - selecione a aba "Administrativo". <br>
 										02 - clique em "<a href="#">Usuários</a>". <br>
-										03 - clique em "<a href="#">Cadastrar usuário</a>". <br>
+										03 - clique em "<a href=" {{ URL("users") }} ">Cadastrar usuário</a>". <br>
 										04 - Na aba Dados pessoais preencha as seguintes informações. <br>
 										05 - Preencha o campo nome. <br>
 										06 - Marque a opção de sexo correspondente. <br>

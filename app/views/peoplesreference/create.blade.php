@@ -54,7 +54,7 @@
 									<div class="tab-pane active" id="formcontrols">
 										<fieldset>
 											<div class="control-group">
-												{{ Form::label('nome','Nome completo:',array('class' => 'control-label') ) }}
+												{{ Form::label('nome','Nome completo: *',array('class' => 'control-label') ) }}
 												<div class="controls">
 													{{ Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '60') ) }}
 												</div>

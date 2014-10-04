@@ -55,7 +55,7 @@
 									<div class="tab-pane active" id="formcontrols">
 										<fieldset>
 											<div class="control-group">
-												<?php echo Form::label('nome','Nome completo:',array('class' => 'control-label') ); ?>
+												<?php echo Form::label('nome','Nome completo: *',array('class' => 'control-label') ); ?>
 
 												<div class="controls">
 													<?php echo Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '60') ); ?>

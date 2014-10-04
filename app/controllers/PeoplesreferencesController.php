@@ -103,7 +103,7 @@ class PeoplesreferencesController extends BaseController{
 		$people->ufrg = Input::get('ufrg');
 		$people->emitedrg = Input::get('emitedrg');
 		$people->numeroprontuario = Input::get('numeroprontuario');
-		$peoplesreference->unidade_id = Input::get('unidade_id');
+		$people->unidade_id = Input::get('unidade_id');
 		$people->cep = Input::get('cep');
 
 		$mycep =  CepConsult::getAddress(Input::get('cep'));
