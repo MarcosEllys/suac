@@ -61,9 +61,9 @@
 										<br>
 
 										01 - selecione a aba "Administrativo". <br>
-										02 - clique em "<a href="#">Usuários</a>". <br>
-										03 - clique em "<a href=" {{ URL("users") }} ">Cadastrar usuário</a>". <br>
-										04 - Na aba Dados pessoais preencha as seguintes informações. <br>
+										02 - clique em "<a href=" {{URL("users")}} ">Usuários</a>". <br>
+										03 - clique em "<a href=" {{ URL("users/create") }} ">Cadastrar usuário</a>". <br>
+										04 - Na aba "Dados pessoais" preencha as seguintes informações. <br>
 										05 - Preencha o campo nome. <br>
 										06 - Marque a opção de sexo correspondente. <br>
 										07 - Preencha o campo data de nascimento no seguinte formato AAAA-MM-DD. <br>
@@ -72,8 +72,27 @@
 										10 - Selecione o orgão expedidor do rg. <br>
 										11 - Selecione o estado em que o rg foi emitido. <br>
 										12 - Preencha o campo data de emissão de rg no seguinte formato AAAA-MM-DD. <br>
-										13 - Preencha o campo telefone para contato com 1 número de telefone do usuário a ser cadastrado. <br>
-										14 - 
+										13 - Preencha o campo telefone para contato. <br>
+										<br>
+										Dados do sistema<br>
+										<br>
+										14 - Preencha o campo login com o nome para acesso ao sistema.<br>
+										15 - Preencha o campo senha com uma senha para acesso ao sistema.<br>
+										16 - Repita a senha no campo seguinte.<br>
+										17 - Preencha o campo email.<br>
+										18 - Selecione o tipo de usuário a ser cadastrado no sistema.<br>
+										19 - Clique na aba "Dados sobre endereço".<br>
+										20 - Preencha o campo cep somente com números.<br>
+										21 - Preencha o campo rua.<br>
+										22 - Preencha o campo bairro.<br>
+										23 - Preencha o campo número.<br>
+										24 - Preencha o campo complemento.<br>
+										25 - Preencha o campo ponto de referência.
+										26 - Clique no botão salvar para confirmar o cadastro.<br><br>
+
+
+										<a href="#">Clique aqui</a> e confira um tutorial.
+
 
 
 									</p>
@@ -113,11 +132,19 @@
 										<br>
 										<br>
 
-										01 - Bla bla. <br>
-										02 - Bla bla. <br>
-										03 - Bla bla. <br>
-										04 - Bla bla. <br>
-										05 - Bla bla. <br>
+										01 - selecione a aba "Administrativo".<br>
+										02 - clique em "<a href=" {{URL("unidades")}} ">Unidades</a>".<br>
+										03 - clique em "<a href=" {{ URL("unidades/create") }} ">Cadastrar unidade</a>".<br>
+										03 - Preencha o campo nome da unidade. <br>
+										04 - Preencha o campo rua.<br>
+										05 - Preencha o campo bairro.<br>
+										06 - Preencha o campo número.<br>
+										07 - Preencha o campo complemento.<br>
+										08 - Selecione o tipo de unidade.<br>
+										09 - Clique no botão salvar para confirmar o cadastro.<br><br>
+
+
+										<a href=" {{ URL("ajuda/createunidade") }} ">Clique aqui</a> e confira um tutorial.
 
 									</p>
 

@@ -43,7 +43,7 @@ Route::group(array('before' => 'auth'), function()
 
 	/*
 	|--------------------------------------------------------------------------
-	| Sobre Routes
+	| Helpers Routes
 	|--------------------------------------------------------------------------
 	|
 	| Rotas dedicadas a seção ajuda.
@@ -60,6 +60,11 @@ Route::group(array('before' => 'auth'), function()
 	Route::get('ajuda/agendaratendimento',function()
 	{
 		return View::make('helpers.agendaratendimento');
+	});
+
+	Route::get('ajuda/createunidade', function()
+	{
+		return View::make('helpers.createunidade');
 	});
 
 	/*
