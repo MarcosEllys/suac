@@ -25,7 +25,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 
 	public static $rules = array(
-		'nome' => 'required|between:5,20',
+		'nome' => 'required|between:2,20',
 		'sexo' => 'required',
 		'nascimento' => 'required',
 		'cpf' => array('required','cpf'),
@@ -33,12 +33,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		'orgaorg' => 'required',
 		'ufrg' => 'required',
 		'emitedrg' => 'required',
-		'username' => 'unique:users|alpha_num|required|between:4,20',
-		'email' => 'unique:uses|required|email',
+		'username' => 'alpha_num|required|between:4,20',
+		'email' => 'required|email',
 		'password' => 'required',
 		'password' => 'confirmed',
 		'is_admin' => 'required',
+		'rua' => 'required',
 		'bairro' => 'required|between:5,20',
+		'cep' => 'required|numeric'
 		);
 
 	public static $messages = array(

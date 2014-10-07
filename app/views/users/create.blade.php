@@ -84,7 +84,7 @@
 											<div class="control-group">
 												{{ Form::label('cpf','Nº do CPF:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('cpf',Input::old('cpf'),array('class' => 'span6', 'placeholder' => 'Somente os números', 'required') ) }}
+													{{ Form::text('cpf',Input::old('cpf'),array('class' => 'span6','placeholder' => 'Somente os números') ) }}
 												</div>
 											</div>
 
@@ -192,21 +192,21 @@
 											<div class="control-group">
 												{{ Form::label('password','Senha:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::password('password',Input::old('password'),array('class' => 'span6', 'required') ) }}
+													{{ Form::text('password',Input::old('password'),array('class' => 'span6') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('password_confirmation','Repita a senha:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::password('password_confirmation',Input::old('password_confirmation'),array('class' => 'span6', 'required') ) }}
+													{{ Form::text('password_confirmation',Input::old('password_confirmation'),array('class' => 'span6') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('email','Email:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::email('email',Input::old('email'),array('class' => 'span6', 'required') ) }}
+													{{ Form::text('email',Input::old('email'),array('class' => 'span6', 'required') ) }}
 												</div>
 											</div>
 
@@ -243,7 +243,7 @@
 									<div class="control-group">
 										{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números', 'required') ) }}
+											{{ Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números') ) }}
 										</div>
 									</div>
 
@@ -251,27 +251,27 @@
 									<div class="control-group">
 										{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('rua',Input::old('rua'),array('class' => 'span6','placeholder' => 'Rua ou avenida', 'required') ) }}
+											{{ Form::text('rua',Input::old('rua'),array('class' => 'span6','placeholder' => 'Rua ou avenida') ) }}
 										</div>
 									</div>
 
 									<div class="control-group">
 										{{ Form::label('bairro','Bairro:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('bairro',Input::old('bairro'),array('class' => 'span6', 'required') ) }}
+											{{ Form::text('bairro',Input::old('bairro'),array('class' => 'span6') ) }}
 										</div>
 									</div>
 									<div class="control-group">
 										{{ Form::label('numero','Numero:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('numero',Input::old('numero'),array('class' => 'span6', 'placeholder' => 'Somente os números', 'required') ) }}
+											{{ Form::text('numero',Input::old('numero'),array('class' => 'span6', 'placeholder' => 'Somente os números') ) }}
 										</div>
 									</div>
 
 									<div class="control-group">
 										{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('complemento',Input::old('complemento'),array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio', 'required') ) }}
+											{{ Form::text('complemento',Input::old('complemento'),array('class' => 'span6','placeholder' => 'Casa / Apartamento / Condominio') ) }}
 										</div>
 									</div>
 

@@ -183,7 +183,6 @@
 										</div>
 										<div class="widget-content">
 
-
 											<div class="control-group">
 												{{ Form::label('username','Login:',array('class' => 'control-label') ) }}
 												<div class="controls">

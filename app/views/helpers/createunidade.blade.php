@@ -278,50 +278,50 @@
 			guidely.add({
 				attachTo : '#target-1',
 				anchor : 'top-right',
-				title : 'Informe o nome completo do usuário',
-				text : 'Preencha o campo com o nome completo do usuário a ser incluida no sistema.'
+				title : 'Informe o nome da unidade',
+				text : 'Preencha o campo com o nome da unidade a ser incluida.'
 			});
 
 			guidely.add({
 				attachTo : '#target-2',
 				anchor : 'top-right',
-				title : 'Informe a data do atendimento',
-				text : 'Preencha o campo com o nome da rua/travessa/bairro da unidade.'
+				title : 'Informe o nome da Rua',
+				text : 'Preencha o campo com o nome da Rua/Travessa onde se localiza a unidade.'
 			});
 
 			guidely.add({
 				attachTo : '#target-3',
 				anchor : 'top-right',
-				title : 'Selecione o tipo de atendimento',
-				text : 'Selecione o assunto sobre o atendimento.'
+				title : 'Informe o nome do Bairro',
+				text : 'Preencha o campo com o nome do Bairro.'
 			});
 
 			guidely.add({
 				attachTo : '#target-4',
 				anchor : 'top-right',
-				title : 'Clique em agendar',
-				text : 'Por último clique em "Agendar" para confirmar.'
+				title : 'Informe o Número',
+				text : 'Preencha o campo com o Número da unidade.'
 			});
 
 			guidely.add({
 				attachTo : '#target-5',
 				anchor : 'top-right',
-				title : 'Clique em agendar',
-				text : 'Por último clique em "Agendar" para confirmar.'
+				title : 'Informe o Complemento',
+				text : 'Preencha o campo com algum porto de referência da unidade.'
 			});
 
 			guidely.add({
 				attachTo : '#target-6',
 				anchor : 'middle-middle',
-				title : 'Clique em agendar',
-				text : 'Por último clique em "Agendar" para confirmar.'
+				title : 'Informe a unidade',
+				text : 'Selecione o Tipo de unidade a ser Cadastrada.'
 			});
 
 			guidely.add({
 				attachTo : '#target-7',
 				anchor : 'middle-middle',
 				title : 'Clique em salvar',
-				text : 'Por último clique em "salvar" para confirmar.'
+				text : 'Por último clique em "salvar" para Finalizar.'
 			});
 
 			guidely.init({

@@ -73,7 +73,7 @@
 							<div class="control-group">
 								{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{ Form::text('complemento',Input::old('complemento'),array('class' => 'span6', 'placeholder' => 'Casa | Apartamento | Condominio', 'maxlength' => '20', 'required') ) }}
+									{{ Form::text('complemento',Input::old('complemento'),array('class' => 'span6', 'placeholder' => 'Casa | Apartamento | Condominio', 'maxlength' => '20') ) }}
 								</div>
 							</div>
 

@@ -36,9 +36,13 @@ class UsersController extends BaseController{
 		}
 	}
 
-	public function login(){
-
-		return View::make('users.login');
+	public function login()
+	{
+		if (Auth::User()){
+			return Redirect::to('/');
+		} else {
+			return View::make('users.login');
+		}
 	}
 
 	public function logout()
@@ -91,14 +95,6 @@ class UsersController extends BaseController{
 		$user->is_admin = Input::get('is_admin');
 		$user->cep = Input::get('cep');
 
-		$mycep =  CepConsult::getAddress(Input::get('cep'));
-
-		$user->uf = $mycep['state'];
-		$user->cidade = $mycep['city'];
-
-		// $user->uf = 'CE';
-		// $user->cidade = 'Icó';
-
 		$user->bairro = Input::get('bairro');
 		$user->rua = Input::get('rua');
 		$user->numero = Input::get('numero');
@@ -109,9 +105,14 @@ class UsersController extends BaseController{
 
 		if ($validator->passes()) {
 
-		$user->save();
+			// $mycep =  CepConsult::getAddress(Input::get('cep'));
 
-		return Redirect::action('UsersController@index');
+			// $user->uf = $mycep['state'];
+			// $user->cidade = $mycep['city'];
+
+			$user->save();
+
+			return Redirect::action('UsersController@index');
 
 		} else {
 
@@ -186,15 +187,8 @@ class UsersController extends BaseController{
 		$user->is_admin = Input::get('is_admin');
 		$user->cep = Input::get('cep');
 
-		$mycep =  CepConsult::getAddress(Input::get('cep'));
-
-		$user->uf = $mycep['state'];
-		$user->cidade = $mycep['city'];
 		$user->bairro = Input::get('bairro');
 		$user->rua = Input::get('rua');
-
-		// $user->uf = 'CE';
-		// $user->cidade = 'Icó';
 
 		$user->numero = Input::get('numero');
 		$user->complemento = Input::get('complemento');
@@ -204,9 +198,14 @@ class UsersController extends BaseController{
 
 		if ($validator->passes()) {
 
-		$user->save();
+			// $mycep =  CepConsult::getAddress(Input::get('cep'));
 
-		return Redirect::action('UsersController@index');
+			// $user->uf = $mycep['state'];
+			// $user->cidade = $mycep['city'];
+
+			$user->save();
+
+			return Redirect::action('UsersController@index');
 
 		} else {
 

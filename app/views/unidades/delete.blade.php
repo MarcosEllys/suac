@@ -80,7 +80,7 @@
 							<div class="control-group">
 								{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
 								<div class="controls">
-									{{{ $unidade->complemento }}}}
+									{{{ $unidade->complemento }}}
 								</div>
 							</div>
 
