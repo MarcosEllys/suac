@@ -14,9 +14,11 @@
     </div>
   </div>
 
-  <br>
-
 <div class="row">
+
+  <div class="span12">
+    @include('layout._errors')
+  </div>
 
   <div class="span5">
     <div class="widget widget-nopad">

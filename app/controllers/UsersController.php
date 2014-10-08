@@ -22,6 +22,7 @@ class UsersController extends BaseController{
 		if ($validator->passes()) {
 
 			if (Auth::attempt($userdata)) {
+				$alert = 'alert-success';
 				return Redirect::to('/');
 			} else {
 				
@@ -105,10 +106,10 @@ class UsersController extends BaseController{
 
 		if ($validator->passes()) {
 
-			// $mycep =  CepConsult::getAddress(Input::get('cep'));
+			$mycep =  CepConsult::getAddress(Input::get('cep'));
 
-			// $user->uf = $mycep['state'];
-			// $user->cidade = $mycep['city'];
+			$user->uf = $mycep['state'];
+			$user->cidade = $mycep['city'];
 
 			$user->save();
 
@@ -198,12 +199,12 @@ class UsersController extends BaseController{
 
 		if ($validator->passes()) {
 
-			// $mycep =  CepConsult::getAddress(Input::get('cep'));
+			$mycep =  CepConsult::getAddress(Input::get('cep'));
 
-			// $user->uf = $mycep['state'];
-			// $user->cidade = $mycep['city'];
+			$user->uf = $mycep['state'];
+			$user->cidade = $mycep['city'];
 
-			$user->save();
+			$user->update();
 
 			return Redirect::action('UsersController@index');
 

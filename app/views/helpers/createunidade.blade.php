@@ -58,7 +58,7 @@
 											<label class="control-label">Nome da unidade:</label>
 											<div class="controls">
 
-													<input type="text" class="span8">
+													<input type="text" class="span8" placeholder="Nome completo">
 											</div>
 										</div>
 
@@ -88,7 +88,7 @@
 										<div class="control-group">
 											<label class="control-label" for="date">Rua:</label>
 											<div class="controls">
-												<input type="text" class="span8">
+												<input type="text" class="span8" placeholder="Avenida | Rua | Travessa">
 											</div>
 										</div>
 
@@ -178,7 +178,7 @@
 										<div class="control-group">
 											<label class="control-label" for="date">Complemento:</label>
 											<div class="controls">
-												<input type="text" class="span8">
+												<input type="text" class="span8" placeholder="Casa | Apartamento | Condomínio">
 											</div>
 										</div>
 
@@ -286,42 +286,42 @@
 				attachTo : '#target-2',
 				anchor : 'top-right',
 				title : 'Informe o nome da Rua',
-				text : 'Preencha o campo com o nome da Rua/Travessa onde se localiza a unidade.'
+				text : 'Preencha o campo com o nome da avenida/rua/travessa onde se localiza a unidade.'
 			});
 
 			guidely.add({
 				attachTo : '#target-3',
 				anchor : 'top-right',
-				title : 'Informe o nome do Bairro',
-				text : 'Preencha o campo com o nome do Bairro.'
+				title : 'Informe o nome do bairro',
+				text : 'Preencha o campo com o nome do bairro.'
 			});
 
 			guidely.add({
 				attachTo : '#target-4',
 				anchor : 'top-right',
-				title : 'Informe o Número',
-				text : 'Preencha o campo com o Número da unidade.'
+				title : 'Informe o número',
+				text : 'Preencha o campo com o número da unidade.'
 			});
 
 			guidely.add({
 				attachTo : '#target-5',
 				anchor : 'top-right',
-				title : 'Informe o Complemento',
-				text : 'Preencha o campo com algum porto de referência da unidade.'
+				title : 'Informe o complemento',
+				text : 'Preencha o campo com algum ponto de referência próximo da unidade.'
 			});
 
 			guidely.add({
 				attachTo : '#target-6',
 				anchor : 'middle-middle',
 				title : 'Informe a unidade',
-				text : 'Selecione o Tipo de unidade a ser Cadastrada.'
+				text : 'Selecione o Tipo de unidade a ser cadastrada.'
 			});
 
 			guidely.add({
 				attachTo : '#target-7',
 				anchor : 'middle-middle',
 				title : 'Clique em salvar',
-				text : 'Por último clique em "salvar" para Finalizar.'
+				text : 'Por último clique em "salvar" para finalizar.'
 			});
 
 			guidely.init({

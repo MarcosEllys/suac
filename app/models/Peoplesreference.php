@@ -17,6 +17,7 @@ class Peoplesreference extends Eloquent{
 	public static $rules = array(
 		'nome' => 'required|between:10,60',
 		'apelido' => 'required|between:4,13',
+		'cpf' => 'required'
 		
 		);
 

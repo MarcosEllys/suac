@@ -2,9 +2,15 @@
 <html lang="pt-br">
 <head>
 
-  <meta charset="utf-8">
-  
   <title>SUAC - Sistema Único de Assistência ao CRAS</title>
+
+  <meta charset="utf-8">
+
+  <meta name="description" content="Sistema para unidades de Assistência Social">
+
+  <meta name="keyowrds" content="cras,suac,suas,mds">
+
+  <meta name="author" content="Marcos Ellys">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   

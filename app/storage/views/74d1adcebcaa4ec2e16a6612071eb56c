@@ -12,9 +12,11 @@
     </div>
   </div>
 
-  <br>
-
 <div class="row">
+
+  <div class="span12">
+    <?php echo $__env->make('layout._errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  </div>
 
   <div class="span5">
     <div class="widget widget-nopad">

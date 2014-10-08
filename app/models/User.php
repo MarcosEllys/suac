@@ -25,14 +25,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 
 	public static $rules = array(
-		'nome' => 'required|between:2,20',
+		'nome' => 'required',
 		'sexo' => 'required',
 		'nascimento' => 'required',
-		'cpf' => array('required','cpf'),
 		'rg' => 'required|numeric',
 		'orgaorg' => 'required',
 		'ufrg' => 'required',
 		'emitedrg' => 'required',
+		'cpf' => array('required','cpf'),
 		'username' => 'alpha_num|required|between:4,20',
 		'email' => 'required|email',
 		'password' => 'required',
@@ -44,8 +44,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		);
 
 	public static $messages = array(
-		'cpf' => 'cpf inválido',
-		);
+ 		'cpf' => 'cpf inválido',
+ 		);
 
 	public function validation($data)
 	{
