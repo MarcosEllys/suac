@@ -66,7 +66,11 @@
 											<div class="control-group">
 												{{ Form::label('sexo', 'Sexo:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{{ $users->sexo }}}	
+													@if($users->sexo = 'M')
+														Masculino
+													@else
+														Feminino
+													@endif
 												</div>
 											</div>
 
@@ -146,9 +150,9 @@
 														{{ Form::label('is_admin', 'Tipo de usuário:',array('class' => 'control-label') ) }}
 														<div class="controls">
 															@if($users->is_admin)
-																Administrador
+															Administrador
 															@else
-																Usuário comum
+															Usuário comum
 															@endif		
 														</div>
 													</div>
