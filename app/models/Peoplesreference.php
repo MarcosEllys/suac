@@ -9,10 +9,16 @@ class Peoplesreference extends Eloquent{
 		return $this->belongsTo('unidades');
 	}
 
+	public function getUnidade()
+	{
+		return Unidade::where('id',$this->unidade_id)->first()->nome;
+	}
+
 	public static $rules = array(
-		'nome' => 'required|alpha|between:10,60',
-		'apelido' => 'required|between:11,13',
-		'cpf' => array('required','cpf'),
+		'nome' => 'required|between:10,60',
+		'apelido' => 'required|between:4,13',
+		'cpf' => 'required'
+		
 		);
 
 	public static $messages = array(
@@ -23,6 +29,5 @@ class Peoplesreference extends Eloquent{
 	public function validate($data)
 	{
 		return Validator::make($data,self::$rules,self::$messages);
-	}
-	
+	}	
 }

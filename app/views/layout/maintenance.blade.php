@@ -34,7 +34,7 @@
 				<span class="icon-bar"></span>
 			</a>
 			
-			{{ HTML::link('#', 'Sistema Único de Assistência ao CRAS - SUAC', array('class' => 'brand')) }}		
+			{{ HTML::link('#', 'SUAC - Sistema Único de Assistência ao CRAS', array('class' => 'brand')) }}		
 			
 			
 		</div> 
@@ -59,7 +59,7 @@
 			<div class="error-container">
 				
 				<h2>
-					Entramos em manutenção! Volte novamente das 7:00 as 18:00.
+					Entramos em manutenção! Volte novamente das 8:00 as 17:00.
 				</h2>
 				
 			</div> 

@@ -20,31 +20,34 @@ Route::post('login','UsersController@validate');
 Route::group(array('before' => 'auth'), function()
 {
 
-	Route::get('/', function()
-	{
+	Route::get('/','HomeController@showWelcome');
 
-		$pf = DB::table('peoplesreferences')->paginate();
+	Route::get('sobre','HomeController@sobre');
 
-		$uni = DB::table('unidades')->paginate();
-
-		$user = DB::table('users')->paginate();
-
-		return View::make('home')
-		->with('peopletotal',$pf)
-		->with('unidades',$uni)
-		->with('users',$user);
-
-	});
-
-	Route::get('sobre',function()
-	{
-		return View::make('umbrella');
-	});
+	/*
+	|--------------------------------------------------------------------------
+	| Helpers Routes
+	|--------------------------------------------------------------------------
+	|
+	| Rotas dedicadas a seção ajuda.
+	| incluido tutoriais.
+	|
+	*/
 
 
 	Route::get('ajuda',function()
 	{
 		return View::make('helpers.index');
+	});
+
+	Route::get('ajuda/agendaratendimento',function()
+	{
+		return View::make('helpers.agendaratendimento');
+	});
+
+	Route::get('ajuda/createunidade', function()
+	{
+		return View::make('helpers.createunidade');
 	});
 
 	/*
@@ -151,9 +154,7 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('reports/peoples',function(){
 
-		$pf = DB::table('peoplesreferences')
-		->orderBy('nomeunidade','asc')
-		->paginate();
+		$pf = Peoplesreference::paginate(null,array('id','nome','apelido','nascimento','nis','cpf','unidade_id'));
 
 		return View::make('reports.peoples.index')
 		->with('peoples',$pf);

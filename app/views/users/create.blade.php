@@ -77,21 +77,21 @@
 											<div class="control-group">
 												{{ Form::label('nascimento','Data de nascimento:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('nascimento',Input::old('nascimento'),array('class' => 'span2','placeholder' => 'AAAAMMDD') ) }}
+													{{ Form::text('nascimento',Input::old('nascimento'),array('class' => 'span2','placeholder' => 'AAAAMMDD', 'required') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('cpf','Nº do CPF:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('cpf',Input::old('cpf'),array('class' => 'span6', 'placeholder' => 'Somente os números') ) }}
+													{{ Form::text('cpf',Input::old('cpf'),array('class' => 'span6','placeholder' => 'Somente os números') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
-												{{ Form::label('rg','Nº do Rg:',array('class' => 'control-label') ) }}
+												{{ Form::label('rg','Nº do RG:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('rg',Input::old('rg'),array('class' => 'span6', 'placeholder' => 'Somente os números') ) }}
+													{{ Form::text('rg',Input::old('rg'),array('class' => 'span6', 'placeholder' => 'Somente os números', 'required') ) }}
 												</div>
 											</div>
 
@@ -163,7 +163,7 @@
 									<div class="control-group">
 										{{ Form::label('emitedrg','Data de emissão:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('emitedrg',Input::old('emitedrg'),array('class' => 'span2','placeholder' => 'AAAAMMDD') ) }}
+											{{ Form::text('emitedrg',Input::old('emitedrg'),array('class' => 'span2','placeholder' => 'AAAAMMDD', 'required') ) }}
 										</div>
 									</div>
 
@@ -185,28 +185,28 @@
 											<div class="control-group">
 												{{ Form::label('username','Login:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('username',Input::old('username'),array('class' => 'span6') ) }}
+													{{ Form::text('username',Input::old('username'),array('class' => 'span6', 'required') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('password','Senha:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::password('password',Input::old('password'),array('class' => 'span6') ) }}
+													{{ Form::text('password',Input::old('password'),array('class' => 'span6') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('password_confirmation','Repita a senha:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::password('password_confirmation',Input::old('password_confirmation'),array('class' => 'span6') ) }}
+													{{ Form::text('password_confirmation',Input::old('password_confirmation'),array('class' => 'span6') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('email','Email:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('email',Input::old('email'),array('class' => 'span6') ) }}
+													{{ Form::text('email',Input::old('email'),array('class' => 'span6', 'required') ) }}
 												</div>
 											</div>
 

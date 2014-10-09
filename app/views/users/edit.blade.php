@@ -183,7 +183,6 @@
 										</div>
 										<div class="widget-content">
 
-
 											<div class="control-group">
 												{{ Form::label('username','Login:',array('class' => 'control-label') ) }}
 												<div class="controls">
@@ -194,14 +193,14 @@
 											<div class="control-group">
 												{{ Form::label('password','Senha:',array('class' => 'control-label','required') ) }}
 												<div class="controls">
-													{{ Form::password('password',null,array('class' => 'span6') ) }}
+													{{ Form::text('password',Input::old('password'),array('class' => 'span6') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('password_confirmation','Repita a senha:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::password('password_confirmation',null,array('class' => 'span6') ) }}
+													{{ Form::text('password_confirmation',Input::old('password_confirmation'),array('class' => 'span6') ) }}
 												</div>
 											</div>
 

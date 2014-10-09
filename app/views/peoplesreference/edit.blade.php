@@ -25,7 +25,7 @@
 				</div>
 			</div>
 
-			<br>
+			@include('layout._errors')
 
 			<div class="row">
 				<div class="span12">
@@ -198,93 +198,98 @@
 									</div>
 
 									<div class="control-group">
-										{{ Form::label('nomeunidade', 'Unidade de atendimento:',array('class' => 'control-label')) }}
+
+										{{ Form::label('unidade_id', 'Unidade de atendimento:',array('class' => 'control-label')) }}
+										
 										<div class="controls">
 
-											{{ Form::select('nomeunidade', array(
-											'centro' => 'Centro',
-											'alto manoel marioano' => 'Alto Manoel Marioano',
-											'bnh' => 'BNH'
-											), $people->nomeunidade) 
-										}}
+											<select id="unidade_id" name="unidade_id">
+												@foreach($unidades as $unidade)
+												<option value=" {{{$unidade->id}}} " selected="selected">{{{$unidade->nome}}}</option>
+												@endforeach
+											</select>
 
+										</div>
 									</div>
-								</div>
-								<!-- /Até aqui -->
+									<!-- /Até aqui -->
 
-							</fieldset>
+								</fieldset>
+							</div>
+
+							<div class="tab-pane" id="jscontrols">
+								<fieldset>
+
+									<div class="control-group">
+										{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											{{ Form::text('cep',$people->cep,array('class' => 'span6') ) }}
+										</div>
+									</div>
+
+
+									<div class="control-group">
+										{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											{{ Form::text('rua',$people->rua,array('class' => 'span6') ) }}
+										</div>
+									</div>
+
+									<div class="control-group">
+										{{ Form::label('bairro','Bairro:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											{{ Form::text('bairro',$people->bairro,array('class' => 'span6') ) }}
+										</div>
+									</div>
+
+
+									<div class="control-group">
+										{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											{{ Form::text('complemento',$people->complemento,array('class' => 'span6') ) }}
+										</div>
+									</div>
+
+									<div class="control-group">
+										{{ Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											{{ Form::text('pointreference',$people->pointreference,array('class' => 'span6') ) }}
+										</div>
+									</div>
+
+									<div class="control-group">
+										{{ Form::label('telefone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											{{ Form::text('telefone1',$people->telefone1,array('class' => 'span6') ) }}
+										</div>
+									</div>
+
+									<div class="control-group">
+										{{ Form::label('telefone2','Telefone para contato 2:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											{{ Form::text('telefone2',$people->telefone2,array('class' => 'span6') ) }}
+										</div>
+									</div>
+
+									<div class="control-group">
+										{{ Form::label('localization', 'Tipo de unidade:',array('class' => 'control-label') ) }}
+										<div class="controls">
+											<label class="radio inline">
+												{{ Form::radio('localization', 'urbano', true) }} Urbano
+											</label>
+											<label class="radio inline">
+												{{ Form::radio('localization', 'rural') }} Rural
+
+											</label>		
+										</div>
+									</div>
+
+									<!-- /Até aqui -->
+
+								</fieldset>
+							</div>
+
 						</div>
 
-						<div class="tab-pane" id="jscontrols">
-							<fieldset>
-
-								<div class="control-group">
-									{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
-									<div class="controls">
-										{{ Form::text('cep',$people->cep,array('class' => 'span6') ) }}
-									</div>
-								</div>
-							
-
-								<div class="control-group">
-									{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
-									<div class="controls">
-										{{ Form::text('rua',$people->rua,array('class' => 'span6') ) }}
-									</div>
-								</div>
-
-								<div class="control-group">
-									{{ Form::label('bairro','Bairro:',array('class' => 'control-label') ) }}
-									<div class="controls">
-										{{ Form::text('bairro',$people->bairro,array('class' => 'span6') ) }}
-									</div>
-								</div>
-
-
-							<div class="control-group">
-								{{ Form::label('complemento','Complemento:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{ Form::text('complemento',$people->complemento,array('class' => 'span6') ) }}
-								</div>
-							</div>
-
-							<div class="control-group">
-								{{ Form::label('pointreference','Ponto de referência:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{ Form::text('pointreference',$people->pointreference,array('class' => 'span6') ) }}
-								</div>
-							</div>
-
-							<div class="control-group">
-								{{ Form::label('telefone1','Telefone para contato 1:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{ Form::text('telefone1',$people->telefone1,array('class' => 'span6') ) }}
-								</div>
-							</div>
-
-							<div class="control-group">
-								{{ Form::label('telefone2','Telefone para contato 2:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									{{ Form::text('telefone2',$people->telefone2,array('class' => 'span6') ) }}
-								</div>
-							</div>
-
-							<div class="control-group">
-								{{ Form::label('localization', 'Tipo de unidade:',array('class' => 'control-label') ) }}
-								<div class="controls">
-									<label class="radio inline">
-										{{ Form::radio('localization', 'urbano', true) }} Urbano
-									</label>
-									<label class="radio inline">
-										{{ Form::radio('localization', 'rural') }} Rural
-
-									</label>		
-								</div>
-							</div>
-
-							<!-- /Até aqui -->
-
-						</fieldset>
 					</div>
 
 				</div>
@@ -295,19 +300,15 @@
 
 	</div>
 
-</div>
+	<div class="form-actions">
 
-</div>
+		{{ Form::submit('Save', array('class' => 'btn btn-primary')) }}
 
-<div class="form-actions">
+		{{ HTML::link('/peoplesref','Cancelar', array('class' => 'btn')) }}
 
-	{{ Form::submit('Save', array('class' => 'btn btn-primary')) }}
+	</div>
 
-	{{ HTML::link('/peoplesref','Cancelar', array('class' => 'btn')) }}
-
-</div>
-
-{{ Form::close() }}
+	{{ Form::close() }}
 
 </div>
 

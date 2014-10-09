@@ -12,10 +12,10 @@ class Unidade extends Eloquent {
 	}
 
 	public static $rules = array(
-		'nome' => 'unique:unidades|required|between:5,40',
-		'rua' => 'unique:unidades|required|between:5,35',
-		'bairro' => 'unique:unidades|required|between:5,30',
-		'numero' => 'unique:unidades|required|numeric|digits_between:2,4',
+		'nome' => 'required|between:5,40',
+		'rua' => 'required|between:1,35',
+		'bairro' => 'required|between:5,30',
+		'numero' => 'required|numeric|digits_between:2,4',
 		'tipo' => 'required',
 		);
 

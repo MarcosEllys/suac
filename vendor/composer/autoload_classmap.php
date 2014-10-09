@@ -46,7 +46,7 @@ return array(
     'Crypt_TripleDES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php',
     'Crypt_Twofish' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
     'CustomValidator' => $baseDir . '/app/libraries/CustomValidator.php',
-    'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
+    'DeleteNomeunidadeInPeoplereference' => $baseDir . '/app/database/migrations/2014_10_03_230111_delete nomeunidade in peoplereference.php',
     'DeleteTipounidadeInPf' => $baseDir . '/app/database/migrations/2014_09_28_203326_delete_tipounidade_in_pf.php',
     'File_ANSI' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
     'File_ASN1' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',

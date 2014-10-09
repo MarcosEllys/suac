@@ -28,25 +28,27 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 
 	public static $rules = array(
-		'nome' => 'required|between:5,20',
+		'nome' => 'required',
 		'sexo' => 'required',
 		'nascimento' => 'required',
-		'cpf' => array('required','cpf'),
-		'rg' => 'required|numeric',
+		'rg' => 'required|min:5|numeric',
 		'orgaorg' => 'required',
 		'ufrg' => 'required',
 		'emitedrg' => 'required',
-		'username' => 'unique:users|alpha_num|required|between:4,20',
-		'email' => 'unique:uses|required|email',
+		'cpf' => array('required','cpf'),
+		'username' => 'alpha_num|required|between:4,20',
+		'email' => 'required|email',
 		'password' => 'required',
 		'password' => 'confirmed',
 		'is_admin' => 'required',
+		'rua' => 'required',
 		'bairro' => 'required|between:5,20',
+		'cep' => 'required|numeric'
 		);
 
 	public static $messages = array(
-		'cpf' => 'cpf inválido',
-		);
+ 		'cpf' => 'cpf inválido',
+ 		);
 
 	public function validation($data)
 	{
@@ -61,8 +63,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 
 	public static $RulesLogin = array(
-		'username' => 'alpha_num|required|between:4,20',
-		'password' => 'required|between:4,20',
+		'username' => 'alpha_num|required|between:3,20',
+		'password' => 'required|between:3,20',
 		);
 
 	public function validate($data)

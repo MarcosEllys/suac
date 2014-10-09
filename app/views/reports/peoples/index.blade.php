@@ -44,11 +44,10 @@
 						</div>
 					</div>
 
-
 					<div class="form-actions">
 
 						<a class="btn btn-large disabled" href="#">
-							<i class="icon-user"></i> Usuários cadastrados: {{ $peoples->count(); }}
+							<i class="icon-user"></i> Usuários cadastrados: {{{ $peoples->count() }}}
 						</a>
 
 					</div>

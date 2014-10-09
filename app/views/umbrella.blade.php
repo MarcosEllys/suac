@@ -25,7 +25,18 @@
 			<div class="row">
 				<div class="span12">
 
-					A Umbrella software é uma empresa de uns fodões filhos da putas.
+					A Umbrella Software é uma equipe de alunos do curso de <strong>Análise e Desenvolvimento de Sistemas da Faculdade Vale
+					do Salgado</strong> cujo o objetivo foi levantar requisitos, defende-lo sobre sua viabilidade, 
+					documentar um sistema e implementa-lo como forma de Trabalho de Conclusão de Curso.<br><br>
+					<h3>Alunos envolvidos no projetos</h3>
+
+					<br>
+
+					Marcos Ellys Rocha Honorato.<br>
+					Jonathan Carlos.<br>
+					Vinicius Emanuel.<br>
+					Francisca Francilia.<br>
+					Eliane de Moura.
 					
 				</div>
 

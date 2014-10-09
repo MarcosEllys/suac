@@ -58,7 +58,11 @@
 											<div class="control-group">
 												{{ Form::label('sexo','Sexo:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{{ Auth::User()->sexo }}}
+													@if(Auth::User()->sexo = 'M')
+													Masculino
+													@else
+													Feminino
+													@endif
 												</div>
 											</div>
 
@@ -137,7 +141,11 @@
 													<div class="control-group">
 														{{ Form::label('is_admin','Tipo de usuário:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{{ Auth::User()->is_admin }}}
+															@if(Auth::User()->is_admin)
+															Administrador
+															@else
+															Usuário comum
+															@endif
 														</div>
 													</div>
 												</div>
@@ -214,7 +222,7 @@
 
 			</div>
 
-				{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
+			{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
 
 			{{ Form::close() }}
 
