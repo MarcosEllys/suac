@@ -145,7 +145,11 @@
 													<div class="control-group">
 														{{ Form::label('is_admin', 'Tipo de usuário:',array('class' => 'control-label') ) }}
 														<div class="controls">
-															{{{ $users->is_admin }}}		
+															@if($users->is_admin)
+																Administrador
+															@else
+																Usuário comum
+															@endif		
 														</div>
 													</div>
 
@@ -239,7 +243,7 @@
 
 			</div>
 
-				{{ HTML::link('/users','Voltar', array('class' => 'btn')) }}
+			{{ HTML::link('/users','Voltar', array('class' => 'btn')) }}
 
 			{{ Form::close() }}
 

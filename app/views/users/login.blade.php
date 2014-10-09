@@ -65,11 +65,11 @@
 			</div>
 			<div class="login-actions">
 
-				<span class="login-checkbox">
+				<!-- <span class="login-checkbox">
 					<label class="choice" for="Field">Recuperar senha</label> 
-				</span>
+				</span> -->
 
-				{{ Form::submit('Enviar', array('class' => 'button btn btn-success btn-large')) }}
+				{{ Form::submit('Entrar', array('class' => 'button btn btn-success btn-large')) }}
 
 			</div>
 			{{ Form::close(); }}

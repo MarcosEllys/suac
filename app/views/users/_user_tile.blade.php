@@ -2,7 +2,7 @@
 	<td>{{{$user->id}}}</td>
 	<td>{{{$user->nome }}}</td>
 	<td>
-		@if($user->is_admin = true)
+		@if($user->is_admin)
 			Administrador
 		@else
 			Usuário comum

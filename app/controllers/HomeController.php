@@ -18,12 +18,23 @@ class HomeController extends BaseController {
 	public function showWelcome()
 	{
 
-		$pf = DB::table('peoplesreferences')->paginate();
+		
+		$pf = Peoplesreference::paginate();
 
-		$unidades = DB::table('unidades')->paginate();
+		$uni = Unidade::paginate();
 
-		return View::make('home')->with('peopletotal',$pf)->with('unidades',$unidades);
+		$user = User::paginate();
 
+		return View::make('home')
+		->with('peopletotal',$pf)
+		->with('unidades',$uni)
+		->with('users',$user);
+
+	}
+
+	public function sobre()
+	{
+		return View::make('umbrella');
 	}
 
 }

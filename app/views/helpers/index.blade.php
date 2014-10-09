@@ -61,8 +61,8 @@
 										<br>
 
 										01 - selecione a aba "Administrativo". <br>
-										02 - clique em "<a href=" {{URL("users")}} ">Usuários</a>". <br>
-										03 - clique em "<a href=" {{ URL("users/create") }} ">Cadastrar usuário</a>". <br>
+										02 - clique em "Usuários". <br>
+										03 - clique em "Cadastrar usuário". <br>
 										04 - Na aba "Dados pessoais" preencha as seguintes informações. <br>
 										05 - Preencha o campo nome. <br>
 										06 - Marque a opção de sexo correspondente. <br>
@@ -133,8 +133,8 @@
 										<br>
 
 										01 - selecione a aba "Administrativo".<br>
-										02 - clique em "<a href=" {{URL("unidades")}} ">Unidades</a>".<br>
-										03 - clique em "<a href=" {{ URL("unidades/create") }} ">Cadastrar unidade</a>".<br>
+										02 - clique em "Unidades".<br>
+										03 - clique em "Cadastrar unidade".<br>
 										03 - Preencha o campo nome da unidade. <br>
 										04 - Preencha o campo rua.<br>
 										05 - Preencha o campo bairro.<br>
@@ -162,7 +162,7 @@
 										<br>
 
 										01 - selecione a aba "Assistência Cras". <br>
-										02 - clique em "<a href="#">Agendar atendimento</a>". <br>
+										02 - clique em "Agendar atendimento". <br>
 										03 - Selecione uma pessoa referenciada. <br>
 										04 - Informe a data do atendimento. <br>
 										05 - Selecione o tipo de atendimento. <br>

@@ -28,7 +28,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		'nome' => 'required',
 		'sexo' => 'required',
 		'nascimento' => 'required',
-		'rg' => 'required|numeric',
+		'rg' => 'required|min:5|numeric',
 		'orgaorg' => 'required',
 		'ufrg' => 'required',
 		'emitedrg' => 'required',

@@ -20,26 +20,9 @@ Route::post('login','UsersController@validate');
 Route::group(array('before' => 'auth'), function()
 {
 
-	Route::get('/', function()
-	{
+	Route::get('/','HomeController@showWelcome');
 
-		$pf = Peoplesreference::paginate();
-
-		$uni = Unidade::paginate();
-
-		$user = User::paginate();
-
-		return View::make('home')
-		->with('peopletotal',$pf)
-		->with('unidades',$uni)
-		->with('users',$user);
-
-	});
-
-	Route::get('sobre',function()
-	{
-		return View::make('umbrella');
-	});
+	Route::get('sobre','HomeController@sobre');
 
 	/*
 	|--------------------------------------------------------------------------
