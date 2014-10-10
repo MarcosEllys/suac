@@ -16,17 +16,18 @@ class UsersController extends BaseController{
 			'username' 	=> Input::get('username'),
 			'password' 	=> Input::get('password')
 			);
-		
+
 		$validator = $this->user->validate($userdata);
 
 		if ($validator->passes()) {
 
 			if (Auth::attempt($userdata)) {
-				$alert = 'alert-success';
 				return Redirect::to('/');
 			} else {
 				
-				return Redirect::to('login')->withInput()->withErrors('Usuário e/ou Senha errados');
+				return Redirect::to('login')
+								->withInput()
+								->withErrors('Usuário e/ou Senha errados');
 
 			}
 

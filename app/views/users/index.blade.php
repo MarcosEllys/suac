@@ -31,6 +31,18 @@
 
 			</div>
 
+			@if(Session::has('MessageSuccess'))
+				<div class="alert alert-success">
+					{{Session::get('message')}}
+				</div>
+			@endif
+
+			@if(Session::has('MessageInfo'))
+				<div class="alert alert-info">
+					{{Session::get('message')}}
+				</div>
+			@endif
+
 			<div class="row">
 				<div class="span12">
 

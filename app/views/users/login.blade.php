@@ -44,8 +44,7 @@
 		<div class="content clearfix">
 
 			{{ Form::open(array('action' => 'UsersController@validate')) }}
-
-
+			
 			@include('layout._errors')
 
 			<h1>Tela de Login</h1>

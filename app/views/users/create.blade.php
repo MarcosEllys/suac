@@ -101,6 +101,7 @@
 												<div class="controls">
 
 													{{ Form::select('orgaorg', array(
+													'' => '',
 													'SSP' => 'SSP',
 													'IFP' => 'IFP',
 													'IPF' => 'IPF',
@@ -115,7 +116,7 @@
 													'CBM' => 'CBM',
 													'CRO' => 'CRO',
 													'CRF' => 'CRF',
-													), 'SSP') 
+													), '') 
 												}}
 
 											</div>
@@ -126,6 +127,7 @@
 											<div class="controls">
 
 												{{ Form::select('ufrg', array(
+												'' => '',
 												'CE' => 'CE',
 												'PB' => 'PB',
 												'PE' => 'PE',
@@ -153,7 +155,7 @@
 												'MA' => 'MA',
 												'PI' => 'PI',
 												'SE' => 'SE'
-												), 'CE') 
+												), '') 
 											}}
 
 
