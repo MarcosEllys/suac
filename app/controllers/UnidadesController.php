@@ -44,7 +44,8 @@ class UnidadesController extends BaseController{
 
 			$unidade->save();
 
-			return Redirect::action('UnidadesController@index');
+			return Redirect::action('UnidadesController@index')
+							->with('MessageSuccess','Unidade criada com sucesso');
 
 		} else {
 
@@ -91,11 +92,14 @@ class UnidadesController extends BaseController{
 
 			$unidade->save();
 
-			return Redirect::action('UnidadesController@index');
+			return Redirect::action('UnidadesController@index')
+							->with('MessageInfo','Unidade alterada com sucesso');
 
 		} else {
 
-			return Redirect::to('unidades/edit/'.$unidade->id)->withInput()->withErrors($validator);
+			return Redirect::to('unidades/edit/'.$unidade->id)
+							->withInput()
+							->withErrors($validator);
 		}
 
 	}
@@ -119,7 +123,8 @@ class UnidadesController extends BaseController{
 
 		$unidade->delete();
 
-		return Redirect::action('UnidadesController@index');
+		return Redirect::action('UnidadesController@index')
+						->with('MessageDelete','Unidade excluida com sucesso');;
 
 	}
 

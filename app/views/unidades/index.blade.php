@@ -16,10 +16,19 @@
 				</div>
 			</div>
 
-			<br>
+			@if(Session::has('MessageDelete'))
+				@include('layout._deletes')
+			@endif
+
+			@if(Session::has('MessageSuccess'))
+				@include('layout._success')
+			@endif
+
+			@if(Session::has('MessageInfo'))
+				@include('layout._infos')
+			@endif
 
 			<div class="row">
-
 				<div class="span7">
 					<div class="widget widget-plain">
 						<div class="widget-content">
@@ -27,8 +36,6 @@
 						</div>
 					</div>					
 				</div>
-
-
 			</div>
 
 			<div class="row">

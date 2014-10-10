@@ -32,15 +32,11 @@
 			</div>
 
 			@if(Session::has('MessageSuccess'))
-				<div class="alert alert-success">
-					{{Session::get('message')}}
-				</div>
+				@include('layout._success')
 			@endif
 
 			@if(Session::has('MessageInfo'))
-				<div class="alert alert-info">
-					{{Session::get('message')}}
-				</div>
+				@include('layout._info')
 			@endif
 
 			<div class="row">

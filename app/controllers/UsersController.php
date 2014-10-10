@@ -68,7 +68,7 @@ class UsersController extends BaseController{
 
 		$type = Auth::User()->is_admin;
 
-		$this->layout->content = View::make('users.index',$vars)->with('type',$type);
+		$this->layout->content = View::make('users.index',$vars);
 
 	}
 
