@@ -47,19 +47,12 @@
 
   <?php echo $__env->make('/layout/top', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> 
 
-  <?php if(Auth::check()): ?>
-
-    <?php echo $__env->make('/layout/navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-
-  <?php endif; ?>
+  <?php echo $__env->make('/layout/navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
   <?php echo $__env->yieldContent('content'); ?>
 
-  <?php if(Auth::check()): ?>
-
-    <?php echo $__env->make('/layout/footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  <?php echo $__env->make('/layout/footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
   
-  <?php endif; ?>
 
 </body>
 </html>

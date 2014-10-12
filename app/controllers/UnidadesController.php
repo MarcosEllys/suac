@@ -17,12 +17,20 @@ class UnidadesController extends BaseController{
 
 		$vars = array('unidades' => $query);
 
+		$type = array('active2' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type);
+
 		$this->layout->content = View::make('unidades.index',$vars);
 
 	}
 
 	public function create()
 	{
+		$type = array('active2' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type);
+		
 		$this->layout->content = View::make('unidades.create');
 	}
 
@@ -61,6 +69,10 @@ class UnidadesController extends BaseController{
 
 		$vars = array('unidade' => $result);
 
+		$type = array('active2' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type);
+
 		$this->layout->content = View::make('unidades.show',$vars);
 
 	}
@@ -70,6 +82,10 @@ class UnidadesController extends BaseController{
 		$unidade = Unidade::find($id);
 
 		$vars = array('unidade' => $unidade);
+
+		$type = array('active2' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type);
 
 		$this->layout->content = View::make('unidades.edit',$vars);
 	}
@@ -110,6 +126,10 @@ class UnidadesController extends BaseController{
 		$result = Unidade::find($id);
 
 		$vars = array('unidade' => $result);
+
+		$type = array('active2' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type);
 
 		$this->layout->content = View::make('unidades.delete',$vars);
 	}

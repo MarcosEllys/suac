@@ -39,19 +39,12 @@
 
   @include('/layout/top') 
 
-  @if(Auth::check())
-
-    @include('/layout/navbar')
-
-  @endif
+  @include('/layout/navbar')
 
   @yield('content')
 
-  @if(Auth::check())
-
-    @include('/layout/footer')
+  @include('/layout/footer')
   
-  @endif
 
 </body>
 </html>

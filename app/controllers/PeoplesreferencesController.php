@@ -16,12 +16,20 @@ class PeoplesreferencesController extends BaseController{
 
 		$vars = array('peoplesreference' => $queryResult);
 
+		$type = array('active3' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type );
+
 		$this->layout->content = View::make('peoplesreference.index',$vars);
 	}
 
 	public function create()
 	{
 		$unidades = Unidade::all();
+
+		$type = array('active3' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type );
 
 		$this->layout->content = View::make('peoplesreference.create')->with('unidades',$unidades);
 	}
@@ -83,6 +91,10 @@ class PeoplesreferencesController extends BaseController{
 
 		$vars = array('people' => $people);
 
+		$type = array('active3' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type );
+
 		$this->layout->content = View::make('peoplesreference.edit',$vars)->with('unidades',$unidades);
 	}
 
@@ -140,6 +152,10 @@ class PeoplesreferencesController extends BaseController{
 
 		$vars = array('people' => $result);
 
+		$type = array('active3' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type );
+
 		$this->layout->content = View::make('peoplesreference.show',$vars);
 	}
 
@@ -149,6 +165,10 @@ class PeoplesreferencesController extends BaseController{
 		$result = Peoplesreference::find($id);
 
 		$vars = array('people' => $result);
+
+		$type = array('active3' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type );
 
 		$this->layout->content = View::make('peoplesreference.delete',$vars);
 	}
@@ -173,6 +193,10 @@ class PeoplesreferencesController extends BaseController{
 		$result = Peoplesreference::where('nome', 'LIKE', '%'.$name.'%')->get();
 
 		$vars = array('peoplesreference' => $result);
+
+		$type = array('active3' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type );
 
 		$this->layout->content = View::make('peoplesreference.search',$vars);
 

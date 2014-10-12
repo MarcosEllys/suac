@@ -1,19 +1,50 @@
 <?php $__env->startSection("navbar"); ?>
+
 <div class="subnavbar">
   <div class="subnavbar-inner">
     <div class="container">
       <ul class="mainnav">
-        <li><a href="<?php echo URL("/"); ?>"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
+        <?php if(isset($active1)): ?>
+         <li class="active"><a href="<?php echo URL("/"); ?>"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
+        <?php else: ?>
+          <li class=""><a href="<?php echo URL("/"); ?>"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
+        <?php endif; ?>
 
-        <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 
-          <i class=" icon-bookmark"></i><span>Administrativo</span> <b class="caret"></b></a>
+        <?php if(Auth::User()->is_admin): ?>
+
+          <?php if(isset($active2)): ?>
+          <li class="dropdown active"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 
+            <i class=" icon-bookmark"></i><span>Administrativo</span> <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+              <li><a href="<?php echo URL("/users"); ?>">Usuários</a></li>
+              <li><a href="<?php echo action('UnidadesController@index'); ?>">Unidades</a></li>
+            </ul>
+          </li>
+          <?php else: ?>
+          <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 
+            <i class=" icon-bookmark"></i><span>Administrativo</span> <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+              <li><a href="<?php echo URL("/users"); ?>">Usuários</a></li>
+              <li><a href="<?php echo action('UnidadesController@index'); ?>">Unidades</a></li>
+            </ul>
+          </li>
+          <?php endif; ?>
+
+        <?php endif; ?>
+
+        <?php if(isset($active3)): ?>
+        <li class="dropdown active"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 
+          <i class=" icon-group"></i><span>Assistência CRAS</span> <b class="caret"></b></a>
 
           <ul class="dropdown-menu">
-            <li><a href="<?php echo URL("/users"); ?>">Usuários</a></li>
-            <li><a href="<?php echo action('UnidadesController@index'); ?>">Unidades</a></li>
+            <li><a href="<?php echo action('PeoplesreferencesController@index'); ?>">Pessoas referênciadas</a></li>
+            <li><a href="#">Famílias</a></li>
+            <li><a href="#">Agendar atendimento</a></li>
           </ul>
         </li>
-
+        <?php else: ?>
         <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 
           <i class=" icon-group"></i><span>Assistência CRAS</span> <b class="caret"></b></a>
 
@@ -23,18 +54,35 @@
             <li><a href="#">Agendar atendimento</a></li>
           </ul>
         </li>
+        <?php endif; ?>
 
-        <li>
-          <a href=" <?php echo URL("/reports"); ?> ">
-            <i class="icon-list-alt"></i><span>Relatórios</span>            
-          </a>
-        </li>
+        <?php if(isset($active4)): ?>
+          <li class="active">
+            <a href=" <?php echo URL("/reports"); ?> ">
+              <i class="icon-list-alt"></i><span>Relatórios</span>            
+            </a>
+          </li>
+        <?php else: ?>
+          <li>
+            <a href=" <?php echo URL("/reports"); ?> ">
+              <i class="icon-list-alt"></i><span>Relatórios</span>            
+            </a>
+          </li>
+        <?php endif; ?>
 
-        <li>
-          <a href="<?php echo URL("/ajuda"); ?>">
-            <i class="icon-facetime-video"></i><span>Ajuda</span>           
-          </a>
-        </li>
+        <?php if(isset($active5)): ?>
+          <li class="active">
+            <a href="<?php echo URL("/ajuda"); ?>">
+              <i class="icon-facetime-video"></i><span>Ajuda</span>           
+            </a>
+          </li>
+        <?php else: ?>
+          <li>
+            <a href="<?php echo URL("/ajuda"); ?>">
+              <i class="icon-facetime-video"></i><span>Ajuda</span>           
+            </a>
+          </li>
+        <?php endif; ?>
 
       </ul>
     </div>

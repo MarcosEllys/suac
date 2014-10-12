@@ -26,9 +26,10 @@ class HomeController extends BaseController {
 		$user = User::paginate();
 
 		return View::make('home')
-		->with('peopletotal',$pf)
-		->with('unidades',$uni)
-		->with('users',$user);
+					->with('active1','active')
+					->with('peopletotal',$pf)
+					->with('unidades',$uni)
+					->with('users',$user);
 
 	}
 

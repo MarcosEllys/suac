@@ -22,12 +22,12 @@ class UsersController extends BaseController{
 		if ($validator->passes()) {
 
 			if (Auth::attempt($userdata)) {
-				return Redirect::to('/');
+				return Redirect::action('HomeController@showWelcome');
 			} else {
 				
 				return Redirect::to('login')
-								->withInput()
-								->withErrors('Usuário e/ou Senha errados');
+				->withInput()
+				->withErrors('Usuário e/ou Senha errados');
 
 			}
 
@@ -51,10 +51,11 @@ class UsersController extends BaseController{
 	{
 		Auth::logout();
 
-		return Redirect::to('/');
+		return Redirect::action('HomeController@showWelcome');;
 	}
 
-	public function perfil(){
+	public function perfil()
+	{
 
 		$this->layout->content = View::make('users.perfil');
 	}
@@ -66,7 +67,9 @@ class UsersController extends BaseController{
 
 		$vars = array('users' => $query);
 
-		$type = Auth::User()->is_admin;
+		$type = array('active2' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type );
 
 		$this->layout->content = View::make('users.index',$vars);
 
@@ -75,6 +78,10 @@ class UsersController extends BaseController{
 
 	public function create()
 	{
+		$type = array('active2' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type);
+
 		$this->layout->content = View::make('users.create');
 	}
 
@@ -134,6 +141,10 @@ class UsersController extends BaseController{
 
 		$vars = array('users' => $result);
 
+		$type = array('active2' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type);
+
 		$this->layout->content = View::make('users.delete',$vars);
 	}
 
@@ -157,6 +168,10 @@ class UsersController extends BaseController{
 
 		$vars = array('users' => $result);
 
+		$type = array('active2' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type);
+
 		$this->layout->content = View::make('users.show',$vars);
 
 	}
@@ -167,7 +182,12 @@ class UsersController extends BaseController{
 
 		$vars = array('users' => $user);
 
+		$type = array('active2' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type);
+		
 		$this->layout->content = View::make('users.edit',$vars);
+
 	}
 
 	public function handleEdit()

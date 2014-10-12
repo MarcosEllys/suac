@@ -37,17 +37,17 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('ajuda',function()
 	{
-		return View::make('helpers.index');
+		return View::make('helpers.index')->with('active5','active');
 	});
 
 	Route::get('ajuda/agendaratendimento',function()
 	{
-		return View::make('helpers.agendaratendimento');
+		return View::make('helpers.agendaratendimento')->with('active5','active');
 	});
 
 	Route::get('ajuda/createunidade', function()
 	{
-		return View::make('helpers.createunidade');
+		return View::make('helpers.createunidade')->with('active5','active');
 	});
 
 	/*
@@ -148,7 +148,7 @@ Route::group(array('before' => 'auth'), function()
 	*/
 
 	Route::get('reports',function(){
-		return View::make('reports.index');
+		return View::make('reports.index')->with('active4','active');
 	});
 	
 
@@ -157,7 +157,7 @@ Route::group(array('before' => 'auth'), function()
 		$pf = Peoplesreference::paginate(null,array('id','nome','apelido','nascimento','nis','cpf','unidade_id'));
 
 		return View::make('reports.peoples.index')
-		->with('peoples',$pf);
+					->with('peoples',$pf);
 
 
 	});
