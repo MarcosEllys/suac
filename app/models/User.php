@@ -27,32 +27,33 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 
 
-	public static $rules = array(
-		'nome' => 'required',
-		'sexo' => 'required',
-		'nascimento' => 'required',
-		'rg' => 'required|min:5|numeric',
-		'orgaorg' => 'required',
-		'ufrg' => 'required',
-		'emitedrg' => 'required',
-		'cpf' => array('required','cpf'),
-		'username' => 'alpha_num|required|between:4,20',
-		'email' => 'required|email',
-		'password' => 'required',
-		'password' => 'confirmed',
-		'is_admin' => 'required',
-		'rua' => 'required',
-		'bairro' => 'required|between:5,20',
-		'cep' => 'required|numeric'
-		);
-
-	public static $messages = array(
- 		'cpf' => 'cpf inválido',
- 		);
-
 	public function validation($data)
 	{
-		return Validator::make($data,self::$rules,self::$messages);
+
+		$rules = array(
+			'nome' => "required",
+			'sexo' => "required",
+			'nascimento' => "required",
+			'rg' => "required|min:5|numeric",
+			'orgaorg' => "required",
+			'ufrg' => "required",
+			'emitedrg' => "required",
+			'username' => "unique:users,username,{$id}|alpha_num|required|between:4,20",
+			'email' => "required|email",
+			'password' => "required",
+			'password' => "confirmed",
+			'is_admin' => "required",
+			'rua' => "required",
+			'bairro' => "required|between:5,20",
+			'cep' => "required|numeric",
+			'cpf' => array("required","cpf"),
+			);
+
+		$messages = array(
+			'cpf' => 'cpf inválido',
+			);
+
+		return Validator::make($data,$rules,$messages);
 	}
 
 	/**

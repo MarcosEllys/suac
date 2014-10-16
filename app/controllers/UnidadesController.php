@@ -5,9 +5,9 @@ class UnidadesController extends BaseController{
 	protected $unidade;
 
 	public function __construct(Unidade $unidade)
-    {
-        $this->unidade = $unidade;
-    }
+	{
+		$this->unidade = $unidade;
+	}
 
 
 	public function index()
@@ -46,14 +46,14 @@ class UnidadesController extends BaseController{
 		$unidade->complemento = Input::get('complemento');
 		$unidade->tipo = Input::get('tipo');
 
-		$validator = $this->unidade->validate(Input::all());
+		$validator = $this->unidade->validate(null,Input::all()); 
 
 		if ($validator->passes()) {
 
 			$unidade->save();
 
 			return Redirect::action('UnidadesController@index')
-							->with('MessageSuccess','Unidade criada com sucesso');
+			->with('MessageSuccess','Unidade criada com sucesso');
 
 		} else {
 
@@ -95,27 +95,29 @@ class UnidadesController extends BaseController{
 
 		$unidade = Unidade::findOrFail(Input::get('id'));
 
-		$unidade->nome = Input::get('nome');
-		$unidade->rua = Input::get('rua');
-		$unidade->bairro = Input::get('bairro');		
-		$unidade->numero = Input::get('numero');
-		$unidade->complemento = Input::get('complemento');
-		$unidade->tipo = Input::get('tipo');
+		$id = Input::get('id');
 
-		$validator = $this->unidade->validate(Input::all());
+		$validator = $this->unidade->validate($id,Input::all());
 
 		if ($validator->passes()) {
+
+			$unidade->nome = Input::get('nome');
+			$unidade->rua = Input::get('rua');
+			$unidade->bairro = Input::get('bairro');		
+			$unidade->numero = Input::get('numero');
+			$unidade->complemento = Input::get('complemento');
+			$unidade->tipo = Input::get('tipo');
 
 			$unidade->save();
 
 			return Redirect::action('UnidadesController@index')
-							->with('MessageInfo','Unidade alterada com sucesso');
+			->with('MessageInfo','Unidade alterada com sucesso');
 
 		} else {
 
 			return Redirect::to('unidades/edit/'.$unidade->id)
-							->withInput()
-							->withErrors($validator);
+			->withInput()
+			->withErrors($validator);
 		}
 
 	}
@@ -144,7 +146,7 @@ class UnidadesController extends BaseController{
 		$unidade->delete();
 
 		return Redirect::action('UnidadesController@index')
-						->with('MessageDelete','Unidade excluida com sucesso');;
+		->with('MessageDelete','Unidade excluida com sucesso');;
 
 	}
 

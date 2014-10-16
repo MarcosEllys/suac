@@ -94,7 +94,7 @@ require app_path().'/filters.php';
 
 /*
 |--------------------------------------------------------------------------
-| Set CustomValidator
+| Set CpfCnpjValidator
 |--------------------------------------------------------------------------
 |
 | load validator.
@@ -103,5 +103,5 @@ require app_path().'/filters.php';
 
 Validator::resolver(function($translator, $data, $rules, $messages)
 {
-	return new CustomValidator($translator, $data, $rules, $messages);
+	return new CpfCnpjValidator($translator, $data, $rules, $messages);
 });

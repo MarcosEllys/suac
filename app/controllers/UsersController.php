@@ -24,17 +24,12 @@ class UsersController extends BaseController{
 			if (Auth::attempt($userdata)) {
 				return Redirect::action('HomeController@showWelcome');
 			} else {
-				
 				return Redirect::to('login')
-				->withInput()
-				->withErrors('Usuário e/ou Senha errados');
-
+								->withInput()
+								->withErrors('Usuário e/ou Senha errados');
 			}
-
 		} else {
-
 			return Redirect::to('login')->withInput()->withErrors($validator);
-
 		}
 	}
 
@@ -112,7 +107,7 @@ class UsersController extends BaseController{
 		$user->complemento = Input::get('complemento');
 		$user->pointreferencia  = Input::get('pointreferencia');
 
-		$validator = $this->user->validation(Input::all());
+		$validator = $this->user->validation(null,Input::all());
 
 		if ($validator->passes()) {
 
@@ -218,7 +213,11 @@ class UsersController extends BaseController{
 		$user->complemento = Input::get('complemento');
 		$user->pointreferencia  = Input::get('pointreferencia');
 
-		$validator = $this->user->validation(Input::all());
+		
+		
+		$id = Input::get('id');
+
+		$validator = $this->user->validation($id,Input::all());
 
 		if ($validator->passes()) {
 

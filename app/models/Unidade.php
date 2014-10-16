@@ -11,17 +11,17 @@ class Unidade extends Eloquent {
 		return $this->hasMany('peoplesreferences');
 	}
 
-	public static $rules = array(
-		'nome' => 'required|between:5,40',
-		'rua' => 'required|between:1,35',
-		'bairro' => 'required|between:5,30',
-		'numero' => 'required|numeric|digits_between:2,4',
-		'tipo' => 'required',
-		);
-
-	public function validate($data)
+	public function validate($id,$data)
 	{
-		return Validator::make($data,self::$rules);
+		$rules = array(
+			'nome' => "unique:unidades,nome,{$id}|required|between:5,40",
+			'rua' => "required|between:1,35",
+			'bairro' => "required|between:3,30",
+			'numero' => "required|numeric|digits_between:2,4",
+			'tipo' => "required",
+			);
+
+		return Validator::make($data,$rules);
 	}
 
 }
