@@ -27,7 +27,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 
 
-	public function validation($data)
+	public function validation($id,$data)
 	{
 
 		$rules = array(

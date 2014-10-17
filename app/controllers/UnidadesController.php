@@ -95,9 +95,7 @@ class UnidadesController extends BaseController{
 
 		$unidade = Unidade::findOrFail(Input::get('id'));
 
-		$id = Input::get('id');
-
-		$validator = $this->unidade->validate($id,Input::all());
+		$validator = $this->unidade->validate(Input::get('id'),Input::all());
 
 		if ($validator->passes()) {
 

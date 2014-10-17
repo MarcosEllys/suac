@@ -1,7 +1,5 @@
 <?php
 
-// use LaravelBook\Ardent\Ardent;
-
 class Unidade extends Eloquent {
 
 	protected $table = 'unidades';
