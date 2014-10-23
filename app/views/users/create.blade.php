@@ -216,10 +216,10 @@
 												{{ Form::label('is_admin', 'Tipo de usuário:',array('class' => 'control-label') ) }}
 												<div class="controls">
 													<label class="radio inline">
-														{{ Form::radio('is_admin', '0', true) }} Administrador
+														{{ Form::radio('is_admin', '1', true) }} Administrador
 													</label>
 													<label class="radio inline">
-														{{ Form::radio('is_admin', '1') }} Assistente social
+														{{ Form::radio('is_admin', '0') }} Usuário comum
 
 													</label>		
 												</div>
@@ -284,6 +284,16 @@
 										</div>
 									</div>
 
+									<div class="form-actions">
+
+										{{ Form::submit('Salvar', array('class' => 'btn btn-primary')) }}
+
+										{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
+
+									</div>
+
+									{{ Form::close() }}
+
 
 									<!-- /Até aqui -->
 
@@ -302,15 +312,14 @@
 
 	</div>
 
-	<div class="form-actions">
-
-		{{ Form::submit('Salvar', array('class' => 'btn btn-primary')) }}
-
-		{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
-
-	</div>
-
-	{{ Form::close() }}
+	<ul class="nav nav-tabs">
+		<li class="">
+			<a class="btn" href="#formcontrols" data-toggle="tab"><i class="icon-chevron-left"></i><i class="icon-chevron-left"></i> Dados pessoais</a>
+		</li>
+		<li class="">
+			<a class="btn" href="#jscontrols" data-toggle="tab">Dados sobre endereço <i class="icon-chevron-right"></i><i class="icon-chevron-right"></i></a>
+		</li>
+	</ul>
 
 </div>
 
@@ -331,37 +340,33 @@
 	<script src="assets/plugins/excanvas.min.js"></script>
 	<script src="assets/plugins/respond.min.js"></script>  
 	<![endif]-->   
-<script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-<script src="assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>  
-<script src="assets/plugins/jquery.cookie.min.js" type="text/javascript"></script>
-<script src="assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript" ></script>
 	<!-- END CORE PLUGINS -->
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script type="text/javascript" src="assets/plugins/ckeditor/ckeditor.js"></script>  
-<script type="text/javascript" src="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
-<script type="text/javascript" src="assets/plugins/chosen-bootstrap/chosen/chosen.jquery.min.js"></script>
-<script type="text/javascript" src="assets/plugins/select2/select2.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script> 
-<script type="text/javascript" src="assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap-toggle-buttons/static/js/jquery.toggle.buttons.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
-<script type="text/javascript" src="assets/plugins/clockface/js/clockface.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/date.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script> 
-<script type="text/javascript" src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>  
-<script type="text/javascript" src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js"></script>   
-<script type="text/javascript" src="assets/plugins/jquery.input-ip-address-control-1.0.min.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery-multi-select/js/jquery.multi-select.js"></script>   
-<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript" ></script>
-<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript" ></script> 
-<script src="assets/plugins/jquery.pwstrength.bootstrap/src/pwstrength.js" type="text/javascript" ></script>
-<script src="assets/plugins/bootstrap-switch/static/js/bootstrap-switch.js" type="text/javascript" ></script>
-<script src="assets/plugins/jquery-tags-input/jquery.tagsinput.min.js" type="text/javascript" ></script>
+	<script type="text/javascript" src="assets/plugins/ckeditor/ckeditor.js"></script>  
+	<script type="text/javascript" src="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+	<script type="text/javascript" src="assets/plugins/chosen-bootstrap/chosen/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/select2/select2.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script> 
+	<script type="text/javascript" src="assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap-toggle-buttons/static/js/jquery.toggle.buttons.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+	<script type="text/javascript" src="assets/plugins/clockface/js/clockface.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/date.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script> 
+	<script type="text/javascript" src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>  
+	<script type="text/javascript" src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+	<script type="text/javascript" src="assets/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js"></script>   
+	<script type="text/javascript" src="assets/plugins/jquery.input-ip-address-control-1.0.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/jquery-multi-select/js/jquery.multi-select.js"></script>   
+	<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript" ></script>
+	<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript" ></script> 
+	<script src="assets/plugins/jquery.pwstrength.bootstrap/src/pwstrength.js" type="text/javascript" ></script>
+	<script src="assets/plugins/bootstrap-switch/static/js/bootstrap-switch.js" type="text/javascript" ></script>
+	<script src="assets/plugins/jquery-tags-input/jquery.tagsinput.min.js" type="text/javascript" ></script>
 	<!-- END PAGE LEVEL PLUGINS -->
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="assets/scripts/app.js"></script>
+	<script src="assets/scripts/app.js"></script>
 
 	<script>
 	jQuery(document).ready(function() {       

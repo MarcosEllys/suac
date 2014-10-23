@@ -16,10 +16,6 @@
 
 <div class="row">
 
-  <div class="span12">
-    @include('layout._errors')
-  </div>
-
   <div class="span5">
     <div class="widget widget-nopad">
       <div class="widget-header"> <i class="icon-bar-chart"></i>
@@ -32,10 +28,10 @@
              <div id="big_stats" class="cf">
             
               <div class="stat">
-               <i class="icon-user"></i>
+               <i class="icon-group"></i>
                <span class="value"> {{ $peopletotal->getTotal(); }} </span>
                <br>
-               Pessoas refenciadas cadastradas
+               Famílias cadastradas
              </div>
 
              <div class="stat"> 

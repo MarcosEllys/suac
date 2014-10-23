@@ -28,6 +28,12 @@
 					</div>					
 				</div>
 
+				@include('layout._deletes')
+				
+				@include('layout._success')
+				
+				@include('layout._infos')
+
 
 				<div class="span5">
 

@@ -222,7 +222,7 @@
 
 			</div>
 
-			{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
+			{{ HTML::link('/users','Voltar', array('class' => 'btn')) }}
 
 			{{ Form::close() }}
 

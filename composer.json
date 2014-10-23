@@ -5,8 +5,7 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"zizaco/cep-consult": "dev-master",
-		 "laravelbook/ardent": "2.*"
+		"zizaco/cep-consult": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

@@ -20,9 +20,9 @@
 
   <?php echo $__env->yieldContent('header'); ?>
 
-  <?php echo HTML::style( asset('css/bootstrap.min.css') ); ?>
+  <?php echo HTML::style( asset('plugins/bootstrap/css/bootstrap.min.css') ); ?>
 
-  <?php echo HTML::style( asset('css/bootstrap-responsive.min.css') ); ?>
+  <?php echo HTML::style( asset('plugins/bootstrap/css/bootstrap-responsive.min.css') ); ?>
 
   <?php echo HTML::style( asset('css/font-awesome.css') ); ?>
 
@@ -34,10 +34,12 @@
 
   <?php echo HTML::script( asset('js/jquery-1.7.2.min.js') ); ?>
 
-  <?php echo HTML::script( asset('js/bootstrap.js') ); ?>
+  <?php echo HTML::script( asset('plugins/bootstrap/js/bootstrap.js') ); ?>
 
   <?php echo HTML::script( asset('js/base.js') ); ?>
 
+
+  <link rel="<?php echo asset('favicon.ico'); ?>">
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
 
@@ -45,13 +47,13 @@
 <body>
 
 
-  <?php echo $__env->make('/layout/top', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> 
+  <?php echo $__env->make('/layout/_top', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> 
 
   <?php echo $__env->make('/layout/navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
   <?php echo $__env->yieldContent('content'); ?>
 
-  <?php echo $__env->make('/layout/footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  <?php echo $__env->make('/layout/_footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
   
 
 </body>

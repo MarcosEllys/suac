@@ -1,4 +1,6 @@
-<div class="alert alert-success">
-	<button type="button" class="close" data-dismiss="alert"> × </button>
-	{{{Session::get('MessageSuccess')}}}
-</div>
+@if(Session::has('MessageSuccess'))
+	<div class="alert alert-success">
+		<button type="button" class="close" data-dismiss="alert"> × </button>
+		{{{Session::get('MessageSuccess')}}}
+	</div>
+@endif

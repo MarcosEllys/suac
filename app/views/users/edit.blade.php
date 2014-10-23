@@ -193,14 +193,14 @@
 											<div class="control-group">
 												{{ Form::label('password','Senha:',array('class' => 'control-label','required') ) }}
 												<div class="controls">
-													{{ Form::text('password',Input::old('password'),array('class' => 'span6') ) }}
+													{{ Form::text('password',null,array('class' => 'span6') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
-												{{ Form::label('password_confirmation','Repita a senha:',array('class' => 'control-label') ) }}
+												{{ Form::label('password_confirmation','Repita a senha:',array('class' => 'control-label','required') ) }}
 												<div class="controls">
-													{{ Form::text('password_confirmation',Input::old('password_confirmation'),array('class' => 'span6') ) }}
+													{{ Form::text('password_confirmation',null,array('class' => 'span6') ) }}
 												</div>
 											</div>
 
@@ -215,10 +215,10 @@
 												{{ Form::label('is_admin', 'Tipo de usuário:',array('class' => 'control-label') ) }}
 												<div class="controls">
 													<label class="radio inline">
-														{{ Form::radio('is_admin', '0', true) }} Administrador
+														{{ Form::radio('is_admin', '1', true) }} Administrador
 													</label>
 													<label class="radio inline">
-														{{ Form::radio('is_admin', '1') }} Assistente social
+														{{ Form::radio('is_admin', '0') }} Usuário comum
 
 													</label>		
 												</div>
@@ -283,6 +283,16 @@
 										</div>
 									</div>
 
+									<div class="form-actions">
+
+										{{ Form::submit('Salvar', array('class' => 'btn btn-primary')) }}
+
+										{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
+
+									</div>
+
+									{{ Form::close() }}
+
 
 									<!-- /Até aqui -->
 
@@ -301,15 +311,14 @@
 
 	</div>
 
-	<div class="form-actions">
-
-		{{ Form::submit('Salvar', array('class' => 'btn btn-primary')) }}
-
-		{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
-
-	</div>
-
-	{{ Form::close() }}
+	<ul class="nav nav-tabs">
+		<li class="">
+			<a class="btn" href="#formcontrols" data-toggle="tab"><i class="icon-chevron-left"></i><i class="icon-chevron-left"></i> Dados pessoais</a>
+		</li>
+		<li class="">
+			<a class="btn" href="#jscontrols" data-toggle="tab">Dados sobre endereço <i class="icon-chevron-right"></i><i class="icon-chevron-right"></i></a>
+		</li>
+	</ul>
 
 </div>
 

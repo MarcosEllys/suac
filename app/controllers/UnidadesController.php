@@ -37,18 +37,18 @@ class UnidadesController extends BaseController{
 	public function store()
 	{
 
-		$unidade = new Unidade();
-
-		$unidade->nome = Input::get('nome');
-		$unidade->rua = Input::get('rua');
-		$unidade->bairro = Input::get('bairro');		
-		$unidade->numero = Input::get('numero');
-		$unidade->complemento = Input::get('complemento');
-		$unidade->tipo = Input::get('tipo');
-
 		$validator = $this->unidade->validate(null,Input::all()); 
 
 		if ($validator->passes()) {
+
+			$unidade = new Unidade();
+
+			$unidade->nome = Input::get('nome');
+			$unidade->rua = Input::get('rua');
+			$unidade->bairro = Input::get('bairro');		
+			$unidade->numero = Input::get('numero');
+			$unidade->complemento = Input::get('complemento');
+			$unidade->tipo = Input::get('tipo');
 
 			$unidade->save();
 
@@ -92,12 +92,12 @@ class UnidadesController extends BaseController{
 
 	public function handleEdit()
 	{
-
 		$unidade = Unidade::findOrFail(Input::get('id'));
 
 		$validator = $this->unidade->validate(Input::get('id'),Input::all());
 
 		if ($validator->passes()) {
+
 
 			$unidade->nome = Input::get('nome');
 			$unidade->rua = Input::get('rua');
@@ -106,7 +106,7 @@ class UnidadesController extends BaseController{
 			$unidade->complemento = Input::get('complemento');
 			$unidade->tipo = Input::get('tipo');
 
-			$unidade->save();
+			$unidade->update();
 
 			return Redirect::action('UnidadesController@index')
 			->with('MessageInfo','Unidade alterada com sucesso');

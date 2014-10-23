@@ -25,8 +25,8 @@ class UsersController extends BaseController{
 				return Redirect::action('HomeController@showWelcome');
 			} else {
 				return Redirect::to('login')
-								->withInput()
-								->withErrors('Usuário e/ou Senha errados');
+				->withInput()
+				->withErrors('Usuário e/ou Senha errados');
 			}
 		} else {
 			return Redirect::to('login')->withInput()->withErrors($validator);
@@ -83,33 +83,33 @@ class UsersController extends BaseController{
 	public function store()
 	{
 
-		$user = new User();
-
-		$user->nome = Input::get('nome');
-		$user->sexo = Input::get('sexo');
-		$user->nascimento = Input::get('nascimento');
-		$user->cpf = Input::get('cpf');
-		$user->rg = Input::get('rg');
-		$user->orgaorg = Input::get('orgaorg');
-		$user->ufrg = Input::get('ufrg');
-		$user->emitedrg = Input::get('emitedrg');
-		$user->telefone = Input::get('telefone');
-		$user->username = Input::get('username');
-		$user->password = Hash::make(Input::get('password'));
-		$user->password_confirmation = Hash::make(Input::get('password_confirmation'));
-		$user->email = Input::get('email');
-		$user->is_admin = Input::get('is_admin');
-		$user->cep = Input::get('cep');
-
-		$user->bairro = Input::get('bairro');
-		$user->rua = Input::get('rua');
-		$user->numero = Input::get('numero');
-		$user->complemento = Input::get('complemento');
-		$user->pointreferencia  = Input::get('pointreferencia');
-
 		$validator = $this->user->validation(null,Input::all());
 
 		if ($validator->passes()) {
+
+			$user = new User();
+
+			$user->nome = Input::get('nome');
+			$user->sexo = Input::get('sexo');
+			$user->nascimento = Input::get('nascimento');
+			$user->cpf = Input::get('cpf');
+			$user->rg = Input::get('rg');
+			$user->orgaorg = Input::get('orgaorg');
+			$user->ufrg = Input::get('ufrg');
+			$user->emitedrg = Input::get('emitedrg');
+			$user->telefone = Input::get('telefone');
+			$user->username = Input::get('username');
+			$user->password = Hash::make(Input::get('password'));
+			$user->password_confirmation = Hash::make(Input::get('password_confirmation'));
+			$user->email = Input::get('email');
+			$user->is_admin = Input::get('is_admin');
+			$user->cep = Input::get('cep');
+
+			$user->bairro = Input::get('bairro');
+			$user->rua = Input::get('rua');
+			$user->numero = Input::get('numero');
+			$user->complemento = Input::get('complemento');
+			$user->pointreferencia  = Input::get('pointreferencia');
 
 			$mycep =  CepConsult::getAddress(Input::get('cep'));
 
@@ -186,45 +186,38 @@ class UsersController extends BaseController{
 	}
 
 	public function handleEdit()
-	{
-
+	{		
 		$user = User::findOrFail(Input::get('id'));
 
-		$user->nome = Input::get('nome');
-		$user->sexo = Input::get('sexo');
-		$user->nascimento = Input::get('nascimento');
-		$user->cpf = Input::get('cpf');
-		$user->rg = Input::get('rg');
-		$user->orgaorg = Input::get('orgaorg');
-		$user->ufrg = Input::get('ufrg');
-		$user->emitedrg = Input::get('emitedrg');
-		$user->telefone = Input::get('telefone');
-		$user->username = Input::get('username');
-		$user->password = Hash::make(Input::get('password'));
-		$user->password_confirmation = Hash::make(Input::get('password_confirmation'));
-		$user->email = Input::get('email');
-		$user->is_admin = Input::get('is_admin');
-		$user->cep = Input::get('cep');
-
-		$user->bairro = Input::get('bairro');
-		$user->rua = Input::get('rua');
-
-		$user->numero = Input::get('numero');
-		$user->complemento = Input::get('complemento');
-		$user->pointreferencia  = Input::get('pointreferencia');
-
-		
-		
-		$id = Input::get('id');
-
-		$validator = $this->user->validation($id,Input::all());
+		$validator = $this->user->validation(Input::get('id'),Input::all());
 
 		if ($validator->passes()) {
+
+			$user->nome = Input::get('nome');
+			$user->sexo = Input::get('sexo');
+			$user->nascimento = Input::get('nascimento');
+			$user->cpf = Input::get('cpf');
+			$user->rg = Input::get('rg');
+			$user->orgaorg = Input::get('orgaorg');
+			$user->ufrg = Input::get('ufrg');
+			$user->emitedrg = Input::get('emitedrg');
+			$user->telefone = Input::get('telefone');
+			$user->username = Input::get('username');
+			$user->password = Hash::make(Input::get('password'));
+			$user->email = Input::get('email');
+			$user->is_admin = Input::get('is_admin');
+			$user->cep = Input::get('cep');
 
 			$mycep =  CepConsult::getAddress(Input::get('cep'));
 
 			$user->uf = $mycep['state'];
 			$user->cidade = $mycep['city'];
+			$user->bairro = Input::get('bairro');
+			$user->rua = Input::get('rua');
+
+			$user->numero = Input::get('numero');
+			$user->complemento = Input::get('complemento');
+			$user->pointreferencia  = Input::get('pointreferencia');
 
 			$user->update();
 

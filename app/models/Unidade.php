@@ -15,7 +15,7 @@ class Unidade extends Eloquent {
 			'nome' => "unique:unidades,nome,{$id}|required|between:5,40",
 			'rua' => "required|between:1,35",
 			'bairro' => "required|between:3,30",
-			'numero' => "required|numeric|digits_between:2,4",
+			'numero' => "required|between:2,6",
 			'tipo' => "required",
 			);
 

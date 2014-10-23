@@ -19,10 +19,8 @@
 			
 			@include('layout._deletes')
 			
-			@if(Session::has('MessageSuccess'))
-				@include('layout._success')
-			@endif
-
+			@include('layout._success')
+			
 			@include('layout._infos')
 			
 			<div class="row">

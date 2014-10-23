@@ -82,6 +82,29 @@ Route::group(array('before' => 'auth'), function()
 
 	/*
 	|--------------------------------------------------------------------------
+	| Composicao familiar Routes
+	|--------------------------------------------------------------------------
+	|
+	| Rotas dedicadas a manipulação de dados de Composicao familiar
+	| Rotas  relacionadas a essa manipulação de dados também ficaram aqui.
+	|
+	*/
+
+	Route::get('familia',function(){
+
+		Return View::make('composicaofamiliar.index');
+
+	});
+
+	Route::get('familia/show',function(){
+
+		Return View::make('composicaofamiliar.show');
+
+	});
+
+
+	/*
+	|--------------------------------------------------------------------------
 	| Users Routes
 	|--------------------------------------------------------------------------
 	|

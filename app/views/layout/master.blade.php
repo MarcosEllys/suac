@@ -20,16 +20,18 @@
 
   @yield('header')
 
-  {{ HTML::style( asset('css/bootstrap.min.css') ) }}
-  {{ HTML::style( asset('css/bootstrap-responsive.min.css') ) }}
+  {{ HTML::style( asset('plugins/bootstrap/css/bootstrap.min.css') ) }}
+  {{ HTML::style( asset('plugins/bootstrap/css/bootstrap-responsive.min.css') ) }}
   {{ HTML::style( asset('css/font-awesome.css') ) }}
   {{ HTML::style( asset('css/style.css') ) }}
   {{ HTML::style( asset('css/pages/dashboard.css') ) }}
 
 
   {{ HTML::script( asset('js/jquery-1.7.2.min.js') ) }}
-  {{ HTML::script( asset('js/bootstrap.js') ) }}
+  {{ HTML::script( asset('plugins/bootstrap/js/bootstrap.js') ) }}
   {{ HTML::script( asset('js/base.js') ) }}
+
+  <link rel="{{ asset('favicon.ico') }}">
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
 
@@ -37,13 +39,13 @@
 <body>
 
 
-  @include('/layout/top') 
+  @include('/layout/_top') 
 
   @include('/layout/navbar')
 
   @yield('content')
 
-  @include('/layout/footer')
+  @include('/layout/_footer')
   
 
 </body>
