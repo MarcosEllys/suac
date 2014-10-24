@@ -39,13 +39,13 @@
 <body>
 
 
-  @include('/layout/_top') 
+  @include('/layout/top') 
 
   @include('/layout/navbar')
 
   @yield('content')
 
-  @include('/layout/_footer')
+  @include('/layout/footer')
   
 
 </body>
