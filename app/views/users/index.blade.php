@@ -31,13 +31,11 @@
 
 			</div>
 
-			@if(Session::has('MessageSuccess'))
-				@include('layout._success')
-			@endif
-
-			@if(Session::has('MessageInfo'))
-				@include('layout._info')
-			@endif
+			@include('layout._deletes')
+			
+			@include('layout._success')
+			
+			@include('layout._infos')
 
 			<div class="row">
 				<div class="span12">

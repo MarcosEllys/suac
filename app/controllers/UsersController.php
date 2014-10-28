@@ -117,10 +117,10 @@ class UsersController extends BaseController{
 
 			$user->save();
 
-			return Redirect::action('UsersController@index');
+			return Redirect::action('UsersController@index')
+			->with('MessageSuccess','Usuário criado com sucesso');
 
 		} else {
-
 			return Redirect::to('users/create')->withInput()->withErrors($validator);
 		}
 
@@ -145,13 +145,12 @@ class UsersController extends BaseController{
 	public function handleDelete()
 	{
 
-		$id = Input::get('id');
-
-		$user = User::findOrFail($id);
+		$user = User::findOrFail(Input::get('id'));
 
 		$user->delete();
 
-		return Redirect::action('UsersController@index');
+		return Redirect::action('UsersController@index')
+		->with('MessageDelete','Usuário excluido com sucesso');
 
 	}
 
@@ -220,7 +219,8 @@ class UsersController extends BaseController{
 
 			$user->update();
 
-			return Redirect::action('UsersController@index');
+			return Redirect::action('UsersController@index')
+			->with('MessageInfo','Usuário editado com sucesso');
 
 		} else {
 

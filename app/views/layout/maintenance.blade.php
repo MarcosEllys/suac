@@ -8,15 +8,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes"> 
 	    
-    {{ HTML::style( asset('css/bootstrap.min.css') ) }}
-    {{ HTML::style( asset('css/bootstrap-responsive.min.css') ) }}
+    {{ HTML::style( asset('plugins/bootstrap/css/bootstrap.min.css') ) }}
+    {{ HTML::style( asset('plugins/bootstrap/css/bootstrap-responsive.min.css') ) }}
     {{ HTML::style( asset('css/awesome.css') ) }}
     {{ HTML::style( asset('css/style.css') ) }}
 	
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
 
 	{{ HTML::script( asset('js/jquery-1.7.2.min') ) }}
-	{{ HTML::script( asset('js/boostrstrap') ) }}
+	{{ HTML::script( asset('plugins/bootstrap/js/boostrstrap') ) }}
 	   
 </head>
 

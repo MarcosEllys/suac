@@ -14,20 +14,20 @@ class Peoplesreference extends Eloquent{
 		return Unidade::where('id',$this->unidade_id)->first()->nome;
 	}
 
-	public static $rules = array(
-		'nome' => 'required|between:10,60',
-		'apelido' => 'required|between:4,13',
-		'cpf' => 'required'
-		
-		);
-
-	public static $messages = array(
-		'cpf' => 'cpf inválido',
-		);
-
-
-	public function validate($data)
+	public function validate($id,$data)
 	{
-		return Validator::make($data,self::$rules,self::$messages);
+		$rules = array(
+			'nome' => 'required|between:10,60',
+			'apelido' => 'required|between:4,13',
+			'rg' => 'unique:peoplesreferences,rg,{$id}|required',
+			'cpf' => 'required'
+
+			);
+
+		$messages = array(
+			'cpf' => 'cpf inválido',
+			);
+
+		return Validator::make($data,$rules,$messages);
 	}	
 }

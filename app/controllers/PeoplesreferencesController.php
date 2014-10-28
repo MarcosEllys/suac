@@ -67,7 +67,7 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->telefone2 = Input::get('telefone2');
 
 
-		$validator = $this->peoplesreference->validate(Input::all());
+		$validator = $this->peoplesreference->validate(null,Input::all());
 
 		if ($validator->passes()) {
 
@@ -102,36 +102,36 @@ class PeoplesreferencesController extends BaseController{
 
 		$people = Peoplesreference::findOrFail(Input::get('id'));
 
-		$people->nome = Input::get('nome');
-		$people->apelido = Input::get('apelido');
-		$people->nascimento = Input::get('nascimento');		
-		$people->nomemae = Input::get('nomemae');
-		$people->nomepai = Input::get('nomepai');
-		$people->nis = Input::get('nis');
-		$people->cpf = Input::get('cpf');
-		$people->rg = Input::get('rg');
-		$people->orgaorg = Input::get('orgaorg');
-		$people->ufrg = Input::get('ufrg');
-		$people->emitedrg = Input::get('emitedrg');
-		$people->numeroprontuario = Input::get('numeroprontuario');
-		$people->unidade_id = Input::get('unidade_id');
-		$people->cep = Input::get('cep');
-
-		$mycep =  CepConsult::getAddress(Input::get('cep'));
-
-		$people->uf = $mycep['state'];
-		$people->municipio = $mycep['city'];
-		$people->rua = Input::get('rua');
-		$people->bairro = Input::get('bairro');
-
-		$people->complemento = Input::get('complemento');
-		$people->pointreference = Input::get('pointreference');
-		$people->telefone1 = Input::get('telefone1');
-		$people->telefone2 = Input::get('telefone2');
-
-		$validator = $this->peoplesreference->validate(Input::all());
+		$validator = $this->peoplesreference->validate(Input::get('id'),Input::all());
 
 		if ($validator->passes()) {
+
+			$people->nome = Input::get('nome');
+			$people->apelido = Input::get('apelido');
+			$people->nascimento = Input::get('nascimento');		
+			$people->nomemae = Input::get('nomemae');
+			$people->nomepai = Input::get('nomepai');
+			$people->nis = Input::get('nis');
+			$people->cpf = Input::get('cpf');
+			$people->rg = Input::get('rg');
+			$people->orgaorg = Input::get('orgaorg');
+			$people->ufrg = Input::get('ufrg');
+			$people->emitedrg = Input::get('emitedrg');
+			$people->numeroprontuario = Input::get('numeroprontuario');
+			$people->unidade_id = Input::get('unidade_id');
+			$people->cep = Input::get('cep');
+
+			$mycep =  CepConsult::getAddress(Input::get('cep'));
+
+			$people->uf = $mycep['state'];
+			$people->municipio = $mycep['city'];
+			$people->rua = Input::get('rua');
+			$people->bairro = Input::get('bairro');
+
+			$people->complemento = Input::get('complemento');
+			$people->pointreference = Input::get('pointreference');
+			$people->telefone1 = Input::get('telefone1');
+			$people->telefone2 = Input::get('telefone2');
 
 			$people->save();
 

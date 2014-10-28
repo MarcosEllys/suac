@@ -87,7 +87,7 @@
 										22 - Preencha o campo bairro.<br>
 										23 - Preencha o campo número.<br>
 										24 - Preencha o campo complemento.<br>
-										25 - Preencha o campo ponto de referência.
+										25 - Preencha o campo ponto de referência.<br>
 										26 - Clique no botão salvar para confirmar o cadastro.<br><br>
 
 
