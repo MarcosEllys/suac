@@ -4,9 +4,9 @@ class Peoplesreference extends Eloquent{
 
 	protected $table = 'peoplesreferences';
 
-	public function unidades()
+	public function unidade()
 	{
-		return $this->belongsTo('unidades');
+		return $this->belongsTo('Unidade');
 	}
 
 	public function getUnidade()

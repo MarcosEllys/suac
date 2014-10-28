@@ -194,14 +194,14 @@
 											<div class="control-group">
 												{{ Form::label('password','Senha:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('password',Input::old('password'),array('class' => 'span6') ) }}
+													{{ Form::password('password', ['class' => 'span6']) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('password_confirmation','Repita a senha:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('password_confirmation',Input::old('password_confirmation'),array('class' => 'span6') ) }}
+													{{ Form::password('password_confirmation', ['class' => 'span6']) }}
 												</div>
 											</div>
 

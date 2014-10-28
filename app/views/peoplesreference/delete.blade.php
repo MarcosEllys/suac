@@ -211,13 +211,6 @@
 														</div>
 													</div>
 
-													<div class="control-group">
-														<label class="control-label">Localização do domicilio</label>
-
-														<div class="controls">
-															{{{ $people->localization }}}																
-														</div>
-													</div>
 												</fieldset>
 										</div>
 									</div>

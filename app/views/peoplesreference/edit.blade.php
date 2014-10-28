@@ -270,18 +270,6 @@
 										</div>
 									</div>
 
-									<div class="control-group">
-										{{ Form::label('localization', 'Tipo de unidade:',array('class' => 'control-label') ) }}
-										<div class="controls">
-											<label class="radio inline">
-												{{ Form::radio('localization', 'urbano', true) }} Urbano
-											</label>
-											<label class="radio inline">
-												{{ Form::radio('localization', 'rural') }} Rural
-
-											</label>		
-										</div>
-									</div>
 
 									<!-- /Até aqui -->
 

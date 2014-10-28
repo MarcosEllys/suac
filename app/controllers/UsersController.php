@@ -100,7 +100,6 @@ class UsersController extends BaseController{
 			$user->telefone = Input::get('telefone');
 			$user->username = Input::get('username');
 			$user->password = Hash::make(Input::get('password'));
-			$user->password_confirmation = Hash::make(Input::get('password_confirmation'));
 			$user->email = Input::get('email');
 			$user->is_admin = Input::get('is_admin');
 			$user->cep = Input::get('cep');

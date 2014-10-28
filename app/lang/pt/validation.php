@@ -105,7 +105,6 @@ return array(
         'emitedrg' => 'data de emissão',
         'username' => 'usuário',
         'password' => 'senha',
-        'localization ' => 'localização',
         'telefone1' => 'telefone 1',
         'telefone2' => 'telefone 2',
         'pointreference' => 'ponto de referencia'),

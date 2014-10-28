@@ -65,7 +65,6 @@ class PeoplesreferencesController extends BaseController{
 		$peoplesreference->pointreference = Input::get('pointreference');
 		$peoplesreference->telefone1 = Input::get('telefone1');
 		$peoplesreference->telefone2 = Input::get('telefone2');
-		$peoplesreference->localization = Input::get('localization');
 
 
 		$validator = $this->peoplesreference->validate(Input::all());
@@ -129,7 +128,6 @@ class PeoplesreferencesController extends BaseController{
 		$people->pointreference = Input::get('pointreference');
 		$people->telefone1 = Input::get('telefone1');
 		$people->telefone2 = Input::get('telefone2');
-		$people->localization = Input::get('localization');
 
 		$validator = $this->peoplesreference->validate(Input::all());
 
