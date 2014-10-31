@@ -45,13 +45,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			'is_admin' => "required",
 			'rua' => "required",
 			'bairro' => "required|between:5,20",
-			'cep' => "required|numeric",
-			'cpf' => array("required","cpf"),
+			'cep' => "required|numeric"
 			);
 
-		$messages = array(
-			'cpf' => 'cpf inválido',
-			);
+		$rules["cpf_cnpj"] = array("required","cpf");
+
+		$messages["cpf_cnpj.cpf"] = 'Cpf inválido.';
 
 		return Validator::make($data,$rules,$messages);
 	}

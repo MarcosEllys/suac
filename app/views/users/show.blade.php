@@ -77,7 +77,9 @@
 											<div class="control-group">
 												{{ Form::label('nascimento','Data de nascimento:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{{ $users->nascimento }}}
+													{{ $users->nascimento }}
+
+													
 												</div>
 											</div>
 

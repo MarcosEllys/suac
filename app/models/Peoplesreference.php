@@ -19,14 +19,13 @@ class Peoplesreference extends Eloquent{
 		$rules = array(
 			'nome' => 'required|between:10,60',
 			'apelido' => 'required|between:4,13',
-			'rg' => 'unique:peoplesreferences,rg,{$id}|required',
-			'cpf' => 'required'
+			'rg' => 'unique:peoplesreferences,rg,{$id}|required'
 
 			);
 
-		$messages = array(
-			'cpf' => 'cpf inválido',
-			);
+		$rules["cpf_cnpj"] = array("required","cpf");
+		
+		$messages["cpf_cnpj.cpf"] = 'Cpf inválido.';
 
 		return Validator::make($data,$rules,$messages);
 	}	

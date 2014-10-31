@@ -90,17 +90,9 @@ Route::group(array('before' => 'auth'), function()
 	|
 	*/
 
-	Route::get('familia',function(){
+	Route::get('familia','FamilysController@index');
 
-		Return View::make('composicaofamiliar.index');
-
-	});
-
-	Route::get('familia/show',function(){
-
-		Return View::make('composicaofamiliar.show');
-
-	});
+	Route::get('familia/show','FamilysController@show');
 
 
 	/*
