@@ -23,23 +23,32 @@ Class familyscontroller extends BaseController{
 
 	}
 
-	public function show()
+	public function show($id)
 	{
-		// $result = Family::findOrFail($id);
 
-		// $vars = array('familias' => $result);
+		$result = Family::find($id);
+
+		$vars = array('familia' => $result);
 
 		$type = array('active3' => 'active');
 
 		$this->layout->navbar = View::make('layout.navbar',$type);
 
-		$this->layout->content = View::make('familia.show');
-
+		$this->layout->content = View::make('familia.show',$vars);
 
 	}
 
-	public function edit()
+	public function edit($id)
 	{
+		$familia = Family::find($id);
+
+		$vars = array('familia' => $familia);
+
+		$type = array('active3' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type);
+
+		$this->layout->content = View::make('familia.edit',$vars);
 
 	}
 

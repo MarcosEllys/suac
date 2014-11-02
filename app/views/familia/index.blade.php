@@ -44,56 +44,17 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td>1</td>
-										<td>Maria chiquinha josefina</td>
-										<td>
-											<span class="label label-success">Concluído</span>
-										</td>
-										<td>
+									@foreach($familias as $familia)
 
-											<a href=" http://suac.com.br/unidades/show/1 ">
-												<button class="btn btn-info">
-													Visualizar
-												</button>
-											</a>
+										@include('familia._family_tile')
 
-											<a href=" http://suac.com.br/unidades/edit/1 ">
-												<button class="btn btn-warning">
-													Editar
-												</button>
-											</a>
-
-										</td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>Joana chiquinha josefina</td>
-										<td>
-											<span class="label label-warning">Incompleto</span>
-										</td>
-										<td>
-
-											<a href=" http://suac.com.br/unidades/show/1 ">
-												<button class="btn btn-info">
-													Visualizar
-												</button>
-											</a>
-
-											<a href=" http://suac.com.br/unidades/edit/1 ">
-												<button class="btn btn-warning">
-													Editar
-												</button>
-											</a>
-
-										</td>
-									</tr>
+									@endforeach
 								</tbody>
 							</table>
 						</div>
 					</div>
 
-					<!-- Paginador aqui -->
+					{{ $familias->links(); }}
 
 				</div>
 			</div>

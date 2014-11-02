@@ -5,6 +5,6 @@
 	<td>{{{$people->nascimento}}}</td>
 	<td>{{{$people->nis}}}</td>
 	<td>{{{$people->cpf}}}</td>
-	<td>{{{$people->getUnidade() }}}</td>
+	<td>{{{$people->unidade->nome }}}</td>
 
 </tr>

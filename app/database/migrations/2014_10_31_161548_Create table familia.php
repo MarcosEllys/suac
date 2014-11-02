@@ -16,14 +16,16 @@ class CreateTableFamilia extends Migration {
 		Schema::create('familys',function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->double('rendatotal');
-			$table->integer('anosmoraestado');
-			$table->integer('anosmoramunicipio');
-			$table->integer('anosmorabairro');
+			$table->double('rendatotal')->nullable()->default(null);
+			$table->integer('anosmoraestado')->nullable()->default(null);
+			$table->integer('anosmoramunicipio')->nullable()->default(null);
+			$table->integer('anosmorabairro')->nullable()->default(null);
 
-			$table->integer('peoplesreference_id');
+			$table->integer('peoplesreference_id')->nullable()->default(null);
 
-			$table->boolean('completo');
+			$table->boolean('completo')->nullable()->default(null);
+
+			$table->timestamps();
 		});
 
 	}

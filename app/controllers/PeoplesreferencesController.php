@@ -23,6 +23,35 @@ class PeoplesreferencesController extends BaseController{
 		$this->layout->content = View::make('peoplesreference.index',$vars);
 	}
 
+	public function show($id)
+	{
+		$result = Peoplesreference::find($id);
+
+		$vars = array('people' => $result);
+
+		$type = array('active3' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type );
+
+		$this->layout->content = View::make('peoplesreference.show',$vars);
+	}
+
+	public function search()
+	{
+		$name = Input::get('nome');
+
+		$result = Peoplesreference::where('nome', 'LIKE', '%'.$name.'%')->get();
+
+		$vars = array('peoplesreference' => $result);
+
+		$type = array('active3' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type );
+
+		$this->layout->content = View::make('peoplesreference.search',$vars);
+
+	}
+
 	public function create()
 	{
 		$unidades = Unidade::all();
@@ -37,41 +66,42 @@ class PeoplesreferencesController extends BaseController{
 	public function store()
 	{
 
-		$peoplesreference = new Peoplesreference();
-
-		$peoplesreference->nome = Input::get('nome');
-		$peoplesreference->apelido = Input::get('apelido');
-		$peoplesreference->nascimento = Input::get('nascimento');		
-		$peoplesreference->nomemae = Input::get('nomemae');
-		$peoplesreference->nomepai = Input::get('nomepai');
-		$peoplesreference->nis = Input::get('nis');
-		$peoplesreference->cpf = Input::get('cpf');
-		$peoplesreference->rg = Input::get('rg');
-		$peoplesreference->orgaorg = Input::get('orgaorg');
-		$peoplesreference->ufrg = Input::get('ufrg');
-		$peoplesreference->emitedrg = Input::get('emitedrg');
-		$peoplesreference->numeroprontuario = Input::get('numeroprontuario');
-		$peoplesreference->unidade_id = Input::get('unidade_id');
-		$peoplesreference->cep = Input::get('cep');
-
-		$mycep =  CepConsult::getAddress(Input::get('cep'));
-
-		$peoplesreference->uf = $mycep['city'];
-		$peoplesreference->municipio = $mycep['city'];
-		$peoplesreference->rua = Input::get('rua');
-		$peoplesreference->bairro = Input::get('bairro');
-
-		$peoplesreference->complemento = Input::get('complemento');
-		$peoplesreference->pointreference = Input::get('pointreference');
-		$peoplesreference->telefone1 = Input::get('telefone1');
-		$peoplesreference->telefone2 = Input::get('telefone2');
-
-
 		$validator = $this->peoplesreference->validate(null,Input::all());
 
 		if ($validator->passes()) {
 
+			$peoplesreference = new Peoplesreference();
+
+			$peoplesreference->nome = Input::get('nome');
+			$peoplesreference->apelido = Input::get('apelido');
+			$peoplesreference->nascimento = Input::get('nascimento');		
+			$peoplesreference->nomemae = Input::get('nomemae');
+			$peoplesreference->nomepai = Input::get('nomepai');
+			$peoplesreference->nis = Input::get('nis');
+			$peoplesreference->cpf = Input::get('cpf');
+			$peoplesreference->rg = Input::get('rg');
+			$peoplesreference->orgaorg = Input::get('orgaorg');
+			$peoplesreference->ufrg = Input::get('ufrg');
+			$peoplesreference->emitedrg = Input::get('emitedrg');
+			$peoplesreference->numeroprontuario = Input::get('numeroprontuario');
+			$peoplesreference->unidade_id = Input::get('unidade_id');
+			$peoplesreference->cep = Input::get('cep');
+
+			// $mycep =  CepConsult::getAddress(Input::get('cep'));
+
+			// $peoplesreference->uf = $mycep['state'];
+			// $peoplesreference->municipio = $mycep['city'];
+			$peoplesreference->rua = Input::get('rua');
+			$peoplesreference->bairro = Input::get('bairro');
+
+			$peoplesreference->complemento = Input::get('complemento');
+			$peoplesreference->pointreference = Input::get('pointreference');
+			$peoplesreference->telefone1 = Input::get('telefone1');
+			$peoplesreference->telefone2 = Input::get('telefone2');
+
 			$peoplesreference->save();
+
+			self::PersistenceFamilyPeopleReference();
 
 			return Redirect::action('PeoplesreferencesController@index');
 
@@ -79,6 +109,28 @@ class PeoplesreferencesController extends BaseController{
 
 			return Redirect::to('peoplesref/create')->withInput()->withErrors($validator);
 		}
+
+	}
+
+	protected function PersistenceFamilyPeopleReference()
+	{
+
+		/**
+		* Instanciado uma nova familia e a salvando em
+		*
+		* conjunto com a pessoa referenciada
+		*
+		* @var object family;
+		*
+		* @return not retrun
+		*
+		**/
+
+			$familia = new Family();
+			$familia->peoplesreference_id = $familia->id;
+			$familia->completo = FALSE;
+			$familia->save();
+
 
 	}
 
@@ -144,19 +196,6 @@ class PeoplesreferencesController extends BaseController{
 
 	}
 
-	public function show($id)
-	{
-		$result = Peoplesreference::find($id);
-
-		$vars = array('people' => $result);
-
-		$type = array('active3' => 'active');
-
-		$this->layout->navbar = View::make('layout.navbar',$type );
-
-		$this->layout->content = View::make('peoplesreference.show',$vars);
-	}
-
 	public function delete($id)
 	{
 
@@ -181,22 +220,6 @@ class PeoplesreferencesController extends BaseController{
 		$people->delete();
 
 		return Redirect::to('/peoplesref');
-
-	}
-
-	public function search()
-	{
-		$name = Input::get('nome');
-
-		$result = Peoplesreference::where('nome', 'LIKE', '%'.$name.'%')->get();
-
-		$vars = array('peoplesreference' => $result);
-
-		$type = array('active3' => 'active');
-
-		$this->layout->navbar = View::make('layout.navbar',$type );
-
-		$this->layout->content = View::make('peoplesreference.search',$vars);
 
 	}
 

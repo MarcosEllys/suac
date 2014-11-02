@@ -33,6 +33,7 @@ return array(
     'CreateMemberFamily' => $baseDir . '/app/database/migrations/2014_10_30_163335_Create Member family.php',
     'CreatePasswordRemindersTable' => $baseDir . '/app/database/migrations/2014_10_30_162822_Create Password Reminders table.php',
     'CreatePeopleReferenceTable' => $baseDir . '/app/database/migrations/2014_10_30_162641_Create PeopleReference table.php',
+    'CreateTableAgendarAtendimento' => $baseDir . '/app/database/migrations/2014_11_02_021751_Create table Agendar Atendimento.php',
     'CreateTableCondicaoHabitacional' => $baseDir . '/app/database/migrations/2014_10_31_155634_Create table CondicaoHabitacional.php',
     'CreateTableFamilia' => $baseDir . '/app/database/migrations/2014_10_31_161548_Create table familia.php',
     'CreateUnidadeTable' => $baseDir . '/app/database/migrations/2014_10_30_162615_Create Unidade table.php',
@@ -49,6 +50,7 @@ return array(
     'Crypt_TripleDES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php',
     'Crypt_Twofish' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
+    'Family' => $baseDir . '/app/models/Family.php',
     'File_ANSI' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
     'File_ASN1' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
     'File_ASN1_Element' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
@@ -1607,4 +1609,5 @@ return array(
     'Zizaco\\CepConsult\\Curl' => $vendorDir . '/zizaco/cep-consult/src/Zizaco/CepConsult/Curl.php',
     'Zizaco\\CepConsult\\Facade' => $vendorDir . '/zizaco/cep-consult/src/Zizaco/CepConsult/Facade.php',
     'Zizaco\\CepConsult\\ServiceProvider' => $vendorDir . '/zizaco/cep-consult/src/Zizaco/CepConsult/ServiceProvider.php',
+    'familyscontroller' => $baseDir . '/app/controllers/FamilysController.php',
 );

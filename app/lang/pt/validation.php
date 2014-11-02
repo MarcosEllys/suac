@@ -13,6 +13,7 @@ return array(
     |
     */
 
+    "cpf"              => "O :attribute não é válido.",
     "accepted"         => "O campo :attribute deve ser aceito.",
     "active_url"       => "O campo :attribute não contém um URL válido.",
     "after"            => "O campo :attribute deverá conter uma data posterior a :date.",

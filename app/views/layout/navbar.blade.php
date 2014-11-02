@@ -41,7 +41,7 @@
           <ul class="dropdown-menu">
             <li><a href="{{ action('PeoplesreferencesController@index') }}">Pessoas referênciadas</a></li>
             <li>
-              <a href=" {{ URL("familia") }} ">Famílias</a>
+              <a href=" {{ URL("family") }} ">Famílias</a>
             </li>
             <li><a href="#">Agendar atendimento</a></li>
           </ul>
@@ -55,7 +55,7 @@
               <a href="{{ action('PeoplesreferencesController@index') }}">Pessoas referênciadas</a>
             </li>
             <li>
-              <a href="{{ URL("familia") }}">Famílias</a>
+              <a href="{{ URL("family") }}">Famílias</a>
             </li>
             <li><a href="#">Agendar atendimento</a></li>
           </ul>

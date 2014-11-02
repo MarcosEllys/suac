@@ -34,6 +34,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			'nome' => "required",
 			'sexo' => "required",
 			'nascimento' => "required",
+			'cpf' => array("required","cpf"),
 			'rg' => "required|min:5|numeric",
 			'orgaorg' => "required",
 			'ufrg' => "required",
@@ -47,10 +48,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			'bairro' => "required|between:5,20",
 			'cep' => "required|numeric"
 			);
-
-		$rules["cpf_cnpj"] = array("required","cpf");
-
-		$messages["cpf_cnpj.cpf"] = 'Cpf inválido.';
 
 		return Validator::make($data,$rules,$messages);
 	}

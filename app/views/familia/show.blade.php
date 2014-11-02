@@ -51,8 +51,6 @@
 
 								</ul>
 
-								<br>
-
 								<div class="tab-content">
 									<div class="tab-pane active" id="morefamily">
 										<form id="edit-profile" class="form-horizontal">
@@ -61,22 +59,100 @@
 												<div class="control-group">
 													<label class="control-label" for="email">Código:</label>
 													<div class="controls">
-														1
+														{{{ $familia->peoplereferences->id }}}
 													</div>
 												</div>
 												<div class="control-group">
-													<label class="control-label" for="email">Pessoa referenciada:</label>
+													<label class="control-label" for="email">
+														Pessoa referenciada:
+													</label>
 													<div class="controls">
-														Marcos
+														{{{ $familia->peoplereferences->nome }}}
 													</div>
 												</div>
 
 												<div class="control-group">
 													<label class="control-label" for="email">Apelido:</label>
 													<div class="controls">
-														Franquim
+														{{{ $familia->peoplereferences->apelido }}}
 													</div>
 												</div>
+
+												<hr>
+
+												<div class="widget widget-plain">
+													<div class="widget-content">
+														<a href="" class="btn btn-large btn-success btn-support-ask">
+															Cadastrar membro
+														</a>
+													</div>
+												</div>
+
+												<div class="widget widget-table action-table">
+													<div class="widget-header">
+														<i class="icon-group"></i>
+														<h3> Membros familiares cadastrados</h3>
+													</div>
+													<div class="widget-content">
+														<table class="table table-striped table-bordered">
+															<thead>
+																<tr>
+																	<th>Id</th>
+																	<th>Nome</th>
+																	<th>Parentesco</th>
+																	<th>Ações</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1</td>
+																	<td> Ana Caroline Carneiro de Sousa</td>
+																	<td> Esposa </td>
+																	<td>
+																		<a href=" http://suac.com.br/users/show/1 ">
+																			<button class="btn btn-info">
+																				Visualizar
+																			</button>
+																		</a>
+																		<a href=" http://suac.com.br/users/edit/1 ">
+																			<button class="btn btn-warning">
+																				Editar
+																			</button>
+																		</a>
+																		<a href=" http://suac.com.br/users/delete/1 ">
+																			<button class="btn btn-danger">
+																				Excluir
+																			</button>
+																		</a>
+																	</td>
+																</tr>
+																<tr>
+																	<td>2</td>
+																	<td> Álvaro Carneiro Rocha </td>
+																	<td> Filho </td>
+																	<td>
+																		<a href=" http://suac.com.br/users/show/2 ">
+																			<button class="btn btn-info">
+																				Visualizar
+																			</button>
+																		</a>
+																		<a href=" http://suac.com.br/users/edit/2 ">
+																			<button class="btn btn-warning">
+																				Editar
+																			</button>
+																		</a>
+																		<a href=" http://suac.com.br/users/delete/2 ">
+																			<button class="btn btn-danger">
+																				Excluir
+																			</button>
+																		</a>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+
 											</fieldset>
 										</form>
 									</div>
@@ -88,23 +164,56 @@
 												<div class="control-group">
 													<label class="control-label" for="email">CEP:</label>
 													<div class="controls">
-														63430-000
+														{{{ $familia->peoplereferences->cep }}}
 													</div>
 												</div>
 
 												<div class="control-group">
 													<label class="control-label" for="email">Estado:</label>
 													<div class="controls">
-														CE
+														{{{ $familia->peoplereferences->uf }}}
 													</div>
 												</div>
 
 												<div class="control-group">
 													<label class="control-label" for="email">Municipio:</label>
 													<div class="controls">
-														Icó
+														{{{ $familia->peoplereferences->municipio }}}
 													</div>
 												</div>
+
+												<div class="control-group">
+													<label class="control-label" for="email">Rua:</label>
+													<div class="controls">
+														{{{ $familia->peoplereferences->rua }}}
+													</div>
+												</div>
+
+												<div class="control-group">
+													<label class="control-label" for="email">Bairro:</label>
+													<div class="controls">
+														{{{ $familia->peoplereferences->bairro }}}
+													</div>
+												</div>
+
+
+
+												<div class="control-group">
+													<label class="control-label" for="email">Complemento:</label>
+													<div class="controls">
+														{{{ $familia->peoplereferences->complemento }}}
+													</div>
+												</div>
+
+												<div class="control-group">
+													<label class="control-label" for="email">
+														Ponto de referência:
+													</label>
+													<div class="controls">
+														{{{ $familia->peoplereferences->pointreference }}}
+													</div>
+												</div>
+
 											</fieldset>
 										</form>
 									</div>
@@ -155,6 +264,8 @@
 							</div>
 						</div>
 
+						<br>
+
 						{{ HTML::link('/peoplesref','Voltar', array('class' => 'btn')) }}
 
 					</div>
@@ -162,5 +273,6 @@
 			</div>
 		</div>
 	</div>
+</div>
 
-	@stop
+@stop

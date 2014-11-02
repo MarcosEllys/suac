@@ -45,6 +45,7 @@ class CreatePeopleReferenceTable extends Migration {
 			 // Coluna de relacionamento
 
 			$table->integer('unidade_id');
+			$table->integer('family_id');
 
 			$table->boolean('desligado');
 			

@@ -90,9 +90,11 @@ Route::group(array('before' => 'auth'), function()
 	|
 	*/
 
-	Route::get('familia','FamilysController@index');
+	Route::get('family','FamilysController@index');
 
-	Route::get('familia/show','FamilysController@show');
+	Route::get('family/show/{id}','FamilysController@show');
+
+	Route::get('family/edit/{id}', 'FamilysController@edit');
 
 
 	/*

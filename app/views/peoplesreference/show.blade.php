@@ -141,7 +141,7 @@
 													<div class="control-group">
 														<label class="control-label" for="email">Nome da Unidade:</label>
 														<div class="controls">
-															{{{ $people->unidade->nome() }}}
+															{{{ $people->unidade->nome }}}
 														</div>
 													</div>
 
