@@ -4,6 +4,8 @@ class PeoplesreferencesController extends BaseController{
 
 	public $peoplesreference;
 
+	static $family_id;
+
 	public function __construct(Peoplesreference $peoplesreference)
 	{
 		$this->peoplesreference = $peoplesreference;
@@ -84,7 +86,6 @@ class PeoplesreferencesController extends BaseController{
 			$peoplesreference->ufrg = Input::get('ufrg');
 			$peoplesreference->emitedrg = Input::get('emitedrg');
 			$peoplesreference->numeroprontuario = Input::get('numeroprontuario');
-			$peoplesreference->unidade_id = Input::get('unidade_id');
 			$peoplesreference->cep = Input::get('cep');
 
 			// $mycep =  CepConsult::getAddress(Input::get('cep'));
@@ -98,6 +99,10 @@ class PeoplesreferencesController extends BaseController{
 			$peoplesreference->pointreference = Input::get('pointreference');
 			$peoplesreference->telefone1 = Input::get('telefone1');
 			$peoplesreference->telefone2 = Input::get('telefone2');
+
+			// Relationships
+
+			$peoplesreference->unidade_id = Input::get('unidade_id');
 
 			$peoplesreference->save();
 
