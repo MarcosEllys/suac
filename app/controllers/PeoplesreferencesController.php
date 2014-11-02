@@ -4,8 +4,6 @@ class PeoplesreferencesController extends BaseController{
 
 	public $peoplesreference;
 
-	static $family_id;
-
 	public function __construct(Peoplesreference $peoplesreference)
 	{
 		$this->peoplesreference = $peoplesreference;
@@ -103,10 +101,11 @@ class PeoplesreferencesController extends BaseController{
 			// Relationships
 
 			$peoplesreference->unidade_id = Input::get('unidade_id');
-
-			$peoplesreference->save();
+			$peoplesreference->family_id = self::IncrementId();
 
 			self::PersistenceFamilyPeopleReference();
+
+			$peoplesreference->save();
 
 			return Redirect::action('PeoplesreferencesController@index');
 
@@ -115,6 +114,13 @@ class PeoplesreferencesController extends BaseController{
 			return Redirect::to('peoplesref/create')->withInput()->withErrors($validator);
 		}
 
+	}
+
+	protected function IncrementId()
+	{
+		$peoples = DB::table('peoplesreferences')->count();
+
+		return $peoples + 1;
 	}
 
 	protected function PersistenceFamilyPeopleReference()
@@ -132,10 +138,8 @@ class PeoplesreferencesController extends BaseController{
 		**/
 
 			$familia = new Family();
-			$familia->peoplesreference_id = $familia->id;
 			$familia->completo = FALSE;
 			$familia->save();
-
 
 	}
 
@@ -153,6 +157,7 @@ class PeoplesreferencesController extends BaseController{
 
 		$this->layout->content = View::make('peoplesreference.edit',$vars)->with('unidades',$unidades);
 	}
+
 
 	public function handleEdit()
 	{
