@@ -21,11 +21,23 @@
 			<div class="row">
 
 				<div class="span7">
+					
 					<div class="widget widget-plain">
 						<div class="widget-content">
-							<a href="<?php echo action('PeoplesreferencesController@create'); ?>" class="btn btn-large btn-success btn-support-ask"> Cadastrar pessoa referênciada </a>
+							<a href="<?php echo action('PeoplesreferencesController@create'); ?>" class="btn btn-large btn-success btn-support-ask">
+								Cadastrar pessoa referênciada 
+							</a>
 						</div>
-					</div>					
+					</div>
+
+					<div class="widget widget-plain">
+						<div class="widget-content">
+							<a href="<?php echo action('PeoplesreferencesController@create'); ?>" class="btn btn-large btn-info btn-support-ask">
+								Pessoas referênciadas desligadas
+							</a>
+						</div>
+					</div>
+
 				</div>
 
 				<?php echo $__env->make('layout._deletes', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

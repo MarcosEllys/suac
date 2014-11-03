@@ -19,7 +19,7 @@
 								/ <a href=" {{ action('PeoplesreferencesController@index') }} "> <i class="icon-user"></i> Pessoas referênciadas</a>
 							</li>
 							<li>
-								/ <i class="icon-remove-sign"></i> Excluir pessoa referenciada
+								/ <i class="icon-remove-sign"></i> Desligar pessoa referenciada
 							</li>
 						</ol>
 					</div>
@@ -32,7 +32,7 @@
 						<div class="widget ">
 							<div class="widget-header">
 								<i class="icon-remove-sign"></i>
-								<h3>Excluir {{{ $people->nome }}}</h3>
+								<h3>Desligar {{{ $people->nome }}}</h3>
 							</div>
 							<div class="widget-content">
 								<div class="tabbable">
@@ -218,7 +218,7 @@
 							</div>
 						</div>
 
-						{{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
+						{{ Form::submit('Desligar', array('class' => 'btn btn-danger')) }}
 
 						{{ HTML::link('/peoplesref','Cancelar', array('class' => 'btn')) }}
 

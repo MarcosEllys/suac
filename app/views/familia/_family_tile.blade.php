@@ -1,3 +1,4 @@
+@if(!$familia->peoplereferences->desligado)
 	<tr>
 		<td> {{{ $familia->id }}} </td>
 		<td> {{{ $familia->peoplereferences->nome }}} </td>
@@ -24,4 +25,4 @@
 
 		</td>
 	</tr>
-	
+	@endif

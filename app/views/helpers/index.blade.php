@@ -60,7 +60,7 @@
 										<br>
 										<br>
 
-										01 - selecione a aba "Administrativo". <br>
+										01 - Clique em "Administrativo". <br>
 										02 - clique em "Usuários". <br>
 										03 - clique em "Cadastrar usuário". <br>
 										04 - Na aba "Dados pessoais" preencha as seguintes informações. <br>
@@ -110,11 +110,11 @@
 										<br>
 										<br>
 
-										01 - Bla bla. <br>
-										02 - Bla bla. <br>
-										03 - Bla bla. <br>
-										04 - Bla bla. <br>
-										05 - Bla bla. <br>
+										01 - Clique em "Assistência CRAS". <br>
+										02 - clique em "Pessoas referenciadas". <br>
+										03 - Clique no botão verde localizado no canto superior esquerdo escrito
+										 "Cadastrar pessoa referênciada". <br>
+										04 - Na aba "Dados pessoais" preencha as seguintes informações. <br>
 
 									</p>
 
@@ -132,7 +132,7 @@
 										<br>
 										<br>
 
-										01 - selecione a aba "Administrativo".<br>
+										01 - Clique em "Administrativo".<br>
 										02 - clique em "Unidades".<br>
 										03 - clique em "Cadastrar unidade".<br>
 										03 - Preencha o campo nome da unidade. <br>
@@ -161,7 +161,7 @@
 										<br>
 										<br>
 
-										01 - selecione a aba "Assistência Cras". <br>
+										01 - Clique em "Assistência Cras". <br>
 										02 - clique em "Agendar atendimento". <br>
 										03 - Selecione uma pessoa referenciada. <br>
 										04 - Informe a data do atendimento. <br>
@@ -170,7 +170,9 @@
 
 										<br>
 
-										<a href=" {{ URL("ajuda/agendaratendimento") }} ">Clique aqui</a> e confira um tutorial.
+										<a href=" {{ URL("ajuda/agendaratendimento") }} ">
+											Clique aqui
+										</a> e confira um tutorial.
 
 									</p>
 

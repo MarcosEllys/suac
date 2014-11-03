@@ -11,9 +11,10 @@ Class familyscontroller extends BaseController{
 
 	public function index()
 	{
-		$query = Family::paginate(5);
 
-		$vars = array('familias' => $query);
+		$queryResult = Family::paginate(5);
+
+		$vars = array('familias' => $queryResult);
 
 		$type = array('active3' => 'active');
 

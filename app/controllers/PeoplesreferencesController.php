@@ -12,7 +12,7 @@ class PeoplesreferencesController extends BaseController{
 	public function index()
 	{
 
-		$queryResult = Peoplesreference::paginate(5);
+		$queryResult = Peoplesreference::where('desligado' , '=' , FALSE)->paginate(5);
 
 		$vars = array('peoplesreference' => $queryResult);
 
@@ -223,12 +223,10 @@ class PeoplesreferencesController extends BaseController{
 	public function handleDelete()
 	{
 
-		$id = Input::get('id');
-
-		$people = Peoplesreference::findOrFail($id);
-
-		$people->delete();
-
+		$people = Peoplesreference::findOrFail(Input::get('id'));
+		$people->desligado = TRUE;
+		$people->update();
+		
 		return Redirect::to('/peoplesref');
 
 	}

@@ -9,7 +9,7 @@
 
 					<ol class="breadcrumb">
 						<li><a href=" {{ URL("/") }} "><i class="icon-dashboard"></i> Home</a></li>
-						<li><a href=" {{ action('PeoplesreferencesController@index') }} "> / <i class="icon-group"></i> Pessoas referênciadas</a></li>
+						<li><a href=" {{ action('PeoplesreferencesController@index') }} "> / <i class="icon-user"></i> Pessoas referênciadas</a></li>
 						<li class="active">  /  <i class="icon-search"></i> Buscar pessoa referênciada</li>
 					</ol>
 
@@ -49,7 +49,7 @@
 
 					<div class="widget widget-table action-table">
 						<div class="widget-header">
-							<i class="icon-group"></i>
+							<i class="icon-user"></i>
 							<h3>Pessoas referenciadas</h3>
 						</div>
 						<div class="widget-content">

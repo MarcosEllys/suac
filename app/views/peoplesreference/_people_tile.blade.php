@@ -1,4 +1,4 @@
-	<tr>
+<tr>
 	<td>{{{$people->id}}}</td>
 	<td>{{{$people->nome }}}</td>
 	<td>{{{$people->apelido}}}</td>
@@ -18,7 +18,7 @@
 
 		<a href=' {{ action('PeoplesreferencesController@delete',$people->id ) }} '>
 			<button class="btn btn-danger">
-				Excluir
+				Desligar
 			</button>
 		</a>
 
