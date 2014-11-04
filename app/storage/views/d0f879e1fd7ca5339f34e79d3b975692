@@ -30,13 +30,19 @@
 						</div>
 					</div>
 
+					<?php if( $output->count()): ?>
 					<div class="widget widget-plain">
 						<div class="widget-content">
-							<a href="<?php echo action('PeoplesreferencesController@create'); ?>" class="btn btn-large btn-info btn-support-ask">
+							<a href="<?php echo action('PeoplesreferencesController@desligadas'); ?>" class="btn btn-large btn-info btn-support-ask">
 								Pessoas referênciadas desligadas
+								<span class="badge">
+									<?php echo $output->count();; ?>
+
+								</span>
 							</a>
 						</div>
 					</div>
+					<?php endif; ?>
 
 				</div>
 
@@ -105,4 +111,4 @@
 </div>
 
 
-<?php $__env->stopSection(); ?>
+<?php $__env->stopSection(); ?>	

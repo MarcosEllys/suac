@@ -76,6 +76,29 @@ Class UsersSeeder extends DatabaseSeeder{
 						'username' => 'pedroca',
 						'password' => Hash::make('psaraiva'),
 						'is_admin' => TRUE
+					),array(
+						'id' => 4,
+						'nome' => 'Gilmara andreia',
+						'sexo' => 'F',
+						'nascimento' => '',
+						'cpf' => 4,
+						'rg' => '',
+						'ufrg' => '',
+						'orgaorg' => '',
+						'emitedrg' => '',
+						'email' => 'gilmara@testes.com',
+						'telefone' => '99713223',
+						'cep' => '63430000',
+						'uf' => 'CE',
+						'cidade' => 'Icó',
+						'bairro' => 'Centro',
+						'rua' => '',
+						'numero' => '1222',
+						'complemento' => '',
+						'pointreferencia' => '',
+						'username' => 'gilmara',
+						'password' => Hash::make('gilmara'),
+						'is_admin' => TRUE
 					)
 			));
 }

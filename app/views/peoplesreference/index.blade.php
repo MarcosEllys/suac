@@ -30,13 +30,18 @@
 						</div>
 					</div>
 
+					@if( $output->count())
 					<div class="widget widget-plain">
 						<div class="widget-content">
-							<a href="{{ action('PeoplesreferencesController@create') }}" class="btn btn-large btn-info btn-support-ask">
+							<a href="{{ action('PeoplesreferencesController@desligadas') }}" class="btn btn-large btn-info btn-support-ask">
 								Pessoas referênciadas desligadas
+								<span class="badge">
+									{{ $output->count(); }}
+								</span>
 							</a>
 						</div>
 					</div>
+					@endif
 
 				</div>
 
@@ -102,4 +107,4 @@
 </div>
 
 
-@stop
+@stop	

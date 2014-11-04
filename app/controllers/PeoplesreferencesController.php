@@ -16,11 +16,15 @@ class PeoplesreferencesController extends BaseController{
 
 		$vars = array('peoplesreference' => $queryResult);
 
+		$queryTrue = Peoplesreference::where('desligado' , '=' , TRUE);
+
+		$varsTrue = array('output' => $queryTrue);
+
 		$type = array('active3' => 'active');
 
 		$this->layout->navbar = View::make('layout.navbar',$type );
 
-		$this->layout->content = View::make('peoplesreference.index',$vars);
+		$this->layout->content = View::make('peoplesreference.index',$vars,$varsTrue);
 	}
 
 	public function show($id)
@@ -229,6 +233,20 @@ class PeoplesreferencesController extends BaseController{
 		
 		return Redirect::to('/peoplesref');
 
+	}
+
+	public function desligadas()
+	{
+
+		$queryResult = Peoplesreference::where('desligado' , '=' , TRUE)->paginate(5);
+
+		$vars = array('peoplesreference' => $queryResult);
+
+		$type = array('active3' => 'active');
+
+		$this->layout->navbar = View::make('layout.navbar',$type );
+
+		$this->layout->content = View::make('peoplesreference.desligadas',$vars);
 	}
 
 }

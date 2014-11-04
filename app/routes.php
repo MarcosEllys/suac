@@ -80,6 +80,8 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::post('peoplesref/delete','PeoplesreferencesController@handleDelete');
 
+	Route::get('peoplesref/desligadas','PeoplesreferencesController@desligadas');
+
 	/*
 	|--------------------------------------------------------------------------
 	| Composicao familiar Routes

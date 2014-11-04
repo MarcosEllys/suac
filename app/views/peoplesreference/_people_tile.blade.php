@@ -9,18 +9,28 @@
 				Visualizar
 			</button>
 		</a>
-		
-		<a href=' {{ action('PeoplesreferencesController@edit',$people->id ) }} '>
-			<button class="btn btn-warning">
-				Editar
+
+		@if(!$people->desligado)
+			<a href=' {{ action('PeoplesreferencesController@edit',$people->id ) }} '>
+				<button class="btn btn-warning">
+					Editar
+				</button>
+			</a>
+		@endif
+
+		@if($people->desligado)
+		<a href=' {{ action('PeoplesreferencesController@delete',$people->id ) }} '>
+			<button class="btn btn-success">
+				Religar
 			</button>
 		</a>
-
+		@else
 		<a href=' {{ action('PeoplesreferencesController@delete',$people->id ) }} '>
 			<button class="btn btn-danger">
 				Desligar
 			</button>
 		</a>
+		@endif
 
 	</td>
 </tr>

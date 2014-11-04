@@ -4,7 +4,7 @@ Class familyscontroller extends BaseController{
 
 	protected $family;
 
-	public function __contruct(family $family)
+	public function __contruct(Family $family)
 	{
 		$this->family = $family;
 	}
