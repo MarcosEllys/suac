@@ -108,6 +108,7 @@ return array(
         'password' => 'senha',
         'telefone1' => 'telefone 1',
         'telefone2' => 'telefone 2',
-        'pointreference' => 'ponto de referencia'),
+        'pointreference' => 'ponto de referencia',
+        'numeroprontuario' => 'número do prontuário'),
 
 );

@@ -27,6 +27,10 @@ class Peoplesreference extends Eloquent{
 			'apelido' => 'required|between:4,13',
 			'rg' => 'unique:peoplesreferences,rg,{$id}|required',
 			'cpf' => array("required","cpf"),
+			'cep' => 'required|numeric',
+			'rua' => 'required|between:4,25',
+			'bairro' => 'required|between:4,25',
+			'numeroprontuario' => 'required'
 			);
 
 

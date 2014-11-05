@@ -56,14 +56,14 @@
 											<div class="control-group">
 												{{ Form::label('nome','Nome completo: *',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '60') ) }}
+													{{ Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '60', 'required') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('apelido','Apelido:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('apelido',Input::old('apelido'),array('class' => 'span6', 'maxlength' => '30') ) }}
+													{{ Form::text('apelido',Input::old('apelido'),array('class' => 'span6', 'maxlength' => '30', 'required') ) }}
 												</div>
 											</div>
 
@@ -99,14 +99,14 @@
 											<div class="control-group">
 												{{ Form::label('cpf','Nº do CPF:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('cpf',Input::old('cpf'),array('class' => 'span6','placeholder' => 'Somente os números') ) }}
+													{{ Form::text('cpf',Input::old('cpf'),array('class' => 'span6','placeholder' => 'Somente os números', 'required') ) }}
 												</div>
 											</div>
 
 											<div class="control-group">
 												{{ Form::label('rg','Nº do RG:',array('class' => 'control-label') ) }}
 												<div class="controls">
-													{{ Form::text('rg',Input::old('rg'),array('class' => 'span6','placeholder' => 'Somente os números') ) }}
+													{{ Form::text('rg',Input::old('rg'),array('class' => 'span6','placeholder' => 'Somente os números', 'required') ) }}
 												</div>
 											</div>
 
@@ -185,7 +185,7 @@
 									<div class="control-group">
 										{{ Form::label('numeroprontuario','Nº do prontuário:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('numeroprontuario',Input::old('numeroprontuario'),array('class' => 'span6','placeholder' => 'Somente os números') ) }}
+											{{ Form::text('numeroprontuario',Input::old('numeroprontuario'),array('class' => 'span6','placeholder' => 'Somente os números', 'required') ) }}
 										</div>
 									</div>
 
@@ -214,7 +214,7 @@
 									<div class="control-group">
 										{{ Form::label('cep','CEP:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números') ) }}
+											{{ Form::text('cep',Input::old('cep'),array('class' => 'span6','placeholder' => 'Somente números', 'required') ) }}
 										</div>
 									</div>
 
@@ -222,14 +222,14 @@
 									<div class="control-group">
 										{{ Form::label('rua','Rua:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('rua',Input::old('rua'),array('class' => 'span6','placeholder' => 'Rua ou avenida') ) }}
+											{{ Form::text('rua',Input::old('rua'),array('class' => 'span6','placeholder' => 'Rua ou avenida', 'required') ) }}
 										</div>
 									</div>
 
 									<div class="control-group">
 										{{ Form::label('bairro','Bairro:',array('class' => 'control-label') ) }}
 										<div class="controls">
-											{{ Form::text('bairro',Input::old('bairro'),array('class' => 'span6') ) }}
+											{{ Form::text('bairro',Input::old('bairro'),array('class' => 'span6', 'required') ) }}
 										</div>
 									</div>
 

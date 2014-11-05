@@ -90,10 +90,10 @@ class PeoplesreferencesController extends BaseController{
 			$peoplesreference->numeroprontuario = Input::get('numeroprontuario');
 			$peoplesreference->cep = Input::get('cep');
 
-			// $mycep =  CepConsult::getAddress(Input::get('cep'));
+			$mycep =  CepConsult::getAddress(Input::get('cep'));
 
-			// $peoplesreference->uf = $mycep['state'];
-			// $peoplesreference->municipio = $mycep['city'];
+			$peoplesreference->uf = $mycep['state'];
+			$peoplesreference->municipio = $mycep['city'];
 			$peoplesreference->rua = Input::get('rua');
 			$peoplesreference->bairro = Input::get('bairro');
 
