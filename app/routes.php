@@ -82,6 +82,8 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('peoplesref/desligadas','PeoplesreferencesController@desligadas');
 
+	Route::post('peoplesref/religar','PeoplesreferencesController@religar');
+
 	/*
 	|--------------------------------------------------------------------------
 	| Composicao familiar Routes

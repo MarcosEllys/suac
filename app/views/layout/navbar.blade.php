@@ -5,7 +5,7 @@
     <div class="container">
       <ul class="mainnav">
         @if(isset($active1))
-        <li class="active"><a href="{{ URL("/") }}"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
+        <li class=" {{{ $active1 }}} "><a href="{{ URL("/") }}"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
         @else
         <li class=""><a href="{{ URL("/") }}"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
         @endif
@@ -13,7 +13,7 @@
         @if(Auth::User()->is_admin)
 
         @if(isset($active2))
-        <li class="dropdown active"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 
+        <li class="dropdown {{{ $active2 }}}"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 
           <i class=" icon-bookmark"></i><span>Administrativo</span> <b class="caret"></b></a>
 
           <ul class="dropdown-menu">
@@ -35,7 +35,7 @@
         @endif
 
         @if(isset($active3))
-        <li class="dropdown active"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 
+        <li class="dropdown {{{ $active3 }}}"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 
           <i class=" icon-group"></i><span>Assistência CRAS</span> <b class="caret"></b></a>
 
           <ul class="dropdown-menu">
@@ -63,7 +63,7 @@
         @endif
 
         @if(isset($active4))
-        <li class="active">
+        <li class="{{{ $active4 }}}">
           <a href=" {{ URL("/reports") }} ">
             <i class="icon-list-alt"></i><span>Relatórios</span>            
           </a>

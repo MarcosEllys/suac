@@ -249,4 +249,15 @@ class PeoplesreferencesController extends BaseController{
 		$this->layout->content = View::make('peoplesreference.desligadas',$vars);
 	}
 
+	public function religar()
+	{
+
+		$people = Peoplesreference::findOrFail(Input::get('id'));
+		$people->desligado = FALSE;
+		$people->update();
+		
+		return Redirect::to('/peoplesref');
+
+	}
+
 }

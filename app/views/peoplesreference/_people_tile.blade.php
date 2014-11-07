@@ -19,11 +19,15 @@
 		@endif
 
 		@if($people->desligado)
-		<a href=' {{ action('PeoplesreferencesController@delete',$people->id ) }} '>
-			<button class="btn btn-success">
-				Religar
-			</button>
-		</a>
+
+			{{ Form::open(array('action' => 'PeoplesreferencesController@religar', 'class' => '')) }}
+
+			{{ Form::hidden('id', $people->id) }}
+
+			{{ Form::submit('Religar', array('class' => 'btn btn-success')) }}
+
+			{{ Form::close() }}
+
 		@else
 		<a href=' {{ action('PeoplesreferencesController@delete',$people->id ) }} '>
 			<button class="btn btn-danger">
