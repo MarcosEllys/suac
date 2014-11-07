@@ -18,6 +18,12 @@
 
 			<br>
 
+			@include('layout._deletes')
+				
+			@include('layout._success')
+				
+			@include('layout._infos')
+
 			<div class="row">
 
 				<div class="span7">
@@ -44,13 +50,6 @@
 					@endif
 
 				</div>
-
-				@include('layout._deletes')
-				
-				@include('layout._success')
-				
-				@include('layout._infos')
-
 
 				<div class="span5">
 

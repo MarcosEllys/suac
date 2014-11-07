@@ -231,7 +231,18 @@ class PeoplesreferencesController extends BaseController{
 		$people->desligado = TRUE;
 		$people->update();
 		
-		return Redirect::to('/peoplesref');
+		return Redirect::to('/peoplesref')->with('MessageInfo','Pessoa referenciada desligada com sucesso');
+
+	}
+
+	public function religar()
+	{
+
+		$people = Peoplesreference::findOrFail(Input::get('id'));
+		$people->desligado = FALSE;
+		$people->update();
+		
+		return Redirect::to('/peoplesref')->with('MessageInfo','Pessoa referenciada religada com sucesso');
 
 	}
 
@@ -249,15 +260,5 @@ class PeoplesreferencesController extends BaseController{
 		$this->layout->content = View::make('peoplesreference.desligadas',$vars);
 	}
 
-	public function religar()
-	{
-
-		$people = Peoplesreference::findOrFail(Input::get('id'));
-		$people->desligado = FALSE;
-		$people->update();
-		
-		return Redirect::to('/peoplesref');
-
-	}
 
 }

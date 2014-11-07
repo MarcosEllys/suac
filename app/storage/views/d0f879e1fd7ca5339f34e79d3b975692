@@ -18,6 +18,12 @@
 
 			<br>
 
+			<?php echo $__env->make('layout._deletes', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+				
+			<?php echo $__env->make('layout._success', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+				
+			<?php echo $__env->make('layout._infos', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
 			<div class="row">
 
 				<div class="span7">
@@ -45,13 +51,6 @@
 					<?php endif; ?>
 
 				</div>
-
-				<?php echo $__env->make('layout._deletes', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-				
-				<?php echo $__env->make('layout._success', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-				
-				<?php echo $__env->make('layout._infos', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-
 
 				<div class="span5">
 
