@@ -5,7 +5,9 @@
     <div class="container">
       <ul class="mainnav">
         <?php if(isset($active1)): ?>
-        <li class=" <?php echo e($active1); ?> "><a href="<?php echo URL("/"); ?>"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
+        <li class=" <?php echo e($active1); ?> ">
+          <a href="<?php echo URL("/"); ?>"><i class="icon-dashboard"></i><span>Home</span> </a>
+        </li>
         <?php else: ?>
         <li class=""><a href="<?php echo URL("/"); ?>"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
         <?php endif; ?>
@@ -17,7 +19,7 @@
           <i class=" icon-bookmark"></i><span>Administrativo</span> <b class="caret"></b></a>
 
           <ul class="dropdown-menu">
-            <li><a href="<?php echo URL("/users"); ?>">Usuários</a></li>
+            <li><a href="<?php echo action('UsersController@index'); ?>">Usuários</a></li>
             <li><a href="<?php echo action('UnidadesController@index'); ?>">Unidades</a></li>
           </ul>
         </li>
@@ -26,7 +28,7 @@
           <i class=" icon-bookmark"></i><span>Administrativo</span> <b class="caret"></b></a>
 
           <ul class="dropdown-menu">
-            <li><a href="<?php echo URL("/users"); ?>">Usuários</a></li>
+            <li><a href="<?php echo action('UsersController@index'); ?>">Usuários</a></li>
             <li><a href="<?php echo action('UnidadesController@index'); ?>">Unidades</a></li>
           </ul>
         </li>
@@ -41,9 +43,9 @@
           <ul class="dropdown-menu">
             <li><a href="<?php echo action('PeoplesreferencesController@index'); ?>">Pessoas referênciadas</a></li>
             <li>
-              <a href=" <?php echo URL("family"); ?> ">Famílias</a>
+              <a href=" <?php echo action('FamilysController@index'); ?> ">Famílias</a>
             </li>
-            <li><a href="#">Agendar atendimento</a></li>
+            <li><a href=" <?php echo action('AgendaratendimentosController@index'); ?> ">Agendar atendimento</a></li>
           </ul>
         </li>
         <?php else: ?>
@@ -55,9 +57,9 @@
               <a href="<?php echo action('PeoplesreferencesController@index'); ?>">Pessoas referênciadas</a>
             </li>
             <li>
-              <a href="<?php echo URL("family"); ?>">Famílias</a>
+              <a href="<?php echo action('FamilysController@index'); ?>">Famílias</a>
             </li>
-            <li><a href="#">Agendar atendimento</a></li>
+            <li><a href=" <?php echo action('AgendaratendimentosController@index'); ?> ">Agendar atendimento</a></li>
           </ul>
         </li>
         <?php endif; ?>

@@ -201,7 +201,8 @@ class PeoplesreferencesController extends BaseController{
 
 			$people->save();
 
-			return Redirect::action('PeoplesreferencesController@index');
+			return Redirect::action('PeoplesreferencesController@index')
+			->with('MessageInfo','Pessoa referenciada editada com sucesso');
 
 		} else {
 

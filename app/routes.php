@@ -52,6 +52,21 @@ Route::group(array('before' => 'auth'), function()
 
 	/*
 	|--------------------------------------------------------------------------
+	| Agendar Atendimento Routes
+	|--------------------------------------------------------------------------
+	|
+	| Rotas dedicadas a manipulação de dados de Agendar Atendimento
+	|
+	*/
+
+	Route::get('agendaratendimento','AgendaratendimentosController@index');
+
+	Route::get('agendaratendimento/create','AgendaratendimentosController@create');
+
+
+
+	/*
+	|--------------------------------------------------------------------------
 	| People references Routes
 	|--------------------------------------------------------------------------
 	|
@@ -98,7 +113,7 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('family/show/{id}','FamilysController@show');
 
-	Route::get('family/edit/{id}', 'FamilysController@edit');
+	Route::get('family/edit/{id}', 'familysController@edit');
 
 
 	/*

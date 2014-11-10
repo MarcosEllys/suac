@@ -5,7 +5,9 @@
     <div class="container">
       <ul class="mainnav">
         @if(isset($active1))
-        <li class=" {{{ $active1 }}} "><a href="{{ URL("/") }}"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
+        <li class=" {{{ $active1 }}} ">
+          <a href="{{ URL("/") }}"><i class="icon-dashboard"></i><span>Home</span> </a>
+        </li>
         @else
         <li class=""><a href="{{ URL("/") }}"><i class="icon-dashboard"></i><span>Home</span> </a> </li>
         @endif
@@ -17,7 +19,7 @@
           <i class=" icon-bookmark"></i><span>Administrativo</span> <b class="caret"></b></a>
 
           <ul class="dropdown-menu">
-            <li><a href="{{ URL("/users") }}">Usuários</a></li>
+            <li><a href="{{ action('UsersController@index') }}">Usuários</a></li>
             <li><a href="{{ action('UnidadesController@index') }}">Unidades</a></li>
           </ul>
         </li>
@@ -26,7 +28,7 @@
           <i class=" icon-bookmark"></i><span>Administrativo</span> <b class="caret"></b></a>
 
           <ul class="dropdown-menu">
-            <li><a href="{{ URL("/users") }}">Usuários</a></li>
+            <li><a href="{{ action('UsersController@index') }}">Usuários</a></li>
             <li><a href="{{ action('UnidadesController@index') }}">Unidades</a></li>
           </ul>
         </li>
@@ -41,9 +43,9 @@
           <ul class="dropdown-menu">
             <li><a href="{{ action('PeoplesreferencesController@index') }}">Pessoas referênciadas</a></li>
             <li>
-              <a href=" {{ URL("family") }} ">Famílias</a>
+              <a href=" {{ action('FamilysController@index') }} ">Famílias</a>
             </li>
-            <li><a href="#">Agendar atendimento</a></li>
+            <li><a href=" {{ action('AgendaratendimentosController@index') }} ">Agendar atendimento</a></li>
           </ul>
         </li>
         @else
@@ -55,9 +57,9 @@
               <a href="{{ action('PeoplesreferencesController@index') }}">Pessoas referênciadas</a>
             </li>
             <li>
-              <a href="{{ URL("family") }}">Famílias</a>
+              <a href="{{ action('FamilysController@index') }}">Famílias</a>
             </li>
-            <li><a href="#">Agendar atendimento</a></li>
+            <li><a href=" {{ action('AgendaratendimentosController@index') }} ">Agendar atendimento</a></li>
           </ul>
         </li>
         @endif

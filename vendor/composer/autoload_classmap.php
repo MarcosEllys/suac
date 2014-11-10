@@ -33,7 +33,7 @@ return array(
     'CreateMemberFamily' => $baseDir . '/app/database/migrations/2014_10_30_163335_Create Member family.php',
     'CreatePasswordRemindersTable' => $baseDir . '/app/database/migrations/2014_10_30_162822_Create Password Reminders table.php',
     'CreatePeopleReferenceTable' => $baseDir . '/app/database/migrations/2014_10_30_162641_Create PeopleReference table.php',
-    'CreateTableAgendarAtendimento' => $baseDir . '/app/database/migrations/2014_11_04_023253_Create table AgendarAtendimento.php',
+    'CreateTableAgendarAtendimento' => $baseDir . '/app/database/migrations/2014_11_10_154637_Create table Agendar Atendimento.php',
     'CreateTableCondicaoHabitacional' => $baseDir . '/app/database/migrations/2014_10_31_155634_Create table CondicaoHabitacional.php',
     'CreateTableFamilia' => $baseDir . '/app/database/migrations/2014_10_31_161548_Create table familia.php',
     'CreateUnidadeTable' => $baseDir . '/app/database/migrations/2014_10_30_162615_Create Unidade table.php',

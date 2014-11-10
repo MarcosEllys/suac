@@ -1,6 +1,6 @@
 <?php
 
-Class familyscontroller extends BaseController{
+Class FamilysController extends BaseController{
 
 	protected $family;
 

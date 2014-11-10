@@ -55,11 +55,11 @@
 
 				<div class="field">
 					{{ Form::label('username','Username:') }}
-					{{ Form::text('username',Input::old('username'),array('class' => 'login username-field', 'id' => 'username', 'placeholder' => 'Usuário','autofocus') ) }}
+					{{ Form::text('username',Input::old('username'),array('class' => 'login username-field', 'id' => 'username', 'placeholder' => 'Usuário','autofocus', 'required') ) }}
 				</div>
 				<div class="field">
 					{{ Form::label('password','Password:') }}
-					<input type="password" id="password" name="password" value="" placeholder="Senha" class="login password-field">
+					<input type="password" id="password" name="password" required value="" placeholder="Senha" class="login password-field">
 				</div>
 			</div>
 			<div class="login-actions">
