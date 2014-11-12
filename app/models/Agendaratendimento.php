@@ -12,7 +12,6 @@ Class Agendaratendimento extends Eloquent{
 	public function validate($data)
 	{
 		$rules = array(
-			'peoplesreference_id' => "required",
 			'atendimento' => "required",
 			'tipoatendimento' => "required"
 			);

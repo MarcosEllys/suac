@@ -25,11 +25,21 @@ class HomeController extends BaseController {
 
 		$user = User::paginate();
 
+		$queryAgendamentos = Agendaratendimento::where('estado' , '=' , 'A')->paginate(5);
+
+		$agendamentos = array('agendamentos' => $queryAgendamentos);
+
+		$queryCancelados = Agendaratendimento::where('estado' , '=' , 'C');
+
+		$cancelados = array('cancelados' => $queryCancelados);
+
 		return View::make('home')
 					->with('active1','active')
 					->with('peopletotal',$pf)
 					->with('unidades',$uni)
-					->with('users',$user);
+					->with('users',$user)
+					->with($agendamentos)
+					->with($cancelados);
 
 	}
 

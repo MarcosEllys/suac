@@ -1,5 +1,5 @@
 	<tr>
-		<td>{{{ $agendamento->peoplesreference }}}</td>
+		<td>{{{ $agendamento->peoplesreference->nome }}}</td>
 		<td>
 			@if( $agendamento->tipoatendimento == 1 )
 			Socioassistencial individualizado

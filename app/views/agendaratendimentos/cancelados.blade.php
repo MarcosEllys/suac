@@ -13,7 +13,7 @@
 							/ <a href=" {{ action('AgendaratendimentosController@index') }} ">
 							<i class="icon-calendar"></i>  Agendar atendimento</a>
 						</li>
-						<li class="active">  /  <i class="icon-calendar"></i> Atendimentos cancelados</li>
+						<li class="active">  /  <i class="icon-remove-sign"></i> Atendimentos cancelados</li>
 					</ol>
 
 

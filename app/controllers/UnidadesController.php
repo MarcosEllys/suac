@@ -19,9 +19,9 @@ class UnidadesController extends BaseController{
 
 		$type = array('active2' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type);
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
 
-		$this->layout->content = View::make('unidades.index',$vars);
+		$this->layout->content = View::make('unidades.index')->with($vars);
 
 	}
 
@@ -29,7 +29,7 @@ class UnidadesController extends BaseController{
 	{
 		$type = array('active2' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type);
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
 		
 		$this->layout->content = View::make('unidades.create');
 	}
@@ -71,9 +71,9 @@ class UnidadesController extends BaseController{
 
 		$type = array('active2' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type);
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
 
-		$this->layout->content = View::make('unidades.show',$vars);
+		$this->layout->content = View::make('unidades.show')->with($vars);
 
 	}
 
@@ -85,9 +85,9 @@ class UnidadesController extends BaseController{
 
 		$type = array('active2' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type);
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
 
-		$this->layout->content = View::make('unidades.edit',$vars);
+		$this->layout->content = View::make('unidades.edit')->with($vars);
 	}
 
 	public function handleEdit()
@@ -129,9 +129,9 @@ class UnidadesController extends BaseController{
 
 		$type = array('active2' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type);
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
 
-		$this->layout->content = View::make('unidades.delete',$vars);
+		$this->layout->content = View::make('unidades.delete')->with($vars);
 	}
 
 	public function handleDelete()

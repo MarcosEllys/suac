@@ -76,7 +76,7 @@
 							<table class="table table-striped table-bordered">
 								<thead>
 									<tr>
-										<th>Nome</th>
+										<th>Pessoa referenciada</th>
 										<th>Tipo</th>
 										<th>Data</th>
 										<th>Ações</th>

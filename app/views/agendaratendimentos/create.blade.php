@@ -48,10 +48,10 @@
 								<div class="controls">
 
 									<select id="peoplesreference_id" name="peoplesreference_id">
-
-										<option value=" 1 " selected="selected"> PF </option>
-
-									</select>
+												@foreach($peoples as $people)
+												<option value=" {{{$people->id}}} " selected="selected">{{{$people->nome}}}</option>
+												@endforeach
+											</select>
 
 
 								</div>

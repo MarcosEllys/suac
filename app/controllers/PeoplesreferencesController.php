@@ -22,9 +22,11 @@ class PeoplesreferencesController extends BaseController{
 
 		$type = array('active3' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type );
+		$this->layout->navbar = View::make('layout.navbar')->with($type );
 
-		$this->layout->content = View::make('peoplesreference.index',$vars,$varsTrue);
+		$this->layout->content = View::make('peoplesreference.index')
+		->with($vars)
+		->with($varsTrue);
 	}
 
 	public function show($id)
@@ -35,9 +37,9 @@ class PeoplesreferencesController extends BaseController{
 
 		$type = array('active3' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type );
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
 
-		$this->layout->content = View::make('peoplesreference.show',$vars);
+		$this->layout->content = View::make('peoplesreference.show')->with($vars);
 	}
 
 	public function search()
@@ -50,9 +52,9 @@ class PeoplesreferencesController extends BaseController{
 
 		$type = array('active3' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type );
+		$this->layout->navbar = View::make('layout.navbar')->with($type );
 
-		$this->layout->content = View::make('peoplesreference.search',$vars);
+		$this->layout->content = View::make('peoplesreference.search')->with($vars);
 
 	}
 
@@ -62,7 +64,7 @@ class PeoplesreferencesController extends BaseController{
 
 		$type = array('active3' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type );
+		$this->layout->navbar = View::make('layout.navbar')->with($type );
 
 		$this->layout->content = View::make('peoplesreference.create')->with('unidades',$unidades);
 	}
@@ -90,10 +92,10 @@ class PeoplesreferencesController extends BaseController{
 			$peoplesreference->numeroprontuario = Input::get('numeroprontuario');
 			$peoplesreference->cep = Input::get('cep');
 
-			$mycep =  CepConsult::getAddress(Input::get('cep'));
+			// $mycep =  CepConsult::getAddress(Input::get('cep'));
 
-			$peoplesreference->uf = $mycep['state'];
-			$peoplesreference->municipio = $mycep['city'];
+			// $peoplesreference->uf = $mycep['state'];
+			// $peoplesreference->municipio = $mycep['city'];
 			$peoplesreference->rua = Input::get('rua');
 			$peoplesreference->bairro = Input::get('bairro');
 
@@ -157,9 +159,11 @@ class PeoplesreferencesController extends BaseController{
 
 		$type = array('active3' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type );
+		$this->layout->navbar = View::make('layout.navbar')->with($type );
 
-		$this->layout->content = View::make('peoplesreference.edit',$vars)->with('unidades',$unidades);
+		$this->layout->content = View::make('peoplesreference.edit')
+		->with($vars)
+		->with('unidades',$unidades);
 	}
 
 
@@ -220,9 +224,9 @@ class PeoplesreferencesController extends BaseController{
 
 		$type = array('active3' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type );
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
 
-		$this->layout->content = View::make('peoplesreference.delete',$vars);
+		$this->layout->content = View::make('peoplesreference.delete')->with($vars);
 	}
 
 	public function handleDelete()
@@ -256,9 +260,9 @@ class PeoplesreferencesController extends BaseController{
 
 		$type = array('active3' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type );
+		$this->layout->navbar = View::make('layout.navbar')->with($type );
 
-		$this->layout->content = View::make('peoplesreference.desligadas',$vars);
+		$this->layout->content = View::make('peoplesreference.desligadas')->with($vars);
 	}
 
 

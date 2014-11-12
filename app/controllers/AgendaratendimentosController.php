@@ -27,7 +27,7 @@ Class AgendaratendimentosController extends BaseController{
 
 		$type = array('active3' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type);
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
 
 		$this->layout->content = View::make('agendaratendimentos.index')
 		->with($vars)
@@ -38,11 +38,10 @@ Class AgendaratendimentosController extends BaseController{
 
 	public function create()
 	{
+		$peoples = Peoplesreference::all();
 		$type = array('active3' => 'active');
-
 		$this->layout->navbar = View::make('layout.navbar')->with($type);
-		
-		$this->layout->content = View::make('agendaratendimentos.create');
+		$this->layout->content = View::make('agendaratendimentos.create')->with('peoples',$peoples);
 	}
 
 	/**
@@ -103,7 +102,7 @@ Class AgendaratendimentosController extends BaseController{
 		$vars = array('agendamentos' => $query);
 		$type = array('active3' => 'active');
 		$this->layout->navbar = View::make('layout.navbar')->with($type);
-		$this->layout->content = View::make('agendaratendimentos.cancelados')->with($vars);
+		$this->layout->content = View::make('agendaratendimentos.realizados')->with($vars);
 
 	}
 

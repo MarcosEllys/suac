@@ -66,30 +66,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td> Raimundo Ananias </td>
-              <td> Atualização de cadastro </td>
-              <td>11/09/2014</td>
-              <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
-            </tr>
-            <tr>
-              <td> Francisca Maria Gomes </td>
-              <td> Adesão a beneficio </td>
-              <td>11/09/2014</td>
-              <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
-            </tr>
-            <tr>
-              <td> José Silva Marciel </td>
-              <td> Atualização de cadastro </td>
-              <td>12/09/2014</td>
-              <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
-            </tr>
-            <tr>
-              <td> Francisca Gonçalves </td>
-              <td> Atualização de cadastro </td>
-              <td>13/09/2014</td>
-              <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
-            </tr>                
+
+            @foreach($agendamentos as $agendamento)
+              @include('agendaratendimentos._agendamento_tile')
+            @endforeach
+
           </tbody>
         </table>
       </div>
