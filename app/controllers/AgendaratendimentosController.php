@@ -13,15 +13,26 @@ Class AgendaratendimentosController extends BaseController{
 	public function index()
 	{
 
-		$query = Agendaratendimento::paginate(5);
+		$query = Agendaratendimento::where('estado' , '=' , 'A')->paginate(5);
 
 		$vars = array('agendamentos' => $query);
+
+		$queryRealizados = Agendaratendimento::where('estado' , '=' , 'R');
+
+		$realizados = array('realizados' => $queryRealizados);
+
+		$queryCancelados = Agendaratendimento::where('estado' , '=' , 'C');
+
+		$cancelados = array('cancelados' => $queryCancelados);
 
 		$type = array('active3' => 'active');
 
 		$this->layout->navbar = View::make('layout.navbar',$type);
 
-		$this->layout->content = View::make('agendaratendimentos.index',$vars);
+		$this->layout->content = View::make('agendaratendimentos.index')
+		->with($vars)
+		->with($realizados)
+		->with($cancelados);
 
 	}
 
@@ -29,123 +40,95 @@ Class AgendaratendimentosController extends BaseController{
 	{
 		$type = array('active3' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type);
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
 		
 		$this->layout->content = View::make('agendaratendimentos.create');
 	}
 
+	/**
+	*--------------------------------------------------------------------------
+	* Value of estado
+	*--------------------------------------------------------------------------
+	*
+	* O estado recebe 1 caractere que siginifica o seu estado.
+	*
+	* A = Aberto
+	* R = Realizado
+	* C = Cancelado
+	*
+	* @var char(1)
+	*
+	*/
+
 	public function store()
 	{
 
-		$validator = $this->unidade->validate(null,Input::all()); 
+		$validator = $this->atendimento->validate(Input::all()); 
 
 		if ($validator->passes()) {
 
-			$unidade = new Unidade();
+			$atendimento = new Agendaratendimento();
 
-			$unidade->nome = Input::get('nome');
-			$unidade->rua = Input::get('rua');
-			$unidade->bairro = Input::get('bairro');		
-			$unidade->numero = Input::get('numero');
-			$unidade->complemento = Input::get('complemento');
-			$unidade->tipo = Input::get('tipo');
+			$atendimento->peoplesreference_id = Input::get('peoplesreference_id');
+			$atendimento->atendimento = Input::get('atendimento');
+			$atendimento->tipoatendimento = Input::get('tipoatendimento');
+			$atendimento->estado = 'A';
+			$atendimento->save();
 
-			$unidade->save();
-
-			return Redirect::action('UnidadesController@index')
-			->with('MessageSuccess','Unidade criada com sucesso');
+			return Redirect::action('AgendaratendimentosController@index')
+			->with('MessageSuccess','Atendimento agendado com sucesso');
 
 		} else {
 
-			return Redirect::to('unidades/create')->withInput()->withErrors($validator);
+			return Redirect::to('agendaratendimento/create')->withInput()->withErrors($validator);
 		}
 
 	}
 
-	public function show($id)
+	public function realizado()
 	{
 
-		$result = Unidade::find($id);
-
-		$vars = array('unidade' => $result);
-
-		$type = array('active2' => 'active');
-
-		$this->layout->navbar = View::make('layout.navbar',$type);
-
-		$this->layout->content = View::make('unidades.show',$vars);
+		$agendamento = Agendaratendimento::findOrFail(Input::get('id'));
+		$agendamento->estado = 'R';
+		$agendamento->update();
+		
+		return Redirect::to('/agendaratendimento')->with('MessageInfo','Atendimento realizado com sucesso');
 
 	}
 
-	public function edit($id)
+	public function realizados()
 	{
-		$unidade = Unidade::find($id);
 
-		$vars = array('unidade' => $unidade);
-
-		$type = array('active2' => 'active');
-
-		$this->layout->navbar = View::make('layout.navbar',$type);
-
-		$this->layout->content = View::make('unidades.edit',$vars);
-	}
-
-	public function handleEdit()
-	{
-		$unidade = Unidade::findOrFail(Input::get('id'));
-
-		$validator = $this->unidade->validate(Input::get('id'),Input::all());
-
-		if ($validator->passes()) {
-
-
-			$unidade->nome = Input::get('nome');
-			$unidade->rua = Input::get('rua');
-			$unidade->bairro = Input::get('bairro');		
-			$unidade->numero = Input::get('numero');
-			$unidade->complemento = Input::get('complemento');
-			$unidade->tipo = Input::get('tipo');
-
-			$unidade->update();
-
-			return Redirect::action('UnidadesController@index')
-			->with('MessageInfo','Unidade alterada com sucesso');
-
-		} else {
-
-			return Redirect::to('unidades/edit/'.$unidade->id)
-			->withInput()
-			->withErrors($validator);
-		}
+		$query = Agendaratendimento::where('estado' , '=' , 'R')->paginate(5);
+		$vars = array('agendamentos' => $query);
+		$type = array('active3' => 'active');
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
+		$this->layout->content = View::make('agendaratendimentos.cancelados')->with($vars);
 
 	}
 
-	public function delete($id)
+
+	public function cancelado()
 	{
 
-		$result = Unidade::find($id);
+		$agendamento = Agendaratendimento::findOrFail(Input::get('id'));
+		$agendamento->estado = 'C';
+		$agendamento->update();
+		
+		return Redirect::to('/agendaratendimento')->with('MessageInfo','Atendimento cancelado com sucesso');
 
-		$vars = array('unidade' => $result);
-
-		$type = array('active2' => 'active');
-
-		$this->layout->navbar = View::make('layout.navbar',$type);
-
-		$this->layout->content = View::make('unidades.delete',$vars);
 	}
 
-	public function handleDelete()
+	public function cancelados()
 	{
 
-		$id = Input::get('id');
-
-		$unidade = Unidade::findOrFail($id);
-
-		$unidade->delete();
-
-		return Redirect::action('UnidadesController@index')
-		->with('MessageDelete','Unidade excluida com sucesso');;
+		$query = Agendaratendimento::where('estado' , '=' , 'C')->paginate(5);
+		$vars = array('agendamentos' => $query);
+		$type = array('active3' => 'active');
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
+		$this->layout->content = View::make('agendaratendimentos.cancelados')->with($vars);
 
 	}
+
 
 }

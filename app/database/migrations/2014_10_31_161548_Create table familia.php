@@ -21,6 +21,7 @@ class CreateTableFamilia extends Migration {
 			$table->integer('anosmoramunicipio')->nullable()->default(null);
 			$table->integer('anosmorabairro')->nullable()->default(null);
 
+			$table->integer('habitacional_id');
 			$table->integer('peoplesreference_id')->nullable()->default(null);
 
 			$table->boolean('completo')->nullable()->default(null);

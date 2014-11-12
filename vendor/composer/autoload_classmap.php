@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Agendaratendimento' => $baseDir . '/app/models/Agendaratendimento.php',
+    'AgendaratendimentosController' => $baseDir . '/app/controllers/AgendaratendimentosController.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
     'Boris\\CLIOptionsHandler' => $vendorDir . '/d11wtq/boris/lib/Boris/CLIOptionsHandler.php',
@@ -30,6 +32,7 @@ return array(
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
     'CpfCnpjValidator' => $baseDir . '/app/libraries/CpfCnpjValidator.php',
+    'CreateHabitacionalsTable' => $baseDir . '/app/database/migrations/2014_11_11_161124_Create Habitacionals table.php',
     'CreateMemberFamily' => $baseDir . '/app/database/migrations/2014_10_30_163335_Create Member family.php',
     'CreatePasswordRemindersTable' => $baseDir . '/app/database/migrations/2014_10_30_162822_Create Password Reminders table.php',
     'CreatePeopleReferenceTable' => $baseDir . '/app/database/migrations/2014_10_30_162641_Create PeopleReference table.php',
@@ -51,6 +54,7 @@ return array(
     'Crypt_Twofish' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
     'Family' => $baseDir . '/app/models/Family.php',
+    'FamilysController' => $baseDir . '/app/controllers/FamilysController.php',
     'File_ANSI' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
     'File_ASN1' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
     'File_ASN1_Element' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
@@ -1610,5 +1614,4 @@ return array(
     'Zizaco\\CepConsult\\Curl' => $vendorDir . '/zizaco/cep-consult/src/Zizaco/CepConsult/Curl.php',
     'Zizaco\\CepConsult\\Facade' => $vendorDir . '/zizaco/cep-consult/src/Zizaco/CepConsult/Facade.php',
     'Zizaco\\CepConsult\\ServiceProvider' => $vendorDir . '/zizaco/cep-consult/src/Zizaco/CepConsult/ServiceProvider.php',
-    'familyscontroller' => $baseDir . '/app/controllers/FamilysController.php',
 );

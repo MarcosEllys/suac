@@ -56,11 +56,12 @@
 
 					<br>
 
+					<strong>Eliane</strong> de Moura Oliveira.<br>
+					<strong>Francisca</strong> Francilia Vieira da Cunha.<br>
+					<strong>Jonathan</strong> Carlos de Lima.<br>
+					<strong>Vinicius</strong> Emmanuel Marques de Castro.<br>
 					<strong>Marcos</strong> Ellys Rocha Honorato.<br>
-					<strong>Jonathan</strong> Carlos.<br>
-					<strong>Vinicius</strong> Emanuel.<br>
-					<strong>Francisca</strong> Francilia.<br>
-					<strong>Eliane</strong> de Moura.
+					<strong>Móises</strong> Lima da Costa.
 					
 				</div>
 

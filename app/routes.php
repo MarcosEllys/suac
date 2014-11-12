@@ -63,6 +63,16 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('agendaratendimento/create','AgendaratendimentosController@create');
 
+	Route::post('agendaratendimento','AgendaratendimentosController@store');
+
+	Route::post('agendaratendimento/realizado','AgendaratendimentosController@realizado');
+
+	Route::get('agendaratendimento/realizados','AgendaratendimentosController@realizados');
+
+	Route::post('agendaratendimento/cancelado','AgendaratendimentosController@cancelado');
+
+	Route::get('agendaratendimento/cancelados','AgendaratendimentosController@cancelados');
+
 
 
 	/*

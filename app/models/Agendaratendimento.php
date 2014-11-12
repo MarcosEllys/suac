@@ -4,19 +4,17 @@ Class Agendaratendimento extends Eloquent{
 
 	protected $table = 'agendaratendimentos';
 
-	public function peoplereference()
+	public function peoplesreference()
 	{
-		return $this->hasOne('Peoplesreference');
+		return $this->belongsTo('Peoplesreference');
 	}
 
 	public function validate($data)
 	{
 		$rules = array(
-			'rendatotal' => "required",
-			'anosmoraestado' => "required",
-			'anosmoramunicipio' => "required",
-			'anosmorabairro' => "required",
-			'tipo' => "required",
+			'peoplesreference_id' => "required",
+			'atendimento' => "required",
+			'tipoatendimento' => "required"
 			);
 
 		return Validator::make($data,$rules);

@@ -9,7 +9,7 @@
 
 					<ol class="breadcrumb">
 						<li><a href="{{ URL("/") }}"><i class="icon-dashboard"></i> Home</a></li>
-						<li class="active">  /  <i class="icon-calendar"></i> Agendar atendimentos</li>
+						<li class="active">  /  <i class="icon-calendar"></i> Agendar atendimento</li>
 					</ol>
 
 
@@ -25,19 +25,43 @@
 			@include('layout._infos')
 
 			<div class="row">
-
-				<div class="span7">
+				<div class="span10">
 					
 					<div class="widget widget-plain">
 						<div class="widget-content">
-							<a href="{{ action('AgendaratendimentosController@create') }}" class="btn btn-large btn-success btn-support-ask">
+							<a href="{{ action('AgendaratendimentosController@create') }}" class="btn btn-large btn-success">
 								Agendar atendimento 
 							</a>
 						</div>
 					</div>
 
-				</div>
+					@if( $realizados->count())
+					<div class="widget widget-plain">
+						<div class="widget-content">
+							<a href="{{ action('AgendaratendimentosController@realizados') }}" class="btn btn-large btn-info">
+								Atendimentos realizados
+								<span class="badge">
+									{{ $realizados->count(); }}
+								</span>
+							</a>
+						</div>
+					</div>
+					@endif
 
+					@if( $cancelados->count())
+					<div class="widget widget-plain">
+						<div class="widget-content">
+							<a href="{{ action('AgendaratendimentosController@cancelados') }}" class="btn btn-large btn-danger">
+								Atendimentos cancelados
+								<span class="badge">
+									{{ $cancelados->count(); }}
+								</span>
+							</a>
+						</div>
+					</div>
+					@endif
+
+				</div>
 			</div>
 
 			<div class="row">
