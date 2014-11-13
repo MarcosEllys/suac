@@ -11,7 +11,7 @@ Class Family extends Eloquent {
 
 	public function habitacional()
 	{
-		return $this->hasOne('Peoplesreference');
+		return $this->hasOne('Habitacional');
 	}
 
 	public function validate($data)

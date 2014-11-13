@@ -2,7 +2,12 @@
 
 class Habitacional extends Eloquent{
 
-	protected $table="habitacionals";
+	protected $table='habitacionals';
+
+	public function habitacional()
+	{
+		return $this->hasOne('Habitacional');
+	}
 
 	public function validate($data)
 	{
