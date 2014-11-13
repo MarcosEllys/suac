@@ -139,13 +139,16 @@ class PeoplesreferencesController extends BaseController{
 		*
 		* @var object family;
 		*
-		* @return not retrun
+		* @return not return
 		*
 		**/
 
 			$familia = new Family();
 			$familia->completo = FALSE;
 			$familia->save();
+
+			$habitacional = new Habitacional();
+			$habitacional->save();
 
 	}
 

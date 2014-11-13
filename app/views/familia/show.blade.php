@@ -59,7 +59,7 @@
 												<div class="control-group">
 													<label class="control-label" for="email">Código:</label>
 													<div class="controls">
-														{{{ $familia->peoplereferences->id }}}
+														{{{ $familia->peoplereference->id }}}
 													</div>
 												</div>
 												<div class="control-group">
@@ -67,14 +67,14 @@
 														Pessoa referenciada:
 													</label>
 													<div class="controls">
-														{{{ $familia->peoplereferences->nome }}}
+														{{{ $familia->peoplereference->nome }}}
 													</div>
 												</div>
 
 												<div class="control-group">
 													<label class="control-label" for="email">Apelido:</label>
 													<div class="controls">
-														{{{ $familia->peoplereferences->apelido }}}
+														{{{ $familia->peoplereference->apelido }}}
 													</div>
 												</div>
 
@@ -164,35 +164,35 @@
 												<div class="control-group">
 													<label class="control-label" for="email">CEP:</label>
 													<div class="controls">
-														{{{ $familia->peoplereferences->cep }}}
+														{{{ $familia->peoplereference->cep }}}
 													</div>
 												</div>
 
 												<div class="control-group">
 													<label class="control-label" for="email">Estado:</label>
 													<div class="controls">
-														{{{ $familia->peoplereferences->uf }}}
+														{{{ $familia->peoplereference->uf }}}
 													</div>
 												</div>
 
 												<div class="control-group">
 													<label class="control-label" for="email">Municipio:</label>
 													<div class="controls">
-														{{{ $familia->peoplereferences->municipio }}}
+														{{{ $familia->peoplereference->municipio }}}
 													</div>
 												</div>
 
 												<div class="control-group">
 													<label class="control-label" for="email">Rua:</label>
 													<div class="controls">
-														{{{ $familia->peoplereferences->rua }}}
+														{{{ $familia->peoplereference->rua }}}
 													</div>
 												</div>
 
 												<div class="control-group">
 													<label class="control-label" for="email">Bairro:</label>
 													<div class="controls">
-														{{{ $familia->peoplereferences->bairro }}}
+														{{{ $familia->peoplereference->bairro }}}
 													</div>
 												</div>
 
@@ -201,7 +201,7 @@
 												<div class="control-group">
 													<label class="control-label" for="email">Complemento:</label>
 													<div class="controls">
-														{{{ $familia->peoplereferences->complemento }}}
+														{{{ $familia->peoplereference->complemento }}}
 													</div>
 												</div>
 
@@ -210,7 +210,7 @@
 														Ponto de referência:
 													</label>
 													<div class="controls">
-														{{{ $familia->peoplereferences->pointreference }}}
+														{{{ $familia->peoplereference->pointreference }}}
 													</div>
 												</div>
 
@@ -258,37 +258,49 @@
 											<fieldset>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'Tipo de residencia:',array('class' => 'control-label') ) }}
+													{{ Form::label('tiporesidencia', 'Tipo de residencia:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														Chopana
+														{{{ $habitacional->tiporesidencia }}}
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'Material das paredes:',array('class' => 'control-label') ) }}
+													{{ Form::label('materialparedes', 'Material das paredes:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														Tijolos
+														{{{ $habitacional->materialparedes }}}
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'A residencia tem energia:',array('class' => 'control-label') ) }}
+													{{ Form::label('energia', 'A residencia tem energia:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														Sim	
+														@if($habitacional->energia)
+															Sim
+														@else
+															Não
+														@endif
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'A residencia tem agua:',array('class' => 'control-label') ) }}
+													{{ Form::label('agua', 'A residencia tem agua:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														Não		
+														@if($habitacional->agua)
+															Sim
+														@else
+															Não
+														@endif	
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'A residencia tem escoamento sanitário:',array('class' => 'control-label') ) }}
+													{{ Form::label('esgoto', 'A residencia tem escoamento sanitário:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														Não
+														@if($habitacional->esgoto)
+															Sim
+														@else
+															Não
+														@endif
 													</div>
 												</div>
 
@@ -307,9 +319,9 @@
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'Quantidade de dormitórios do imóvel:',array('class' => 'control-label') ) }}
+													{{ Form::label('dormitorios', 'Quantidade de dormitórios do imóvel:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														2		
+														{{{ $habitacional->dormitorios }}}	
 													</div>
 												</div>
 
@@ -330,31 +342,7 @@
 												<div class="control-group">
 													{{ Form::label('is_admin', 'Observação:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														lorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMET lorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMET lorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMET lorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMET lorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMET lorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
-														LOREM IPSUM DOLOR SIT AMET 
+														{{{ $habitacional->observacao }}}
 													</div>
 												</div>
 

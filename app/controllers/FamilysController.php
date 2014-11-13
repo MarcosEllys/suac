@@ -9,8 +9,6 @@ Class FamilysController extends BaseController{
 		$this->family = $family;
 	}
 
-
-
 	public function index()
 	{
 
@@ -29,29 +27,41 @@ Class FamilysController extends BaseController{
 	public function show($id)
 	{
 
-		$result = Family::find($id);
+		$queryFamily = Family::find($id);
 
-		$vars = array('familia' => $result);
+		$familia = array('familia' => $queryFamily);
+
+		$queryHabitacional = Habitacional::find($id);
+
+		$habitacional = array('habitacional' => $queryHabitacional);
 
 		$type = array('active3' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type);
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
 
-		$this->layout->content = View::make('familia.show',$vars);
+		$this->layout->content = View::make('familia.show')
+		->with($familia)
+		->with($habitacional);
 
 	}
 
 	public function edit($id)
 	{
-		$familia = Family::find($id);
+		$queryFamily = Family::find($id);
 
-		$vars = array('familia' => $familia);
+		$familia = array('familia' => $queryFamily);
+
+		$queryHabitacional = Habitacional::find($id);
+
+		$habitacional = array('habitacional' => $queryHabitacional);
 
 		$type = array('active3' => 'active');
 
-		$this->layout->navbar = View::make('layout.navbar',$type);
+		$this->layout->navbar = View::make('layout.navbar')->with($type);
 
-		$this->layout->content = View::make('familia.edit',$vars);
+		$this->layout->content = View::make('familia.edit')
+		->with($familia)
+		->with($habitacional);
 
 	}
 

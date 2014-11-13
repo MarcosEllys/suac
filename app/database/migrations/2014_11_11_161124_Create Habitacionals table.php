@@ -28,8 +28,7 @@ class CreateHabitacionalsTable extends Migration {
 			$table->bigInteger('qtdcomodos')->nullable();
 			$table->bigInteger('qtddormitorios')->nullable();
 			$table->text('observacao')->default(null);
-
-			$table->bigInteger('peoplesreference_id');
+			$table->bigInteger('family_id');
 			
 			$table->timestamps();
 

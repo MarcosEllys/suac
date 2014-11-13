@@ -127,6 +127,14 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::post('family/edit','FamilysController@handleEdit');
 
+	/*
+	|--------------------------------------------------------------------------
+	| Unique route to Habitacional of Family
+	|--------------------------------------------------------------------------
+	*/
+
+	Route::post('family/habitacional','HabitacionalsController@handleEdit');	
+
 
 	/*
 	|--------------------------------------------------------------------------

@@ -48,13 +48,16 @@
 
 								<div class="tab-content">
 									<div class="tab-pane active" id="morefamily">
-										{{ Form::open(array('action' => 'FamilysController@handleEdit', 'class' => 'form-horizontal')) }}
 										<fieldset>
+
+											{{ Form::open(array('action' => 'FamilysController@handleEdit', 'class' => 'form-horizontal')) }}
+
+											{{ Form::hidden('id', $familia->id) }}
 
 											<div class="control-group">
 												<label class="control-label" for="email">Código:</label>
 												<div class="controls">
-													{{{ $familia->peoplereferences->id }}}
+													{{{ $familia->peoplereference->id }}}
 												</div>
 											</div>
 											<div class="control-group">
@@ -62,13 +65,11 @@
 													Pessoa referenciada:
 												</label>
 												<div class="controls">
-													{{{ $familia->peoplereferences->nome }}}
+													{{{ $familia->peoplereference->nome }}}
 												</div>
 											</div>
 
 											<hr>
-
-											{{ Form::hidden('id', $familia->id) }}
 
 											<div class="control-group">
 												<label class="control-label" for="email">Renda total:</label>
@@ -105,91 +106,94 @@
 
 												{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
 
+												{{ Form::close() }}
 											</div>
 
 
 										</fieldset>
-										{{ Form::close() }}
 									</div>
 
 									<div class="tab-pane" id="morelocalization">
-										<form id="edit-profile" class="form-horizontal">
 											<fieldset>
 
+												{{ Form::open(array('action' => 'HabitacionalsController@handleEdit', 'class' => 'form-horizontal')) }}
+
+												{{ Form::hidden('id', $familia->id) }}
+
 												<div class="control-group">
-													{{ Form::label('is_admin', 'Tipo de residencia:',array('class' => 'control-label') ) }}
+													{{ Form::label('tiporesidencia', 'Tipo de residencia:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '15', 'required') ) }}
+														{{ Form::text('tiporesidencia',Input::old('tiporesidencia'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '15', 'required') ) }}
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'Material das paredes:',array('class' => 'control-label') ) }}
+													{{ Form::label('materialparedes', 'Material das paredes:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '15', 'required') ) }}
+														{{ Form::text('materialparedes',Input::old('materialparedes'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '15', 'required') ) }}
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'A residencia tem energia:',array('class' => 'control-label') ) }}
+													{{ Form::label('energia', 'A residencia tem energia:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+														{{ Form::radio('energia', TRUE) }} Sim {{ Form::radio('energia', FALSE) }} Não
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'A residencia tem agua:',array('class' => 'control-label') ) }}
+													{{ Form::label('agua', 'A residencia tem agua:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+														{{ Form::radio('agua', TRUE) }} Sim {{ Form::radio('agua', FALSE) }} Não
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'A residencia tem escoamento sanitário:',array('class' => 'control-label') ) }}
+													{{ Form::label('esgoto', 'A residencia tem escoamento sanitário:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+														{{ Form::radio('esgoto', TRUE) }} Sim {{ Form::radio('esgoto', FALSE) }} Não
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'A rua tem coleta de lixo:',array('class' => 'control-label') ) }}
+													{{ Form::label('coletalixo', 'A rua tem coleta de lixo:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+														{{ Form::radio('coletalixo', TRUE) }} Sim {{ Form::radio('coletalixo', FALSE) }} Não
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'Quantidade de comodos do imóvel:',array('class' => 'control-label') ) }}
+													{{ Form::label('qtdcomodos', 'Quantidade de comodos do imóvel:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+														{{ Form::radio('qtdcomodos', 1) }} 1 {{ Form::radio('qtdcomodos', 2 ) }} 2 {{ Form::radio('qtdcomodos', 3 ) }} 3 {{ Form::radio('qtdcomodos', 4 ) }} 4 {{ Form::radio('qtdcomodos', 5 ) }} 5
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'Quantidade de dormitórios do imóvel:',array('class' => 'control-label') ) }}
+													{{ Form::label('qtddormitorios', 'Quantidade de dormitórios do imóvel:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+														{{ Form::radio('qtddormitorios', 1) }} 1 {{ Form::radio('qtddormitorios', 2 ) }} 2 {{ Form::radio('qtddormitorios', 3 ) }} 3 {{ Form::radio('qtddormitorios', 4 ) }} 4
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'Localizado em área de desabamento:',array('class' => 'control-label') ) }}
+													{{ Form::label('localizadoareadesabamento', 'Localizado em área de desabamento:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+														{{ Form::radio('localizadoareadesabamento', TRUE) }} Sim {{ Form::radio('localizadoareadesabamento', FALSE) }} Não
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'Localizado em área de dificil acesso:',array('class' => 'control-label') ) }}
+													{{ Form::label('localizadoareadificilacesso', 'Localizado em área de dificil acesso:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+														{{ Form::radio('localizadoareadificilacesso', TRUE) }} Sim {{ Form::radio('localizadoareadificilacesso', FALSE) }} Não
 													</div>
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'Observação:',array('class' => 'control-label') ) }}
+													{{ Form::label('Observacao', 'Observação:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::textarea('nome',Input::old('nome'),array('class' => 'span10') ) }}
+														{{ Form::textarea('Observacao',Input::old('nome'),array('class' => 'span10') ) }}
 													</div>
 												</div>
 
@@ -199,10 +203,11 @@
 
 													{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
 
+													{{ Form::close() }}
+
 												</div>
 
 											</fieldset>
-										</form>
 									</div>
 
 									

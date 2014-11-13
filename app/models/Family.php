@@ -4,7 +4,12 @@ Class Family extends Eloquent {
 
 	protected $table = 'familys';
 
-	public function peoplereferences()
+	public function peoplereference()
+	{
+		return $this->hasOne('Peoplesreference');
+	}
+
+	public function habitacional()
 	{
 		return $this->hasOne('Peoplesreference');
 	}

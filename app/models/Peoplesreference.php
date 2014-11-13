@@ -17,7 +17,7 @@ class Peoplesreference extends Eloquent{
 
 	public function family()
 	{
-		return $this->belongsTo('Family');		
+		return $this->hasOne('Family');		
 	}
 
 	public function validate($id,$data)

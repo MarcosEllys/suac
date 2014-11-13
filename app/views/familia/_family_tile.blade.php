@@ -1,7 +1,7 @@
-@if(!$familia->peoplereferences->desligado)
+@if(!$familia->peoplereference->desligado)
 	<tr>
 		<td> {{{ $familia->id }}} </td>
-		<td> {{{ $familia->peoplereferences->nome }}} </td>
+		<td> {{{ $familia->peoplereference->nome }}} </td>
 		<td>
 			@if($familia->completo)
 			<span class="label label-success">Concluído</span>
