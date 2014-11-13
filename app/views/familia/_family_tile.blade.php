@@ -16,13 +16,12 @@
 					Visualizar
 				</button>
 			</a>
-
-			<a href=' '>
-				<button class="btn btn-warning">
-					Editar
-				</button>
-			</a>
-
+			<a href=' {{ action('FamilysController@edit',$familia->id ) }} '>
+			<button class="btn btn-warning">
+				Editar
+			</button>
+		</a>
+		
 		</td>
 	</tr>
 	@endif

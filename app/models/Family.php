@@ -12,11 +12,7 @@ Class Family extends Eloquent {
 	public function validate($data)
 	{
 		$rules = array(
-			'rendatotal' => "required",
-			'anosmoraestado' => "required",
-			'anosmoramunicipio' => "required",
-			'anosmorabairro' => "required",
-			'tipo' => "required",
+			'anosmoraestado' => 'required'
 			);
 
 		return Validator::make($data,$rules);

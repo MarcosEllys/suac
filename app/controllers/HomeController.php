@@ -25,7 +25,7 @@ class HomeController extends BaseController {
 
 		$user = User::paginate();
 
-		$queryAgendamentos = Agendaratendimento::where('estado' , '=' , 'A')->paginate(5);
+		$queryAgendamentos = Agendaratendimento::where('estado' , '=' , 'A')->paginate(3);
 
 		$agendamentos = array('agendamentos' => $queryAgendamentos);
 

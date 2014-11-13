@@ -223,16 +223,30 @@
 											<fieldset>
 
 												<div class="control-group">
-													<label class="control-label" for="email">Casa:</label>
+													<label class="control-label" for="email">Renda total:</label>
 													<div class="controls">
-														Alugada
+														R$ {{{ $familia->rendatotal }}}
 													</div>
 												</div>
 
 												<div class="control-group">
-													<label class="control-label" for="email">Bairro:</label>
+													<label class="control-label" for="email">Anos que mora no estado:</label>
 													<div class="controls">
-														Favela
+														{{{ $familia->anosmoraestado }}} ano(s)
+													</div>
+												</div>
+
+												<div class="control-group">
+													<label class="control-label" for="email">Anos que mora no municipio:</label>
+													<div class="controls">
+														{{{ $familia->anosmoramunicipio }}} ano(s)
+													</div>
+												</div>
+
+												<div class="control-group">
+													<label class="control-label" for="email">Anos que mora no bairro:</label>
+													<div class="controls">
+														{{{ $familia->anosmorabairro }}} ano(s)
 													</div>
 												</div>
 											</fieldset>
@@ -244,18 +258,106 @@
 											<fieldset>
 
 												<div class="control-group">
-													<label class="control-label" for="email">Casa própria:</label>
+													{{ Form::label('is_admin', 'Tipo de residencia:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														Sim
+														Chopana
 													</div>
 												</div>
 
 												<div class="control-group">
-													<label class="control-label" for="email">Casa pintada:</label>
+													{{ Form::label('is_admin', 'Material das paredes:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														Sim
+														Tijolos
 													</div>
 												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'A residencia tem energia:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														Sim	
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'A residencia tem agua:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														Não		
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'A residencia tem escoamento sanitário:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														Não
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'A rua tem coleta de lixo:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														Não		
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'Quantidade de comodos do imóvel:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														5		
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'Quantidade de dormitórios do imóvel:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														2		
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'Localizado em área de desabamento:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														Sim	
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'Localizado em área de dificil acesso:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														Sim		
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'Observação:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														lorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMET lorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMET lorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMET lorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMET lorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMET lorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMETlorem ipsum dolor sit amet
+														LOREM IPSUM DOLOR SIT AMET 
+													</div>
+												</div>
+
 											</fieldset>
 										</form>
 									</div>

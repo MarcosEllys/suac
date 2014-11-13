@@ -24,6 +24,8 @@
 				</div>
 			</div>
 
+			@include('layout._errors')
+
 			<br>
 
 			<div class="row">
@@ -37,48 +39,77 @@
 							<div class="tabbable">
 								<ul class="nav nav-tabs">
 									<li class="active">
-										<a href="#morefamily" data-toggle="tab">Dados sobre familia</a>
+										<a href="#morefamily" data-toggle="tab">Dados sobre convivencia</a>
 									</li>
 									<li class="">
-										<a href="#morelocalization" data-toggle="tab">Dados sobre endereço</a>
+										<a href="#morelocalization" data-toggle="tab">Condição habitacional</a>
 									</li>
-									<li class="">
-										<a href="#convivencia" data-toggle="tab">Dados sobre convivencia</a>
-									</li>
-									<li class="">
-										<a href="#habitacional" data-toggle="tab">Condição habitacional</a>
-									</li>
-
 								</ul>
-
-								<br>
 
 								<div class="tab-content">
 									<div class="tab-pane active" id="morefamily">
-										<form id="edit-profile" class="form-horizontal">
-											<fieldset>
+										{{ Form::open(array('action' => 'FamilysController@handleEdit', 'class' => 'form-horizontal')) }}
+										<fieldset>
 
-												<div class="control-group">
-													<label class="control-label" for="email">Código:</label>
-													<div class="controls">
-														1
-													</div>
+											<div class="control-group">
+												<label class="control-label" for="email">Código:</label>
+												<div class="controls">
+													{{{ $familia->peoplereferences->id }}}
 												</div>
-												<div class="control-group">
-													<label class="control-label" for="email">Pessoa referenciada:</label>
-													<div class="controls">
-														Marcos
-													</div>
+											</div>
+											<div class="control-group">
+												<label class="control-label" for="email">
+													Pessoa referenciada:
+												</label>
+												<div class="controls">
+													{{{ $familia->peoplereferences->nome }}}
 												</div>
+											</div>
 
-												<div class="control-group">
-													<label class="control-label" for="email">Apelido:</label>
-													<div class="controls">
-														Franquim
-													</div>
+											<hr>
+
+											{{ Form::hidden('id', $familia->id) }}
+
+											<div class="control-group">
+												<label class="control-label" for="email">Renda total:</label>
+												<div class="controls">
+													{{ Form::number('rendatotal',$familia->rendatotal,array('class' => 'span6', 'required', 'placeholder' => 'Em reais') ) }}
 												</div>
-											</fieldset>
-										</form>
+											</div>
+
+											<div class="control-group">
+												<label class="control-label" for="email">Anos que mora no estado:</label>
+												<div class="controls">
+													{{ Form::number('anosmoraestado',$familia->anosmoraestado,array('class' => 'span6', 'required') ) }}
+												</div>
+											</div>
+
+											<div class="control-group">
+												<label class="control-label" for="email">Anos que mora no municipio:</label>
+												<div class="controls">
+													{{ Form::number('anosmoramunicipio',$familia->anosmoramunicipio,array('class' => 'span6', 'required') ) }}
+												</div>
+											</div>
+
+											<div class="control-group">
+												<label class="control-label" for="email">Anos que mora no bairro:</label>
+												<div class="controls">
+													{{ Form::number('anosmorabairro',$familia->anosmorabairro,array('class' => 'span6', 'required') ) }}
+												</div>
+											</div>
+
+
+											<div class="form-actions">
+
+												{{ Form::submit('Salvar convivência', array('class' => 'btn btn-primary')) }}
+
+												{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
+
+											</div>
+
+
+										</fieldset>
+										{{ Form::close() }}
 									</div>
 
 									<div class="tab-pane" id="morelocalization">
@@ -86,74 +117,100 @@
 											<fieldset>
 
 												<div class="control-group">
-													<label class="control-label" for="email">CEP:</label>
+													{{ Form::label('is_admin', 'Tipo de residencia:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														63430-000
+														{{ Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '15', 'required') ) }}
 													</div>
 												</div>
 
 												<div class="control-group">
-													<label class="control-label" for="email">Estado:</label>
+													{{ Form::label('is_admin', 'Material das paredes:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														CE
+														{{ Form::text('nome',Input::old('nome'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '15', 'required') ) }}
 													</div>
 												</div>
 
 												<div class="control-group">
-													<label class="control-label" for="email">Municipio:</label>
+													{{ Form::label('is_admin', 'A residencia tem energia:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														Icó
+														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
 													</div>
 												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'A residencia tem agua:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'A residencia tem escoamento sanitário:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'A rua tem coleta de lixo:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'Quantidade de comodos do imóvel:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'Quantidade de dormitórios do imóvel:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'Localizado em área de desabamento:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'Localizado em área de dificil acesso:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														{{ Form::radio('name', TRUE) }} Sim {{ Form::radio('name', FALSE, true) }} Não
+													</div>
+												</div>
+
+												<div class="control-group">
+													{{ Form::label('is_admin', 'Observação:',array('class' => 'control-label') ) }}
+													<div class="controls">
+														{{ Form::textarea('nome',Input::old('nome'),array('class' => 'span10') ) }}
+													</div>
+												</div>
+
+												<div class="form-actions">
+
+													{{ Form::submit('Salvar habitacional', array('class' => 'btn btn-primary')) }}
+
+													{{ HTML::link('/users','Cancelar', array('class' => 'btn')) }}
+
+												</div>
+
 											</fieldset>
 										</form>
 									</div>
 
-									<div class="tab-pane" id="convivencia">
-										<form id="edit-profile" class="form-horizontal">
-											<fieldset>
-
-												<div class="control-group">
-													<label class="control-label" for="email">Casa:</label>
-													<div class="controls">
-														Alugada
-													</div>
-												</div>
-
-												<div class="control-group">
-													<label class="control-label" for="email">Bairro:</label>
-													<div class="controls">
-														Favela
-													</div>
-												</div>
-											</fieldset>
-										</form>
-									</div>
-
-									<div class="tab-pane" id="habitacional">
-										<form id="edit-profile" class="form-horizontal">
-											<fieldset>
-
-												<div class="control-group">
-													<label class="control-label" for="email">Casa própria:</label>
-													<div class="controls">
-														Sim
-													</div>
-												</div>
-
-												<div class="control-group">
-													<label class="control-label" for="email">Casa pintada:</label>
-													<div class="controls">
-														Sim
-													</div>
-												</div>
-											</fieldset>
-										</form>
-									</div>
-
+									
 								</div>
 							</div>
 						</div>
+
+						<br>
 
 						{{ HTML::link('/peoplesref','Voltar', array('class' => 'btn')) }}
 

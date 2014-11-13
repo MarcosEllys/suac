@@ -4,10 +4,12 @@ Class FamilysController extends BaseController{
 
 	protected $family;
 
-	public function __contruct(Family $family)
+	public function __construct(Family $family)
 	{
 		$this->family = $family;
 	}
+
+
 
 	public function index()
 	{
@@ -55,6 +57,29 @@ Class FamilysController extends BaseController{
 
 	public function handleEdit()
 	{
+		$familia = Family::findOrFail(Input::get('id'));
+
+		$validator = $this->family->validate(Input::all());
+
+		if ($validator->passes()) {
+
+
+			$familia->rendatotal = Input::get('rendatotal');
+			$familia->anosmoraestado = Input::get('anosmoraestado');
+			$familia->anosmoramunicipio = Input::get('anosmoramunicipio');
+			$familia->anosmorabairro = Input::get('anosmorabairro');
+
+			$familia->update();
+
+			return Redirect::action('FamilysController@index')
+			->with('MessageInfo','Família alterada com sucesso');
+
+		} else {
+
+			return Redirect::to('family/edit/'.$familia->id)
+			->withInput()
+			->withErrors($validator);
+		}
 
 	}
 

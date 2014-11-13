@@ -123,7 +123,9 @@ Route::group(array('before' => 'auth'), function()
 
 	Route::get('family/show/{id}','FamilysController@show');
 
-	Route::get('family/edit/{id}', 'familysController@edit');
+	Route::get('family/edit/{id}', 'FamilysController@edit');
+
+	Route::post('family/edit','FamilysController@handleEdit');
 
 
 	/*
