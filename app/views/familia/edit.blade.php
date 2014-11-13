@@ -123,14 +123,14 @@
 												<div class="control-group">
 													{{ Form::label('tiporesidencia', 'Tipo de residencia:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::text('tiporesidencia',Input::old('tiporesidencia'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '15', 'required') ) }}
+														{{ Form::text('tiporesidencia',$habitacional->tiporesidencia,array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '15', 'required') ) }}
 													</div>
 												</div>
 
 												<div class="control-group">
 													{{ Form::label('materialparedes', 'Material das paredes:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::text('materialparedes',Input::old('materialparedes'),array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '15', 'required') ) }}
+														{{ Form::text('materialparedes',$habitacional->materialparedes,array('class' => 'span6', 'placeholder' => 'Nome completo', 'maxlength' => '15', 'required') ) }}
 													</div>
 												</div>
 
@@ -191,9 +191,9 @@
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('Observacao', 'Observação:',array('class' => 'control-label') ) }}
+													{{ Form::label('observacao', 'Observação:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{ Form::textarea('Observacao',Input::old('nome'),array('class' => 'span10') ) }}
+														{{ Form::textarea('observacao',$habitacional->observacao,array('class' => 'span10') ) }}
 													</div>
 												</div>
 

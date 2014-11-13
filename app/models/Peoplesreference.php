@@ -25,7 +25,7 @@ class Peoplesreference extends Eloquent{
 		$rules = array(
 			'nome' => 'required|between:10,60',
 			'apelido' => 'required|between:4,13',
-			'rg' => 'unique:peoplesreferences,rg,{$id}|required',
+			'rg' => 'required',
 			'cpf' => array("required","cpf"),
 			'cep' => 'required|numeric',
 			'rua' => 'required|between:4,25',

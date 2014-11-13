@@ -38,8 +38,6 @@ class HabitacionalsController extends BaseController{
 			$habitacional->qtdcomodos = Input::get('qtddormitorios');
 			$habitacional->observacao = Input::get('observacao');
 			$habitacional->energia = Input::get('energia');
-
-			$habitacional->family_id = self::IncrementId();
 			
 
 			$habitacional->update();
@@ -54,14 +52,5 @@ class HabitacionalsController extends BaseController{
 			->withErrors($validator);
 		}
 
-	}
-
-	protected function IncrementId()
-	{
-		$habitacional = DB::table('habitacionals')->count();
-
-		return $habitacional + 1;
-	}
-
-	
+	}	
 }

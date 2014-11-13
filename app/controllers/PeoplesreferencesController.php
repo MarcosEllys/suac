@@ -145,6 +145,7 @@ class PeoplesreferencesController extends BaseController{
 
 			$familia = new Family();
 			$familia->completo = FALSE;
+			$familia->habitacional_id = self::IncrementId();
 			$familia->save();
 
 			$habitacional = new Habitacional();

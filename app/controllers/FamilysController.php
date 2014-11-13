@@ -31,17 +31,11 @@ Class FamilysController extends BaseController{
 
 		$familia = array('familia' => $queryFamily);
 
-		$queryHabitacional = Habitacional::find($id);
-
-		$habitacional = array('habitacional' => $queryHabitacional);
-
 		$type = array('active3' => 'active');
 
 		$this->layout->navbar = View::make('layout.navbar')->with($type);
 
-		$this->layout->content = View::make('familia.show')
-		->with($familia)
-		->with($habitacional);
+		$this->layout->content = View::make('familia.show')->with($familia);
 
 	}
 

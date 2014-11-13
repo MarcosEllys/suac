@@ -260,21 +260,21 @@
 												<div class="control-group">
 													{{ Form::label('tiporesidencia', 'Tipo de residencia:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{{ $habitacional->tiporesidencia }}}
+														{{{ $familia->habitacional->tiporesidencia }}}
 													</div>
 												</div>
 
 												<div class="control-group">
 													{{ Form::label('materialparedes', 'Material das paredes:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{{ $habitacional->materialparedes }}}
+														{{{ $familia->habitacional->materialparedes }}}
 													</div>
 												</div>
 
 												<div class="control-group">
 													{{ Form::label('energia', 'A residencia tem energia:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														@if($habitacional->energia)
+														@if($familia->habitacional->energia)
 															Sim
 														@else
 															Não
@@ -285,7 +285,7 @@
 												<div class="control-group">
 													{{ Form::label('agua', 'A residencia tem agua:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														@if($habitacional->agua)
+														@if($familia->habitacional->agua)
 															Sim
 														@else
 															Não
@@ -296,7 +296,7 @@
 												<div class="control-group">
 													{{ Form::label('esgoto', 'A residencia tem escoamento sanitário:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														@if($habitacional->esgoto)
+														@if($familia->habitacional->esgoto)
 															Sim
 														@else
 															Não
@@ -312,7 +312,7 @@
 												</div>
 
 												<div class="control-group">
-													{{ Form::label('is_admin', 'Quantidade de comodos do imóvel:',array('class' => 'control-label') ) }}
+													{{ Form::label('dormitorios', 'Quantidade de comodos do imóvel:',array('class' => 'control-label') ) }}
 													<div class="controls">
 														5		
 													</div>
@@ -321,7 +321,7 @@
 												<div class="control-group">
 													{{ Form::label('dormitorios', 'Quantidade de dormitórios do imóvel:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{{ $habitacional->dormitorios }}}	
+														{{{ $familia->habitacional->qtddormitorios }}}	
 													</div>
 												</div>
 
@@ -342,7 +342,7 @@
 												<div class="control-group">
 													{{ Form::label('is_admin', 'Observação:',array('class' => 'control-label') ) }}
 													<div class="controls">
-														{{{ $habitacional->observacao }}}
+														{{{ $familia->habitacional->observacao }}}
 													</div>
 												</div>
 
